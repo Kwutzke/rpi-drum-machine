@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/DrumMachine.dir/main.cpp.o"
+  "CMakeFiles/DrumMachine.dir/sample.cpp.o"
   "DrumMachine.pdb"
   "DrumMachine"
 )

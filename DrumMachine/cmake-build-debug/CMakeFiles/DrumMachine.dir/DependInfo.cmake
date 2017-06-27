@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/kilian/Development/EntwMM/Arduino Drum Machine/DrumMachine/main.cpp" "/Users/kilian/Development/EntwMM/Arduino Drum Machine/DrumMachine/cmake-build-debug/CMakeFiles/DrumMachine.dir/main.cpp.o"
+  "/Users/kilian/Development/EntwMM/Arduino Drum Machine/DrumMachine/sample.cpp" "/Users/kilian/Development/EntwMM/Arduino Drum Machine/DrumMachine/cmake-build-debug/CMakeFiles/DrumMachine.dir/sample.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

@@ -85,6 +85,12 @@
 		<Unit filename="/Users/kilian/Development/EntwMM/Arduino Drum Machine/DrumMachine/main.cpp">
 			<Option target="DrumMachine"/>
 		</Unit>
+		<Unit filename="/Users/kilian/Development/EntwMM/Arduino Drum Machine/DrumMachine/sample.cpp">
+			<Option target="DrumMachine"/>
+		</Unit>
+		<Unit filename="/Users/kilian/Development/EntwMM/Arduino Drum Machine/DrumMachine/sample.h">
+			<Option target="DrumMachine"/>
+		</Unit>
 		<Unit filename="/Users/kilian/Development/EntwMM/Arduino Drum Machine/DrumMachine/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

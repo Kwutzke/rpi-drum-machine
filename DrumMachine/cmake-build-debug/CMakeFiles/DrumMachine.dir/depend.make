@@ -3,3 +3,6 @@
 
 CMakeFiles/DrumMachine.dir/main.cpp.o: ../main.cpp
 
+CMakeFiles/DrumMachine.dir/sample.cpp.o: ../sample.cpp
+CMakeFiles/DrumMachine.dir/sample.cpp.o: ../sample.h
+
