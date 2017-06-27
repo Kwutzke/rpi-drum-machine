@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/kilian/Development/EntwMM/Arduino Drum Machine/DrumMachine/main.cpp
+zconf.h
+-
+SDL2/SDL.h
+/Users/kilian/Development/EntwMM/Arduino Drum Machine/DrumMachine/SDL2/SDL.h
+SDL2_mixer/SDL_mixer.h
+/Users/kilian/Development/EntwMM/Arduino Drum Machine/DrumMachine/SDL2_mixer/SDL_mixer.h
+SDL2_image/SDL_image.h
+/Users/kilian/Development/EntwMM/Arduino Drum Machine/DrumMachine/SDL2_image/SDL_image.h
+
