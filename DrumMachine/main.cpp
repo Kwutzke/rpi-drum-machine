@@ -3,11 +3,13 @@
 //
 
 #include <zconf.h>
+#include <iostream>
 
 #include "SDL2/SDL.h"
-#include "SDL2_mixer/SDL_mixer.h"
-#include "SDL2_image/SDL_image.h"
+#include "SDL2/SDL_mixer.h"
+#include "SDL2/SDL_image.h"
 
+using namespace std;
 
 #define NUM_WAVEFORMS 2
 const char *_waveFileNames[] =
@@ -75,6 +77,7 @@ int main(int argc, char **argv) {
                     switch (Event.key.keysym.sym) {
                         case 'q':
                             Mix_PlayChannel(-1, _sample[0], 0);
+                            cout << "q pressed" << endl;
                             break;
                         case 'w':
                             Mix_PlayChannel(-1, _sample[1], 0);
