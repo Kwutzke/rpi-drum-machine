@@ -3,8 +3,7 @@
 //
 
 #include <vector>
-
-#include "sample.h"
+#include "Sample.h"
 
 #ifndef DRUMMACHINE_DRUMMACHINE_H
 #define DRUMMACHINE_DRUMMACHINE_H
