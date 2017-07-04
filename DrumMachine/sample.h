@@ -5,7 +5,7 @@
 #ifndef DRUMMACHINE_SAMPLE_H
 #define DRUMMACHINE_SAMPLE_H
 
-
+#include <vector>
 
 class sample {
 public:
