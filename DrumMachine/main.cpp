@@ -51,12 +51,12 @@ int main(int argc, char **argv) {
     SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO);
     atexit(SDL_Quit);
 
-//    SDL_Window *window = SDL_CreateWindow("DrumPads",
-//                                          SDL_WINDOWPOS_UNDEFINED,
-//                                          SDL_WINDOWPOS_UNDEFINED,
-//                                          256,
-//                                          256,
-//                                          SDL_WINDOW_RESIZABLE);
+    SDL_Window *window = SDL_CreateWindow("DrumPads",
+                                          SDL_WINDOWPOS_UNDEFINED,
+                                          SDL_WINDOWPOS_UNDEFINED,
+                                          256,
+                                          256,
+                                          SDL_WINDOW_RESIZABLE);
 
     // Application specific Initialize of data structures
     if (Init() == false)

@@ -6,6 +6,7 @@
 #define DRUMMACHINE_SAMPLE_H
 
 
+
 class sample {
 public:
 private:
