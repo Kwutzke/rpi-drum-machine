@@ -4,7 +4,7 @@ set(CMAKE_LIBRARY_PATH ${CMAKE_LIBRARY_PATH} /usr/lib/)
 
 set(CMAKE_CXX_STANDARD 14)
 
-set(SOURCE_FILES main.cpp main.cpp sample.cpp sample.h)
+set(SOURCE_FILES mainExample.cpp mainExample.cpp sample.cpp sample.h DrumMachine.cpp DrumMachine.h main.cpp)
 
 add_executable(DrumMachine ${SOURCE_FILES})
 target_link_libraries(DrumMachine SDL2)
