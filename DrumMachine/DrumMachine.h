@@ -19,7 +19,7 @@ private:
     int currentBeat;
     int sixteenthNoteMillis;
     bool loopRunning;
-    vector<sample> samples;
+    vector<Sample> samples;
 
     void initialize();
 public:
@@ -32,6 +32,10 @@ public:
 
     void setBPM(int);
     int getBPM();
+
+    void openAudio();
+
+    void allocateChannels();
 };
 
 

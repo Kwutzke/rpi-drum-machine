@@ -13,7 +13,24 @@ using namespace std;
 
 DrumMachine::DrumMachine() : loopRunning(false), currentBeat(0) {
     SDL_Init(SDL_INIT_AUDIO);
-    setBPM(60);
+    this->openAudio();
+    this->allocateChannels();
+    setBPM(118);
+
+    Sample baseDrum("/Users/kilian/Development/EntwMM/Arduino Drum Machine/DrumMachine/audio_files/tr909_16bit/bd01.wav");
+    baseDrum.preFillKickDrumArray();
+    this->samples.push_back(baseDrum);
+
+    Sample clap("/Users/kilian/Development/EntwMM/Arduino Drum Machine/DrumMachine/audio_files/tr909_16bit/cp01.wav");
+    clap.preFillClapArray();
+    this->samples.push_back(clap);
+
+    Sample highHat("/Users/kilian/Development/EntwMM/Arduino Drum Machine/DrumMachine/audio_files/tr909_16bit/oh01.wav");
+    highHat.preFillHighHatArray();
+    this->samples.push_back(highHat);
+
+
+
 }
 
 int getCurrentTimeMillis() {
@@ -28,12 +45,13 @@ void DrumMachine::loop() {
 
         if (timeElapsed >= sixteenthNoteMillis) {
             for (size_t i = 0; i < samples.size(); i++) {
-//                this->samples.at(i).play();
+                this->samples.at(i).playSample(currentBeat);
             }
 
             lastTime = getCurrentTimeMillis();
 
             currentBeat++;
+            cout << currentBeat << endl ;
             if (currentBeat >= TOTAL_BEATS * TOTAL_LOOPS) {
                 currentBeat = 0;
             }
@@ -57,4 +75,20 @@ void DrumMachine::setBPM(int bpm) {
 
 int DrumMachine::getBPM() {
     return this->bpm;
+}
+
+void DrumMachine::openAudio() {
+    int result = Mix_OpenAudio(44100, AUDIO_S16SYS, 2, 512);
+    if (result < 0) {
+        fprintf(stderr, "Unable to open audio: %s\n", SDL_GetError());
+        exit(-1);
+    }
+}
+
+void DrumMachine::allocateChannels() {
+    int result = Mix_AllocateChannels(4);
+    if (result < 0) {
+        fprintf(stderr, "Unable to allocate mixing channels: %s\n", SDL_GetError());
+        exit(-1);
+    }
 }

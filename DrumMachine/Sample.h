@@ -26,14 +26,15 @@ class Sample {
 public:
     Sample(const char* samplePath);
     void playSample(int currentBeat);
-    void prefillKickDrumArray();
+    void preFillKickDrumArray();
+    void preFillClapArray();
+    void preFillHighHatArray();
 private:
     Mix_Chunk* sampleFile;
     bool active;
     int loopLength;
-    vector<int> playArray[32];
+    vector<int> playArray;
     bool playing;
-
 };
 
 
