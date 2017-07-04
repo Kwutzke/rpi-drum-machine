@@ -5,11 +5,15 @@
 #ifndef DRUMMACHINE_SAMPLE_H
 #define DRUMMACHINE_SAMPLE_H
 
+#include <vector>
 
 class sample {
 public:
 private:
-    bool m_is_active;
+    bool m_active;
+    int m_loopLength;
+//    vector<int> m_playArray[32];
+    bool m_playing;
 
 };
 
