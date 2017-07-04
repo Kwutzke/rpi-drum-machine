@@ -11,7 +11,7 @@
 using namespace std::chrono;
 using namespace std;
 
-DrumMachine::DrumMachine() : loopRunning(false) {
+DrumMachine::DrumMachine() : loopRunning(false), currentBeat(0) {
     SDL_Init(SDL_INIT_AUDIO);
     setBPM(60);
 }
@@ -26,9 +26,17 @@ void DrumMachine::loop() {
     while (loopRunning) {
         timeElapsed = getCurrentTimeMillis() - lastTime;
 
-        if (timeElapsed >= sixteenthNoteMillis*16) {
-            cout << "Beat!" << endl;
+        if (timeElapsed >= sixteenthNoteMillis) {
+            for (size_t i = 0; i < samples.size(); i++) {
+//                this->samples.at(i).play();
+            }
+
             lastTime = getCurrentTimeMillis();
+
+            currentBeat++;
+            if (currentBeat >= TOTAL_BEATS * TOTAL_LOOPS) {
+                currentBeat = 0;
+            }
         }
     }
 }

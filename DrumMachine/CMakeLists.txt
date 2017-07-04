@@ -6,6 +6,7 @@ set(CMAKE_CXX_STANDARD 14)
 
 set(SOURCE_FILES main.cpp DrumMachine.cpp Sample.cpp)
 
+
 add_executable(DrumMachine ${SOURCE_FILES})
 target_link_libraries(DrumMachine SDL2)
 target_link_libraries(DrumMachine SDL2_image)
