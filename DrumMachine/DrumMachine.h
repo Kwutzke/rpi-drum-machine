@@ -9,14 +9,18 @@
 #ifndef DRUMMACHINE_DRUMMACHINE_H
 #define DRUMMACHINE_DRUMMACHINE_H
 
+using namespace std;
 
 class DrumMachine {
 private:
+    const int TOTAL_LOOPS = 4;
+    const int TOTAL_BEATS = 16;
+
     int bpm;
     int currentBeat;
     int sixteenthNoteMillis;
     bool loopRunning;
-//    vector<sample> samples; ??
+    vector<sample> samples;
 
     void initialize();
 public:
