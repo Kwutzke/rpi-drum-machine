@@ -14,6 +14,7 @@
 
 #include <vector>
 #include <string>
+#include <boost/thread.hpp>
 
 #ifndef DRUMMACHINE_SAMPLE_H
 #define DRUMMACHINE_SAMPLE_H

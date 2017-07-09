@@ -24,17 +24,12 @@ private:
     void initialize();
 public:
     DrumMachine();
-
     void loop();
-
     void startLoop();
     void stopLoop();
-
     void setBPM(int);
     int getBPM();
-
     void openAudio();
-
     void allocateChannels();
 };
 

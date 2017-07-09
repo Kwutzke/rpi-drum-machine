@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include "Sample.h"
+#include <boost/thread.hpp>
 
 Sample::Sample(const char* samplePath) : playArray(64, 0) {
     this->sampleFile = Mix_LoadWAV(samplePath);
@@ -17,7 +18,6 @@ void Sample::playSample(int currentBeat) {
         Mix_PlayChannel(-1, this->sampleFile, 0);
         cout << "play" << endl;
     }
-
 }
 
 void Sample::preFillKickDrumArray() {
