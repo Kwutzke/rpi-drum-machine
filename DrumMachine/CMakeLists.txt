@@ -4,7 +4,11 @@ set(CMAKE_LIBRARY_PATH ${CMAKE_LIBRARY_PATH} /usr/lib/)
 
 set(CMAKE_CXX_STANDARD 14)
 
+<<<<<<< HEAD
 set(SOURCE_FILES main.cpp DrumMachine.cpp Sample.cpp LedController.cpp)
+=======
+set(SOURCE_FILES main.cpp DrumMachine.cpp Sample.cpp LedController.cpp Timer.cpp)
+>>>>>>> implemented timer without thread
 
 
 add_executable(DrumMachine ${SOURCE_FILES})
