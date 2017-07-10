@@ -6,11 +6,14 @@
 #include <chrono>
 #include <iostream>
 #include "DrumMachine.h"
+#include "Timer.h"
 
 using namespace std::chrono;
 using namespace std;
 
-DrumMachine::DrumMachine() : loopRunning(false), currentBeat(0), ledController() {
+DrumMachine::DrumMachine() : loopRunning(false), currentBeat(0)
+//        , ledController()
+{
     SDL_Init(SDL_INIT_AUDIO);
     this->openAudio();
     this->allocateChannels();
@@ -34,27 +37,23 @@ long long getCurrentTimeMillis() {
 }
 
 void DrumMachine::loop() {
-    long long timeElapsed;
-    long long lastTime = 0;
-    while (loopRunning) {
-        timeElapsed = getCurrentTimeMillis() - lastTime;
-
-        if (timeElapsed >= sixteenthNoteMillis) {
-            for (size_t i = 0; i < samples.size(); i++) {
-                this->samples.at(i).playSample(currentBeat);
-            }
-
-            this->ledController.blinkRhythmLed(currentBeat);
-
-            lastTime = getCurrentTimeMillis();
-
-            currentBeat++;
-//            cout << currentBeat << endl ;
-            if (currentBeat >= TOTAL_BEATS * TOTAL_LOOPS) {
-                currentBeat = 0;
-            }
+    const long PRECISION_NANOS = 10000; // 10ms
+    Timer timer(sixteenthNoteMillis, PRECISION_NANOS);
+    timer.start([this] () {
+        for (size_t i = 0; i < samples.size(); i++) {
+            this->samples.at(i).playSample(currentBeat);
         }
-    }
+
+//        this->ledController.blinkRhythmLed(currentBeat);
+
+        // next beat
+        currentBeat++;
+        if (currentBeat >= TOTAL_BEATS * TOTAL_LOOPS) {
+            currentBeat = 0;
+        }
+//            cout << currentBeat << endl ;
+    });
+
 }
 
 void DrumMachine::startLoop() {
