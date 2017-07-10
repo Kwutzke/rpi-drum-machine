@@ -26,7 +26,7 @@ public:
     Timer(int, int);
 
     template <typename Function, typename... Args>
-    void start(Function& callback, Args&... args) {
+    void start(Function&& callback, Args&&... args) {
         running = true;
         long long lastTime = getCurrentTimeMillis();
 
