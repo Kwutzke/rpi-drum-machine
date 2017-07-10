@@ -16,7 +16,7 @@ int main() {
 //    DrumMachine drumMachine;
 //    drumMachine.startLoop();
 
-    Timer timer(1000, 100000000);
+    Timer timer(1000, 100000000); // precision in nanoseconds
     timer.start(testFunction);
 
     return 0;
