@@ -4,6 +4,7 @@
 
 #include <vector>
 #include "Sample.h"
+#include "LedController.h"
 
 #ifndef DRUMMACHINE_DRUMMACHINE_H
 #define DRUMMACHINE_DRUMMACHINE_H
@@ -20,6 +21,7 @@ private:
     int sixteenthNoteMillis;
     bool loopRunning;
     vector<Sample> samples;
+    LedController ledController;
 
     void initialize();
 public:

@@ -14,12 +14,11 @@
 
 #include <vector>
 #include <string>
-#include <boost/thread.hpp>
+#include <thread>
+#include <iostream>
 
 #ifndef DRUMMACHINE_SAMPLE_H
 #define DRUMMACHINE_SAMPLE_H
-
-
 
 using namespace std;
 
