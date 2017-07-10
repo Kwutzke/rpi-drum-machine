@@ -13,8 +13,11 @@ void testFunction() {
 }
 
 int main() {
-    DrumMachine drumMachine;
-    drumMachine.startLoop();
+//    DrumMachine drumMachine;
+//    drumMachine.startLoop();
+
+    Timer timer(1000, 100000000); // precision in nanoseconds
+    timer.start(testFunction);
 
     Timer timer(1000, 100000000); // precision in nanoseconds
     timer.start(testFunction);
