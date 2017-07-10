@@ -30,7 +30,7 @@ public:
         running = true;
         long long lastTime = getCurrentTimeMillis();
 
-        const timespec spec = { 0, precision};
+        timespec spec = { 0, precision };
 
         while (running) {
             long long now = getCurrentTimeMillis();
@@ -39,7 +39,7 @@ public:
                 th.detach();
                 lastTime = now;
             }
-            nanosleep(&spec, nullptr);
+//            nanosleep(&spec, nullptr);
         }
     }
 
