@@ -8,13 +8,11 @@
     #include "SDL2_image/SDL_image.h"
 #else
     #include "SDL2/SDL_mixer.h"
-    #include "SDL2/SDL_image.h"
     #include "SDL2/SDL.h"
 #endif
 
 #include <vector>
 #include <string>
-#include <boost/thread.hpp>
 
 #ifndef DRUMMACHINE_SAMPLE_H
 #define DRUMMACHINE_SAMPLE_H

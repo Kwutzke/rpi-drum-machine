@@ -4,7 +4,6 @@
 
 #include <iostream>
 #include "Sample.h"
-#include <boost/thread.hpp>
 
 Sample::Sample(const char* samplePath) : playArray(64, 0) {
     this->sampleFile = Mix_LoadWAV(samplePath);
@@ -14,7 +13,7 @@ Sample::Sample(const char* samplePath) : playArray(64, 0) {
 }
 
 void Sample::playSample(int currentBeat) {
-    if(this->playArray.at((unsigned long) currentBeat) == 1) {
+    if(this->playArray.at((unsigned long) currentBeat) == 1) {  
         Mix_PlayChannel(-1, this->sampleFile, 0);
         cout << "play" << endl;
     }

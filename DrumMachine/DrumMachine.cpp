@@ -5,8 +5,6 @@
 #include <SDL2/SDL.h>
 #include <chrono>
 #include <iostream>
-#include <boost/thread.hpp>
-#include <boost/asio.hpp>
 #include "DrumMachine.h"
 
 using namespace std::chrono;
@@ -36,22 +34,22 @@ long long getCurrentTimeMillis() {
 }
 
 void DrumMachine::loop() {
-    boost::asio::io_service ioService;
-    boost::thread_group threadpool;
-
-    boost::asio::io_service::work work(ioService);
-    threadpool.create_thread(
-            boost::bind(&boost::asio::io_service::run, &ioService)
-    );
-    threadpool.create_thread(
-            boost::bind(&boost::asio::io_service::run, &ioService)
-    );
-    threadpool.create_thread(
-            boost::bind(&boost::asio::io_service::run, &ioService)
-    );
-    threadpool.create_thread(
-            boost::bind(&boost::asio::io_service::run, &ioService)
-    );
+//    boost::asio::io_service ioService;
+//    boost::thread_group threadpool;
+//
+//    boost::asio::io_service::work work(ioService);
+//    threadpool.create_thread(
+//            boost::bind(&boost::asio::io_service::run, &ioService)
+//    );
+//    threadpool.create_thread(
+//            boost::bind(&boost::asio::io_service::run, &ioService)
+//    );
+//    threadpool.create_thread(
+//            boost::bind(&boost::asio::io_service::run, &ioService)
+//    );
+//    threadpool.create_thread(
+//            boost::bind(&boost::asio::io_service::run, &ioService)
+//    );
 
     long long timeElapsed;
     long long lastTime = 0;
@@ -60,7 +58,7 @@ void DrumMachine::loop() {
 
         if (timeElapsed >= sixteenthNoteMillis) {
             for (size_t i = 0; i < samples.size(); i++) {
-                ioService.post(boost::bind(&Sample::playSample, &this->samples.at(i), currentBeat));
+//                ioService.post(boost::bind(&Sample::playSample, &this->samples.at(i), currentBeat));
             }
 
             lastTime = getCurrentTimeMillis();
