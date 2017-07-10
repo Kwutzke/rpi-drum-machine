@@ -68,7 +68,7 @@ void DrumMachine::stopLoop() {
 
 void DrumMachine::setBPM(int bpm) {
     this->bpm = bpm;
-    this->sixteenthNoteMillis = 60000/bpm/16;
+    this->sixteenthNoteMillis = 60000 / bpm / 16;
 }
 
 int DrumMachine::getBPM() {

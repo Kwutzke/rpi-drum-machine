@@ -4,8 +4,7 @@ set(CMAKE_LIBRARY_PATH ${CMAKE_LIBRARY_PATH} /usr/lib/)
 
 set(CMAKE_CXX_STANDARD 14)
 
-
-set(SOURCE_FILES main.cpp DrumMachine.cpp Sample.cpp LedController.cpp)
+set(SOURCE_FILES main.cpp DrumMachine.cpp Sample.cpp LedController.cpp Timer.cpp)
 
 
 add_executable(DrumMachine ${SOURCE_FILES})
