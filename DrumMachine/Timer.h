@@ -35,8 +35,8 @@ public:
         while (running) {
             long long now = getCurrentTimeMillis();
             if (lastTime + interval <= now) {
-//                thread thread(callback);
-                callback();
+                thread th(callback);
+                th.detach();
                 lastTime = now;
             }
             nanosleep(&spec, nullptr);
