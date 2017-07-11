@@ -16,15 +16,15 @@ DrumMachine::DrumMachine() : loopRunning(false), currentBeat(0), ledController()
     this->allocateChannels();
     setBPM(120);
 
-    Sample baseDrum("../audio_files/tr909_16bit/bd01.wav");
+    Sample baseDrum("./audio_files/tr909_16bit/bd01.wav");
     baseDrum.preFillKickDrumArray();
     this->samples.push_back(baseDrum);
 
-    Sample clap("../audio_files/tr909_16bit/cp01.wav");
+    Sample clap("./audio_files/tr909_16bit/cp01.wav");
     clap.preFillClapArray();
     this->samples.push_back(clap);
 
-    Sample highHat("../audio_files/tr909_16bit/oh01.wav");
+    Sample highHat("./audio_files/tr909_16bit/oh01.wav");
     highHat.preFillHighHatArray();
     this->samples.push_back(highHat);
 }

@@ -18,9 +18,25 @@ LedController::LedController(){
 
 void LedController::blinkRhythmLed(int position) {
     thread tLed ([this, position]() {
-        int shortedPosition = position%4;
-        this->blink(shortedPosition);
+        int shortedPosition = position%32;
+        switch(shortedPosition) {
+            case 0:
+                this->blink(0);
+                break;
+            case 8:
+                this->blink(1);
+                break;
+            case 16:
+                this->blink(2);
+                break;
+            case 24:
+                this->blink(3);
+                break;
+            default:
+                return;
+        }
     });
+
     tLed.detach();
 };
 
