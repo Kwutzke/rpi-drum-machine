@@ -2,12 +2,12 @@
 // Created by fritz on 7/3/17.
 //
 
+#ifndef DRUMMACHINE_DRUMMACHINE_H
+#define DRUMMACHINE_DRUMMACHINE_H
+
 #include <vector>
 #include "Sample.h"
 #include "LedController.h"
-
-#ifndef DRUMMACHINE_DRUMMACHINE_H
-#define DRUMMACHINE_DRUMMACHINE_H
 
 using namespace std;
 
@@ -22,6 +22,7 @@ private:
     bool loopRunning;
     vector<Sample> samples;
 //    LedController ledController;
+    float volume;
 
     void initialize();
 public:
@@ -29,10 +30,15 @@ public:
     void loop();
     void startLoop();
     void stopLoop();
-    void setBPM(int);
-    int getBPM();
     void openAudio();
     void allocateChannels();
+    void addSample(Sample);
+
+    void setBPM(int);
+    int getBPM();
+
+    void setMasterVolume(float);
+    float getMasterVolume();
 };
 
 
