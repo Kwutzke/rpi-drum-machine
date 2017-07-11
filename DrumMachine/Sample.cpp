@@ -3,7 +3,7 @@
 //
 #include "Sample.h"
 
-Sample::Sample(const char *samplePath) : playArray(64, 0) {
+Sample::Sample(const char *samplePath) : playArray(64, 0), volume(1), masterVolume(1) {
     this->sampleFile = Mix_LoadWAV(samplePath);
     if (this->sampleFile == NULL) {
         fprintf(stderr, "Unable to load wave file: %s\n", samplePath);
@@ -40,6 +40,43 @@ void Sample::preFillHighHatArray() {
             if (i != 64)
                 this->playArray.at((unsigned long) i + 8) = 1;
     }
+}
+
+void Sample::setMixVolume() {
+    int volume = 100;
+    volume *= this->masterVolume * this->volume;
+    Mix_VolumeChunk(this->sampleFile, volume);
+    cout << "Master: " << this->getMasterVolume() << " Sample: " << this->getVolume() << " Result: " << volume << endl;
+}
+
+void Sample::setVolume(float volume) {
+    if (volume >= 1) {
+        this->volume = 1;
+    } else if (volume <= 0) {
+        this->volume = 0;
+    } else {
+        this->volume = volume;
+    }
+    setMixVolume();
+}
+
+float Sample::getVolume() {
+    return this->volume;
+}
+
+void Sample::setMasterVolume(float volume) {
+    if (volume >= 1) {
+        this->masterVolume = 1;
+    } else if (volume <= 0) {
+        this->masterVolume = 0;
+    } else {
+        this->masterVolume = volume;
+    }
+    setMixVolume();
+}
+
+float Sample::getMasterVolume() {
+    return this->masterVolume;
 }
 
 

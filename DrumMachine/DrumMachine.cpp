@@ -11,25 +11,13 @@
 using namespace std::chrono;
 using namespace std;
 
-DrumMachine::DrumMachine() : loopRunning(false), currentBeat(0)
+DrumMachine::DrumMachine() : loopRunning(false), currentBeat(0), volume(1)
 //        , ledController()
 {
     SDL_Init(SDL_INIT_AUDIO);
     this->openAudio();
     this->allocateChannels();
     setBPM(120);
-
-    Sample baseDrum("./audio_files/tr909_16bit/bd01.wav");
-    baseDrum.preFillKickDrumArray();
-    this->samples.push_back(baseDrum);
-
-    Sample clap("./audio_files/tr909_16bit/cp01.wav");
-    clap.preFillClapArray();
-    this->samples.push_back(clap);
-
-    Sample highHat("./audio_files/tr909_16bit/oh01.wav");
-    highHat.preFillHighHatArray();
-    this->samples.push_back(highHat);
 }
 
 long long getCurrentTimeMillis() {
@@ -88,4 +76,26 @@ void DrumMachine::allocateChannels() {
         fprintf(stderr, "Unable to allocate mixing channels: %s\n", SDL_GetError());
         exit(-1);
     }
+}
+
+void DrumMachine::setMasterVolume(float volume) {
+    if (volume >= 1) {
+        this->volume = 1;
+    } else if (volume <= 0) {
+        this->volume = 0;
+    } else {
+        this->volume = volume;
+    }
+    for (unsigned short i = 0; i < samples.size(); i++) {
+        samples.at(i).setMasterVolume(volume);
+    }
+}
+
+float DrumMachine::getMasterVolume() {
+    return this->volume;
+}
+
+void DrumMachine::addSample(Sample sample) {
+    sample.setMasterVolume(volume);
+    this->samples.push_back(sample);
 }
