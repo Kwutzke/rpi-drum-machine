@@ -7,12 +7,13 @@
 #include <iostream>
 #include "DrumMachine.h"
 #include "Timer.h"
+#include "LedController.h"
 
 using namespace std::chrono;
 using namespace std;
 
 DrumMachine::DrumMachine() : loopRunning(false), currentBeat(0)
-//        , ledController()
+//        , LedController()
 {
     SDL_Init(SDL_INIT_AUDIO);
     this->openAudio();
@@ -88,4 +89,8 @@ void DrumMachine::allocateChannels() {
         fprintf(stderr, "Unable to allocate mixing channels: %s\n", SDL_GetError());
         exit(-1);
     }
+}
+
+void DrumMachine::volumeUp() {
+
 }

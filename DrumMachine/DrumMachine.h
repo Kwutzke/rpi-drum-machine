@@ -2,12 +2,13 @@
 // Created by fritz on 7/3/17.
 //
 
-#include <vector>
-#include "Sample.h"
-#include "LedController.h"
 
 #ifndef DRUMMACHINE_DRUMMACHINE_H
 #define DRUMMACHINE_DRUMMACHINE_H
+
+#include <vector>
+#include "Sample.h"
+#include "AOutputController.h"
 
 using namespace std;
 
@@ -21,9 +22,7 @@ private:
     int sixteenthNoteMillis;
     bool loopRunning;
     vector<Sample> samples;
-//    LedController ledController;
-
-    void initialize();
+    AOutputController outputController;
 public:
     DrumMachine();
     void loop();
@@ -33,6 +32,8 @@ public:
     int getBPM();
     void openAudio();
     void allocateChannels();
+
+    void volumeUp();
 };
 
 

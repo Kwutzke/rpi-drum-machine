@@ -2,13 +2,13 @@
 // Created by fritz on 7/10/17.
 //
 
+#ifndef DRUMMACHINE_TIMER_H
+#define DRUMMACHINE_TIMER_H
+
 #include <iostream>
 #include <chrono>
 #include <time.h>
 #include <thread>
-
-#ifndef DRUMMACHINE_TIMER_H
-#define DRUMMACHINE_TIMER_H
 
 using namespace std;
 using namespace std::chrono;
@@ -35,11 +35,11 @@ public:
         while (running) {
             long long now = getCurrentTimeMillis();
             if (lastTime + interval <= now) {
-                thread th(callback);
+                thread th(callback, args);
                 th.detach();
                 lastTime = now;
             }
-//            nanosleep(&spec, nullptr);
+            nanosleep(&spec, nullptr);
         }
     }
 

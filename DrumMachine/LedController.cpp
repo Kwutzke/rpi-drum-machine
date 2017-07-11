@@ -4,7 +4,7 @@
 #include <wiringPi.h>
 #include "LedController.h"
 
-LedController::LedController(){
+LedController::LedController() {
     wiringPiSetup();
     pinMode(0, OUTPUT);
     digitalWrite(0, LOW);
@@ -16,9 +16,9 @@ LedController::LedController(){
     digitalWrite(3, LOW);
 };
 
-void LedController::blinkRhythmLed(int position) {
-    thread tLed ([this, position]() {
-        int shortedPosition = position%32;
+void LedController::positionChange(int newPosition){
+    thread tLed ([this, newPosition]() {
+        int shortedPosition = newPosition%32;
         switch(shortedPosition) {
             case 0:
                 this->blink(0);
@@ -44,4 +44,20 @@ void LedController::blink(int ledPosition) {
     digitalWrite(ledPosition, HIGH);
     delay(500);
     digitalWrite(ledPosition, LOW);
+}
+
+void LedController::bpmChange(int newBpm) {
+
+}
+
+void LedController::volumeChange(int newVolume) {
+
+}
+
+void LedController::activeSampleChange(int newActiveSample) {
+
+}
+
+void LedController::samplePlayPositionChange(vector<int> &newPlayArray) {
+
 }
