@@ -21,7 +21,7 @@ private:
     int sixteenthNoteMillis;
     bool loopRunning;
     vector<Sample> samples;
-    LedController ledController;
+//    LedController ledController;
 
     void initialize();
 public:

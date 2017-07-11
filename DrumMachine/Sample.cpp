@@ -3,7 +3,7 @@
 //
 #include "Sample.h"
 
-Sample::Sample(const char* samplePath) : playArray(64, 0) {
+Sample::Sample(const char *samplePath) : playArray(64, 0) {
     this->sampleFile = Mix_LoadWAV(samplePath);
     if (this->sampleFile == NULL) {
         fprintf(stderr, "Unable to load wave file: %s\n", samplePath);
@@ -11,34 +11,34 @@ Sample::Sample(const char* samplePath) : playArray(64, 0) {
 }
 
 void Sample::playSample(int currentBeat) {
-    if(this->playArray.at((unsigned long) currentBeat) == 1) {
+    if (this->playArray.at((unsigned long) currentBeat) == 1) {
         thread t([this]() {
             Mix_PlayChannel(-1, this->sampleFile, 0);
 //            cout << "play" << endl;
         });
-    t.detach();
+        t.detach();
     }
 }
 
 void Sample::preFillKickDrumArray() {
     for (int i = 0; i < 64; ++i) {
-        if(i%16 == 0)
+        if (i % 16 == 0)
             this->playArray.at((unsigned long) i) = 1;
     }
 }
 
 void Sample::preFillClapArray() {
     for (int i = 0; i < 64; ++i) {
-        if(i%32 == 0)
+        if (i % 32 == 0)
             this->playArray.at((unsigned long) i + 16) = 1;
     }
 }
 
 void Sample::preFillHighHatArray() {
     for (int i = 0; i < 64; ++i) {
-        if(i%16 == 0)
-            if(i != 64)
-                this->playArray.at((unsigned long) i+8) = 1;
+        if (i % 16 == 0)
+            if (i != 64)
+                this->playArray.at((unsigned long) i + 8) = 1;
     }
 }
 
