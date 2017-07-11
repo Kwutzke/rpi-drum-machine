@@ -28,12 +28,21 @@ public:
     void preFillKickDrumArray();
     void preFillClapArray();
     void preFillHighHatArray();
+
+    void setVolume(float);
+    float getVolume();
+    void setMasterVolume(float);
+    float getMasterVolume();
 private:
     Mix_Chunk* sampleFile;
     bool active;
     int loopLength;
     vector<int> playArray;
     bool playing;
+    float volume;
+    float masterVolume;
+
+    void setMixVolume();
 };
 
 

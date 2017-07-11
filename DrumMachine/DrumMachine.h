@@ -23,17 +23,24 @@ private:
     bool loopRunning;
     vector<Sample> samples;
     AOutputController outputController;
+
+//    LedController ledController;
+    float volume;
+
 public:
     DrumMachine();
     void loop();
     void startLoop();
     void stopLoop();
-    void setBPM(int);
-    int getBPM();
     void openAudio();
     void allocateChannels();
 
     void volumeUp();
+    void addSample(Sample);
+    void setBPM(int);
+    int getBPM();
+    void setMasterVolume(float);
+    float getMasterVolume();
 };
 
 
