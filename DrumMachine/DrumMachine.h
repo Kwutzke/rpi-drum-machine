@@ -6,7 +6,7 @@
 #ifndef DRUMMACHINE_DRUMMACHINE_H
 #define DRUMMACHINE_DRUMMACHINE_H
 
-#include <vector>
+#include<vector>
 #include "Sample.h"
 #include "AOutputController.h"
 
@@ -22,21 +22,25 @@ private:
     int sixteenthNoteMillis;
     bool loopRunning;
     vector<Sample> samples;
-    AOutputController outputController;
 
 //    LedController ledController;
     float volume;
 
 public:
     DrumMachine();
+
     void loop();
     void startLoop();
     void stopLoop();
+    void toggleLoop();
+    bool isLoopRunning();
     void openAudio();
     void allocateChannels();
 
-    void volumeUp();
     void addSample(Sample);
+    void increaseVolume(float);
+
+    // Getters and Setters
     void setBPM(int);
     int getBPM();
     void setMasterVolume(float);

@@ -46,7 +46,7 @@ void Sample::setMixVolume() {
     int volume = 100;
     volume *= this->masterVolume * this->volume;
     Mix_VolumeChunk(this->sampleFile, volume);
-    cout << "Master: " << this->getMasterVolume() << " Sample: " << this->getVolume() << " Result: " << volume << endl;
+//    cout << "Master: " << this->getMasterVolume() << " Sample: " << this->getVolume() << " Result: " << volume << endl;
 }
 
 void Sample::setVolume(float volume) {

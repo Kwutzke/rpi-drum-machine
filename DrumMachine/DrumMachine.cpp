@@ -5,6 +5,7 @@
 #include <SDL2/SDL.h>
 #include <chrono>
 #include <iostream>
+#include <functional>
 #include "DrumMachine.h"
 #include "Timer.h"
 #include "LedController.h"
@@ -13,10 +14,7 @@ using namespace std::chrono;
 using namespace std;
 
 
-DrumMachine::DrumMachine() : loopRunning(false), currentBeat(0), volume(1)
-//        , ledController()
-
-{
+DrumMachine::DrumMachine() : loopRunning(false), currentBeat(0), volume(1) {
     SDL_Init(SDL_INIT_AUDIO);
     this->openAudio();
     this->allocateChannels();
@@ -81,10 +79,6 @@ void DrumMachine::allocateChannels() {
     }
 }
 
-void DrumMachine::volumeUp() {
-}
-
-
 void DrumMachine::setMasterVolume(float volume) {
     if (volume >= 1) {
         this->volume = 1;
@@ -105,4 +99,26 @@ float DrumMachine::getMasterVolume() {
 void DrumMachine::addSample(Sample sample) {
     sample.setMasterVolume(volume);
     this->samples.push_back(sample);
+}
+
+void DrumMachine::increaseVolume(float value) {
+    if (volume + value >= 1) {
+        setMasterVolume(1);
+    } else if (volume + value <= 0) {
+        setMasterVolume(0);
+    } else {
+        setMasterVolume(volume + value);
+    }
+}
+
+void DrumMachine::toggleLoop() {
+    if (isLoopRunning()) {
+        stopLoop();
+    } else {
+        startLoop();
+    }
+}
+
+bool DrumMachine::isLoopRunning() {
+    return loopRunning;
 }
