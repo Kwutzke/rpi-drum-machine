@@ -1,7 +1,3 @@
-//
-// Created by fritz on 7/13/17.
-//
-
 #ifndef DRUMMACHINE_INPUTLISTENER_H
 #define DRUMMACHINE_INPUTLISTENER_H
 

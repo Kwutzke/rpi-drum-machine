@@ -1,18 +1,16 @@
-//
-// Created by fritz on 7/13/17.
-//
-
 #include "DrumMachineInputListener.h"
 #include "RaspInputController.h"
 
 using namespace inputs;
 
-DrumMachineInputListener::DrumMachineInputListener(DrumMachine& drumMachine): drumMachine(drumMachine) {
-
-}
+DrumMachineInputListener::DrumMachineInputListener(DrumMachine& drumMachine): drumMachine(drumMachine) { }
 
 void DrumMachineInputListener::inputEvent(unsigned short input) {
     switch (input) {
+        case START_STOP_BUTTON:
+            drumMachine.toggleLoop();
+            cout << "Toggle loop!" << endl;
+            break;
         case VOLUME_UP_BUTTON:
             drumMachine.increaseVolume(VOLUME_STEP_SIZE);
                 cout << "Volume up!" << endl;

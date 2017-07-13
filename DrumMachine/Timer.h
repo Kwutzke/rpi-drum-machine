@@ -1,7 +1,3 @@
-//
-// Created by fritz on 7/10/17.
-//
-
 #ifndef DRUMMACHINE_TIMER_H
 #define DRUMMACHINE_TIMER_H
 

@@ -1,7 +1,3 @@
-//
-// Created by fritz on 7/12/17.
-//
-
 #ifndef DRUMMACHINE_RASPINPUTCONTROLLER_H
 #define DRUMMACHINE_RASPINPUTCONTROLLER_H
 

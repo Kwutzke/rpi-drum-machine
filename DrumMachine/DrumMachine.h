@@ -1,12 +1,7 @@
-//
-// Created by fritz on 7/3/17.
-//
-
-
 #ifndef DRUMMACHINE_DRUMMACHINE_H
 #define DRUMMACHINE_DRUMMACHINE_H
 
-#include<vector>
+#include <vector>
 #include "Sample.h"
 #include "AOutputController.h"
 
@@ -21,28 +16,30 @@ private:
     int currentBeat;
     int sixteenthNoteMillis;
     bool loopRunning;
+    float volume;
+
     vector<Sample> samples;
 
-//    LedController ledController;
-    float volume;
+    void allocateChannels();
+    void openAudio();
+    void loop();
 
 public:
     DrumMachine();
 
-    void loop();
     void startLoop();
     void stopLoop();
     void toggleLoop();
-    bool isLoopRunning();
-    void openAudio();
-    void allocateChannels();
-
     void addSample(Sample);
+    void addSamples(vector<Sample>);
     void increaseVolume(float);
 
     // Getters and Setters
+    bool isLoopRunning();
+
     void setBPM(int);
     int getBPM();
+
     void setMasterVolume(float);
     float getMasterVolume();
 };

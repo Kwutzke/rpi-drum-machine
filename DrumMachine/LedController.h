@@ -1,7 +1,3 @@
-//
-// Created by Kilian Wutzke on 10.07.17.
-//
-
 #ifndef DRUMMACHINE_LEDCONTROLLER_H
 #define DRUMMACHINE_LEDCONTROLLER_H
 
