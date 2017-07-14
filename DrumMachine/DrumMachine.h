@@ -8,7 +8,6 @@
 
 #include <vector>
 #include "Sample.h"
-#include "AOutputController.h"
 
 using namespace std;
 
@@ -22,7 +21,6 @@ private:
     int sixteenthNoteMillis;
     bool loopRunning;
     vector<Sample> samples;
-    AOutputController outputController;
 
 //    LedController ledController;
     float volume;

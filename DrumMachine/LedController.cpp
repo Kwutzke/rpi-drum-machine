@@ -1,7 +1,6 @@
 //
 // Created by Kilian Wutzke on 10.07.17.
 //
-#include <wiringPi.h>
 #include "LedController.h"
 
 LedController::LedController() {

@@ -6,19 +6,14 @@
 #define DRUMMACHINE_PIINPUTCONTROLLER_H
 
 
-#include "AInputController.h"
-#include <wiringPi.h>
-
-class PiInputController: public AInputController {
+class PiInputController {
 public:
     template <typename Function, typename... Args>
-    void volumeUp(Function &&callback, Args &&... args) override {
-        wiringPiISR()
+    void volumeUp(Function &&callback, Args &&... args) {
     };
 
     template <typename Function, typename... Args>
-    void volumeDown(Function &&callback, Args &&... args) override {
-
+    void volumeDown(Function &&callback, Args &&... args) {
     };
 };
 
