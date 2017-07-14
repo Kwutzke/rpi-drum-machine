@@ -17,8 +17,6 @@ namespace inputs {
         BEAT16_BUTTON               = 29,   START_STOP_BUTTON   = 30;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 class RaspInputController {
 private:
     // Input Pins
@@ -35,25 +33,7 @@ private:
             BEAT15_BUTTON_PIN               = 28,   BEAT16_BUTTON_PIN               = 29,   START_STOP_BUTTON_PIN   = 100;
 
     vector<InputListener*> inputListenerList;
-=======
-=======
->>>>>>> parent of a6efbd8... bugfixed
-#include "AInputController.h"
-#include <wiringPi.h>
 
-class PiInputController: public AInputController {
-public:
-    template <typename Function, typename... Args>
-    void volumeUp(Function &&callback, Args &&... args) override {
-        wiringPiISR()
-    };
-
-    template <typename Function, typename... Args>
-    void volumeDown(Function &&callback, Args &&... args) override {
-
-    };
-};
->>>>>>> parent of a6efbd8... bugfixed
 
     void startPolling();
 
@@ -64,7 +44,7 @@ public:
 
     RaspInputController();
 
-    void addInputListener(InputListener& listener)
+    void addInputListener(InputListener& listener);
 };
 
 #endif //DRUMMACHINE_RASPINPUTCONTROLLER_H
