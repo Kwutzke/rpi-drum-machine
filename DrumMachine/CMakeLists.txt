@@ -4,8 +4,6 @@ set(CMAKE_LIBRARY_PATH ${CMAKE_LIBRARY_PATH} /usr/lib/)
 
 set(CMAKE_CXX_STANDARD 14)
 
-set(SOURCE_FILES main.cpp DrumMachine.cpp Sample.cpp Timer.cpp AInputController.h RaspInputController.cpp RaspInputController.h)
-
 set(SOURCE_FILES
         main.cpp
         DrumMachine.h
@@ -14,13 +12,6 @@ set(SOURCE_FILES
         Sample.cpp
         Timer.h
         Timer.cpp
-        AOutputController.h
-        RaspInputController.h
-        RaspInputController.cpp
-        InputListener.h
-        DrumMachineInputListener.h
-        DrumMachineInputListener.cpp
-        LedController.h
         )
 
 add_executable(DrumMachine ${SOURCE_FILES})
@@ -28,4 +19,4 @@ target_link_libraries(${PROJECT_NAME} SDL2)
 target_link_libraries(${PROJECT_NAME} SDL2_image)
 target_link_libraries(${PROJECT_NAME} SDL2_mixer)
 target_link_libraries(${PROJECT_NAME} pthread)
-target_link_libraries(${PROJECT_NAME} wiringPi)
+

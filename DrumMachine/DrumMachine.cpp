@@ -3,7 +3,6 @@
 #include <iostream>
 #include "DrumMachine.h"
 #include "Timer.h"
-#include "LedController.h"
 
 using namespace std::chrono;
 using namespace std;

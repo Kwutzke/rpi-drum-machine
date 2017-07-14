@@ -3,7 +3,6 @@
 
 #include <vector>
 #include "Sample.h"
-#include "AOutputController.h"
 
 using namespace std;
 
@@ -19,7 +18,6 @@ private:
     float volume;
 
     vector<Sample> samples;
-    AOutputController outputController;
 
     void allocateChannels();
     void openAudio();

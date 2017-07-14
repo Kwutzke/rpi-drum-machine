@@ -1,6 +1,4 @@
 #include "DrumMachine.h"
-#include "RaspInputController.h"
-#include "DrumMachineInputListener.h"
 
 using namespace std;
 
@@ -30,12 +28,6 @@ void setup(DrumMachine& drumMachine) {
 int main() {
     DrumMachine drumMachine;
     drumMachine.setBPM(120);
-
-    DrumMachineInputListener listener(drumMachine);
-
-    RaspInputController controller;
-    controller.addInputListener(listener);
-
 
     // Development
     setup(drumMachine);
