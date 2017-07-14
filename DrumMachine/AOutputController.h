@@ -2,6 +2,7 @@
 #define DRUMMACHINE_AOUTPUTCONTROLLER_H
 
 #include <vector>
+#include "DrumMachine.h"
 
 using namespace std;
 

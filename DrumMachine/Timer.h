@@ -31,7 +31,7 @@ public:
         while (running) {
             long long now = getCurrentTimeMillis();
             if (lastTime + interval <= now) {
-                thread th(callback);
+                thread th(callback, args);
                 th.detach();
                 lastTime = now;
             }
