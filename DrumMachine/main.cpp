@@ -1,4 +1,5 @@
 #include "DrumMachine.h"
+#include "RaspOutputController.h"
 
 using namespace std;
 
@@ -7,14 +8,14 @@ void setup(DrumMachine& drumMachine) {
     Sample clap("./audio_files/tr909_16bit/cp01.wav");
     Sample highHat("./audio_files/tr909_16bit/oh01.wav");
 
-    for (unsigned short i = 0; i < 64; ++i) {
-        if (i % 16 == 0) {
+    for (unsigned short i = 0; i < 16; ++i) {
+        if (i % 4 == 0) {
             baseDrum.playAtBeat(i);
-            if (i != 64)
-                highHat.playAtBeat(i + 8);
+            highHat.playAtBeat(i + 2);
         }
-        if (i % 32 == 0) {
-            clap.playAtBeat(i + 16);
+        if (i % 4 == 0) {
+            if (i != 0 & i != 8)
+                clap.playAtBeat(i);
         }
     }
 
@@ -22,11 +23,13 @@ void setup(DrumMachine& drumMachine) {
     drumMachine.addSample(baseDrum);
     drumMachine.addSample(clap);
     drumMachine.addSample(highHat);
+    drumMachine.setActiveSample(1);
 }
 
 
 int main() {
-    DrumMachine drumMachine;
+    RaspOutputController raspOutputController;
+    DrumMachine drumMachine(raspOutputController);
     drumMachine.setBPM(120);
 
     // Development

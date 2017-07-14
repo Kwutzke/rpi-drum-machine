@@ -6,17 +6,20 @@ set(CMAKE_CXX_STANDARD 14)
 
 set(SOURCE_FILES
         main.cpp
+        RaspOutputController.h
+        RaspOutputController.cpp
         DrumMachine.h
         DrumMachine.cpp
         Sample.h
         Sample.cpp
         Timer.h
         Timer.cpp
-        )
+        AOutputController.h)
 
 add_executable(DrumMachine ${SOURCE_FILES})
 target_link_libraries(${PROJECT_NAME} SDL2)
 target_link_libraries(${PROJECT_NAME} SDL2_image)
 target_link_libraries(${PROJECT_NAME} SDL2_mixer)
 target_link_libraries(${PROJECT_NAME} pthread)
+target_link_libraries(${PROJECT_NAME} wiringPi)
 

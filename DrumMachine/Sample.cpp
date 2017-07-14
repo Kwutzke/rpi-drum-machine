@@ -1,6 +1,6 @@
 #include "Sample.h"
 
-Sample::Sample(const char *samplePath) : playArray(64, 0), volume(1), masterVolume(1) {
+Sample::Sample(const char *samplePath) : playArray(16, 0), volume(1), masterVolume(1) {
     this->sampleFile = Mix_LoadWAV(samplePath);
     if (this->sampleFile == NULL) {
         fprintf(stderr, "Unable to load wave file: %s\n", samplePath);
@@ -61,4 +61,6 @@ float Sample::getMasterVolume() {
     return this->masterVolume;
 }
 
-
+vector<int, allocator<int>> &Sample::getPlayArray() {
+    return playArray;
+}

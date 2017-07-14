@@ -7,7 +7,7 @@
 using namespace std::chrono;
 using namespace std;
 
-DrumMachine::DrumMachine() : loopRunning(false), currentBeat(0), volume(1) {
+DrumMachine::DrumMachine(AOutputController& raspOutputController) : loopRunning(false), currentBeat(0), volume(1), outputController(raspOutputController) {
     this->openAudio();
     this->allocateChannels();
 }
@@ -34,6 +34,7 @@ void DrumMachine::loop() {
     const long PRECISION_NANOS = 10000; // 10ms
     Timer timer(sixteenthNoteMillis, PRECISION_NANOS);
     timer.start([this] () {
+        this->outputController.positionChange(currentBeat);
         for (size_t i = 0; i < samples.size(); i++) {
             this->samples.at(i).playSample(currentBeat);
         }
@@ -76,7 +77,7 @@ void DrumMachine::stopLoop() {
 
 void DrumMachine::setBPM(int bpm) {
     this->bpm = bpm;
-    this->sixteenthNoteMillis = 60000 / bpm / 16;
+    this->sixteenthNoteMillis = 60000 / bpm / 4;
 }
 
 int DrumMachine::getBPM() {
@@ -114,3 +115,9 @@ void DrumMachine::addSamples(vector<Sample> samples) {
 bool DrumMachine::isLoopRunning() {
     return loopRunning;
 }
+
+void DrumMachine::setActiveSample(unsigned short activeSample) {
+    this->activeSample = activeSample;
+    this->outputController.samplePlayPositionChange(this->samples.at(activeSample).getPlayArray());
+}
+
