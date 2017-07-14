@@ -1,39 +1,45 @@
-//
-// Created by fritz on 7/3/17.
-//
-
 #include "DrumMachine.h"
-#include "Timer.h"
-#include <iostream>
+#include "RaspInputController.h"
+#include "DrumMachineInputListener.h"
 
 using namespace std;
 
-void testFunction() {
-    cout << "Hello World!" << endl;
+void setup(DrumMachine& drumMachine) {
+    Sample baseDrum("./audio_files/tr909_16bit/bd01.wav");
+    Sample clap("./audio_files/tr909_16bit/cp01.wav");
+    Sample highHat("./audio_files/tr909_16bit/oh01.wav");
+
+    for (unsigned short i = 0; i < 64; ++i) {
+        if (i % 16 == 0) {
+            baseDrum.playAtBeat(i);
+            if (i != 64)
+                highHat.playAtBeat(i + 8);
+        }
+        if (i % 32 == 0) {
+            clap.playAtBeat(i + 16);
+        }
+    }
+
+//    drumMachine.addSamples({ baseDrum, clap, highHat });
+    drumMachine.addSample(baseDrum);
+    drumMachine.addSample(clap);
+    drumMachine.addSample(highHat);
 }
+
 
 int main() {
     DrumMachine drumMachine;
-    drumMachine.setMasterVolume(.6f);
+    drumMachine.setBPM(120);
 
-    Sample baseDrum("../audio_files/tr909_16bit/bd01.wav");
-    baseDrum.preFillKickDrumArray();
-    baseDrum.setVolume(0.1f);
-    drumMachine.addSample(baseDrum);
+    DrumMachineInputListener listener(drumMachine);
 
-    Sample clap("../audio_files/tr909_16bit/cp01.wav");
-    clap.preFillClapArray();
-    clap.setVolume(.3f);
-    drumMachine.addSample(clap);
+    RaspInputController controller;
+    controller.addInputListener(listener);
 
-    Sample highHat("../audio_files/tr909_16bit/oh01.wav");
-    highHat.preFillHighHatArray();
-    drumMachine.addSample(highHat);
+
+    // Development
+    setup(drumMachine);
 
     drumMachine.startLoop();
-
-    Timer timer(1000, 100000000); // precision in nanoseconds
-    timer.start(testFunction);
-
     return 0;
 }

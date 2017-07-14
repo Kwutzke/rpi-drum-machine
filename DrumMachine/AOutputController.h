@@ -1,8 +1,3 @@
-//
-// Created by Kilian Wutzke on 11.07.17.
-//
-
-
 #ifndef DRUMMACHINE_AOUTPUTCONTROLLER_H
 #define DRUMMACHINE_AOUTPUTCONTROLLER_H
 

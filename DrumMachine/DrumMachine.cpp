@@ -1,7 +1,3 @@
-//
-// Created by fritz on 7/3/17.
-//
-
 #include <SDL2/SDL.h>
 #include <chrono>
 #include <iostream>
@@ -11,19 +7,27 @@
 using namespace std::chrono;
 using namespace std;
 
-
-DrumMachine::DrumMachine() : loopRunning(false), currentBeat(0), volume(1)
-//        , ledController()
-
-{
-    SDL_Init(SDL_INIT_AUDIO);
+DrumMachine::DrumMachine() : loopRunning(false), currentBeat(0), volume(1) {
     this->openAudio();
     this->allocateChannels();
-    setBPM(120);
 }
 
-long long getCurrentTimeMillis() {
-    return duration_cast<milliseconds>(system_clock::now().time_since_epoch()).count();
+void DrumMachine::openAudio() {
+    SDL_Init(SDL_INIT_AUDIO);
+
+    int result = Mix_OpenAudio(44100, AUDIO_S16SYS, 2, 512);
+    if (result < 0) {
+        fprintf(stderr, "Unable to open audio: %s\n", SDL_GetError());
+        exit(-1);
+    }
+}
+
+void DrumMachine::allocateChannels() {
+    int result = Mix_AllocateChannels(8);
+    if (result < 0) {
+        fprintf(stderr, "Unable to allocate mixing channels: %s\n", SDL_GetError());
+        exit(-1);
+    }
 }
 
 void DrumMachine::loop() {
@@ -34,16 +38,31 @@ void DrumMachine::loop() {
             this->samples.at(i).playSample(currentBeat);
         }
 
-//        this->ledController.blinkRhythmLed(currentBeat);
-
         // next beat
         currentBeat++;
         if (currentBeat >= TOTAL_BEATS * TOTAL_LOOPS) {
             currentBeat = 0;
         }
-//            cout << currentBeat << endl ;
     });
 
+}
+
+void DrumMachine::increaseVolume(float value) {
+    if (volume + value >= 1) {
+        setMasterVolume(1);
+    } else if (volume + value <= 0) {
+        setMasterVolume(0);
+    } else {
+        setMasterVolume(volume + value);
+    }
+}
+
+void DrumMachine::toggleLoop() {
+    if (isLoopRunning()) {
+        stopLoop();
+    } else {
+        startLoop();
+    }
 }
 
 void DrumMachine::startLoop() {
@@ -63,26 +82,6 @@ void DrumMachine::setBPM(int bpm) {
 int DrumMachine::getBPM() {
     return this->bpm;
 }
-
-void DrumMachine::openAudio() {
-    int result = Mix_OpenAudio(44100, AUDIO_S16SYS, 2, 512);
-    if (result < 0) {
-        fprintf(stderr, "Unable to open audio: %s\n", SDL_GetError());
-        exit(-1);
-    }
-}
-
-void DrumMachine::allocateChannels() {
-    int result = Mix_AllocateChannels(8);
-    if (result < 0) {
-        fprintf(stderr, "Unable to allocate mixing channels: %s\n", SDL_GetError());
-        exit(-1);
-    }
-}
-
-void DrumMachine::volumeUp() {
-}
-
 
 void DrumMachine::setMasterVolume(float volume) {
     if (volume >= 1) {
@@ -104,4 +103,14 @@ float DrumMachine::getMasterVolume() {
 void DrumMachine::addSample(Sample sample) {
     sample.setMasterVolume(volume);
     this->samples.push_back(sample);
+}
+
+void DrumMachine::addSamples(vector<Sample> samples) {
+    for (unsigned short i = 0; samples.size(); i++) {
+        addSample(samples[i]);
+    }
+}
+
+bool DrumMachine::isLoopRunning() {
+    return loopRunning;
 }

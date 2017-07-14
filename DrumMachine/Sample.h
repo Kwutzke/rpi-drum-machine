@@ -1,7 +1,3 @@
-//
-// Created by Kilian Wutzke on 27.06.17.
-//
-
 #ifndef DRUMMACHINE_SAMPLE_H
 #define DRUMMACHINE_SAMPLE_H
 
@@ -11,7 +7,7 @@
 #include "SDL2_image/SDL_image.h"
 #else
 #include "SDL2/SDL_mixer.h"
-    #include "SDL2/SDL.h"
+#include "SDL2/SDL.h"
 #endif
 
 #include <vector>
@@ -25,19 +21,19 @@ class Sample {
 public:
     Sample(const char* samplePath);
     void playSample(int currentBeat);
-    void preFillKickDrumArray();
-    void preFillClapArray();
-    void preFillHighHatArray();
+    void playAtBeat(unsigned int);
+    void muteAtBeat(unsigned int);
 
+    // Getters and Setters
     void setVolume(float);
     float getVolume();
     void setMasterVolume(float);
     float getMasterVolume();
 private:
     Mix_Chunk* sampleFile;
+    vector<int> playArray;
     bool active;
     int loopLength;
-    vector<int> playArray;
     bool playing;
     float volume;
     float masterVolume;
