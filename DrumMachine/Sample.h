@@ -29,6 +29,10 @@ public:
     float getVolume();
     void setMasterVolume(float);
     float getMasterVolume();
+
+    vector<int> &getPlayArray();
+
+
 private:
     Mix_Chunk* sampleFile;
     vector<int> playArray;
@@ -39,6 +43,7 @@ private:
     float masterVolume;
 
     void setMixVolume();
+
 };
 
 

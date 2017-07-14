@@ -3,6 +3,8 @@
 
 #include <thread>
 #include <map>
+#include <list>
+#include <vector>
 
 using namespace std;
 
@@ -29,12 +31,13 @@ public:
 
     void activeSampleChange(int newActiveSample) ;
 
-//    void samplePlayPositionChange(vector<int> &newPlayArray) ;
+    void samplePlayPositionChange(vector<int>&) ;
 
-    void blink(int ledPosition);
+    void blink(int);
+
 
 private:
-    map<unsigned short , unsigned short> beatPinMap = {
+    const map<unsigned short, unsigned short> beatPinMap = {
             {BEAT1_RED, 115}, {BEAT1_GREEN, 114}, {BEAT1_BLUE, 112},
             {BEAT2_RED, 111}, {BEAT2_GREEN, 110}, {BEAT2_BLUE, 108},
             {BEAT3_RED, 215}, {BEAT3_GREEN, 214}, {BEAT3_BLUE, 212},
@@ -43,11 +46,28 @@ private:
             {BEAT6_RED, 104}, {BEAT6_GREEN, 105}, {BEAT6_BLUE, 107},
             {BEAT7_RED, 200}, {BEAT7_GREEN, 201}, {BEAT7_BLUE, 203},
             {BEAT8_RED, 204}, {BEAT8_GREEN, 205}, {BEAT8_BLUE, 207}
-
     };
 
+    const vector<unsigned short> redLedList = {
+            BEAT1_RED, BEAT2_RED, BEAT3_RED, BEAT4_RED, BEAT5_RED, BEAT6_RED, BEAT7_RED, BEAT8_RED
+    };
+
+    const vector<unsigned short> greenLedList = {
+            BEAT1_GREEN, BEAT2_GREEN, BEAT3_GREEN, BEAT4_GREEN, BEAT5_GREEN, BEAT6_GREEN, BEAT7_GREEN, BEAT8_GREEN
+    };
+
+    const vector<unsigned short> blueLedList = {
+            BEAT1_BLUE, BEAT2_BLUE, BEAT3_BLUE, BEAT4_BLUE, BEAT5_BLUE, BEAT6_BLUE, BEAT7_BLUE, BEAT8_BLUE
+    };
 
     void initializePins();
+
+    void switchOfAllLed();
+
+    void ledOff(int ledPin);
+
+    void switchOnFirstBeatLed();
+
 };
 
 

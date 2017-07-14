@@ -14,6 +14,8 @@ set(SOURCE_FILES
         Sample.cpp
         Timer.h
         Timer.cpp
+        DrumMachine.h
+        DrumMachine.cpp
         )
 
 

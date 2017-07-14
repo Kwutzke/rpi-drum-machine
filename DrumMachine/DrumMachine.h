@@ -14,11 +14,12 @@ private:
     const int TOTAL_BEATS = 16;
 
     int bpm;
-    int currentBeat;
+    unsigned short currentBeat;
     int sixteenthNoteMillis;
     bool loopRunning;
     float volume;
     RaspOutputController outputController;
+    unsigned short activeSample;
 
     vector<Sample> samples;
 
@@ -45,7 +46,7 @@ public:
     void setMasterVolume(float);
     float getMasterVolume();
 
-    void setOutputController(RaspOutputController);
+    void setActiveSample(unsigned short);
 };
 
 
