@@ -4,12 +4,13 @@
 #include <vector>
 #include "Sample.h"
 #include "AOutputController.h"
+#include "RaspOutputController.h"
 
 using namespace std;
 
 class DrumMachine {
 private:
-    const int TOTAL_LOOPS = 4;
+    const int TOTAL_LOOPS = 1;
     const int TOTAL_BEATS = 16;
 
     int bpm;
@@ -17,6 +18,7 @@ private:
     int sixteenthNoteMillis;
     bool loopRunning;
     float volume;
+    RaspOutputController outputController;
 
     vector<Sample> samples;
 
@@ -25,7 +27,7 @@ private:
     void loop();
 
 public:
-    DrumMachine();
+    DrumMachine(RaspOutputController);
 
     void startLoop();
     void stopLoop();
@@ -42,6 +44,8 @@ public:
 
     void setMasterVolume(float);
     float getMasterVolume();
+
+    void setOutputController(RaspOutputController);
 };
 
 

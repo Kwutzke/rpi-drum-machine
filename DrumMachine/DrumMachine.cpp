@@ -7,7 +7,7 @@
 using namespace std::chrono;
 using namespace std;
 
-DrumMachine::DrumMachine() : loopRunning(false), currentBeat(0), volume(1) {
+DrumMachine::DrumMachine(RaspOutputController raspOutputController) : loopRunning(false), currentBeat(0), volume(1), outputController(raspOutputController) {
     this->openAudio();
     this->allocateChannels();
 }
@@ -113,4 +113,8 @@ void DrumMachine::addSamples(vector<Sample> samples) {
 
 bool DrumMachine::isLoopRunning() {
     return loopRunning;
+}
+
+void DrumMachine::setOutputController(RaspOutputController outputController) {
+    this->outputController = outputController;
 }

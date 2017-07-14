@@ -4,6 +4,7 @@
 #include "DrumMachine.h"
 #include "InputListener.h"
 #include <wiringPi.h>
+#include <mcp23017.h>
 
 namespace inputs {
         const unsigned short
@@ -25,9 +26,9 @@ private:
             BPM_DOWN_BUTTON_PIN             = 4,    BPM_VOLUME_SWITCH_BUTTON_PIN    = 5,    SAMPLE1_BUTTON_PIN      = 6,
             SAMPLE2_BUTTON_PIN              = 7,    SAMPLE3_BUTTON_PIN              = 8,    SAMPLE4_BUTTON_PIN      = 9,
             SAMPLE5_BUTTON_PIN              = 10,   SAMPLE6_BUTTON_PIN              = 11,   SAMPLE7_BUTTON_PIN      = 12,
-            SAMPLE8_BUTTON_PIN              = 13,   BEAT1_BUTTON_PIN                = 14,   BEAT2_BUTTON_PIN        = 15,
-            BEAT3_BUTTON_PIN                = 16,   BEAT4_BUTTON_PIN                = 17,   BEAT5_BUTTON_PIN        = 18,
-            BEAT6_BUTTON_PIN                = 19,   BEAT7_BUTTON_PIN                = 20,   BEAT8_BUTTON_PIN        = 21,
+            SAMPLE8_BUTTON_PIN              = 13,   BEAT1_BUTTON_PIN                = 113,   BEAT2_BUTTON_PIN        = 110,
+            BEAT3_BUTTON_PIN                = 213,   BEAT4_BUTTON_PIN                = 210,   BEAT5_BUTTON_PIN        = 102,
+            BEAT6_BUTTON_PIN                = 106,   BEAT7_BUTTON_PIN                = 202,   BEAT8_BUTTON_PIN        = 206,
             BEAT9_BUTTON_PIN                = 22,   BEAT10_BUTTON_PIN               = 23,   BEAT11_BUTTON_PIN       = 24,
             BEAT12_BUTTON_PIN               = 25,   BEAT13_BUTTON_PIN               = 26,   BEAT14_BUTTON_PIN       = 27,
             BEAT15_BUTTON_PIN               = 28,   BEAT16_BUTTON_PIN               = 29,   START_STOP_BUTTON_PIN   = 100;

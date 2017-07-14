@@ -7,6 +7,9 @@ RaspInputController::RaspInputController() {
 }
 
 void RaspInputController::initializePins() {
+    wiringPiSetup();
+    mcp23017Setup(0x20, 100);
+    mcp23017Setup(0x21, 200);
     // ToDo initialize pins
 }
 

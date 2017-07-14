@@ -2,13 +2,12 @@
 #define DRUMMACHINE_AOUTPUTCONTROLLER_H
 
 #include <vector>
-#include "DrumMachine.h"
 
 using namespace std;
 
 class AOutputController {
 public:
-    virtual void positionChange(int newPosition) = 0;
+    virtual void positionChange(unsigned short newPosition) = 0;
     virtual void bpmChange(int newBpm) = 0;
     virtual void volumeChange(int newVolume) = 0;
     virtual void activeSampleChange(int newActiveSample) = 0;
