@@ -111,3 +111,10 @@ void DrumMachine::setActiveSample(unsigned short activeSample) {
     this->outputController.samplePlayPositionChange(this->samples.at(activeSample).getPlayArray());
 }
 
+void DrumMachine::toggleSampleAtBeat(unsigned long sampleNumber, unsigned int beat) {
+    this->samples.at(sampleNumber).togglePlayAtBeat(beat);
+}
+
+void DrumMachine::toggleActiveSampleAtBeat(unsigned int beat) {
+    this->samples.at(activeSample).togglePlayAtBeat(beat);
+}

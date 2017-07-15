@@ -36,6 +36,8 @@ public:
     void addSample(Sample);
     void addSamples(vector<Sample>);
     void increaseVolume(float);
+    void toggleSampleAtBeat(unsigned long sampleNumber, unsigned int beat);
+    void toggleActiveSampleAtBeat(unsigned int beat);
 
     // Getters and Setters
     bool isLoopRunning();

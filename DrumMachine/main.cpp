@@ -1,3 +1,4 @@
+#include <mcp23017.h>
 #include "DrumMachine.h"
 #include "InputListener.h"
 #include "RaspInputController.h"
@@ -31,7 +32,10 @@ void setup(DrumMachine& drumMachine) {
 
 
 int main() {
+
+    cout << "Initializing output controller ..." << endl;
     RaspOutputController raspOutputController;
+    cout << "Intitializing drum machine ..." << endl;
     DrumMachine drumMachine(raspOutputController);
     // Development
     setup(drumMachine);

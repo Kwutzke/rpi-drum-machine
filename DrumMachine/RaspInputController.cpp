@@ -5,11 +5,19 @@ RaspInputController::RaspInputController() : pollingTimer(1000, 20000) {
 }
 
 void RaspInputController::initializePins() {
-    // ToDo initialize pins
+    map<unsigned short, unsigned short>::iterator it;
+    for (it = this->outputMap.begin(); it != this->outputMap.end(); it ++) {
+        try {
+            pinMode(it->second, INPUT);
+            pullUpDnControl(it->second, PUD_UP);
+        } catch (int e) {
+            cout << "WARNING: Can't find pin " + it->second << endl;
+        }
+    }
 }
 
 void RaspInputController::startPolling() {
-    Timer pollingTimer(1000, 20000); // 2ms polling rate
+    Timer pollingTimer(10, 20000); // 2ms polling rate
     pollingTimer.start([this]() {
         vector<unsigned short> inputEvents = getInputEvents();
         if (inputEvents.size() > 0) {
@@ -23,10 +31,20 @@ void RaspInputController::startPolling() {
 }
 
 vector<unsigned short> RaspInputController::getInputEvents() {
-    // ToDo poll inputs from pi
-
     vector<unsigned short> events;
-    events.push_back(inputs::START_STOP_BUTTON);
+    map<unsigned short, unsigned short>::iterator it;
+
+    for (it = this->outputMap.begin(); it != this->outputMap.end(); it ++) {
+        unsigned short button = it->first;
+        bool state = digitalRead(it->second) == 0;
+        if (this->buttonStateMap.at(button) != state) {
+            this->buttonStateMap.at(button) = state;
+
+            if (state) {
+                events.push_back(button);
+            }
+        }
+    }
     return move(events);
 }
 

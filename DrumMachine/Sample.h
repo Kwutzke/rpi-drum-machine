@@ -17,25 +17,32 @@
 
 using namespace std;
 
+namespace state {
+    const unsigned short PLAY = 1, MUTE = 0;
+}
+
 class Sample {
 public:
+
     Sample(const char* samplePath);
     void playSample(int currentBeat);
     void playAtBeat(unsigned int);
     void muteAtBeat(unsigned int);
 
+    void togglePlayAtBeat(unsigned int);
     // Getters and Setters
     void setVolume(float);
     float getVolume();
     void setMasterVolume(float);
+
     float getMasterVolume();
 
-    vector<int> &getPlayArray();
 
-
+    vector<unsigned short> &getPlayArray();
 private:
+
     Mix_Chunk* sampleFile;
-    vector<int> playArray;
+    vector<unsigned short> playArray;
     bool active;
     int loopLength;
     bool playing;
