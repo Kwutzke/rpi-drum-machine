@@ -5,6 +5,7 @@
 #include <chrono>
 #include <time.h>
 #include <thread>
+#include <vector>
 
 using namespace std;
 using namespace std::chrono;
@@ -18,6 +19,7 @@ private:
     long long getCurrentTimeMillis() {
         return duration_cast<milliseconds>(system_clock::now().time_since_epoch()).count();
     }
+
 public:
     Timer(int, int);
 
@@ -40,6 +42,10 @@ public:
     }
 
     void stop();
+
+    int getInterval() const;
+
+    void setInterval(int interval);
 };
 
 

@@ -1,5 +1,7 @@
 #include "Sample.h"
 
+using namespace state;
+
 Sample::Sample(const char *samplePath) : playArray(16, 0), volume(1), masterVolume(1) {
     this->sampleFile = Mix_LoadWAV(samplePath);
     if (this->sampleFile == NULL) {
@@ -61,6 +63,14 @@ float Sample::getMasterVolume() {
     return this->masterVolume;
 }
 
-vector<int, allocator<int>> &Sample::getPlayArray() {
+vector<unsigned short, allocator<unsigned short>> &Sample::getPlayArray() {
     return playArray;
+}
+
+void Sample::togglePlayAtBeat(unsigned int beat) {
+    if (playArray.at(beat) == PLAY) {
+        playArray.at(beat) = MUTE;
+    } else {
+        playArray.at(beat) = PLAY;
+    }
 }

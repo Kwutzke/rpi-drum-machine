@@ -1,9 +1,14 @@
+#include <mcp23017.h>
 #include "DrumMachine.h"
-#include "RaspOutputController.h"
+#include "InputListener.h"
+#include "RaspInputController.h"
+#include "DrumMachineInputListener.h"
 
 using namespace std;
 
 void setup(DrumMachine& drumMachine) {
+    drumMachine.setBPM(120);
+
     Sample baseDrum("./audio_files/tr909_16bit/bd01.wav");
     Sample clap("./audio_files/tr909_16bit/cp01.wav");
     Sample highHat("./audio_files/tr909_16bit/oh01.wav");
@@ -19,7 +24,6 @@ void setup(DrumMachine& drumMachine) {
         }
     }
 
-//    drumMachine.addSamples({ baseDrum, clap, highHat });
     drumMachine.addSample(baseDrum);
     drumMachine.addSample(clap);
     drumMachine.addSample(highHat);
@@ -28,13 +32,18 @@ void setup(DrumMachine& drumMachine) {
 
 
 int main() {
-    RaspOutputController raspOutputController;
-    DrumMachine drumMachine(raspOutputController);
-    drumMachine.setBPM(120);
 
+    cout << "Initializing output controller ..." << endl;
+    RaspOutputController raspOutputController;
+    cout << "Intitializing drum machine ..." << endl;
+    DrumMachine drumMachine(raspOutputController);
     // Development
     setup(drumMachine);
 
-    drumMachine.startLoop();
+    DrumMachineInputListener listener(drumMachine);
+
+    RaspInputController controller;
+    controller.addInputListener(listener);
+    controller.start();
     return 0;
 }

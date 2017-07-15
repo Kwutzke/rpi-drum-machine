@@ -5,14 +5,14 @@
 #include "Sample.h"
 #include "AOutputController.h"
 #include "RaspOutputController.h"
-
+#include "Timer.h"
 
 using namespace std;
 
 class DrumMachine {
 private:
-    const int TOTAL_LOOPS = 1;
     const int TOTAL_BEATS = 16;
+    const long LOOP_PRECISION_NANOS = 10000; // 10ms
 
     int bpm;
     unsigned short currentBeat;
@@ -22,21 +22,22 @@ private:
     AOutputController& outputController;
     unsigned short activeSample;
 
+    Timer loop;
     vector<Sample> samples;
 
     void allocateChannels();
     void openAudio();
-    void loop();
 
 public:
     DrumMachine(AOutputController&);
 
     void startLoop();
     void stopLoop();
-    void toggleLoop();
     void addSample(Sample);
     void addSamples(vector<Sample>);
     void increaseVolume(float);
+    void toggleSampleAtBeat(unsigned long sampleNumber, unsigned int beat);
+    void toggleActiveSampleAtBeat(unsigned int beat);
 
     // Getters and Setters
     bool isLoopRunning();

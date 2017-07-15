@@ -2,6 +2,9 @@
 #include <mcp23017.h>
 #include <iostream>
 #include "RaspOutputController.h"
+#include "Sample.h"
+
+using namespace state;
 
 RaspOutputController::RaspOutputController(){
     wiringPiSetup();
@@ -67,16 +70,16 @@ void RaspOutputController::activeSampleChange(int newActiveSample) {
 
 }
 
-void RaspOutputController::samplePlayPositionChange(vector<int> &newPlayArray) {
+void RaspOutputController::samplePlayPositionChange(vector<unsigned short> &newPlayArray) {
     thread tLed([this, &newPlayArray]() {
         int i;
         for(i = 0; i < newPlayArray.size(); i++) {
             if (i < 8) {
                 digitalWrite(this->beatPinMap.at(this->redLedList.at((unsigned long) i)), LOW);
-                if (newPlayArray.at((unsigned long) i) == 1) {
+                if (newPlayArray.at((unsigned long) i) == PLAY) {
                     digitalWrite(this->beatPinMap.at(this->redLedList.at((unsigned long) i)), HIGH);
                     digitalWrite(this->beatPinMap.at(this->blueLedList.at((unsigned long) i)), LOW);
-                } else if (newPlayArray.at((unsigned long) i) == 0) {
+                } else if (newPlayArray.at((unsigned long) i) == MUTE) {
                     digitalWrite(this->beatPinMap.at(this->redLedList.at((unsigned long) i)), LOW);
                     if (i == 0 | i == 4 | i == 8 | i == 12)
                         digitalWrite(this->beatPinMap.at(this->blueLedList.at((unsigned long) i)), HIGH);

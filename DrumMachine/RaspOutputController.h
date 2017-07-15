@@ -43,8 +43,8 @@ public:
 
     void activeSampleChange(int newActiveSample) override;
 
-    void samplePlayPositionChange(vector<int> &) override;
-
+    void samplePlayPositionChange(vector<unsigned short>&) override;
+    
     void blink(int);
 
 private:
