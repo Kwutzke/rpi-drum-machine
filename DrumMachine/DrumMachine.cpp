@@ -2,7 +2,6 @@
 #include <chrono>
 #include <iostream>
 #include "DrumMachine.h"
-#include "Timer.h"
 
 using namespace std::chrono;
 using namespace std;
@@ -37,15 +36,18 @@ void DrumMachine::startLoop() {
         loopRunning = true;
         loop.setInterval(sixteenthNoteMillis);
         loop.start([this]() {
+            cout << "loop" << endl;
             for (size_t i = 0; i < samples.size(); i++) {
                 this->samples.at(i).playSample(currentBeat);
             }
-
+            this->outputController.positionChange(currentBeat);
             // next beat
+            cout << "Increase currentBeat from " << currentBeat << " to ";
             currentBeat++;
-            if (currentBeat >= TOTAL_BEATS) {
+            if (currentBeat == 15) {
                 currentBeat = 0;
             }
+            cout << currentBeat << endl;
         });
     }
 }

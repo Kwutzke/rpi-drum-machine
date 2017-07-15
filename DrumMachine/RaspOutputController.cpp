@@ -7,9 +7,6 @@
 using namespace state;
 
 RaspOutputController::RaspOutputController(){
-    wiringPiSetup();
-    mcp23017Setup(100, 0x20);
-    mcp23017Setup(200, 0x21);
     this->initializePins();
     this->switchOnFirstBeatLed();
 

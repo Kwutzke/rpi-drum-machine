@@ -32,18 +32,42 @@ void setup(DrumMachine& drumMachine) {
 
 
 int main() {
+    cout << "Initializing wiring pi ...";
+    wiringPiSetup();
+    mcp23017Setup(100, 0x20);
+    mcp23017Setup(200, 0x21);
+    mcp23017Setup(300, 0x23);
+    mcp23017Setup(400, 0x24);
+    mcp23017Setup(500, 0x26);
+    cout << " done." << endl;
 
-    cout << "Initializing output controller ..." << endl;
+    cout << "Initializing output controller ...";
     RaspOutputController raspOutputController;
-    cout << "Intitializing drum machine ..." << endl;
+    cout << " done." << endl;
+
+    cout << "Initializing drum machine ...";
     DrumMachine drumMachine(raspOutputController);
+    cout << " done." << endl;
+
     // Development
+    cout << "Filling samples ...";
     setup(drumMachine);
+    cout << " done." << endl;
 
+//    drumMachine.startLoop();
+
+    cout << "Initializing input listener ...";
     DrumMachineInputListener listener(drumMachine);
+    cout << " done." << endl;
 
+    cout << "Initializing input controller ...";
     RaspInputController controller;
+    cout << " done." << endl;
+
+    cout << "Registering input listener ...";
     controller.addInputListener(listener);
+    cout << " done." << endl;
+
     controller.start();
     return 0;
 }
