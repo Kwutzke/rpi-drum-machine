@@ -57,14 +57,14 @@ private:
             {BEAT6_RED,   104}, {BEAT6_GREEN, 105}, {BEAT6_BLUE,  107},
             {BEAT7_RED,   200}, {BEAT7_GREEN, 201}, {BEAT7_BLUE,  203},
             {BEAT8_RED,   204}, {BEAT8_GREEN, 205}, {BEAT8_BLUE,  207},
-            {BEAT9_RED,   204}, {BEAT9_GREEN, 205}, {BEAT9_BLUE,  207},
-            {BEAT10_RED,   204}, {BEAT10_GREEN, 205}, {BEAT10_BLUE,  207},
-            {BEAT11_RED,   204}, {BEAT11_GREEN, 205}, {BEAT11_BLUE,  207},
-            {BEAT12_RED,   204}, {BEAT12_GREEN, 205}, {BEAT12_BLUE,  207},
-            {BEAT13_RED,   204}, {BEAT13_GREEN, 205}, {BEAT13_BLUE,  207},
-            {BEAT14_RED,   204}, {BEAT14_GREEN, 205}, {BEAT14_BLUE,  207},
-            {BEAT15_RED,   204}, {BEAT15_GREEN, 205}, {BEAT15_BLUE,  207},
-            {BEAT16_RED,   204}, {BEAT16_GREEN, 205}, {BEAT16_BLUE,  207},
+            {BEAT9_RED,   315}, {BEAT9_GREEN, 314}, {BEAT9_BLUE,  312},
+            {BEAT10_RED,   311}, {BEAT10_GREEN, 310}, {BEAT10_BLUE,  308},
+            {BEAT11_RED,   415}, {BEAT11_GREEN, 414}, {BEAT11_BLUE,  412},
+            {BEAT12_RED,   411}, {BEAT12_GREEN, 410}, {BEAT12_BLUE,  408},
+            {BEAT13_RED,   300}, {BEAT13_GREEN, 301}, {BEAT13_BLUE,  303},
+            {BEAT14_RED,   304}, {BEAT14_GREEN, 305}, {BEAT14_BLUE,  307},
+            {BEAT15_RED,   400}, {BEAT15_GREEN, 414}, {BEAT15_BLUE,  407},
+            {BEAT16_RED,   404}, {BEAT16_GREEN, 410}, {BEAT16_BLUE,  403},
     };
 
     const vector<unsigned short> redLedList = {
