@@ -7,7 +7,9 @@
 using namespace std::chrono;
 using namespace std;
 
-DrumMachine::DrumMachine(AOutputController& raspOutputController) : loopRunning(false), currentBeat(0), volume(1), outputController(raspOutputController) {
+DrumMachine::DrumMachine(AOutputController& raspOutputController) : loopRunning(false), currentBeat(0), volume(1),
+                                                                    outputController(raspOutputController),
+                                                                    loop(sixteenthNoteMillis, (int) LOOP_PRECISION_NANOS) {
     this->openAudio();
     this->allocateChannels();
 }
@@ -30,22 +32,27 @@ void DrumMachine::allocateChannels() {
     }
 }
 
-void DrumMachine::loop() {
-    const long PRECISION_NANOS = 10000; // 10ms
-    Timer timer(sixteenthNoteMillis, PRECISION_NANOS);
-    timer.start([this] () {
-        this->outputController.positionChange(currentBeat);
-        for (size_t i = 0; i < samples.size(); i++) {
-            this->samples.at(i).playSample(currentBeat);
-        }
+void DrumMachine::startLoop() {
+    if (!loopRunning) {
+        loopRunning = true;
+        loop.setInterval(sixteenthNoteMillis);
+        loop.start([this]() {
+            for (size_t i = 0; i < samples.size(); i++) {
+                this->samples.at(i).playSample(currentBeat);
+            }
 
-        // next beat
-        currentBeat++;
-        if (currentBeat >= TOTAL_BEATS * TOTAL_LOOPS) {
-            currentBeat = 0;
-        }
-    });
+            // next beat
+            currentBeat++;
+            if (currentBeat >= TOTAL_BEATS) {
+                currentBeat = 0;
+            }
+        });
+    }
+}
 
+void DrumMachine::stopLoop() {
+    loopRunning = false;
+    loop.stop();
 }
 
 void DrumMachine::increaseVolume(float value) {
@@ -56,23 +63,6 @@ void DrumMachine::increaseVolume(float value) {
     } else {
         setMasterVolume(volume + value);
     }
-}
-
-void DrumMachine::toggleLoop() {
-    if (isLoopRunning()) {
-        stopLoop();
-    } else {
-        startLoop();
-    }
-}
-
-void DrumMachine::startLoop() {
-    loopRunning = true;
-    loop();
-}
-
-void DrumMachine::stopLoop() {
-    loopRunning = false;
 }
 
 void DrumMachine::setBPM(int bpm) {

@@ -6,4 +6,12 @@ Timer::Timer(int interval, int precision) : interval(interval), precision(precis
 
 void Timer::stop() {
     this->running = false;
+}
+
+int Timer::getInterval() const {
+    return interval;
+}
+
+void Timer::setInterval(int interval) {
+    Timer::interval = interval;
 };
