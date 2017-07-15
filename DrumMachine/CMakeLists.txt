@@ -12,12 +12,13 @@ set(SOURCE_FILES
         RaspInputController.cpp
         DrumMachine.h
         DrumMachine.cpp
+        DrumMachineInputListener.h
         DrumMachineInputListener.cpp
         Sample.h
         Sample.cpp
         Timer.h
         Timer.cpp
-        AOutputController.h InputListener.h DrumMachineInputListener.h)
+        )
 
 add_executable(DrumMachine ${SOURCE_FILES})
 target_link_libraries(${PROJECT_NAME} SDL2)
