@@ -22,14 +22,16 @@ using namespace inputs;
 class RaspInputController {
 private:
     map<unsigned short, unsigned short> outputMap = {
-            { VOLUME_UP_BUTTON, 1  }, { VOLUME_DOWN_BUTTON, 2  }, { BPM_UP_BUTTON,  3  }, { BPM_DOWN_BUTTON,    4  },
-            { MUTE_BUTTON,      5  }, { SAMPLE1_BUTTON,     6  }, { SAMPLE2_BUTTON, 7  }, { SAMPLE3_BUTTON,     8  },
-            { SAMPLE4_BUTTON,   9  }, { SAMPLE5_BUTTON,     10 }, { SAMPLE6_BUTTON, 11 }, { SAMPLE7_BUTTON,     12 },
-            { SAMPLE8_BUTTON,   13 }, { BEAT1_BUTTON,       14 }, { BEAT2_BUTTON,   14 }, { BEAT3_BUTTON,       14 },
-            { BEAT4_BUTTON,     14 }, { BEAT5_BUTTON,       14 }, { BEAT6_BUTTON,   14 }, { BEAT7_BUTTON,       14 },
-            { BEAT8_BUTTON,     14 }, { BEAT9_BUTTON,       14 }, { BEAT10_BUTTON,  14 }, { BEAT11_BUTTON,      14 },
-            { BEAT12_BUTTON,    14 }, { BEAT13_BUTTON,      14 }, { BEAT14_BUTTON,  14 }, { BEAT15_BUTTON,      14 },
-            { BEAT16_BUTTON,    14 }, { START_STOP_BUTTON,  0  }
+//            { VOLUME_UP_BUTTON, -1  }, { VOLUME_DOWN_BUTTON, 2  }, { BPM_UP_BUTTON,  3  }, { BPM_DOWN_BUTTON,    4  },
+//            { MUTE_BUTTON,      -1  }, { SAMPLE1_BUTTON,     6  }, { SAMPLE2_BUTTON, 7  }, { SAMPLE3_BUTTON,     8  },
+//            { SAMPLE4_BUTTON,   9  }, { SAMPLE5_BUTTON,     10 }, { SAMPLE6_BUTTON, 11 }, { SAMPLE7_BUTTON,     12 },
+//            { SAMPLE8_BUTTON,   13 },
+            { BEAT1_BUTTON,     113 }, { BEAT2_BUTTON,      109 }, { BEAT3_BUTTON,  213 },
+            { BEAT4_BUTTON,     209 }, { BEAT5_BUTTON,      102 }, { BEAT6_BUTTON,  106 }, { BEAT7_BUTTON,       202 },
+            { BEAT8_BUTTON,     206 }, { BEAT9_BUTTON,      313 }, { BEAT10_BUTTON, 309 }, { BEAT11_BUTTON,      413 },
+            { BEAT12_BUTTON,    409 }, { BEAT13_BUTTON,     302 }, { BEAT14_BUTTON, 306 }, { BEAT15_BUTTON,      402 },
+            { BEAT16_BUTTON,    406 },
+            { START_STOP_BUTTON,  0  }
     };
 
     map<unsigned short, bool> buttonStateMap = {

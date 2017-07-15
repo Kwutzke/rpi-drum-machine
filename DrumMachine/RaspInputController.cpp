@@ -17,7 +17,8 @@ void RaspInputController::initializePins() {
 }
 
 void RaspInputController::startPolling() {
-    Timer pollingTimer(10, 20000); // 2ms polling rate
+    Timer pollingTimer(100, 20000); // 2ms polling rate
+    cout << "Starting to poll input events ..." << endl;
     pollingTimer.start([this]() {
         vector<unsigned short> inputEvents = getInputEvents();
         if (inputEvents.size() > 0) {
@@ -38,6 +39,7 @@ vector<unsigned short> RaspInputController::getInputEvents() {
         unsigned short button = it->first;
         bool state = digitalRead(it->second) == 0;
         if (this->buttonStateMap.at(button) != state) {
+            cout << "Input detected! (" << button << ")" << endl;
             this->buttonStateMap.at(button) = state;
 
             if (state) {
@@ -58,5 +60,4 @@ void RaspInputController::stop() {
 
 void RaspInputController::start() {
     startPolling();
-
 }
