@@ -7,9 +7,6 @@
 using namespace state;
 
 RaspOutputController::RaspOutputController(){
-    wiringPiSetup();
-    mcp23017Setup(100, 0x20);
-    mcp23017Setup(200, 0x21);
     this->initializePins();
     this->switchOnFirstBeatLed();
 
@@ -23,18 +20,15 @@ void RaspOutputController::initializePins() {
 }
 
 void RaspOutputController::positionChange(unsigned short newPosition) {
-    if(newPosition < 8) {
-        thread tLed ([this, newPosition]() {
-            this->blink(this->beatPinMap.at(this->greenLedList.at((unsigned long) newPosition)));
-//            cout << newPosition << endl;
-        });
-        tLed.detach();
-    }
+    thread tLed ([this, newPosition]() {
+        this->blink(this->beatPinMap.at(this->greenLedList.at((unsigned long) newPosition)));
+    });
+    tLed.detach();
 };
 
 void RaspOutputController::switchOnFirstBeatLed() {
-//    digitalWrite(this->beatPinMap.at(BEAT1_BLUE), 1);
-//    digitalWrite(this->beatPinMap.at(BEAT5_BLUE), 1);
+    digitalWrite(this->beatPinMap.at(BEAT1_BLUE), 1);
+    digitalWrite(this->beatPinMap.at(BEAT5_BLUE), 1);
 }
 
 void RaspOutputController::switchOfAllLed() {
@@ -70,22 +64,23 @@ void RaspOutputController::activeSampleChange(int newActiveSample) {
 
 }
 
-void RaspOutputController::samplePlayPositionChange(vector<unsigned short> &newPlayArray) {
+void RaspOutputController::playPositionChange(vector<unsigned short> &newPlayArray) {
     thread tLed([this, &newPlayArray]() {
-        int i;
+    short unsigned i;
         for(i = 0; i < newPlayArray.size(); i++) {
-            if (i < 8) {
-                digitalWrite(this->beatPinMap.at(this->redLedList.at((unsigned long) i)), LOW);
-                if (newPlayArray.at((unsigned long) i) == PLAY) {
-                    digitalWrite(this->beatPinMap.at(this->redLedList.at((unsigned long) i)), HIGH);
-                    digitalWrite(this->beatPinMap.at(this->blueLedList.at((unsigned long) i)), LOW);
-                } else if (newPlayArray.at((unsigned long) i) == MUTE) {
-                    digitalWrite(this->beatPinMap.at(this->redLedList.at((unsigned long) i)), LOW);
-                    if (i == 0 | i == 4 | i == 8 | i == 12)
-                        digitalWrite(this->beatPinMap.at(this->blueLedList.at((unsigned long) i)), HIGH);
-                }
-            }
+            this->playPositionChange(i, newPlayArray.at(i));
         }
     });
     tLed.detach();
+}
+
+void RaspOutputController::playPositionChange(unsigned short position, unsigned short playState) {
+    if (playState == PLAY) {
+        digitalWrite(position, HIGH);
+        digitalWrite(position, LOW);
+    } else if (playState == MUTE) {
+        digitalWrite(position, LOW);
+        if (position == 0 | position == 4 | i == 8 | i == 12)
+            digitalWrite(position, HIGH);
+    }
 }

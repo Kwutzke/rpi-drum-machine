@@ -108,11 +108,12 @@ bool DrumMachine::isLoopRunning() {
 
 void DrumMachine::setActiveSample(unsigned short activeSample) {
     this->activeSample = activeSample;
-    this->outputController.samplePlayPositionChange(this->samples.at(activeSample).getPlayArray());
+    this->outputController.playPositionChange(this->samples.at(activeSample).getPlayArray());
 }
 
 void DrumMachine::toggleSampleAtBeat(unsigned long sampleNumber, unsigned int beat) {
     this->samples.at(sampleNumber).togglePlayAtBeat(beat);
+    this->outputController.playPositionChange((unsigned short) sampleNumber, this->samples.at(sampleNumber).getPlayArray().at(beat));
 }
 
 void DrumMachine::toggleActiveSampleAtBeat(unsigned int beat) {

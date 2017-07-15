@@ -11,7 +11,8 @@ public:
     virtual void bpmChange(int newBpm) = 0;
     virtual void volumeChange(int newVolume) = 0;
     virtual void activeSampleChange(int newActiveSample) = 0;
-    virtual void samplePlayPositionChange(vector<unsigned short> &newPlayArray) = 0;
+    virtual void playPositionChange(vector<unsigned short> &newPlayArray) = 0;
+    virtual void playPositionChange(unsigned short, unsigned short) = 0;
 };
 
 
