@@ -1,12 +1,13 @@
+#include <wiringPi.h>
 #include "RaspInputController.h"
 
-RaspInputController::RaspInputController() : pollingTimer(1000, 20000) {
+RaspInputController::RaspInputController() : pollingTimer(1000, 20000), roterPollingTimer(10, 20000) {
     initializePins();
 }
 
 void RaspInputController::initializePins() {
     map<unsigned short, unsigned short>::iterator it;
-    for (it = this->outputMap.begin(); it != this->outputMap.end(); it ++) {
+    for (it = this->outputMap.begin(); it != this->outputMap.end(); it++) {
         try {
             pinMode(it->second, INPUT);
             pullUpDnControl(it->second, PUD_UP);
@@ -17,8 +18,50 @@ void RaspInputController::initializePins() {
 }
 
 void RaspInputController::startPolling() {
-    Timer pollingTimer(100, 20000); // 2ms polling rate
+    Timer pollingTimer(100, 20000); // 100ms polling rate, 2ms precision
     cout << "Starting to poll input events ..." << endl;
+
+    Timer roterPollingTimer(10, 20000);
+    thread th([this]() {
+        this->roterPollingTimer.start([this]() {
+            bool volumeBpmUpButtonState = digitalRead(this->outputMap.at(VOLUME_BPM_UP_BUTTON)) == 0;
+            if (volumeBpmUpButtonState != this->buttonStateMap.at(VOLUME_BPM_UP_BUTTON) && volumeBpmUpButtonState) {
+                this->buttonStateMap.at(VOLUME_BPM_UP_BUTTON) = true;
+
+                thread thu([this] () {
+                    delay(200);
+                    this->buttonStateMap.at(VOLUME_BPM_UP_BUTTON) = false;
+                });
+                thu.detach();
+
+                for (unsigned short i = 0; i < inputListenerList.size(); i++) {
+                    if (this->buttonStateMap.at(VOLUME_BPM_UP_BUTTON)) {
+                        inputListenerList[i]->inputEvent(VOLUME_BPM_UP_BUTTON);
+                    }
+                }
+            }
+
+            bool volumeBpmDownButtonState = digitalRead(this->outputMap.at(VOLUME_BPM_DOWN_BUTTON)) == 0;
+            if (volumeBpmDownButtonState != this->buttonStateMap.at(VOLUME_BPM_DOWN_BUTTON) &&
+                volumeBpmDownButtonState) {
+                this->buttonStateMap.at(VOLUME_BPM_DOWN_BUTTON) = true;
+
+                thread thd([this] () {
+                    delay(200);
+                    this->buttonStateMap.at((VOLUME_BPM_DOWN_BUTTON)) = false;
+                });
+                thd.detach();
+
+                for (unsigned short i = 0; i < inputListenerList.size(); i++) {
+                    if (this->buttonStateMap.at(VOLUME_BPM_DOWN_BUTTON)) {
+                        inputListenerList[i]->inputEvent(VOLUME_BPM_DOWN_BUTTON);
+                    }
+                }
+            }
+        });
+    });
+    th.detach();
+
     pollingTimer.start([this]() {
         vector<unsigned short> inputEvents = getInputEvents();
         if (inputEvents.size() > 0) {
@@ -35,15 +78,17 @@ vector<unsigned short> RaspInputController::getInputEvents() {
     vector<unsigned short> events;
     map<unsigned short, unsigned short>::iterator it;
 
-    for (it = this->outputMap.begin(); it != this->outputMap.end(); it ++) {
+    for (it = this->outputMap.begin(); it != this->outputMap.end(); it++) {
         unsigned short button = it->first;
-        bool state = digitalRead(it->second) == 0;
-        if (this->buttonStateMap.at(button) != state) {
-            cout << "Input detected! (" << button << ")" << endl;
-            this->buttonStateMap.at(button) = state;
+        if (button != VOLUME_BPM_UP_BUTTON && button != VOLUME_BPM_DOWN_BUTTON) {
+            bool state = digitalRead(it->second) == 0;
+            if (this->buttonStateMap.at(button) != state) {
+                cout << "Input detected! (" << button << ")" << endl;
+                this->buttonStateMap.at(button) = state;
 
-            if (state) {
-                events.push_back(button);
+                if (state) {
+                    events.push_back(button);
+                }
             }
         }
     }
@@ -56,6 +101,7 @@ void RaspInputController::addInputListener(InputListener &listener) {
 
 void RaspInputController::stop() {
     pollingTimer.stop();
+    roterPollingTimer.stop();
 }
 
 void RaspInputController::start() {

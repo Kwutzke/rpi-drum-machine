@@ -7,7 +7,8 @@
 
 class DrumMachineInputListener: public InputListener {
 private:
-    const float VOLUME_STEP_SIZE = 0.1f;
+    const float VOLUME_STEP_SIZE = 0.05f;
+    const int BPM_STEP_SIZE = 1;
 
     DrumMachine& drumMachine;
 
