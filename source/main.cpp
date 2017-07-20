@@ -8,7 +8,7 @@
 using namespace std;
 using namespace sample;
 
-void setup(DrumMachine& drumMachine) {
+void setup(DrumMachine &drumMachine) {
     drumMachine.setBPM(120);
 
     Sample baseDrum("./audio_files/tr909_16bit/bd01.wav");

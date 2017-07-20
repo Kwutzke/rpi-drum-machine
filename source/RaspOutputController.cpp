@@ -21,7 +21,7 @@ void RaspOutputController::initializePins() {
 }
 
 void RaspOutputController::positionChange(unsigned short newPosition) {
-    thread tLed ([this, newPosition]() {
+    thread tLed([this, newPosition]() {
         this->blink(this->outputPinMap.at(this->greenLedList.at((unsigned long) newPosition)));
     });
     tLed.detach();
@@ -69,9 +69,9 @@ void RaspOutputController::activeSampleChange(unsigned short newActiveSample, un
 
 void RaspOutputController::playPositionChange(vector<unsigned short> &newPlayArray) {
     short unsigned i;
-        for(i = 0; i < newPlayArray.size(); i++) {
-            this->playPositionChange(i, newPlayArray.at(i));
-        }
+    for (i = 0; i < newPlayArray.size(); i++) {
+        this->playPositionChange(i, newPlayArray.at(i));
+    }
 }
 
 void RaspOutputController::playPositionChange(unsigned short position, unsigned short playState) {
@@ -85,7 +85,7 @@ void RaspOutputController::playPositionChange(unsigned short position, unsigned 
     }
 }
 
-void RaspOutputController::setBeatBlinkDelay(unsigned int beatBlinkDelay) {
+void RaspOutputController::setBeatDuration(unsigned int beatDuration) {
     this->beatBlinkDelay = beatBlinkDelay;
 }
 

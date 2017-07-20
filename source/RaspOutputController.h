@@ -43,38 +43,76 @@ public:
 
     void activeSampleChange(unsigned short newActiveSample, unsigned short oldActiveSample) override;
 
-    void playPositionChange(vector<unsigned short>&) override;
+    void playPositionChange(vector<unsigned short> &) override;
 
     void playPositionChange(unsigned short position, unsigned short playState) override;
 
     void blink(int);
 
-    void setBeatBlinkDelay(unsigned int beatBlinkDelay) override;
+    void setBeatDuration(unsigned int beatDuration) override;
 
     void showMainScreen(unsigned int bpm) override;
 
     void showSampleScreen(unsigned int bpm, float volume) override;
+
 private:
     const map<unsigned short, unsigned short> outputPinMap = {
-            {BEAT1_RED,   115}, {BEAT1_GREEN, 114}, {BEAT1_BLUE,  112},
-            {BEAT2_RED,   111}, {BEAT2_GREEN, 110}, {BEAT2_BLUE,  108},
-            {BEAT3_RED,   215}, {BEAT3_GREEN, 214}, {BEAT3_BLUE,  212},
-            {BEAT4_RED,   211}, {BEAT4_GREEN, 210}, {BEAT4_BLUE,  208},
-            {BEAT5_RED,   100}, {BEAT5_GREEN, 101}, {BEAT5_BLUE,  103},
-            {BEAT6_RED,   104}, {BEAT6_GREEN, 105}, {BEAT6_BLUE,  107},
-            {BEAT7_RED,   200}, {BEAT7_GREEN, 201}, {BEAT7_BLUE,  203},
-            {BEAT8_RED,   204}, {BEAT8_GREEN, 205}, {BEAT8_BLUE,  207},
-            {BEAT9_RED,   303}, {BEAT9_GREEN, 301}, {BEAT9_BLUE,  300},
-            {BEAT10_RED,   307}, {BEAT10_GREEN, 305}, {BEAT10_BLUE,  304},
-            {BEAT11_RED,   403}, {BEAT11_GREEN, 401}, {BEAT11_BLUE,  400},
-            {BEAT12_RED,   407}, {BEAT12_GREEN, 405}, {BEAT12_BLUE,  404},
-            {BEAT13_RED,   312}, {BEAT13_GREEN, 314}, {BEAT13_BLUE,  315},
-            {BEAT14_RED,   308}, {BEAT14_GREEN, 310}, {BEAT14_BLUE,  311},
-            {BEAT15_RED,   412}, {BEAT15_GREEN, 414}, {BEAT15_BLUE,  415},
-            {BEAT16_RED,   408}, {BEAT16_GREEN, 410}, {BEAT16_BLUE,  411},
-            {SAMPLE1_LED, 500}, {SAMPLE2_LED, 502}, {SAMPLE3_LED, 515},
-            {SAMPLE4_LED, 513}, {SAMPLE5_LED, 511}, {SAMPLE6_LED, 509},
-            {SAMPLE7_LED, 504}, {SAMPLE8_LED, 506},
+            {BEAT1_RED,    115},
+            {BEAT1_GREEN,  114},
+            {BEAT1_BLUE,   112},
+            {BEAT2_RED,    111},
+            {BEAT2_GREEN,  110},
+            {BEAT2_BLUE,   108},
+            {BEAT3_RED,    215},
+            {BEAT3_GREEN,  214},
+            {BEAT3_BLUE,   212},
+            {BEAT4_RED,    211},
+            {BEAT4_GREEN,  210},
+            {BEAT4_BLUE,   208},
+            {BEAT5_RED,    100},
+            {BEAT5_GREEN,  101},
+            {BEAT5_BLUE,   103},
+            {BEAT6_RED,    104},
+            {BEAT6_GREEN,  105},
+            {BEAT6_BLUE,   107},
+            {BEAT7_RED,    200},
+            {BEAT7_GREEN,  201},
+            {BEAT7_BLUE,   203},
+            {BEAT8_RED,    204},
+            {BEAT8_GREEN,  205},
+            {BEAT8_BLUE,   207},
+            {BEAT9_RED,    303},
+            {BEAT9_GREEN,  301},
+            {BEAT9_BLUE,   300},
+            {BEAT10_RED,   307},
+            {BEAT10_GREEN, 305},
+            {BEAT10_BLUE,  304},
+            {BEAT11_RED,   403},
+            {BEAT11_GREEN, 401},
+            {BEAT11_BLUE,  400},
+            {BEAT12_RED,   407},
+            {BEAT12_GREEN, 405},
+            {BEAT12_BLUE,  404},
+            {BEAT13_RED,   312},
+            {BEAT13_GREEN, 314},
+            {BEAT13_BLUE,  315},
+            {BEAT14_RED,   308},
+            {BEAT14_GREEN, 310},
+            {BEAT14_BLUE,  311},
+            {BEAT15_RED,   412},
+            {BEAT15_GREEN, 414},
+            {BEAT15_BLUE,  415},
+            {BEAT16_RED,   408},
+            {BEAT16_GREEN, 410},
+            {BEAT16_BLUE,  411},
+            {SAMPLE1_LED,  500},
+            {SAMPLE2_LED,  502},
+            {SAMPLE3_LED,  515},
+            {SAMPLE4_LED,  513},
+            {SAMPLE5_LED,  511},
+            {SAMPLE6_LED,  509},
+            {SAMPLE7_LED,  504},
+            {SAMPLE8_LED,  506},
     };
 
     const vector<unsigned short> redLedList = {
@@ -84,7 +122,8 @@ private:
 
     const vector<unsigned short> greenLedList = {
             BEAT1_GREEN, BEAT2_GREEN, BEAT3_GREEN, BEAT4_GREEN, BEAT5_GREEN, BEAT6_GREEN, BEAT7_GREEN, BEAT8_GREEN,
-            BEAT9_GREEN, BEAT10_GREEN, BEAT11_GREEN, BEAT12_GREEN, BEAT13_GREEN, BEAT14_GREEN, BEAT15_GREEN, BEAT16_GREEN
+            BEAT9_GREEN, BEAT10_GREEN, BEAT11_GREEN, BEAT12_GREEN, BEAT13_GREEN, BEAT14_GREEN, BEAT15_GREEN,
+            BEAT16_GREEN
     };
 
     const vector<unsigned short> blueLedList = {
@@ -99,9 +138,13 @@ private:
     Display display;
 
     void switchOffAllLed();
+
     void switchOffAllRedBeatLeds();
+
     unsigned int beatBlinkDelay;
+
     void initializePins();
+
     void switchOnFirstBeatLed();
 
 };

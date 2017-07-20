@@ -7,9 +7,10 @@ using namespace std::chrono;
 using namespace std;
 using namespace sample;
 
-DrumMachine::DrumMachine(AOutputController& raspOutputController) : loopRunning(false), currentBeat(0), volume(1),
+DrumMachine::DrumMachine(AOutputController &raspOutputController) : loopRunning(false), currentBeat(0), volume(1),
                                                                     outputController(raspOutputController),
-                                                                    loop(sixteenthNoteMillis, (int) LOOP_PRECISION_NANOS),
+                                                                    loop(sixteenthNoteMillis,
+                                                                         (int) LOOP_PRECISION_NANOS),
                                                                     activeSample(NO_SAMPLE) {
     this->openAudio();
     this->allocateChannels();
@@ -87,7 +88,7 @@ void DrumMachine::setBPM(unsigned short bpm) {
         this->bpm = bpm;
         this->sixteenthNoteMillis = 60000 / bpm / 4;
         this->loop.setInterval(sixteenthNoteMillis);
-        this->outputController.setBeatBlinkDelay((unsigned int) (sixteenthNoteMillis * .8f));
+        this->outputController.setBeatDuration((unsigned int) (sixteenthNoteMillis * .8f));
         this->outputController.showMainScreen(bpm);
     }
 }

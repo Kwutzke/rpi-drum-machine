@@ -24,6 +24,6 @@ void Display::showSampleScreen(unsigned int bpm, float volume) {
     display.printf("BPM:%d", bpm);
     display.setTextSize(3);
     display.setCursor(1, 30);
-    display.printf("VOL:%d", (int)(volume * 100));
+    display.printf("VOL:%d", (int) (volume * 100));
     display.display();
 }

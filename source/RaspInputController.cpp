@@ -28,7 +28,7 @@ void RaspInputController::startPolling() {
             if (volumeBpmUpButtonState != this->buttonStateMap.at(VOLUME_BPM_UP_BUTTON) && volumeBpmUpButtonState) {
                 this->buttonStateMap.at(VOLUME_BPM_UP_BUTTON) = true;
 
-                thread thu([this] () {
+                thread thu([this]() {
                     delay(200);
                     this->buttonStateMap.at(VOLUME_BPM_UP_BUTTON) = false;
                 });
@@ -46,7 +46,7 @@ void RaspInputController::startPolling() {
                 volumeBpmDownButtonState) {
                 this->buttonStateMap.at(VOLUME_BPM_DOWN_BUTTON) = true;
 
-                thread thd([this] () {
+                thread thd([this]() {
                     delay(200);
                     this->buttonStateMap.at((VOLUME_BPM_DOWN_BUTTON)) = false;
                 });

@@ -10,7 +10,9 @@ public:
     Display();
 
     void showMainScreen(unsigned int bpm);
+
     void showSampleScreen(unsigned int bpm, float volume);
+
 private:
     Adafruit_SSD1306 display;
 };

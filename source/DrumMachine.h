@@ -18,7 +18,7 @@ namespace sample {
 
 namespace beat {
     const unsigned short
-            BEAT1 = 0, BEAT2  = 1, BEAT3  = 2,  BEAT4 =  3,  BEAT5 =  4,  BEAT6  = 5,  BEAT7  = 6,  BEAT8  = 7,
+            BEAT1 = 0, BEAT2 = 1, BEAT3 = 2, BEAT4 = 3, BEAT5 = 4, BEAT6 = 5, BEAT7 = 6, BEAT8 = 7,
             BEAT9 = 8, BEAT10 = 9, BEAT11 = 10, BEAT12 = 11, BEAT13 = 12, BEAT14 = 13, BEAT15 = 14, BEAT16 = 15;
 }
 
@@ -32,25 +32,29 @@ private:
     int sixteenthNoteMillis;
     bool loopRunning;
     float volume;
-    AOutputController& outputController;
+    AOutputController &outputController;
     unsigned short activeSample;
 
     Timer loop;
     vector<Sample> samples;
 
     void allocateChannels();
+
     void openAudio();
 
 public:
-    explicit DrumMachine(AOutputController&);
+    explicit DrumMachine(AOutputController &);
 
     void startLoop();
+
     void stopLoop();
+
     void addSample(Sample);
-    void addSamples(vector<Sample>);
-    void increaseVolume(float);
+
     void increaseActiveSampleVolume(float);
+
     void increaseBpm(unsigned short);
+
     void toggleSampleAtBeat(unsigned short beat);
 
     // Getters and Setters
@@ -61,9 +65,11 @@ public:
     unsigned short getBPM();
 
     void setMasterVolume(float);
+
     float getMasterVolume();
 
     void setActiveSample(unsigned short);
+
     unsigned short getActiveSample();
 };
 
