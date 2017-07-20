@@ -8,8 +8,6 @@ using namespace std;
 class AOutputController {
 public:
     virtual void positionChange(unsigned short newPosition) = 0;
-    virtual void bpmChange(int newBpm) = 0;
-    virtual void volumeChange(int newVolume) = 0;
     virtual void activeSampleChange(unsigned short newActiveSample, unsigned short oldActiveSample) = 0;
     virtual void playPositionChange(vector<unsigned short> &newPlayArray) = 0;
     virtual void playPositionChange(unsigned short, unsigned short) = 0;

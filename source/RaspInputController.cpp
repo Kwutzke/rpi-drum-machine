@@ -1,7 +1,7 @@
 #include <wiringPi.h>
 #include "RaspInputController.h"
 
-RaspInputController::RaspInputController() : pollingTimer(1000, 20000), roterPollingTimer(10, 20000) {
+RaspInputController::RaspInputController() : pollingTimer(1000, 20000), rotaryPollingTimer(10, 20000) {
     initializePins();
 }
 
@@ -21,9 +21,9 @@ void RaspInputController::startPolling() {
     Timer pollingTimer(100, 20000); // 100ms polling rate, 2ms precision
     cout << "Starting to poll input events ..." << endl;
 
-    Timer roterPollingTimer(10, 20000);
+    Timer rotaryPollingTimer(10, 20000);
     thread th([this]() {
-        this->roterPollingTimer.start([this]() {
+        this->rotaryPollingTimer.start([this]() {
             bool volumeBpmUpButtonState = digitalRead(this->outputMap.at(VOLUME_BPM_UP_BUTTON)) == 0;
             if (volumeBpmUpButtonState != this->buttonStateMap.at(VOLUME_BPM_UP_BUTTON) && volumeBpmUpButtonState) {
                 this->buttonStateMap.at(VOLUME_BPM_UP_BUTTON) = true;
@@ -101,7 +101,7 @@ void RaspInputController::addInputListener(InputListener &listener) {
 
 void RaspInputController::stop() {
     pollingTimer.stop();
-    roterPollingTimer.stop();
+    rotaryPollingTimer.stop();
 }
 
 void RaspInputController::start() {

@@ -46,7 +46,7 @@ void DrumMachine::startLoop() {
 
             // next beat
             currentBeat++;
-            if (currentBeat == 16) {
+            if (currentBeat == TOTAL_BEATS) {
                 currentBeat = 0;
             }
             cout << currentBeat << endl;
@@ -82,7 +82,7 @@ void DrumMachine::increaseActiveSampleVolume(float volume) {
     this->outputController.showSampleScreen(getBPM(), oldVolume + volume);
 }
 
-void DrumMachine::setBPM(int bpm) {
+void DrumMachine::setBPM(unsigned short bpm) {
     if (bpm >= 20 && bpm <= 220) {
         this->bpm = bpm;
         this->sixteenthNoteMillis = 60000 / bpm / 4;
@@ -92,7 +92,7 @@ void DrumMachine::setBPM(int bpm) {
     }
 }
 
-int DrumMachine::getBPM() {
+unsigned short DrumMachine::getBPM() {
     return this->bpm;
 }
 
@@ -147,7 +147,7 @@ void DrumMachine::setActiveSample(unsigned short newActiveSample) {
     }
 }
 
-void DrumMachine::toggleSampleAtBeat(unsigned int beat) {
+void DrumMachine::toggleSampleAtBeat(unsigned short beat) {
     if (this->activeSample != NO_SAMPLE) {
         this->samples.at(activeSample).togglePlayAtBeat(beat);
         this->outputController.playPositionChange(beat, this->samples.at(this->activeSample).getPlayArray().at(beat));
@@ -162,6 +162,6 @@ unsigned short DrumMachine::getActiveSample() {
     return this->activeSample;
 }
 
-void DrumMachine::increaseBpm(int value) {
+void DrumMachine::increaseBpm(unsigned short value) {
     setBPM(getBPM() + value);
 }

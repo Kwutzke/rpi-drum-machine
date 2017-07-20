@@ -4,7 +4,7 @@ using namespace state;
 
 Sample::Sample(const char *samplePath) : playArray(16, 0), volume(1), masterVolume(1) {
     this->sampleFile = Mix_LoadWAV(samplePath);
-    if (this->sampleFile == NULL) {
+    if (this->sampleFile == nullptr) {
         fprintf(stderr, "Unable to load wave file: %s\n", samplePath);
     }
 }
@@ -26,7 +26,6 @@ void Sample::setMixVolume() {
     int volume = 100;
     volume *= this->masterVolume * this->volume;
     Mix_VolumeChunk(this->sampleFile, volume);
-//    cout << "Master: " << this->getMasterVolume() << " Sample: " << this->getVolume() << " Result: " << volume << endl;
 }
 
 void Sample::playAtBeat(unsigned int beatPosition) {

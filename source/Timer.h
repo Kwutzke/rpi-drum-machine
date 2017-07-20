@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <chrono>
-#include <time.h>
+#include <ctime>
 #include <thread>
 #include <vector>
 

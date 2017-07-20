@@ -24,7 +24,7 @@ namespace state {
 class Sample {
 public:
 
-    Sample(const char* samplePath);
+    explicit Sample(const char* samplePath);
     void playSample(int currentBeat);
     void play();
     void playAtBeat(unsigned int);
@@ -38,15 +38,12 @@ public:
 
     float getMasterVolume();
 
-
     vector<unsigned short> &getPlayArray();
+
 private:
 
     Mix_Chunk* sampleFile;
     vector<unsigned short> playArray;
-    bool active;
-    int loopLength;
-    bool playing;
     float volume;
     float masterVolume;
 

@@ -49,7 +49,8 @@ private:
 
     vector<InputListener*> inputListenerList;
     Timer pollingTimer;
-    Timer roterPollingTimer;
+    Timer rotaryPollingTimer;
+
 
     void startPolling();
 

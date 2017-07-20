@@ -8,12 +8,12 @@
 class DrumMachineInputListener: public InputListener {
 private:
     const float VOLUME_STEP_SIZE = 0.05f;
-    const int BPM_STEP_SIZE = 1;
+    const unsigned short BPM_STEP_SIZE = 1;
 
     DrumMachine& drumMachine;
 
 public:
-    DrumMachineInputListener(DrumMachine& drumMachine);
+    explicit DrumMachineInputListener(DrumMachine& drumMachine);
 
     void inputEvent(unsigned short event) override;
 };

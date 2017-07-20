@@ -54,18 +54,6 @@ void RaspOutputController::blink(int ledPin) {
     digitalWrite(ledPin, LOW);
 }
 
-void RaspOutputController::ledOff(int ledPin){
-
-}
-
-void RaspOutputController::bpmChange(int newBpm) {
-
-}
-
-void RaspOutputController::volumeChange(int newVolume) {
-
-}
-
 void RaspOutputController::activeSampleChange(unsigned short newActiveSample, unsigned short oldActiveSample) {
     if (oldActiveSample != NO_SAMPLE) {
         digitalWrite(this->outputPinMap.at(this->sampleLedList.at(oldActiveSample)), LOW);

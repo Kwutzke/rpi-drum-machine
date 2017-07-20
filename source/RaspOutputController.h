@@ -41,15 +41,11 @@ public:
 
     void positionChange(unsigned short newPosition) override;
 
-    void bpmChange(int newBpm) override;
-
-    void volumeChange(int newVolume) override;
-
     void activeSampleChange(unsigned short newActiveSample, unsigned short oldActiveSample) override;
 
     void playPositionChange(vector<unsigned short>&) override;
 
-    void playPositionChange(unsigned short, unsigned short) override;
+    void playPositionChange(unsigned short position, unsigned short playState) override;
 
     void blink(int);
 
@@ -100,17 +96,12 @@ private:
             SAMPLE1_LED, SAMPLE2_LED, SAMPLE3_LED, SAMPLE4_LED, SAMPLE5_LED, SAMPLE6_LED, SAMPLE7_LED, SAMPLE8_LED
     };
 
-    void switchOffAllLed();
-    void switchOffAllRedBeatLeds();
-
-    unsigned int beatBlinkDelay;
-
     Display display;
 
+    void switchOffAllLed();
+    void switchOffAllRedBeatLeds();
+    unsigned int beatBlinkDelay;
     void initializePins();
-
-    void ledOff(int ledPin);
-
     void switchOnFirstBeatLed();
 
 };

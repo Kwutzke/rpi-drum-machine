@@ -27,7 +27,7 @@ private:
     const int TOTAL_BEATS = 16;
     const long LOOP_PRECISION_NANOS = 10000; // 10ms
 
-    int bpm;
+    unsigned short bpm;
     unsigned short currentBeat;
     int sixteenthNoteMillis;
     bool loopRunning;
@@ -42,7 +42,7 @@ private:
     void openAudio();
 
 public:
-    DrumMachine(AOutputController&);
+    explicit DrumMachine(AOutputController&);
 
     void startLoop();
     void stopLoop();
@@ -50,14 +50,15 @@ public:
     void addSamples(vector<Sample>);
     void increaseVolume(float);
     void increaseActiveSampleVolume(float);
-    void increaseBpm(int);
-    void toggleSampleAtBeat(unsigned int beat);
+    void increaseBpm(unsigned short);
+    void toggleSampleAtBeat(unsigned short beat);
 
     // Getters and Setters
     bool isLoopRunning();
 
-    void setBPM(int);
-    int getBPM();
+    void setBPM(unsigned short);
+
+    unsigned short getBPM();
 
     void setMasterVolume(float);
     float getMasterVolume();

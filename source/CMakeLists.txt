@@ -25,6 +25,7 @@ set(SOURCE_FILES
         )
 
 add_executable(DrumMachine ${SOURCE_FILES})
+
 target_link_libraries(${PROJECT_NAME} SDL2)
 target_link_libraries(${PROJECT_NAME} SDL2_image)
 target_link_libraries(${PROJECT_NAME} SDL2_mixer)
