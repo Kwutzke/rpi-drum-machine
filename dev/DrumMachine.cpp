@@ -5,10 +5,12 @@
 
 using namespace std::chrono;
 using namespace std;
+using namespace sample;
 
 DrumMachine::DrumMachine(AOutputController& raspOutputController) : loopRunning(false), currentBeat(0), volume(1),
                                                                     outputController(raspOutputController),
-                                                                    loop(sixteenthNoteMillis, (int) LOOP_PRECISION_NANOS) {
+                                                                    loop(sixteenthNoteMillis, (int) LOOP_PRECISION_NANOS),
+                                                                    activeSample(NO_SAMPLE) {
     this->openAudio();
     this->allocateChannels();
 }
@@ -36,15 +38,15 @@ void DrumMachine::startLoop() {
         loopRunning = true;
         loop.setInterval(sixteenthNoteMillis);
         loop.start([this]() {
-            cout << "loop" << endl;
             for (size_t i = 0; i < samples.size(); i++) {
                 this->samples.at(i).playSample(currentBeat);
             }
+
             this->outputController.positionChange(currentBeat);
+
             // next beat
-            cout << "Increase currentBeat from " << currentBeat << " to ";
             currentBeat++;
-            if (currentBeat == 15) {
+            if (currentBeat == 16) {
                 currentBeat = 0;
             }
             cout << currentBeat << endl;
@@ -55,6 +57,7 @@ void DrumMachine::startLoop() {
 void DrumMachine::stopLoop() {
     loopRunning = false;
     loop.stop();
+    this->currentBeat = 0;
 }
 
 void DrumMachine::increaseVolume(float value) {
@@ -67,9 +70,26 @@ void DrumMachine::increaseVolume(float value) {
     }
 }
 
+void DrumMachine::increaseActiveSampleVolume(float volume) {
+    float oldVolume = this->samples.at(this->activeSample).getVolume();
+    if (oldVolume + volume >= 1) {
+        this->samples.at(this->activeSample).setVolume(1.0f);
+    } else if (oldVolume + volume <= 0) {
+        this->samples.at(this->activeSample).setVolume(0.0f);
+    } else {
+        this->samples.at(this->activeSample).setVolume(oldVolume + volume);
+    }
+    this->outputController.showSampleScreen(getBPM(), oldVolume + volume);
+}
+
 void DrumMachine::setBPM(int bpm) {
-    this->bpm = bpm;
-    this->sixteenthNoteMillis = 60000 / bpm / 4;
+    if (bpm >= 20 && bpm <= 220) {
+        this->bpm = bpm;
+        this->sixteenthNoteMillis = 60000 / bpm / 4;
+        this->loop.setInterval(sixteenthNoteMillis);
+        this->outputController.setBeatBlinkDelay((unsigned int) (sixteenthNoteMillis * .8f));
+        this->outputController.showMainScreen(bpm);
+    }
 }
 
 int DrumMachine::getBPM() {
@@ -108,16 +128,40 @@ bool DrumMachine::isLoopRunning() {
     return loopRunning;
 }
 
-void DrumMachine::setActiveSample(unsigned short activeSample) {
-    this->activeSample = activeSample;
-    this->outputController.playPositionChange(this->samples.at(activeSample).getPlayArray());
+void DrumMachine::setActiveSample(unsigned short newActiveSample) {
+
+    if (newActiveSample == this->activeSample) {
+        newActiveSample = NO_SAMPLE;
+        this->outputController.showMainScreen(getBPM());
+    }
+
+    this->outputController.activeSampleChange(newActiveSample, this->activeSample);
+    this->activeSample = newActiveSample;
+
+    if (newActiveSample >= this->samples.size()) {
+        cout << "WARNING: No Sample " << newActiveSample << "found!" << endl;
+    } else {
+        cout << "Old active sample: " << this->activeSample << " new active sample: " << newActiveSample << endl;
+        this->outputController.playPositionChange(this->samples.at(this->activeSample).getPlayArray());
+        this->outputController.showSampleScreen(getBPM(), this->samples.at(this->activeSample).getVolume());
+    }
 }
 
-void DrumMachine::toggleSampleAtBeat(unsigned long sampleNumber, unsigned int beat) {
-    this->samples.at(sampleNumber).togglePlayAtBeat(beat);
-    this->outputController.playPositionChange((unsigned short) sampleNumber, this->samples.at(sampleNumber).getPlayArray().at(beat));
+void DrumMachine::toggleSampleAtBeat(unsigned int beat) {
+    if (this->activeSample != NO_SAMPLE) {
+        this->samples.at(activeSample).togglePlayAtBeat(beat);
+        this->outputController.playPositionChange(beat, this->samples.at(this->activeSample).getPlayArray().at(beat));
+    } else {
+        if (beat >= 0 && beat < this->samples.size()) {
+            this->samples.at(beat).play();
+        }
+    }
 }
 
-void DrumMachine::toggleActiveSampleAtBeat(unsigned int beat) {
-    this->samples.at(activeSample).togglePlayAtBeat(beat);
+unsigned short DrumMachine::getActiveSample() {
+    return this->activeSample;
+}
+
+void DrumMachine::increaseBpm(int value) {
+    setBPM(getBPM() + value);
 }

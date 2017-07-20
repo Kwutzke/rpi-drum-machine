@@ -1,50 +1,56 @@
 #include <wiringPi.h>
-#include <mcp23017.h>
 #include <iostream>
 #include "RaspOutputController.h"
 #include "Sample.h"
+#include "DrumMachine.h"
 
 using namespace state;
+using namespace sample;
 
-RaspOutputController::RaspOutputController(){
+RaspOutputController::RaspOutputController() : beatBlinkDelay(0) {
     this->initializePins();
+    this->switchOffAllLed();
     this->switchOnFirstBeatLed();
-
 };
 
 void RaspOutputController::initializePins() {
     map<unsigned short, unsigned short>::const_iterator it;
-    for (it = this->beatPinMap.begin(); it != this->beatPinMap.end(); it++) {
+    for (it = this->outputPinMap.begin(); it != this->outputPinMap.end(); it++) {
         pinMode(it->second, OUTPUT);
     }
 }
 
 void RaspOutputController::positionChange(unsigned short newPosition) {
     thread tLed ([this, newPosition]() {
-        this->blink(this->beatPinMap.at(this->greenLedList.at((unsigned long) newPosition)));
+        this->blink(this->outputPinMap.at(this->greenLedList.at((unsigned long) newPosition)));
     });
     tLed.detach();
 };
 
 void RaspOutputController::switchOnFirstBeatLed() {
-    digitalWrite(this->beatPinMap.at(BEAT1_BLUE), 1);
-    digitalWrite(this->beatPinMap.at(BEAT5_BLUE), 1);
+    digitalWrite(this->outputPinMap.at(BEAT1_BLUE), 1);
+    digitalWrite(this->outputPinMap.at(BEAT5_BLUE), 1);
+    digitalWrite(this->outputPinMap.at(BEAT9_BLUE), 1);
+    digitalWrite(this->outputPinMap.at(BEAT13_BLUE), 1);
 }
 
-void RaspOutputController::switchOfAllLed() {
+void RaspOutputController::switchOffAllRedBeatLeds() {
+    for (unsigned short led : this->redLedList) {
+        digitalWrite(this->outputPinMap.at(led), LOW);
+    }
+}
+
+void RaspOutputController::switchOffAllLed() {
     map<unsigned short, unsigned short>::const_iterator it;
-    for (it = this->beatPinMap.begin(); it != this->beatPinMap.end(); it++) {
-        thread tLed([this, it]() {
-            pinMode(it->second, OUTPUT);
-            this->blink(it->second);
-        });
-        tLed.detach();
+    for (it = this->outputPinMap.begin(); it != this->outputPinMap.end(); it++) {
+        pinMode(it->second, OUTPUT);
+        this->blink(it->second);
     }
 }
 
 void RaspOutputController::blink(int ledPin) {
     digitalWrite(ledPin, HIGH);
-    delay(100);
+    delay(this->beatBlinkDelay);
     digitalWrite(ledPin, LOW);
 }
 
@@ -60,27 +66,45 @@ void RaspOutputController::volumeChange(int newVolume) {
 
 }
 
-void RaspOutputController::activeSampleChange(int newActiveSample) {
-
+void RaspOutputController::activeSampleChange(unsigned short newActiveSample, unsigned short oldActiveSample) {
+    if (oldActiveSample != NO_SAMPLE) {
+        digitalWrite(this->outputPinMap.at(this->sampleLedList.at(oldActiveSample)), LOW);
+    }
+    if (newActiveSample != NO_SAMPLE) {
+        digitalWrite(this->outputPinMap.at(this->sampleLedList.at(newActiveSample)), HIGH);
+    }
+    if (newActiveSample == NO_SAMPLE) {
+        switchOffAllRedBeatLeds();
+        switchOnFirstBeatLed();
+    }
 }
 
 void RaspOutputController::playPositionChange(vector<unsigned short> &newPlayArray) {
-    thread tLed([this, &newPlayArray]() {
     short unsigned i;
         for(i = 0; i < newPlayArray.size(); i++) {
             this->playPositionChange(i, newPlayArray.at(i));
         }
-    });
-    tLed.detach();
 }
 
 void RaspOutputController::playPositionChange(unsigned short position, unsigned short playState) {
     if (playState == PLAY) {
-        digitalWrite(position, HIGH);
-        digitalWrite(position, LOW);
+        digitalWrite(this->outputPinMap.at(this->redLedList.at(position)), HIGH);
+        digitalWrite(this->outputPinMap.at(this->blueLedList.at(position)), LOW);
     } else if (playState == MUTE) {
-        digitalWrite(position, LOW);
+        digitalWrite(this->outputPinMap.at(this->redLedList.at(position)), LOW);
         if (position == 0 | position == 4 | position == 8 | position == 12)
-            digitalWrite(position, HIGH);
+            digitalWrite(this->outputPinMap.at(this->blueLedList.at(position)), HIGH);
     }
+}
+
+void RaspOutputController::setBeatBlinkDelay(unsigned int beatBlinkDelay) {
+    this->beatBlinkDelay = beatBlinkDelay;
+}
+
+void RaspOutputController::showMainScreen(unsigned int bpm) {
+    display.showMainScreen(bpm);
+}
+
+void RaspOutputController::showSampleScreen(unsigned int bpm, float volume) {
+    display.showSampleScreen(bpm, volume);
 }

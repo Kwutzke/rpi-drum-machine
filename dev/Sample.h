@@ -26,6 +26,7 @@ public:
 
     Sample(const char* samplePath);
     void playSample(int currentBeat);
+    void play();
     void playAtBeat(unsigned int);
     void muteAtBeat(unsigned int);
 
