@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_drum_machine_8h">
+    <title>DrumMachine.h File Reference</title>
+    <programlisting>#include &lt;vector&gt;</programlisting>
+    <programlisting>#include &quot;Sample.h&quot;</programlisting>
+    <programlisting>#include &quot;AOutputController.h&quot;</programlisting>
+    <programlisting>#include &quot;RaspOutputController.h&quot;</programlisting>
+    <programlisting>#include &quot;Timer.h&quot;</programlisting>
+        <section>
+            <title> Klassen </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_drum_machine">DrumMachine</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title> Namensbereiche </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespacesample">sample</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespacebeat">beat</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Ausführliche Beschreibung</title>
+    <para>Definition in file /Users/kilian/Development/EntwMM/Arduino Drum Machine/source/DrumMachine.h</para>
+    </simplesect>
+</section>

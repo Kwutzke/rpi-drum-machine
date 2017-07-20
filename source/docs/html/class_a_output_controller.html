@@ -1,0 +1,376 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drum Machine: AOutputController Klassenreferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Drum Machine
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Suchen');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_a_output_controller.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Öffentliche Methoden</a> &#124;
+<a href="class_a_output_controller-members.html">Aufstellung aller Elemente</a>  </div>
+  <div class="headertitle">
+<div class="title">AOutputController Klassenreferenz<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_a_output_controller_8h_source.html">AOutputController.h</a>&gt;</code></p>
+<div class="dynheader">
+Klassendiagramm für AOutputController:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_a_output_controller.png" usemap="#AOutputController_map" alt=""/>
+  <map id="AOutputController_map" name="AOutputController_map">
+<area href="class_rasp_output_controller.html" alt="RaspOutputController" shape="rect" coords="0,56,133,80"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Öffentliche Methoden</h2></td></tr>
+<tr class="memitem:a5a818a40e2911411d378032b8b2fb6c8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_output_controller.html#a5a818a40e2911411d378032b8b2fb6c8">positionChange</a> (unsigned short newPosition)=0</td></tr>
+<tr class="separator:a5a818a40e2911411d378032b8b2fb6c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2b87aa6291c38cc65185bf6a37ae300"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_output_controller.html#ac2b87aa6291c38cc65185bf6a37ae300">activeSampleChange</a> (unsigned short newActiveSample, unsigned short oldActiveSample)=0</td></tr>
+<tr class="separator:ac2b87aa6291c38cc65185bf6a37ae300"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bad658dfc3eb1223ace0c0454130818"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_output_controller.html#a7bad658dfc3eb1223ace0c0454130818">playPositionChange</a> (vector&lt; unsigned short &gt; &amp;newPlayArray)=0</td></tr>
+<tr class="separator:a7bad658dfc3eb1223ace0c0454130818"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15c1300df5606bf7d4838b41a45c31e3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_output_controller.html#a15c1300df5606bf7d4838b41a45c31e3">playPositionChange</a> (unsigned short, unsigned short)=0</td></tr>
+<tr class="separator:a15c1300df5606bf7d4838b41a45c31e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac685432fc57d2441ecb548386554d2c9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_output_controller.html#ac685432fc57d2441ecb548386554d2c9">setBeatDuration</a> (unsigned int beatDuration)=0</td></tr>
+<tr class="separator:ac685432fc57d2441ecb548386554d2c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace7df9de71110b3615156b9bd06a9349"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_output_controller.html#ace7df9de71110b3615156b9bd06a9349">showMainScreen</a> (unsigned int bpm)=0</td></tr>
+<tr class="separator:ace7df9de71110b3615156b9bd06a9349"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab53d12a6aa6f38d0e4ead69e85ed4fe"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_output_controller.html#aab53d12a6aa6f38d0e4ead69e85ed4fe">showSampleScreen</a> (unsigned int bpm, float volume)=0</td></tr>
+<tr class="separator:aab53d12a6aa6f38d0e4ead69e85ed4fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
+<div class="textblock">
+<p class="definition">Definiert in Zeile <a class="el" href="_a_output_controller_8h_source.html#l00008">8</a> der Datei <a class="el" href="_a_output_controller_8h_source.html">AOutputController.h</a>.</p>
+</div><h2 class="groupheader">Dokumentation der Elementfunktionen</h2>
+<a id="ac2b87aa6291c38cc65185bf6a37ae300"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2b87aa6291c38cc65185bf6a37ae300">&#9670;&nbsp;</a></span>activeSampleChange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void AOutputController::activeSampleChange </td>
+          <td>(</td>
+          <td class="paramtype">unsigned short&#160;</td>
+          <td class="paramname"><em>newActiveSample</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned short&#160;</td>
+          <td class="paramname"><em>oldActiveSample</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implementiert in <a class="el" href="class_rasp_output_controller.html#a92954cf26d4dd5f7d8835d1d508302c0">RaspOutputController</a>.</p>
+
+<p class="reference">Wird benutzt von <a class="el" href="_drum_machine_8cpp_source.html#l00126">DrumMachine::setActiveSample()</a>.</p>
+
+</div>
+</div>
+<a id="a7bad658dfc3eb1223ace0c0454130818"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bad658dfc3eb1223ace0c0454130818">&#9670;&nbsp;</a></span>playPositionChange() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void AOutputController::playPositionChange </td>
+          <td>(</td>
+          <td class="paramtype">vector&lt; unsigned short &gt; &amp;&#160;</td>
+          <td class="paramname"><em>newPlayArray</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implementiert in <a class="el" href="class_rasp_output_controller.html#aa084e570bcf25c75b9389ca63c875f0c">RaspOutputController</a>.</p>
+
+<p class="reference">Wird benutzt von <a class="el" href="_drum_machine_8cpp_source.html#l00126">DrumMachine::setActiveSample()</a> und <a class="el" href="_drum_machine_8cpp_source.html#l00145">DrumMachine::toggleSampleAtBeat()</a>.</p>
+
+</div>
+</div>
+<a id="a15c1300df5606bf7d4838b41a45c31e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15c1300df5606bf7d4838b41a45c31e3">&#9670;&nbsp;</a></span>playPositionChange() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void AOutputController::playPositionChange </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>short</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>short</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implementiert in <a class="el" href="class_rasp_output_controller.html#a0778395ee8ec044d04fbfcb2f3b2eb04">RaspOutputController</a>.</p>
+
+</div>
+</div>
+<a id="a5a818a40e2911411d378032b8b2fb6c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a818a40e2911411d378032b8b2fb6c8">&#9670;&nbsp;</a></span>positionChange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void AOutputController::positionChange </td>
+          <td>(</td>
+          <td class="paramtype">unsigned short&#160;</td>
+          <td class="paramname"><em>newPosition</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implementiert in <a class="el" href="class_rasp_output_controller.html#afce87d510c0564567e4250b22639d5e0">RaspOutputController</a>.</p>
+
+<p class="reference">Wird benutzt von <a class="el" href="_drum_machine_8cpp_source.html#l00037">DrumMachine::startLoop()</a>.</p>
+
+</div>
+</div>
+<a id="ac685432fc57d2441ecb548386554d2c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac685432fc57d2441ecb548386554d2c9">&#9670;&nbsp;</a></span>setBeatDuration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void AOutputController::setBeatDuration </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>beatDuration</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implementiert in <a class="el" href="class_rasp_output_controller.html#a5fd551f1aba056356befd71e5bff23f1">RaspOutputController</a>.</p>
+
+<p class="reference">Wird benutzt von <a class="el" href="_drum_machine_8cpp_source.html#l00086">DrumMachine::setBPM()</a>.</p>
+
+</div>
+</div>
+<a id="ace7df9de71110b3615156b9bd06a9349"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace7df9de71110b3615156b9bd06a9349">&#9670;&nbsp;</a></span>showMainScreen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void AOutputController::showMainScreen </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>bpm</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implementiert in <a class="el" href="class_rasp_output_controller.html#ad195a3d664b7c7e5680cd8949203c1fc">RaspOutputController</a>.</p>
+
+<p class="reference">Wird benutzt von <a class="el" href="_drum_machine_8cpp_source.html#l00126">DrumMachine::setActiveSample()</a> und <a class="el" href="_drum_machine_8cpp_source.html#l00086">DrumMachine::setBPM()</a>.</p>
+
+</div>
+</div>
+<a id="aab53d12a6aa6f38d0e4ead69e85ed4fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab53d12a6aa6f38d0e4ead69e85ed4fe">&#9670;&nbsp;</a></span>showSampleScreen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void AOutputController::showSampleScreen </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>bpm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>volume</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implementiert in <a class="el" href="class_rasp_output_controller.html#a613d3a1d1ceb31875be95e4a4b733fba">RaspOutputController</a>.</p>
+
+<p class="reference">Wird benutzt von <a class="el" href="_drum_machine_8cpp_source.html#l00074">DrumMachine::increaseActiveSampleVolume()</a> und <a class="el" href="_drum_machine_8cpp_source.html#l00126">DrumMachine::setActiveSample()</a>.</p>
+
+</div>
+</div>
+<hr/>Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei:<ul>
+<li><a class="el" href="_a_output_controller_8h_source.html">AOutputController.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_a_output_controller.html">AOutputController</a></li>
+    <li class="footer">Erzeugt von
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_timer_8h">
+    <title>Timer.h File Reference</title>
+    <programlisting>#include &lt;iostream&gt;</programlisting>
+    <programlisting>#include &lt;chrono&gt;</programlisting>
+    <programlisting>#include &lt;ctime&gt;</programlisting>
+    <programlisting>#include &lt;thread&gt;</programlisting>
+    <programlisting>#include &lt;vector&gt;</programlisting>
+        <section>
+            <title> Klassen </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_timer">Timer</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Ausführliche Beschreibung</title>
+    <para>Definition in file /Users/kilian/Development/EntwMM/Arduino Drum Machine/source/Timer.h</para>
+    </simplesect>
+</section>

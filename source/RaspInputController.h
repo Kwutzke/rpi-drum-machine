@@ -81,7 +81,7 @@ private:
             {BEAT15_BUTTON,          false},
             {BEAT16_BUTTON,          false},
             {START_STOP_BUTTON,      false}
-    };
+    }; ///<
 
     vector<InputListener *> inputListenerList;
     Timer pollingTimer;

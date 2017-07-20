@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_input_listener">
+<title>InputListener class Reference</title>
+<para>
+    <programlisting>#include <link linkend="_input_listener_8h">&lt;InputListener.h&gt;</link></programlisting>
+</para>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="class_input_listener_1a1a3d74f2ffc108c773511ea4be250f7d">inputEvent</link> (
+unsigned short input)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="class_input_listener_1a1a3d74f2ffc108c773511ea4be250f7d">
+                <title>virtual void InputListener::inputEvent (unsigned short input)=0</title> <emphasis></emphasis>
+                
+            </section>
+</section>

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_display_8h">
+    <title>Display.h File Reference</title>
+    <programlisting>#include &lt;ArduiPi_SSD1306.h&gt;</programlisting>
+    <programlisting>#include &lt;Adafruit_GFX.h&gt;</programlisting>
+    <programlisting>#include &lt;Adafruit_SSD1306.h&gt;</programlisting>
+        <section>
+            <title> Klassen </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_display">Display</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Ausführliche Beschreibung</title>
+    <para>Definition in file /Users/kilian/Development/EntwMM/Arduino Drum Machine/source/Display.h</para>
+    </simplesect>
+</section>

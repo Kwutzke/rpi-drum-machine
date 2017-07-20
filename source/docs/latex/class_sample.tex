@@ -1,0 +1,345 @@
+\hypertarget{class_sample}{}\section{Sample Klassenreferenz}
+\label{class_sample}\index{Sample@{Sample}}
+
+
+A class that holds and maintains information about a sample audio file, which can be played by the Drum Machine.  
+
+
+
+
+{\ttfamily \#include $<$Sample.\+h$>$}
+
+\subsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_sample_a7aea6b090998a430341aa6d1d6222c63}{Sample} (const char $\ast$sample\+Path)
+\item 
+void \hyperlink{class_sample_a5c016261d1f93a28c323a53af3ee545a}{play\+Sample} (int current\+Beat)
+\item 
+void \hyperlink{class_sample_a2ccc1c5571e54ba6725714cd795698f3}{play} ()
+\begin{DoxyCompactList}\small\item\em Plays sample, when called. \end{DoxyCompactList}\item 
+void \hyperlink{class_sample_a287eada639aedccb8908d1ae6bf67874}{play\+At\+Beat} (unsigned int beat\+Position)
+\item 
+void \hyperlink{class_sample_a4bf009853c35f7a29955fa2554d8e799}{toggle\+Play\+At\+Beat} (unsigned short beat\+Position)
+\item 
+void \hyperlink{class_sample_ae298bfb5c8c1c3c867fa962e799a2fa5}{set\+Volume} (float \hyperlink{class_sample_a74a4b4799b2bdec9fdde363992b9cec8}{volume})
+\begin{DoxyCompactList}\small\item\em Setter of member volume. \end{DoxyCompactList}\item 
+float \hyperlink{class_sample_a9f3c251183832a53ec1967331d022575}{get\+Volume} ()
+\begin{DoxyCompactList}\small\item\em Getter of member volume. \end{DoxyCompactList}\item 
+void \hyperlink{class_sample_af8ad49b65a536c535393e3968516b871}{set\+Master\+Volume} (float \hyperlink{class_sample_a74a4b4799b2bdec9fdde363992b9cec8}{volume})
+\begin{DoxyCompactList}\small\item\em Setter of member master\+Volume. \end{DoxyCompactList}\item 
+vector$<$ unsigned short $>$ \& \hyperlink{class_sample_a5728b28ce6f6ee19a1b84eddded4fa97}{get\+Play\+Array} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Methoden}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_sample_a6d13988721d2190947f65969d4737a48}{set\+Mix\+Volume} ()
+\item 
+float \hyperlink{class_sample_afceddb412ab50a67cb98ca6b72456f24}{get\+Master\+Volume} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attribute}
+\begin{DoxyCompactItemize}
+\item 
+Mix\+\_\+\+Chunk $\ast$ \hyperlink{class_sample_ae158342c8d18a05de1c85802f7cfbd2a}{sample\+File}
+\begin{DoxyCompactList}\small\item\em Pointer to. \end{DoxyCompactList}\item 
+vector$<$ unsigned short $>$ \hyperlink{class_sample_a824014df7294cb94445e7ee89cc15987}{play\+Array}
+\begin{DoxyCompactList}\small\item\em Vector that holds 16 zeroes or ones. One stands for an active state an zero for inactive. \end{DoxyCompactList}\item 
+float \hyperlink{class_sample_a74a4b4799b2bdec9fdde363992b9cec8}{volume}
+\item 
+float \hyperlink{class_sample_a2d48ff8caf8425c37cf74130afb0c87a}{master\+Volume}
+\end{DoxyCompactItemize}
+
+
+\subsection{Ausführliche Beschreibung}
+A class that holds and maintains information about a sample audio file, which can be played by the Drum Machine. 
+
+Definiert in Zeile 32 der Datei Sample.\+h.
+
+
+
+\subsection{Beschreibung der Konstruktoren und Destruktoren}
+\mbox{\Hypertarget{class_sample_a7aea6b090998a430341aa6d1d6222c63}\label{class_sample_a7aea6b090998a430341aa6d1d6222c63}} 
+\index{Sample@{Sample}!Sample@{Sample}}
+\index{Sample@{Sample}!Sample@{Sample}}
+\subsubsection{\texorpdfstring{Sample()}{Sample()}}
+{\footnotesize\ttfamily Sample\+::\+Sample (\begin{DoxyParamCaption}\item[{const char $\ast$}]{sample\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Constructor 
+\begin{DoxyParams}{Parameter}
+{\em sample\+Path} & char\mbox{[}\mbox{]} defines where to find the audio sample file \\
+\hline
+\end{DoxyParams}
+
+
+Definiert in Zeile 5 der Datei Sample.\+cpp.
+
+
+
+Benutzt sample\+File.
+
+
+
+\subsection{Dokumentation der Elementfunktionen}
+\mbox{\Hypertarget{class_sample_afceddb412ab50a67cb98ca6b72456f24}\label{class_sample_afceddb412ab50a67cb98ca6b72456f24}} 
+\index{Sample@{Sample}!get\+Master\+Volume@{get\+Master\+Volume}}
+\index{get\+Master\+Volume@{get\+Master\+Volume}!Sample@{Sample}}
+\subsubsection{\texorpdfstring{get\+Master\+Volume()}{getMasterVolume()}}
+{\footnotesize\ttfamily float Sample\+::get\+Master\+Volume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\begin{DoxyReturn}{Rückgabe}
+
+\end{DoxyReturn}
+
+
+Definiert in Zeile 61 der Datei Sample.\+cpp.
+
+
+
+Benutzt master\+Volume.
+
+\mbox{\Hypertarget{class_sample_a5728b28ce6f6ee19a1b84eddded4fa97}\label{class_sample_a5728b28ce6f6ee19a1b84eddded4fa97}} 
+\index{Sample@{Sample}!get\+Play\+Array@{get\+Play\+Array}}
+\index{get\+Play\+Array@{get\+Play\+Array}!Sample@{Sample}}
+\subsubsection{\texorpdfstring{get\+Play\+Array()}{getPlayArray()}}
+{\footnotesize\ttfamily vector$<$ unsigned short, allocator$<$ unsigned short $>$ $>$ \& Sample\+::get\+Play\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definiert in Zeile 65 der Datei Sample.\+cpp.
+
+
+
+Benutzt play\+Array.
+
+\mbox{\Hypertarget{class_sample_a9f3c251183832a53ec1967331d022575}\label{class_sample_a9f3c251183832a53ec1967331d022575}} 
+\index{Sample@{Sample}!get\+Volume@{get\+Volume}}
+\index{get\+Volume@{get\+Volume}!Sample@{Sample}}
+\subsubsection{\texorpdfstring{get\+Volume()}{getVolume()}}
+{\footnotesize\ttfamily float Sample\+::get\+Volume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter of member volume. 
+
+
+
+Definiert in Zeile 46 der Datei Sample.\+cpp.
+
+
+
+Benutzt volume.
+
+\mbox{\Hypertarget{class_sample_a2ccc1c5571e54ba6725714cd795698f3}\label{class_sample_a2ccc1c5571e54ba6725714cd795698f3}} 
+\index{Sample@{Sample}!play@{play}}
+\index{play@{play}!Sample@{Sample}}
+\subsubsection{\texorpdfstring{play()}{play()}}
+{\footnotesize\ttfamily void Sample\+::play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Plays sample, when called. 
+
+
+
+Definiert in Zeile 21 der Datei Sample.\+cpp.
+
+
+
+Benutzt sample\+File.
+
+
+
+Wird benutzt von play\+Sample().
+
+\mbox{\Hypertarget{class_sample_a287eada639aedccb8908d1ae6bf67874}\label{class_sample_a287eada639aedccb8908d1ae6bf67874}} 
+\index{Sample@{Sample}!play\+At\+Beat@{play\+At\+Beat}}
+\index{play\+At\+Beat@{play\+At\+Beat}!Sample@{Sample}}
+\subsubsection{\texorpdfstring{play\+At\+Beat()}{playAtBeat()}}
+{\footnotesize\ttfamily void Sample\+::play\+At\+Beat (\begin{DoxyParamCaption}\item[{unsigned int}]{beat\+Position }\end{DoxyParamCaption})}
+
+Activates sample at the passed beat\+Position 
+\begin{DoxyParams}{Parameter}
+{\em beat\+Position} & the beat position, where to activate the sample \\
+\hline
+\end{DoxyParams}
+
+
+Definiert in Zeile 31 der Datei Sample.\+cpp.
+
+
+
+Benutzt play\+Array.
+
+
+
+Wird benutzt von setup().
+
+\mbox{\Hypertarget{class_sample_a5c016261d1f93a28c323a53af3ee545a}\label{class_sample_a5c016261d1f93a28c323a53af3ee545a}} 
+\index{Sample@{Sample}!play\+Sample@{play\+Sample}}
+\index{play\+Sample@{play\+Sample}!Sample@{Sample}}
+\subsubsection{\texorpdfstring{play\+Sample()}{playSample()}}
+{\footnotesize\ttfamily void Sample\+::play\+Sample (\begin{DoxyParamCaption}\item[{int}]{current\+Beat }\end{DoxyParamCaption})}
+
+Checks if the sample is active for the passed beat position and if so, plays it 
+\begin{DoxyParams}{Parameter}
+{\em current\+Beat} & the current beat position of the running loop \\
+\hline
+\end{DoxyParams}
+
+
+Definiert in Zeile 12 der Datei Sample.\+cpp.
+
+
+
+Benutzt play() und play\+Array.
+
+\mbox{\Hypertarget{class_sample_af8ad49b65a536c535393e3968516b871}\label{class_sample_af8ad49b65a536c535393e3968516b871}} 
+\index{Sample@{Sample}!set\+Master\+Volume@{set\+Master\+Volume}}
+\index{set\+Master\+Volume@{set\+Master\+Volume}!Sample@{Sample}}
+\subsubsection{\texorpdfstring{set\+Master\+Volume()}{setMasterVolume()}}
+{\footnotesize\ttfamily void Sample\+::set\+Master\+Volume (\begin{DoxyParamCaption}\item[{float}]{volume }\end{DoxyParamCaption})}
+
+
+
+Setter of member master\+Volume. 
+
+
+
+Definiert in Zeile 50 der Datei Sample.\+cpp.
+
+
+
+Benutzt master\+Volume, set\+Mix\+Volume() und volume.
+
+
+
+Wird benutzt von Drum\+Machine\+::add\+Sample().
+
+\mbox{\Hypertarget{class_sample_a6d13988721d2190947f65969d4737a48}\label{class_sample_a6d13988721d2190947f65969d4737a48}} 
+\index{Sample@{Sample}!set\+Mix\+Volume@{set\+Mix\+Volume}}
+\index{set\+Mix\+Volume@{set\+Mix\+Volume}!Sample@{Sample}}
+\subsubsection{\texorpdfstring{set\+Mix\+Volume()}{setMixVolume()}}
+{\footnotesize\ttfamily void Sample\+::set\+Mix\+Volume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definiert in Zeile 25 der Datei Sample.\+cpp.
+
+
+
+Benutzt master\+Volume, sample\+File und volume.
+
+
+
+Wird benutzt von set\+Master\+Volume() und set\+Volume().
+
+\mbox{\Hypertarget{class_sample_ae298bfb5c8c1c3c867fa962e799a2fa5}\label{class_sample_ae298bfb5c8c1c3c867fa962e799a2fa5}} 
+\index{Sample@{Sample}!set\+Volume@{set\+Volume}}
+\index{set\+Volume@{set\+Volume}!Sample@{Sample}}
+\subsubsection{\texorpdfstring{set\+Volume()}{setVolume()}}
+{\footnotesize\ttfamily void Sample\+::set\+Volume (\begin{DoxyParamCaption}\item[{float}]{volume }\end{DoxyParamCaption})}
+
+
+
+Setter of member volume. 
+
+
+
+Definiert in Zeile 35 der Datei Sample.\+cpp.
+
+
+
+Benutzt set\+Mix\+Volume() und volume.
+
+\mbox{\Hypertarget{class_sample_a4bf009853c35f7a29955fa2554d8e799}\label{class_sample_a4bf009853c35f7a29955fa2554d8e799}} 
+\index{Sample@{Sample}!toggle\+Play\+At\+Beat@{toggle\+Play\+At\+Beat}}
+\index{toggle\+Play\+At\+Beat@{toggle\+Play\+At\+Beat}!Sample@{Sample}}
+\subsubsection{\texorpdfstring{toggle\+Play\+At\+Beat()}{togglePlayAtBeat()}}
+{\footnotesize\ttfamily void Sample\+::toggle\+Play\+At\+Beat (\begin{DoxyParamCaption}\item[{unsigned short}]{beat\+Position }\end{DoxyParamCaption})}
+
+Toggles sample state at the passed beat\+Position from active to inactive or vice versa 
+\begin{DoxyParams}{Parameter}
+{\em beat\+Position} & the beat position where to toggle the sample state \\
+\hline
+\end{DoxyParams}
+
+
+Definiert in Zeile 69 der Datei Sample.\+cpp.
+
+
+
+Benutzt state\+::\+M\+U\+TE, state\+::\+P\+L\+AY und play\+Array.
+
+
+
+\subsection{Dokumentation der Datenelemente}
+\mbox{\Hypertarget{class_sample_a2d48ff8caf8425c37cf74130afb0c87a}\label{class_sample_a2d48ff8caf8425c37cf74130afb0c87a}} 
+\index{Sample@{Sample}!master\+Volume@{master\+Volume}}
+\index{master\+Volume@{master\+Volume}!Sample@{Sample}}
+\subsubsection{\texorpdfstring{master\+Volume}{masterVolume}}
+{\footnotesize\ttfamily float Sample\+::master\+Volume\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definiert in Zeile 80 der Datei Sample.\+h.
+
+
+
+Wird benutzt von get\+Master\+Volume(), set\+Master\+Volume() und set\+Mix\+Volume().
+
+\mbox{\Hypertarget{class_sample_a824014df7294cb94445e7ee89cc15987}\label{class_sample_a824014df7294cb94445e7ee89cc15987}} 
+\index{Sample@{Sample}!play\+Array@{play\+Array}}
+\index{play\+Array@{play\+Array}!Sample@{Sample}}
+\subsubsection{\texorpdfstring{play\+Array}{playArray}}
+{\footnotesize\ttfamily vector$<$unsigned short$>$ Sample\+::play\+Array\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Vector that holds 16 zeroes or ones. One stands for an active state an zero for inactive. 
+
+
+
+Definiert in Zeile 78 der Datei Sample.\+h.
+
+
+
+Wird benutzt von get\+Play\+Array(), play\+At\+Beat(), play\+Sample() und toggle\+Play\+At\+Beat().
+
+\mbox{\Hypertarget{class_sample_ae158342c8d18a05de1c85802f7cfbd2a}\label{class_sample_ae158342c8d18a05de1c85802f7cfbd2a}} 
+\index{Sample@{Sample}!sample\+File@{sample\+File}}
+\index{sample\+File@{sample\+File}!Sample@{Sample}}
+\subsubsection{\texorpdfstring{sample\+File}{sampleFile}}
+{\footnotesize\ttfamily Mix\+\_\+\+Chunk$\ast$ Sample\+::sample\+File\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Pointer to. 
+
+
+
+Definiert in Zeile 77 der Datei Sample.\+h.
+
+
+
+Wird benutzt von play(), Sample() und set\+Mix\+Volume().
+
+\mbox{\Hypertarget{class_sample_a74a4b4799b2bdec9fdde363992b9cec8}\label{class_sample_a74a4b4799b2bdec9fdde363992b9cec8}} 
+\index{Sample@{Sample}!volume@{volume}}
+\index{volume@{volume}!Sample@{Sample}}
+\subsubsection{\texorpdfstring{volume}{volume}}
+{\footnotesize\ttfamily float Sample\+::volume\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definiert in Zeile 79 der Datei Sample.\+h.
+
+
+
+Wird benutzt von get\+Volume(), set\+Master\+Volume(), set\+Mix\+Volume() und set\+Volume().
+
+
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_sample_8h}{Sample.\+h}\item 
+\hyperlink{_sample_8cpp}{Sample.\+cpp}\end{DoxyCompactItemize}

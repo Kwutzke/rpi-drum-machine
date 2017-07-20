@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_display">
+<title>Display class Reference</title>
+<para>
+    <programlisting>#include <link linkend="_display_8h">&lt;Display.h&gt;</link></programlisting>
+</para>
+        <section>
+            <title>Private Attribute</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Adafruit_SSD1306 display</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_display_1ae972fffea6f7ca1d627ef48c3d841bb3">Display</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_display_1a1a47a3c1e96d0ade385063c87197182f">showMainScreen</link> (
+unsigned int bpm)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_display_1a74eafd254fbd1f6757ea77501b2b4d04">showSampleScreen</link> (
+unsigned int bpm, float volume)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Dokumentation der Datenelemente</title>
+        </section>
+            <section xml:id="class_display_1ae972fffea6f7ca1d627ef48c3d841bb3">
+                <title>Display::Display ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_display_1a1a47a3c1e96d0ade385063c87197182f">
+                <title>void Display::showMainScreen (unsigned int bpm)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_display_1a74eafd254fbd1f6757ea77501b2b4d04">
+                <title>void Display::showSampleScreen (unsigned int bpm, float volume)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

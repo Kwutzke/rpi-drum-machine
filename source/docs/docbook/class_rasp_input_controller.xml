@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_rasp_input_controller">
+<title>RaspInputController class Reference</title>
+<para>
+    <programlisting>#include <link linkend="_rasp_input_controller_8h">&lt;RaspInputController.h&gt;</link></programlisting>
+</para>
+        <section>
+            <title>Private Attribute</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>map&lt; unsigned short, unsigned short &gt; outputMap</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>map&lt; unsigned short, bool &gt; buttonStateMap</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>vector&lt; InputListener * &gt; inputListenerList</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Timer pollingTimer</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Timer rotaryPollingTimer</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_rasp_input_controller_1a7e15590d321b382fcb5f4d70959a5cbe">startPolling</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>vector&lt; unsigned short &gt; <link linkend="class_rasp_input_controller_1a95a42703b4c0bca34ba966745bad5dff">getInputEvents</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_rasp_input_controller_1a5ffc6f68b0c74f31a9b595ff8acc49f1">initializePins</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_rasp_input_controller_1a63a9e2ab7d0eb5aed2da6068454caa65">RaspInputController</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_rasp_input_controller_1a31d6f6befaea44931f0010175bfe1a17">addInputListener</link> (
+<link linkend="class_input_listener">InputListener</link> &amp; listener)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_rasp_input_controller_1a7d9523be1a83acde964cb5d2b1d281ed">stop</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_rasp_input_controller_1a8cb185caa124285987d6b98122cfbea4">start</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Dokumentation der Datenelemente</title>
+        </section>
+            <section xml:id="class_rasp_input_controller_1a7e15590d321b382fcb5f4d70959a5cbe">
+                <title>void RaspInputController::startPolling ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_rasp_input_controller_1a95a42703b4c0bca34ba966745bad5dff">
+                <title>vector&lt; unsigned short &gt; RaspInputController::getInputEvents ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_rasp_input_controller_1a5ffc6f68b0c74f31a9b595ff8acc49f1">
+                <title>void RaspInputController::initializePins ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_rasp_input_controller_1a63a9e2ab7d0eb5aed2da6068454caa65">
+                <title>RaspInputController::RaspInputController ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_rasp_input_controller_1a31d6f6befaea44931f0010175bfe1a17">
+                <title>void RaspInputController::addInputListener (InputListener &amp;listener)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_rasp_input_controller_1a7d9523be1a83acde964cb5d2b1d281ed">
+                <title>void RaspInputController::stop ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_rasp_input_controller_1a8cb185caa124285987d6b98122cfbea4">
+                <title>void RaspInputController::start ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

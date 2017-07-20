@@ -71,6 +71,8 @@ public:
     void setActiveSample(unsigned short);
 
     unsigned short getActiveSample();
+
+    void increaseVolume(float value);
 };
 
 

@@ -1,0 +1,203 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="namespaceinputs">
+<title>inputs</title>
+        <section>
+            <title>Variablen</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceinputs_1ab1d58fe937ccabff6ec4011a74028bfb">VOLUME_BPM_UP_BUTTON</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceinputs_1af3cad6ab00b2670e1710698945d28c17">VOLUME_BPM_DOWN_BUTTON</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceinputs_1af0075a72395787966efcec2403306b43">MUTE_BUTTON</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceinputs_1a39dbaf6935309e198c1a0bc6e3468c45">SAMPLE1_BUTTON</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceinputs_1afcf2086c7f58f801e5654d8e573d928c">SAMPLE2_BUTTON</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceinputs_1a17158d35ca30fb91c6f9f757ce0d7ccc">SAMPLE3_BUTTON</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceinputs_1ac9ccac580f0955e454a367ddc6421d78">SAMPLE4_BUTTON</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceinputs_1ad22ade847b4a38fd418dccda07814551">SAMPLE5_BUTTON</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceinputs_1a88edcfa8b89df1abcca33bcec05974c4">SAMPLE6_BUTTON</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceinputs_1a50972dcf524a7b7c420ca75b0ba72a29">SAMPLE7_BUTTON</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceinputs_1a85f389284c616cd584390d04ad192ced">SAMPLE8_BUTTON</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceinputs_1af62021422f469c370f42c78a72504a66">BEAT1_BUTTON</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceinputs_1a8cdd33c9e53b617a2cf8bd32a5b74484">BEAT2_BUTTON</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceinputs_1ab60a6fc2188a034f76d3fbe554efe314">BEAT3_BUTTON</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceinputs_1af65f26f63a9572003a2bc49e7955e319">BEAT4_BUTTON</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceinputs_1a8a027829529daa53a24ece7b8334164b">BEAT5_BUTTON</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceinputs_1a6afdc23bce21454342081cf937e47ab9">BEAT6_BUTTON</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceinputs_1ac74e302394a578b31f0cf44df8cbb1a9">BEAT7_BUTTON</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceinputs_1abfcd4d28221c436391131a27402ea620">BEAT8_BUTTON</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceinputs_1af628ea84bf7114a62249d4bb425ed06a">BEAT9_BUTTON</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceinputs_1a9778bcf3a44a9d16ae156bac6d745a24">BEAT10_BUTTON</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceinputs_1ad09e4010a8b08721988599b198645372">BEAT11_BUTTON</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceinputs_1a7b6bb44b9241cac31ff9909c3fc88271">BEAT12_BUTTON</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceinputs_1a8f9d547eaa8c52cebfa64221341f266a">BEAT13_BUTTON</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceinputs_1a4dfd34a5656f72c71f1b2dd8efc963dc">BEAT14_BUTTON</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceinputs_1a1952aa2d27b65c8d8899a1ae1cfb7bb9">BEAT15_BUTTON</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceinputs_1af0f3099a06352ba4eb0808091b908178">BEAT16_BUTTON</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceinputs_1ab1d04ae8b7a7f4d11849c110f20fae10">START_STOP_BUTTON</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+</section>

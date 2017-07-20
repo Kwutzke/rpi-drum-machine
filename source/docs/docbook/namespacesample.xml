@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="namespacesample">
+<title>sample</title>
+        <section>
+            <title>Variablen</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespacesample_1a59478bc0929eb3127ff4ed573d5abab5">SAMPLE1</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespacesample_1a74decdde1db22f406d0a0cc1857534f4">SAMPLE2</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespacesample_1ac0aab16a33bfcdbd978ad2efd28cd85a">SAMPLE3</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespacesample_1ac15354120ebb7dccc9ba3f548e996148">SAMPLE4</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespacesample_1ae4dc2e0aefa868bda5be2fcdc695ef4e">SAMPLE5</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespacesample_1af6cf4e0873f330ffdf8d341aca16d6cc">SAMPLE6</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespacesample_1ad35669bc942fa6aa53d1d261f7257a3e">SAMPLE7</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespacesample_1a941e99fc5405e8c43f53d75c486d0819">SAMPLE8</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespacesample_1aa6106026bc40989292431c65c348a659">NO_SAMPLE</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+</section>

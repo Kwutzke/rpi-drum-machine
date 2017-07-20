@@ -1,0 +1,436 @@
+\hypertarget{class_rasp_output_controller}{}\section{Rasp\+Output\+Controller Klassenreferenz}
+\label{class_rasp_output_controller}\index{Rasp\+Output\+Controller@{Rasp\+Output\+Controller}}
+
+
+{\ttfamily \#include $<$Rasp\+Output\+Controller.\+h$>$}
+
+Klassendiagramm für Rasp\+Output\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_rasp_output_controller}
+\end{center}
+\end{figure}
+\subsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_rasp_output_controller_afd7487de7ff81c6b092f4072d4fa80a5}{Rasp\+Output\+Controller} ()
+\item 
+void \hyperlink{class_rasp_output_controller_afce87d510c0564567e4250b22639d5e0}{position\+Change} (unsigned short new\+Position) override
+\item 
+void \hyperlink{class_rasp_output_controller_a92954cf26d4dd5f7d8835d1d508302c0}{active\+Sample\+Change} (unsigned short new\+Active\+Sample, unsigned short old\+Active\+Sample) override
+\item 
+void \hyperlink{class_rasp_output_controller_aa084e570bcf25c75b9389ca63c875f0c}{play\+Position\+Change} (vector$<$ unsigned short $>$ \&) override
+\item 
+void \hyperlink{class_rasp_output_controller_a0778395ee8ec044d04fbfcb2f3b2eb04}{play\+Position\+Change} (unsigned short position, unsigned short play\+State) override
+\item 
+void \hyperlink{class_rasp_output_controller_a27fcbf9e1a1f9c3cefefefd537acc401}{blink} (int)
+\item 
+void \hyperlink{class_rasp_output_controller_a5fd551f1aba056356befd71e5bff23f1}{set\+Beat\+Duration} (unsigned int beat\+Duration) override
+\item 
+void \hyperlink{class_rasp_output_controller_ad195a3d664b7c7e5680cd8949203c1fc}{show\+Main\+Screen} (unsigned int bpm) override
+\item 
+void \hyperlink{class_rasp_output_controller_a613d3a1d1ceb31875be95e4a4b733fba}{show\+Sample\+Screen} (unsigned int bpm, float volume) override
+\end{DoxyCompactItemize}
+\subsection*{Private Methoden}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_rasp_output_controller_afdd3bcfa82341a9d2539233abe7cb617}{switch\+Off\+All\+Led} ()
+\item 
+void \hyperlink{class_rasp_output_controller_a9a5025e13e27544721a80e6725ed23e4}{switch\+Off\+All\+Red\+Beat\+Leds} ()
+\item 
+void \hyperlink{class_rasp_output_controller_a1172c2966777bbcee89cbe4e6de027d5}{initialize\+Pins} ()
+\item 
+void \hyperlink{class_rasp_output_controller_a0cacbc3cbca8f1b78318234c6b74e576}{switch\+On\+First\+Beat\+Led} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attribute}
+\begin{DoxyCompactItemize}
+\item 
+const map$<$ unsigned short, unsigned short $>$ \hyperlink{class_rasp_output_controller_afd8a9fff94ee9bcf63bcbe6fa810aa32}{output\+Pin\+Map}
+\item 
+const vector$<$ unsigned short $>$ \hyperlink{class_rasp_output_controller_a8ee2d3ff908d1094cc9d1320133d0bdf}{red\+Led\+List}
+\item 
+const vector$<$ unsigned short $>$ \hyperlink{class_rasp_output_controller_a8b888abfd8719eb95568abaf53d68d5c}{green\+Led\+List}
+\item 
+const vector$<$ unsigned short $>$ \hyperlink{class_rasp_output_controller_a9b5e5c4ee94d43d62e41961e6c8bea3b}{blue\+Led\+List}
+\item 
+const vector$<$ unsigned short $>$ \hyperlink{class_rasp_output_controller_ad0ad19b081450eb1d9cd6548c14a23ea}{sample\+Led\+List}
+\item 
+\hyperlink{class_display}{Display} \hyperlink{class_rasp_output_controller_a0bb52cfee18c44cd2ed64dea27d5ccc4}{display}
+\item 
+unsigned int \hyperlink{class_rasp_output_controller_a4deb199f7d611c2be39dc2d59ea45bba}{beat\+Blink\+Delay}
+\end{DoxyCompactItemize}
+
+
+\subsection{Ausführliche Beschreibung}
+
+
+Definiert in Zeile 38 der Datei Rasp\+Output\+Controller.\+h.
+
+
+
+\subsection{Beschreibung der Konstruktoren und Destruktoren}
+\mbox{\Hypertarget{class_rasp_output_controller_afd7487de7ff81c6b092f4072d4fa80a5}\label{class_rasp_output_controller_afd7487de7ff81c6b092f4072d4fa80a5}} 
+\index{Rasp\+Output\+Controller@{Rasp\+Output\+Controller}!Rasp\+Output\+Controller@{Rasp\+Output\+Controller}}
+\index{Rasp\+Output\+Controller@{Rasp\+Output\+Controller}!Rasp\+Output\+Controller@{Rasp\+Output\+Controller}}
+\subsubsection{\texorpdfstring{Rasp\+Output\+Controller()}{RaspOutputController()}}
+{\footnotesize\ttfamily Rasp\+Output\+Controller\+::\+Rasp\+Output\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definiert in Zeile 10 der Datei Rasp\+Output\+Controller.\+cpp.
+
+
+
+Benutzt initialize\+Pins(), switch\+Off\+All\+Led() und switch\+On\+First\+Beat\+Led().
+
+
+
+\subsection{Dokumentation der Elementfunktionen}
+\mbox{\Hypertarget{class_rasp_output_controller_a92954cf26d4dd5f7d8835d1d508302c0}\label{class_rasp_output_controller_a92954cf26d4dd5f7d8835d1d508302c0}} 
+\index{Rasp\+Output\+Controller@{Rasp\+Output\+Controller}!active\+Sample\+Change@{active\+Sample\+Change}}
+\index{active\+Sample\+Change@{active\+Sample\+Change}!Rasp\+Output\+Controller@{Rasp\+Output\+Controller}}
+\subsubsection{\texorpdfstring{active\+Sample\+Change()}{activeSampleChange()}}
+{\footnotesize\ttfamily void Rasp\+Output\+Controller\+::active\+Sample\+Change (\begin{DoxyParamCaption}\item[{unsigned short}]{new\+Active\+Sample,  }\item[{unsigned short}]{old\+Active\+Sample }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implementiert \hyperlink{class_a_output_controller_ac2b87aa6291c38cc65185bf6a37ae300}{A\+Output\+Controller}.
+
+
+
+Definiert in Zeile 57 der Datei Rasp\+Output\+Controller.\+cpp.
+
+
+
+Benutzt sample\+::\+N\+O\+\_\+\+S\+A\+M\+P\+LE, output\+Pin\+Map, switch\+Off\+All\+Red\+Beat\+Leds() und switch\+On\+First\+Beat\+Led().
+
+\mbox{\Hypertarget{class_rasp_output_controller_a27fcbf9e1a1f9c3cefefefd537acc401}\label{class_rasp_output_controller_a27fcbf9e1a1f9c3cefefefd537acc401}} 
+\index{Rasp\+Output\+Controller@{Rasp\+Output\+Controller}!blink@{blink}}
+\index{blink@{blink}!Rasp\+Output\+Controller@{Rasp\+Output\+Controller}}
+\subsubsection{\texorpdfstring{blink()}{blink()}}
+{\footnotesize\ttfamily void Rasp\+Output\+Controller\+::blink (\begin{DoxyParamCaption}\item[{int}]{led\+Pin }\end{DoxyParamCaption})}
+
+
+
+Definiert in Zeile 51 der Datei Rasp\+Output\+Controller.\+cpp.
+
+
+
+Benutzt beat\+Blink\+Delay.
+
+
+
+Wird benutzt von position\+Change() und switch\+Off\+All\+Led().
+
+\mbox{\Hypertarget{class_rasp_output_controller_a1172c2966777bbcee89cbe4e6de027d5}\label{class_rasp_output_controller_a1172c2966777bbcee89cbe4e6de027d5}} 
+\index{Rasp\+Output\+Controller@{Rasp\+Output\+Controller}!initialize\+Pins@{initialize\+Pins}}
+\index{initialize\+Pins@{initialize\+Pins}!Rasp\+Output\+Controller@{Rasp\+Output\+Controller}}
+\subsubsection{\texorpdfstring{initialize\+Pins()}{initializePins()}}
+{\footnotesize\ttfamily void Rasp\+Output\+Controller\+::initialize\+Pins (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definiert in Zeile 16 der Datei Rasp\+Output\+Controller.\+cpp.
+
+
+
+Benutzt output\+Pin\+Map.
+
+
+
+Wird benutzt von Rasp\+Output\+Controller().
+
+\mbox{\Hypertarget{class_rasp_output_controller_aa084e570bcf25c75b9389ca63c875f0c}\label{class_rasp_output_controller_aa084e570bcf25c75b9389ca63c875f0c}} 
+\index{Rasp\+Output\+Controller@{Rasp\+Output\+Controller}!play\+Position\+Change@{play\+Position\+Change}}
+\index{play\+Position\+Change@{play\+Position\+Change}!Rasp\+Output\+Controller@{Rasp\+Output\+Controller}}
+\subsubsection{\texorpdfstring{play\+Position\+Change()}{playPositionChange()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Rasp\+Output\+Controller\+::play\+Position\+Change (\begin{DoxyParamCaption}\item[{vector$<$ unsigned short $>$ \&}]{new\+Play\+Array }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implementiert \hyperlink{class_a_output_controller_a7bad658dfc3eb1223ace0c0454130818}{A\+Output\+Controller}.
+
+
+
+Definiert in Zeile 70 der Datei Rasp\+Output\+Controller.\+cpp.
+
+\mbox{\Hypertarget{class_rasp_output_controller_a0778395ee8ec044d04fbfcb2f3b2eb04}\label{class_rasp_output_controller_a0778395ee8ec044d04fbfcb2f3b2eb04}} 
+\index{Rasp\+Output\+Controller@{Rasp\+Output\+Controller}!play\+Position\+Change@{play\+Position\+Change}}
+\index{play\+Position\+Change@{play\+Position\+Change}!Rasp\+Output\+Controller@{Rasp\+Output\+Controller}}
+\subsubsection{\texorpdfstring{play\+Position\+Change()}{playPositionChange()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Rasp\+Output\+Controller\+::play\+Position\+Change (\begin{DoxyParamCaption}\item[{unsigned short}]{position,  }\item[{unsigned short}]{play\+State }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implementiert \hyperlink{class_a_output_controller_a15c1300df5606bf7d4838b41a45c31e3}{A\+Output\+Controller}.
+
+
+
+Definiert in Zeile 77 der Datei Rasp\+Output\+Controller.\+cpp.
+
+
+
+Benutzt state\+::\+M\+U\+TE, output\+Pin\+Map und state\+::\+P\+L\+AY.
+
+\mbox{\Hypertarget{class_rasp_output_controller_afce87d510c0564567e4250b22639d5e0}\label{class_rasp_output_controller_afce87d510c0564567e4250b22639d5e0}} 
+\index{Rasp\+Output\+Controller@{Rasp\+Output\+Controller}!position\+Change@{position\+Change}}
+\index{position\+Change@{position\+Change}!Rasp\+Output\+Controller@{Rasp\+Output\+Controller}}
+\subsubsection{\texorpdfstring{position\+Change()}{positionChange()}}
+{\footnotesize\ttfamily void Rasp\+Output\+Controller\+::position\+Change (\begin{DoxyParamCaption}\item[{unsigned short}]{new\+Position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implementiert \hyperlink{class_a_output_controller_a5a818a40e2911411d378032b8b2fb6c8}{A\+Output\+Controller}.
+
+
+
+Definiert in Zeile 23 der Datei Rasp\+Output\+Controller.\+cpp.
+
+
+
+Benutzt blink() und output\+Pin\+Map.
+
+\mbox{\Hypertarget{class_rasp_output_controller_a5fd551f1aba056356befd71e5bff23f1}\label{class_rasp_output_controller_a5fd551f1aba056356befd71e5bff23f1}} 
+\index{Rasp\+Output\+Controller@{Rasp\+Output\+Controller}!set\+Beat\+Duration@{set\+Beat\+Duration}}
+\index{set\+Beat\+Duration@{set\+Beat\+Duration}!Rasp\+Output\+Controller@{Rasp\+Output\+Controller}}
+\subsubsection{\texorpdfstring{set\+Beat\+Duration()}{setBeatDuration()}}
+{\footnotesize\ttfamily void Rasp\+Output\+Controller\+::set\+Beat\+Duration (\begin{DoxyParamCaption}\item[{unsigned int}]{beat\+Duration }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implementiert \hyperlink{class_a_output_controller_ac685432fc57d2441ecb548386554d2c9}{A\+Output\+Controller}.
+
+
+
+Definiert in Zeile 88 der Datei Rasp\+Output\+Controller.\+cpp.
+
+
+
+Benutzt beat\+Blink\+Delay.
+
+\mbox{\Hypertarget{class_rasp_output_controller_ad195a3d664b7c7e5680cd8949203c1fc}\label{class_rasp_output_controller_ad195a3d664b7c7e5680cd8949203c1fc}} 
+\index{Rasp\+Output\+Controller@{Rasp\+Output\+Controller}!show\+Main\+Screen@{show\+Main\+Screen}}
+\index{show\+Main\+Screen@{show\+Main\+Screen}!Rasp\+Output\+Controller@{Rasp\+Output\+Controller}}
+\subsubsection{\texorpdfstring{show\+Main\+Screen()}{showMainScreen()}}
+{\footnotesize\ttfamily void Rasp\+Output\+Controller\+::show\+Main\+Screen (\begin{DoxyParamCaption}\item[{unsigned int}]{bpm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implementiert \hyperlink{class_a_output_controller_ace7df9de71110b3615156b9bd06a9349}{A\+Output\+Controller}.
+
+
+
+Definiert in Zeile 92 der Datei Rasp\+Output\+Controller.\+cpp.
+
+
+
+Benutzt display und Display\+::show\+Main\+Screen().
+
+\mbox{\Hypertarget{class_rasp_output_controller_a613d3a1d1ceb31875be95e4a4b733fba}\label{class_rasp_output_controller_a613d3a1d1ceb31875be95e4a4b733fba}} 
+\index{Rasp\+Output\+Controller@{Rasp\+Output\+Controller}!show\+Sample\+Screen@{show\+Sample\+Screen}}
+\index{show\+Sample\+Screen@{show\+Sample\+Screen}!Rasp\+Output\+Controller@{Rasp\+Output\+Controller}}
+\subsubsection{\texorpdfstring{show\+Sample\+Screen()}{showSampleScreen()}}
+{\footnotesize\ttfamily void Rasp\+Output\+Controller\+::show\+Sample\+Screen (\begin{DoxyParamCaption}\item[{unsigned int}]{bpm,  }\item[{float}]{volume }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implementiert \hyperlink{class_a_output_controller_aab53d12a6aa6f38d0e4ead69e85ed4fe}{A\+Output\+Controller}.
+
+
+
+Definiert in Zeile 96 der Datei Rasp\+Output\+Controller.\+cpp.
+
+
+
+Benutzt display und Display\+::show\+Sample\+Screen().
+
+\mbox{\Hypertarget{class_rasp_output_controller_afdd3bcfa82341a9d2539233abe7cb617}\label{class_rasp_output_controller_afdd3bcfa82341a9d2539233abe7cb617}} 
+\index{Rasp\+Output\+Controller@{Rasp\+Output\+Controller}!switch\+Off\+All\+Led@{switch\+Off\+All\+Led}}
+\index{switch\+Off\+All\+Led@{switch\+Off\+All\+Led}!Rasp\+Output\+Controller@{Rasp\+Output\+Controller}}
+\subsubsection{\texorpdfstring{switch\+Off\+All\+Led()}{switchOffAllLed()}}
+{\footnotesize\ttfamily void Rasp\+Output\+Controller\+::switch\+Off\+All\+Led (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definiert in Zeile 43 der Datei Rasp\+Output\+Controller.\+cpp.
+
+
+
+Benutzt blink() und output\+Pin\+Map.
+
+
+
+Wird benutzt von Rasp\+Output\+Controller().
+
+\mbox{\Hypertarget{class_rasp_output_controller_a9a5025e13e27544721a80e6725ed23e4}\label{class_rasp_output_controller_a9a5025e13e27544721a80e6725ed23e4}} 
+\index{Rasp\+Output\+Controller@{Rasp\+Output\+Controller}!switch\+Off\+All\+Red\+Beat\+Leds@{switch\+Off\+All\+Red\+Beat\+Leds}}
+\index{switch\+Off\+All\+Red\+Beat\+Leds@{switch\+Off\+All\+Red\+Beat\+Leds}!Rasp\+Output\+Controller@{Rasp\+Output\+Controller}}
+\subsubsection{\texorpdfstring{switch\+Off\+All\+Red\+Beat\+Leds()}{switchOffAllRedBeatLeds()}}
+{\footnotesize\ttfamily void Rasp\+Output\+Controller\+::switch\+Off\+All\+Red\+Beat\+Leds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definiert in Zeile 37 der Datei Rasp\+Output\+Controller.\+cpp.
+
+
+
+Benutzt output\+Pin\+Map und red\+Led\+List.
+
+
+
+Wird benutzt von active\+Sample\+Change().
+
+\mbox{\Hypertarget{class_rasp_output_controller_a0cacbc3cbca8f1b78318234c6b74e576}\label{class_rasp_output_controller_a0cacbc3cbca8f1b78318234c6b74e576}} 
+\index{Rasp\+Output\+Controller@{Rasp\+Output\+Controller}!switch\+On\+First\+Beat\+Led@{switch\+On\+First\+Beat\+Led}}
+\index{switch\+On\+First\+Beat\+Led@{switch\+On\+First\+Beat\+Led}!Rasp\+Output\+Controller@{Rasp\+Output\+Controller}}
+\subsubsection{\texorpdfstring{switch\+On\+First\+Beat\+Led()}{switchOnFirstBeatLed()}}
+{\footnotesize\ttfamily void Rasp\+Output\+Controller\+::switch\+On\+First\+Beat\+Led (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definiert in Zeile 30 der Datei Rasp\+Output\+Controller.\+cpp.
+
+
+
+Benutzt outputs\+::\+B\+E\+A\+T13\+\_\+\+B\+L\+UE, outputs\+::\+B\+E\+A\+T1\+\_\+\+B\+L\+UE, outputs\+::\+B\+E\+A\+T5\+\_\+\+B\+L\+UE, outputs\+::\+B\+E\+A\+T9\+\_\+\+B\+L\+UE und output\+Pin\+Map.
+
+
+
+Wird benutzt von active\+Sample\+Change() und Rasp\+Output\+Controller().
+
+
+
+\subsection{Dokumentation der Datenelemente}
+\mbox{\Hypertarget{class_rasp_output_controller_a4deb199f7d611c2be39dc2d59ea45bba}\label{class_rasp_output_controller_a4deb199f7d611c2be39dc2d59ea45bba}} 
+\index{Rasp\+Output\+Controller@{Rasp\+Output\+Controller}!beat\+Blink\+Delay@{beat\+Blink\+Delay}}
+\index{beat\+Blink\+Delay@{beat\+Blink\+Delay}!Rasp\+Output\+Controller@{Rasp\+Output\+Controller}}
+\subsubsection{\texorpdfstring{beat\+Blink\+Delay}{beatBlinkDelay}}
+{\footnotesize\ttfamily unsigned int Rasp\+Output\+Controller\+::beat\+Blink\+Delay\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definiert in Zeile 144 der Datei Rasp\+Output\+Controller.\+h.
+
+
+
+Wird benutzt von blink() und set\+Beat\+Duration().
+
+\mbox{\Hypertarget{class_rasp_output_controller_a9b5e5c4ee94d43d62e41961e6c8bea3b}\label{class_rasp_output_controller_a9b5e5c4ee94d43d62e41961e6c8bea3b}} 
+\index{Rasp\+Output\+Controller@{Rasp\+Output\+Controller}!blue\+Led\+List@{blue\+Led\+List}}
+\index{blue\+Led\+List@{blue\+Led\+List}!Rasp\+Output\+Controller@{Rasp\+Output\+Controller}}
+\subsubsection{\texorpdfstring{blue\+Led\+List}{blueLedList}}
+{\footnotesize\ttfamily const vector$<$unsigned short$>$ Rasp\+Output\+Controller\+::blue\+Led\+List\hspace{0.3cm}{\ttfamily [private]}}
+
+{\bfseries Initialisierung\+:}
+\begin{DoxyCode}
+= \{
+            \hyperlink{namespaceoutputs_a7c39d2e5116c2502c2b90bf1e8be5520}{BEAT1\_BLUE}, \hyperlink{namespaceoutputs_ac6bffee9716f79b218c8fb366351032e}{BEAT2\_BLUE}, \hyperlink{namespaceoutputs_ae87166c20e497c5b092a92bc98da94c2}{BEAT3\_BLUE}, 
+      \hyperlink{namespaceoutputs_aa66f074e1960dc7dbf507acdf6cc5ae3}{BEAT4\_BLUE}, \hyperlink{namespaceoutputs_a0fab71f89a857d67f1329fbd097046ae}{BEAT5\_BLUE}, \hyperlink{namespaceoutputs_a1981eea86b118b5ff49c09ee50a75221}{BEAT6\_BLUE}, \hyperlink{namespaceoutputs_a7051f5db20e6f0c0dc7dad8775d21b1f}{BEAT7\_BLUE}, 
+      \hyperlink{namespaceoutputs_a29cf0b90cc4df367e62aaaa86e7ed24e}{BEAT8\_BLUE}, \hyperlink{namespaceoutputs_a1f88716cbf83123bc10bd31b07f86b4c}{BEAT9\_BLUE},
+            \hyperlink{namespaceoutputs_a188668f7db5d9610361658c817b08574}{BEAT10\_BLUE}, \hyperlink{namespaceoutputs_a31d60b8c00551d3dbeca8645eba200eb}{BEAT11\_BLUE}, \hyperlink{namespaceoutputs_ae7b144325945c1712151bf0d6a363c5f}{BEAT12\_BLUE}, 
+      \hyperlink{namespaceoutputs_a38a0eba17cc5ed8eed42c37dca1feb3f}{BEAT13\_BLUE}, \hyperlink{namespaceoutputs_ab384095ae250cb117a95683710620188}{BEAT14\_BLUE}, \hyperlink{namespaceoutputs_a6d12c95904da18827ed262896b9ebaa1}{BEAT15\_BLUE}, 
+      \hyperlink{namespaceoutputs_aaa4685feacdb3e8d2bb1c0435952e030}{BEAT16\_BLUE}
+    \}
+\end{DoxyCode}
+
+
+Definiert in Zeile 129 der Datei Rasp\+Output\+Controller.\+h.
+
+\mbox{\Hypertarget{class_rasp_output_controller_a0bb52cfee18c44cd2ed64dea27d5ccc4}\label{class_rasp_output_controller_a0bb52cfee18c44cd2ed64dea27d5ccc4}} 
+\index{Rasp\+Output\+Controller@{Rasp\+Output\+Controller}!display@{display}}
+\index{display@{display}!Rasp\+Output\+Controller@{Rasp\+Output\+Controller}}
+\subsubsection{\texorpdfstring{display}{display}}
+{\footnotesize\ttfamily \hyperlink{class_display}{Display} Rasp\+Output\+Controller\+::display\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definiert in Zeile 138 der Datei Rasp\+Output\+Controller.\+h.
+
+
+
+Wird benutzt von show\+Main\+Screen() und show\+Sample\+Screen().
+
+\mbox{\Hypertarget{class_rasp_output_controller_a8b888abfd8719eb95568abaf53d68d5c}\label{class_rasp_output_controller_a8b888abfd8719eb95568abaf53d68d5c}} 
+\index{Rasp\+Output\+Controller@{Rasp\+Output\+Controller}!green\+Led\+List@{green\+Led\+List}}
+\index{green\+Led\+List@{green\+Led\+List}!Rasp\+Output\+Controller@{Rasp\+Output\+Controller}}
+\subsubsection{\texorpdfstring{green\+Led\+List}{greenLedList}}
+{\footnotesize\ttfamily const vector$<$unsigned short$>$ Rasp\+Output\+Controller\+::green\+Led\+List\hspace{0.3cm}{\ttfamily [private]}}
+
+{\bfseries Initialisierung\+:}
+\begin{DoxyCode}
+= \{
+            \hyperlink{namespaceoutputs_ad934b2db0cff1421ca84b300dc257508}{BEAT1\_GREEN}, \hyperlink{namespaceoutputs_ad2dc5e7bf8fd1c9ffa64cf8efdb0035a}{BEAT2\_GREEN}, \hyperlink{namespaceoutputs_a95e392d21973d605abcc9efc19dce314}{BEAT3\_GREEN}, 
+      \hyperlink{namespaceoutputs_afd9270436632213bade739dbc4f6c8f6}{BEAT4\_GREEN}, \hyperlink{namespaceoutputs_a4b1e0d3ad2b80752a68cdec9a73f5ac6}{BEAT5\_GREEN}, \hyperlink{namespaceoutputs_a55c3bd8cf6cdffbd199abc9ae5a0e1ac}{BEAT6\_GREEN}, 
+      \hyperlink{namespaceoutputs_a971ea0c6742c83be5634cbf533cfb050}{BEAT7\_GREEN}, \hyperlink{namespaceoutputs_a6fe56e04e6ce7835262e2a60df0506d6}{BEAT8\_GREEN},
+            \hyperlink{namespaceoutputs_a0600b91e575643cfee3eb9e9e5b14839}{BEAT9\_GREEN}, \hyperlink{namespaceoutputs_ab0b662f329ea65f6f5fc1acba70fbd07}{BEAT10\_GREEN}, \hyperlink{namespaceoutputs_a38945c3c9766ee86e3c97a79e2be45c1}{BEAT11\_GREEN}, 
+      \hyperlink{namespaceoutputs_a863de14249bb5dd32b6fb2dd665f804e}{BEAT12\_GREEN}, \hyperlink{namespaceoutputs_a3410f51b9ac465ad73e71e8bd54b3ab4}{BEAT13\_GREEN}, \hyperlink{namespaceoutputs_a181a1c13a2964de30df1c57bae8f8428}{BEAT14\_GREEN}, 
+      \hyperlink{namespaceoutputs_afacd3fd74ab006d3ce548b672c3ab2f7}{BEAT15\_GREEN},
+            \hyperlink{namespaceoutputs_abb8efcc194a9934c26026a359edc8929}{BEAT16\_GREEN}
+    \}
+\end{DoxyCode}
+
+
+Definiert in Zeile 123 der Datei Rasp\+Output\+Controller.\+h.
+
+\mbox{\Hypertarget{class_rasp_output_controller_afd8a9fff94ee9bcf63bcbe6fa810aa32}\label{class_rasp_output_controller_afd8a9fff94ee9bcf63bcbe6fa810aa32}} 
+\index{Rasp\+Output\+Controller@{Rasp\+Output\+Controller}!output\+Pin\+Map@{output\+Pin\+Map}}
+\index{output\+Pin\+Map@{output\+Pin\+Map}!Rasp\+Output\+Controller@{Rasp\+Output\+Controller}}
+\subsubsection{\texorpdfstring{output\+Pin\+Map}{outputPinMap}}
+{\footnotesize\ttfamily const map$<$unsigned short, unsigned short$>$ Rasp\+Output\+Controller\+::output\+Pin\+Map\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definiert in Zeile 59 der Datei Rasp\+Output\+Controller.\+h.
+
+
+
+Wird benutzt von active\+Sample\+Change(), initialize\+Pins(), play\+Position\+Change(), position\+Change(), switch\+Off\+All\+Led(), switch\+Off\+All\+Red\+Beat\+Leds() und switch\+On\+First\+Beat\+Led().
+
+\mbox{\Hypertarget{class_rasp_output_controller_a8ee2d3ff908d1094cc9d1320133d0bdf}\label{class_rasp_output_controller_a8ee2d3ff908d1094cc9d1320133d0bdf}} 
+\index{Rasp\+Output\+Controller@{Rasp\+Output\+Controller}!red\+Led\+List@{red\+Led\+List}}
+\index{red\+Led\+List@{red\+Led\+List}!Rasp\+Output\+Controller@{Rasp\+Output\+Controller}}
+\subsubsection{\texorpdfstring{red\+Led\+List}{redLedList}}
+{\footnotesize\ttfamily const vector$<$unsigned short$>$ Rasp\+Output\+Controller\+::red\+Led\+List\hspace{0.3cm}{\ttfamily [private]}}
+
+{\bfseries Initialisierung\+:}
+\begin{DoxyCode}
+= \{
+            \hyperlink{namespaceoutputs_ae1c055268c6bbfadcc272bc6028b1a59}{BEAT1\_RED}, \hyperlink{namespaceoutputs_a7b5646e7b81bc49443f10f2b852384bb}{BEAT2\_RED}, \hyperlink{namespaceoutputs_a0c48c063f394a0735f24036e932bff2b}{BEAT3\_RED}, 
+      \hyperlink{namespaceoutputs_a73a38f1135a723ebb294500daa641aec}{BEAT4\_RED}, \hyperlink{namespaceoutputs_a992a202d7fce79a524fe71498efb3709}{BEAT5\_RED}, \hyperlink{namespaceoutputs_a44e21deb20acdd11aa47bd5c2358dd6c}{BEAT6\_RED}, \hyperlink{namespaceoutputs_a88730a5804ff8785e2fb07a1957a243c}{BEAT7\_RED}, 
+      \hyperlink{namespaceoutputs_aeb7e7b9874ac290d2ff579a8b144fe13}{BEAT8\_RED}, \hyperlink{namespaceoutputs_a57a4d2c831b8b263bc763032afddaa03}{BEAT9\_RED},
+            \hyperlink{namespaceoutputs_a3108e2ed7adaa0c15822673c1cf5341d}{BEAT10\_RED}, \hyperlink{namespaceoutputs_a3b55bd1a681764d7655dfee327930872}{BEAT11\_RED}, \hyperlink{namespaceoutputs_a3138968cd14e309f1e88228bd1259f3f}{BEAT12\_RED}, 
+      \hyperlink{namespaceoutputs_a34ead0f387c2557f9d74d57186f1578f}{BEAT13\_RED}, \hyperlink{namespaceoutputs_ae72dd425b992846bc954f41227bdda1a}{BEAT14\_RED}, \hyperlink{namespaceoutputs_a6cdbcf8d70f85316af1ea2b96d9b72bd}{BEAT15\_RED}, \hyperlink{namespaceoutputs_a3dbc6b2fd920d581b752b72f86be3733}{BEAT16\_RED}
+    \}
+\end{DoxyCode}
+
+
+Definiert in Zeile 118 der Datei Rasp\+Output\+Controller.\+h.
+
+
+
+Wird benutzt von switch\+Off\+All\+Red\+Beat\+Leds().
+
+\mbox{\Hypertarget{class_rasp_output_controller_ad0ad19b081450eb1d9cd6548c14a23ea}\label{class_rasp_output_controller_ad0ad19b081450eb1d9cd6548c14a23ea}} 
+\index{Rasp\+Output\+Controller@{Rasp\+Output\+Controller}!sample\+Led\+List@{sample\+Led\+List}}
+\index{sample\+Led\+List@{sample\+Led\+List}!Rasp\+Output\+Controller@{Rasp\+Output\+Controller}}
+\subsubsection{\texorpdfstring{sample\+Led\+List}{sampleLedList}}
+{\footnotesize\ttfamily const vector$<$unsigned short$>$ Rasp\+Output\+Controller\+::sample\+Led\+List\hspace{0.3cm}{\ttfamily [private]}}
+
+{\bfseries Initialisierung\+:}
+\begin{DoxyCode}
+= \{
+            \hyperlink{namespaceoutputs_a151156390f60151968f4092740d9d6b8}{SAMPLE1\_LED}, \hyperlink{namespaceoutputs_ae0776935fda36be3a645994d16591980}{SAMPLE2\_LED}, \hyperlink{namespaceoutputs_a8a0be2be0ae271cb8b57234a189b6689}{SAMPLE3\_LED}, 
+      \hyperlink{namespaceoutputs_a6fbee7a72f91577a7e1f072d00ad8d9f}{SAMPLE4\_LED}, \hyperlink{namespaceoutputs_a87e2d51fbeb2ac9fd23fc5d937b1c7c2}{SAMPLE5\_LED}, \hyperlink{namespaceoutputs_a7bdee2eb9fc676ac7edb9582334be15a}{SAMPLE6\_LED}, 
+      \hyperlink{namespaceoutputs_a3d438bc8ce91fb825bf2da7834ac639e}{SAMPLE7\_LED}, \hyperlink{namespaceoutputs_ac6e07c06d1d512716e6309db54648440}{SAMPLE8\_LED}
+    \}
+\end{DoxyCode}
+
+
+Definiert in Zeile 134 der Datei Rasp\+Output\+Controller.\+h.
+
+
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_rasp_output_controller_8h}{Rasp\+Output\+Controller.\+h}\item 
+\hyperlink{_rasp_output_controller_8cpp}{Rasp\+Output\+Controller.\+cpp}\end{DoxyCompactItemize}

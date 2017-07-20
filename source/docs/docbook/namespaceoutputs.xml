@@ -1,0 +1,399 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="namespaceoutputs">
+<title>outputs</title>
+        <section>
+            <title>Variablen</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1ae1c055268c6bbfadcc272bc6028b1a59">BEAT1_RED</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1ad934b2db0cff1421ca84b300dc257508">BEAT1_GREEN</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1a7c39d2e5116c2502c2b90bf1e8be5520">BEAT1_BLUE</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1a7b5646e7b81bc49443f10f2b852384bb">BEAT2_RED</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1ad2dc5e7bf8fd1c9ffa64cf8efdb0035a">BEAT2_GREEN</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1ac6bffee9716f79b218c8fb366351032e">BEAT2_BLUE</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1a0c48c063f394a0735f24036e932bff2b">BEAT3_RED</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1a95e392d21973d605abcc9efc19dce314">BEAT3_GREEN</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1ae87166c20e497c5b092a92bc98da94c2">BEAT3_BLUE</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1a73a38f1135a723ebb294500daa641aec">BEAT4_RED</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1afd9270436632213bade739dbc4f6c8f6">BEAT4_GREEN</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1aa66f074e1960dc7dbf507acdf6cc5ae3">BEAT4_BLUE</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1a992a202d7fce79a524fe71498efb3709">BEAT5_RED</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1a4b1e0d3ad2b80752a68cdec9a73f5ac6">BEAT5_GREEN</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1a0fab71f89a857d67f1329fbd097046ae">BEAT5_BLUE</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1a44e21deb20acdd11aa47bd5c2358dd6c">BEAT6_RED</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1a55c3bd8cf6cdffbd199abc9ae5a0e1ac">BEAT6_GREEN</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1a1981eea86b118b5ff49c09ee50a75221">BEAT6_BLUE</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1a88730a5804ff8785e2fb07a1957a243c">BEAT7_RED</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1a971ea0c6742c83be5634cbf533cfb050">BEAT7_GREEN</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1a7051f5db20e6f0c0dc7dad8775d21b1f">BEAT7_BLUE</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1aeb7e7b9874ac290d2ff579a8b144fe13">BEAT8_RED</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1a6fe56e04e6ce7835262e2a60df0506d6">BEAT8_GREEN</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1a29cf0b90cc4df367e62aaaa86e7ed24e">BEAT8_BLUE</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1a57a4d2c831b8b263bc763032afddaa03">BEAT9_RED</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1a0600b91e575643cfee3eb9e9e5b14839">BEAT9_GREEN</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1a1f88716cbf83123bc10bd31b07f86b4c">BEAT9_BLUE</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1a3108e2ed7adaa0c15822673c1cf5341d">BEAT10_RED</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1ab0b662f329ea65f6f5fc1acba70fbd07">BEAT10_GREEN</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1a188668f7db5d9610361658c817b08574">BEAT10_BLUE</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1a3b55bd1a681764d7655dfee327930872">BEAT11_RED</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1a38945c3c9766ee86e3c97a79e2be45c1">BEAT11_GREEN</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1a31d60b8c00551d3dbeca8645eba200eb">BEAT11_BLUE</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1a3138968cd14e309f1e88228bd1259f3f">BEAT12_RED</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1a863de14249bb5dd32b6fb2dd665f804e">BEAT12_GREEN</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1ae7b144325945c1712151bf0d6a363c5f">BEAT12_BLUE</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1a34ead0f387c2557f9d74d57186f1578f">BEAT13_RED</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1a3410f51b9ac465ad73e71e8bd54b3ab4">BEAT13_GREEN</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1a38a0eba17cc5ed8eed42c37dca1feb3f">BEAT13_BLUE</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1ae72dd425b992846bc954f41227bdda1a">BEAT14_RED</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1a181a1c13a2964de30df1c57bae8f8428">BEAT14_GREEN</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1ab384095ae250cb117a95683710620188">BEAT14_BLUE</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1a6cdbcf8d70f85316af1ea2b96d9b72bd">BEAT15_RED</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1afacd3fd74ab006d3ce548b672c3ab2f7">BEAT15_GREEN</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1a6d12c95904da18827ed262896b9ebaa1">BEAT15_BLUE</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1a3dbc6b2fd920d581b752b72f86be3733">BEAT16_RED</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1abb8efcc194a9934c26026a359edc8929">BEAT16_GREEN</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1aaa4685feacdb3e8d2bb1c0435952e030">BEAT16_BLUE</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1a151156390f60151968f4092740d9d6b8">SAMPLE1_LED</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1ae0776935fda36be3a645994d16591980">SAMPLE2_LED</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1a8a0be2be0ae271cb8b57234a189b6689">SAMPLE3_LED</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1a6fbee7a72f91577a7e1f072d00ad8d9f">SAMPLE4_LED</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1a87e2d51fbeb2ac9fd23fc5d937b1c7c2">SAMPLE5_LED</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1a7bdee2eb9fc676ac7edb9582334be15a">SAMPLE6_LED</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1a3d438bc8ce91fb825bf2da7834ac639e">SAMPLE7_LED</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespaceoutputs_1ac6e07c06d1d512716e6309db54648440">SAMPLE8_LED</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+</section>

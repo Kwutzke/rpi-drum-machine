@@ -1,0 +1,178 @@
+\hypertarget{class_timer}{}\section{Timer Klassenreferenz}
+\label{class_timer}\index{Timer@{Timer}}
+
+
+{\ttfamily \#include $<$Timer.\+h$>$}
+
+\subsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_timer_a5712c673f940c048eaa49440e9a57fab}{Timer} (int, int)
+\item 
+{\footnotesize template$<$typename Function , typename... Args$>$ }\\void \hyperlink{class_timer_adcf70b5065e31461e27309c96065437a}{start} (Function \&\&callback, Args \&\&... args)
+\item 
+void \hyperlink{class_timer_a63f0eb44b27402196590a03781515dba}{stop} ()
+\item 
+int \hyperlink{class_timer_a998fabc8cce38394c4b4536fc81db438}{get\+Interval} () const
+\item 
+void \hyperlink{class_timer_aa88ef228247b40496f8474253bda3a0e}{set\+Interval} (int \hyperlink{class_timer_a8bdff3d549795a1efc0588edaa127b15}{interval})
+\end{DoxyCompactItemize}
+\subsection*{Private Methoden}
+\begin{DoxyCompactItemize}
+\item 
+long long \hyperlink{class_timer_a39a332f8ce3a45ed8d78c772755342c8}{get\+Current\+Time\+Millis} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attribute}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_timer_a71742840f2c6d4d6ab085b2eb439545a}{precision}
+\item 
+int \hyperlink{class_timer_a8bdff3d549795a1efc0588edaa127b15}{interval}
+\item 
+bool \hyperlink{class_timer_a3b8bb57a0a252c88f85c0592715ea425}{running}
+\end{DoxyCompactItemize}
+
+
+\subsection{Ausführliche Beschreibung}
+
+
+Definiert in Zeile 13 der Datei Timer.\+h.
+
+
+
+\subsection{Beschreibung der Konstruktoren und Destruktoren}
+\mbox{\Hypertarget{class_timer_a5712c673f940c048eaa49440e9a57fab}\label{class_timer_a5712c673f940c048eaa49440e9a57fab}} 
+\index{Timer@{Timer}!Timer@{Timer}}
+\index{Timer@{Timer}!Timer@{Timer}}
+\subsubsection{\texorpdfstring{Timer()}{Timer()}}
+{\footnotesize\ttfamily Timer\+::\+Timer (\begin{DoxyParamCaption}\item[{int}]{interval,  }\item[{int}]{precision }\end{DoxyParamCaption})}
+
+
+
+Definiert in Zeile 5 der Datei Timer.\+cpp.
+
+
+
+\subsection{Dokumentation der Elementfunktionen}
+\mbox{\Hypertarget{class_timer_a39a332f8ce3a45ed8d78c772755342c8}\label{class_timer_a39a332f8ce3a45ed8d78c772755342c8}} 
+\index{Timer@{Timer}!get\+Current\+Time\+Millis@{get\+Current\+Time\+Millis}}
+\index{get\+Current\+Time\+Millis@{get\+Current\+Time\+Millis}!Timer@{Timer}}
+\subsubsection{\texorpdfstring{get\+Current\+Time\+Millis()}{getCurrentTimeMillis()}}
+{\footnotesize\ttfamily long long Timer\+::get\+Current\+Time\+Millis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definiert in Zeile 19 der Datei Timer.\+h.
+
+\mbox{\Hypertarget{class_timer_a998fabc8cce38394c4b4536fc81db438}\label{class_timer_a998fabc8cce38394c4b4536fc81db438}} 
+\index{Timer@{Timer}!get\+Interval@{get\+Interval}}
+\index{get\+Interval@{get\+Interval}!Timer@{Timer}}
+\subsubsection{\texorpdfstring{get\+Interval()}{getInterval()}}
+{\footnotesize\ttfamily int Timer\+::get\+Interval (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definiert in Zeile 11 der Datei Timer.\+cpp.
+
+
+
+Benutzt interval.
+
+\mbox{\Hypertarget{class_timer_aa88ef228247b40496f8474253bda3a0e}\label{class_timer_aa88ef228247b40496f8474253bda3a0e}} 
+\index{Timer@{Timer}!set\+Interval@{set\+Interval}}
+\index{set\+Interval@{set\+Interval}!Timer@{Timer}}
+\subsubsection{\texorpdfstring{set\+Interval()}{setInterval()}}
+{\footnotesize\ttfamily void Timer\+::set\+Interval (\begin{DoxyParamCaption}\item[{int}]{interval }\end{DoxyParamCaption})}
+
+
+
+Definiert in Zeile 15 der Datei Timer.\+cpp.
+
+
+
+Benutzt interval.
+
+
+
+Wird benutzt von Drum\+Machine\+::set\+B\+P\+M() und Drum\+Machine\+::start\+Loop().
+
+\mbox{\Hypertarget{class_timer_adcf70b5065e31461e27309c96065437a}\label{class_timer_adcf70b5065e31461e27309c96065437a}} 
+\index{Timer@{Timer}!start@{start}}
+\index{start@{start}!Timer@{Timer}}
+\subsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily template$<$typename Function , typename... Args$>$ \\
+void Timer\+::start (\begin{DoxyParamCaption}\item[{Function \&\&}]{callback,  }\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definiert in Zeile 27 der Datei Timer.\+h.
+
+
+
+Wird benutzt von Drum\+Machine\+::start\+Loop() und Rasp\+Input\+Controller\+::start\+Polling().
+
+\mbox{\Hypertarget{class_timer_a63f0eb44b27402196590a03781515dba}\label{class_timer_a63f0eb44b27402196590a03781515dba}} 
+\index{Timer@{Timer}!stop@{stop}}
+\index{stop@{stop}!Timer@{Timer}}
+\subsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void Timer\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definiert in Zeile 7 der Datei Timer.\+cpp.
+
+
+
+Benutzt running.
+
+
+
+Wird benutzt von Rasp\+Input\+Controller\+::stop() und Drum\+Machine\+::stop\+Loop().
+
+
+
+\subsection{Dokumentation der Datenelemente}
+\mbox{\Hypertarget{class_timer_a8bdff3d549795a1efc0588edaa127b15}\label{class_timer_a8bdff3d549795a1efc0588edaa127b15}} 
+\index{Timer@{Timer}!interval@{interval}}
+\index{interval@{interval}!Timer@{Timer}}
+\subsubsection{\texorpdfstring{interval}{interval}}
+{\footnotesize\ttfamily int Timer\+::interval\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definiert in Zeile 16 der Datei Timer.\+h.
+
+
+
+Wird benutzt von get\+Interval() und set\+Interval().
+
+\mbox{\Hypertarget{class_timer_a71742840f2c6d4d6ab085b2eb439545a}\label{class_timer_a71742840f2c6d4d6ab085b2eb439545a}} 
+\index{Timer@{Timer}!precision@{precision}}
+\index{precision@{precision}!Timer@{Timer}}
+\subsubsection{\texorpdfstring{precision}{precision}}
+{\footnotesize\ttfamily int Timer\+::precision\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definiert in Zeile 15 der Datei Timer.\+h.
+
+\mbox{\Hypertarget{class_timer_a3b8bb57a0a252c88f85c0592715ea425}\label{class_timer_a3b8bb57a0a252c88f85c0592715ea425}} 
+\index{Timer@{Timer}!running@{running}}
+\index{running@{running}!Timer@{Timer}}
+\subsubsection{\texorpdfstring{running}{running}}
+{\footnotesize\ttfamily bool Timer\+::running\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definiert in Zeile 17 der Datei Timer.\+h.
+
+
+
+Wird benutzt von stop().
+
+
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_timer_8h}{Timer.\+h}\item 
+\hyperlink{_timer_8cpp}{Timer.\+cpp}\end{DoxyCompactItemize}

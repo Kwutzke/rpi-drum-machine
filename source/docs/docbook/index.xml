@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <info>
+    <title>Drum Machine</title>
+    </info>
+    <chapter>
+        <title>Namespace Documentation</title>
+        <xi:include href="namespacebeat.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespaceinputs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespaceoutputs.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespacesample.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespacestate.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespacestd.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespacestd_1_1chrono.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </chapter>
+    <chapter>
+        <title>Klassen-Dokumentation</title>
+        <xi:include href="class_a_output_controller.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="class_display.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="class_drum_machine.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="class_drum_machine_input_listener.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="class_input_listener.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="class_rasp_input_controller.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="class_rasp_output_controller.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="class_sample.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="class_timer.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </chapter>
+    <chapter>
+        <title>Datei-Dokumentation</title>
+        <xi:include href="_a_output_controller_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_display_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_display_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_drum_machine_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_drum_machine_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_drum_machine_input_listener_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_drum_machine_input_listener_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_input_listener_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="main_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_rasp_input_controller_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_rasp_input_controller_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_rasp_output_controller_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_rasp_output_controller_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_sample_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_sample_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_timer_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_timer_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </chapter>
+</book>

@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="main_8cpp">
+    <title>main.cpp File Reference</title>
+    <programlisting>#include &lt;mcp23017.h&gt;</programlisting>
+    <programlisting>#include &lt;wiringPi.h&gt;</programlisting>
+    <programlisting>#include &quot;DrumMachine.h&quot;</programlisting>
+    <programlisting>#include &quot;InputListener.h&quot;</programlisting>
+    <programlisting>#include &quot;RaspInputController.h&quot;</programlisting>
+    <programlisting>#include &quot;DrumMachineInputListener.h&quot;</programlisting>
+        <section>
+            <title>Funktionen</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="main_8cpp_1a73e5135dcf1892c3d2ff55a7b486e7d2">setup</link> (
+<link linkend="class_drum_machine">DrumMachine</link> &amp; drumMachine)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4">main</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Ausführliche Beschreibung</title>
+    <para>Definition in file /Users/kilian/Development/EntwMM/Arduino Drum Machine/source/main.cpp</para>
+    </simplesect>
+</section>

@@ -1,0 +1,224 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_rasp_output_controller">
+<title>RaspOutputController class Reference</title>
+<para>
+    <programlisting>#include <link linkend="_rasp_output_controller_8h">&lt;RaspOutputController.h&gt;</link></programlisting>
+</para>
+        <section>
+            <title>Private Attribute</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const map&lt; unsigned short, unsigned short &gt; outputPinMap</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const vector&lt; unsigned short &gt; redLedList</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const vector&lt; unsigned short &gt; greenLedList</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const vector&lt; unsigned short &gt; blueLedList</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const vector&lt; unsigned short &gt; sampleLedList</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Display display</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>unsigned int beatBlinkDelay</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_rasp_output_controller_1afd7487de7ff81c6b092f4072d4fa80a5">RaspOutputController</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_rasp_output_controller_1afce87d510c0564567e4250b22639d5e0">positionChange</link> (
+unsigned short newPosition)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_rasp_output_controller_1a92954cf26d4dd5f7d8835d1d508302c0">activeSampleChange</link> (
+unsigned short newActiveSample, unsigned short oldActiveSample)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_rasp_output_controller_1aa084e570bcf25c75b9389ca63c875f0c">playPositionChange</link> (
+vector&lt; unsigned short &gt; &amp; )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_rasp_output_controller_1a0778395ee8ec044d04fbfcb2f3b2eb04">playPositionChange</link> (
+unsigned short position, unsigned short playState)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_rasp_output_controller_1a27fcbf9e1a1f9c3cefefefd537acc401">blink</link> (
+int )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_rasp_output_controller_1a5fd551f1aba056356befd71e5bff23f1">setBeatDuration</link> (
+unsigned int beatDuration)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_rasp_output_controller_1ad195a3d664b7c7e5680cd8949203c1fc">showMainScreen</link> (
+unsigned int bpm)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_rasp_output_controller_1a613d3a1d1ceb31875be95e4a4b733fba">showSampleScreen</link> (
+unsigned int bpm, float volume)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_rasp_output_controller_1afdd3bcfa82341a9d2539233abe7cb617">switchOffAllLed</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_rasp_output_controller_1a9a5025e13e27544721a80e6725ed23e4">switchOffAllRedBeatLeds</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_rasp_output_controller_1a1172c2966777bbcee89cbe4e6de027d5">initializePins</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_rasp_output_controller_1a0cacbc3cbca8f1b78318234c6b74e576">switchOnFirstBeatLed</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Dokumentation der Datenelemente</title>
+        </section>
+            <section xml:id="class_rasp_output_controller_1afd7487de7ff81c6b092f4072d4fa80a5">
+                <title>RaspOutputController::RaspOutputController ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_rasp_output_controller_1afce87d510c0564567e4250b22639d5e0">
+                <title>void RaspOutputController::positionChange (unsigned short newPosition) override</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_rasp_output_controller_1a92954cf26d4dd5f7d8835d1d508302c0">
+                <title>void RaspOutputController::activeSampleChange (unsigned short newActiveSample, unsigned short oldActiveSample) override</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_rasp_output_controller_1aa084e570bcf25c75b9389ca63c875f0c">
+                <title>void RaspOutputController::playPositionChange (vector&lt; unsigned short &gt; &amp;) override</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_rasp_output_controller_1a0778395ee8ec044d04fbfcb2f3b2eb04">
+                <title>void RaspOutputController::playPositionChange (unsigned short position, unsigned short playState) override</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_rasp_output_controller_1a27fcbf9e1a1f9c3cefefefd537acc401">
+                <title>void RaspOutputController::blink (int)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_rasp_output_controller_1a5fd551f1aba056356befd71e5bff23f1">
+                <title>void RaspOutputController::setBeatDuration (unsigned int beatDuration) override</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_rasp_output_controller_1ad195a3d664b7c7e5680cd8949203c1fc">
+                <title>void RaspOutputController::showMainScreen (unsigned int bpm) override</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_rasp_output_controller_1a613d3a1d1ceb31875be95e4a4b733fba">
+                <title>void RaspOutputController::showSampleScreen (unsigned int bpm, float volume) override</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_rasp_output_controller_1afdd3bcfa82341a9d2539233abe7cb617">
+                <title>void RaspOutputController::switchOffAllLed ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_rasp_output_controller_1a9a5025e13e27544721a80e6725ed23e4">
+                <title>void RaspOutputController::switchOffAllRedBeatLeds ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_rasp_output_controller_1a1172c2966777bbcee89cbe4e6de027d5">
+                <title>void RaspOutputController::initializePins ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_rasp_output_controller_1a0cacbc3cbca8f1b78318234c6b74e576">
+                <title>void RaspOutputController::switchOnFirstBeatLed ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

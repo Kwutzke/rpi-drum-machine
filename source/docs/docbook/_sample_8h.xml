@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_sample_8h">
+    <title>Sample.h File Reference</title>
+    <programlisting>#include &quot;SDL2/SDL_mixer.h&quot;</programlisting>
+    <programlisting>#include &quot;SDL2/SDL.h&quot;</programlisting>
+    <programlisting>#include &lt;vector&gt;</programlisting>
+    <programlisting>#include &lt;string&gt;</programlisting>
+    <programlisting>#include &lt;thread&gt;</programlisting>
+    <programlisting>#include &lt;iostream&gt;</programlisting>
+        <section>
+            <title> Klassen </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_sample">Sample</link></para>
+<para><emphasis>A class that holds and maintains information about a sample audio file,
+         which can be played by the Drum Machine.</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title> Namensbereiche </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespacestate">state</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Ausführliche Beschreibung</title>
+    <para>Definition in file /Users/kilian/Development/EntwMM/Arduino Drum Machine/source/Sample.h</para>
+    </simplesect>
+</section>

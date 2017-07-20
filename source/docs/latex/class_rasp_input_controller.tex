@@ -1,0 +1,315 @@
+\hypertarget{class_rasp_input_controller}{}\section{Rasp\+Input\+Controller Klassenreferenz}
+\label{class_rasp_input_controller}\index{Rasp\+Input\+Controller@{Rasp\+Input\+Controller}}
+
+
+{\ttfamily \#include $<$Rasp\+Input\+Controller.\+h$>$}
+
+\subsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_rasp_input_controller_a63a9e2ab7d0eb5aed2da6068454caa65}{Rasp\+Input\+Controller} ()
+\item 
+void \hyperlink{class_rasp_input_controller_a31d6f6befaea44931f0010175bfe1a17}{add\+Input\+Listener} (\hyperlink{class_input_listener}{Input\+Listener} \&listener)
+\item 
+void \hyperlink{class_rasp_input_controller_a7d9523be1a83acde964cb5d2b1d281ed}{stop} ()
+\item 
+void \hyperlink{class_rasp_input_controller_a8cb185caa124285987d6b98122cfbea4}{start} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Methoden}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_rasp_input_controller_a7e15590d321b382fcb5f4d70959a5cbe}{start\+Polling} ()
+\item 
+vector$<$ unsigned short $>$ \hyperlink{class_rasp_input_controller_a95a42703b4c0bca34ba966745bad5dff}{get\+Input\+Events} ()
+\item 
+void \hyperlink{class_rasp_input_controller_a5ffc6f68b0c74f31a9b595ff8acc49f1}{initialize\+Pins} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attribute}
+\begin{DoxyCompactItemize}
+\item 
+map$<$ unsigned short, unsigned short $>$ \hyperlink{class_rasp_input_controller_a7b59eba5cc562eccc91347ddbd777e50}{output\+Map}
+\item 
+map$<$ unsigned short, bool $>$ \hyperlink{class_rasp_input_controller_ae02dcbb81abe6b6e6e3eaaeef4f3bf4a}{button\+State\+Map}
+\item 
+vector$<$ \hyperlink{class_input_listener}{Input\+Listener} $\ast$ $>$ \hyperlink{class_rasp_input_controller_a5a5a8d99d69c35e206ddf7467e36cfae}{input\+Listener\+List}
+\item 
+\hyperlink{class_timer}{Timer} \hyperlink{class_rasp_input_controller_a388779c1ddf9f5910a92cd350cc59e5c}{polling\+Timer}
+\item 
+\hyperlink{class_timer}{Timer} \hyperlink{class_rasp_input_controller_a55b065ae154806341fd900a8b61110a5}{rotary\+Polling\+Timer}
+\end{DoxyCompactItemize}
+
+
+\subsection{Ausführliche Beschreibung}
+
+
+Definiert in Zeile 22 der Datei Rasp\+Input\+Controller.\+h.
+
+
+
+\subsection{Beschreibung der Konstruktoren und Destruktoren}
+\mbox{\Hypertarget{class_rasp_input_controller_a63a9e2ab7d0eb5aed2da6068454caa65}\label{class_rasp_input_controller_a63a9e2ab7d0eb5aed2da6068454caa65}} 
+\index{Rasp\+Input\+Controller@{Rasp\+Input\+Controller}!Rasp\+Input\+Controller@{Rasp\+Input\+Controller}}
+\index{Rasp\+Input\+Controller@{Rasp\+Input\+Controller}!Rasp\+Input\+Controller@{Rasp\+Input\+Controller}}
+\subsubsection{\texorpdfstring{Rasp\+Input\+Controller()}{RaspInputController()}}
+{\footnotesize\ttfamily Rasp\+Input\+Controller\+::\+Rasp\+Input\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definiert in Zeile 4 der Datei Rasp\+Input\+Controller.\+cpp.
+
+
+
+Benutzt initialize\+Pins().
+
+
+
+\subsection{Dokumentation der Elementfunktionen}
+\mbox{\Hypertarget{class_rasp_input_controller_a31d6f6befaea44931f0010175bfe1a17}\label{class_rasp_input_controller_a31d6f6befaea44931f0010175bfe1a17}} 
+\index{Rasp\+Input\+Controller@{Rasp\+Input\+Controller}!add\+Input\+Listener@{add\+Input\+Listener}}
+\index{add\+Input\+Listener@{add\+Input\+Listener}!Rasp\+Input\+Controller@{Rasp\+Input\+Controller}}
+\subsubsection{\texorpdfstring{add\+Input\+Listener()}{addInputListener()}}
+{\footnotesize\ttfamily void Rasp\+Input\+Controller\+::add\+Input\+Listener (\begin{DoxyParamCaption}\item[{\hyperlink{class_input_listener}{Input\+Listener} \&}]{listener }\end{DoxyParamCaption})}
+
+
+
+Definiert in Zeile 98 der Datei Rasp\+Input\+Controller.\+cpp.
+
+
+
+Benutzt input\+Listener\+List.
+
+
+
+Wird benutzt von main().
+
+\mbox{\Hypertarget{class_rasp_input_controller_a95a42703b4c0bca34ba966745bad5dff}\label{class_rasp_input_controller_a95a42703b4c0bca34ba966745bad5dff}} 
+\index{Rasp\+Input\+Controller@{Rasp\+Input\+Controller}!get\+Input\+Events@{get\+Input\+Events}}
+\index{get\+Input\+Events@{get\+Input\+Events}!Rasp\+Input\+Controller@{Rasp\+Input\+Controller}}
+\subsubsection{\texorpdfstring{get\+Input\+Events()}{getInputEvents()}}
+{\footnotesize\ttfamily vector$<$ unsigned short $>$ Rasp\+Input\+Controller\+::get\+Input\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definiert in Zeile 77 der Datei Rasp\+Input\+Controller.\+cpp.
+
+
+
+Benutzt button\+State\+Map, output\+Map, inputs\+::\+V\+O\+L\+U\+M\+E\+\_\+\+B\+P\+M\+\_\+\+D\+O\+W\+N\+\_\+\+B\+U\+T\+T\+ON und inputs\+::\+V\+O\+L\+U\+M\+E\+\_\+\+B\+P\+M\+\_\+\+U\+P\+\_\+\+B\+U\+T\+T\+ON.
+
+
+
+Wird benutzt von start\+Polling().
+
+\mbox{\Hypertarget{class_rasp_input_controller_a5ffc6f68b0c74f31a9b595ff8acc49f1}\label{class_rasp_input_controller_a5ffc6f68b0c74f31a9b595ff8acc49f1}} 
+\index{Rasp\+Input\+Controller@{Rasp\+Input\+Controller}!initialize\+Pins@{initialize\+Pins}}
+\index{initialize\+Pins@{initialize\+Pins}!Rasp\+Input\+Controller@{Rasp\+Input\+Controller}}
+\subsubsection{\texorpdfstring{initialize\+Pins()}{initializePins()}}
+{\footnotesize\ttfamily void Rasp\+Input\+Controller\+::initialize\+Pins (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definiert in Zeile 8 der Datei Rasp\+Input\+Controller.\+cpp.
+
+
+
+Benutzt output\+Map.
+
+
+
+Wird benutzt von Rasp\+Input\+Controller().
+
+\mbox{\Hypertarget{class_rasp_input_controller_a8cb185caa124285987d6b98122cfbea4}\label{class_rasp_input_controller_a8cb185caa124285987d6b98122cfbea4}} 
+\index{Rasp\+Input\+Controller@{Rasp\+Input\+Controller}!start@{start}}
+\index{start@{start}!Rasp\+Input\+Controller@{Rasp\+Input\+Controller}}
+\subsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void Rasp\+Input\+Controller\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definiert in Zeile 107 der Datei Rasp\+Input\+Controller.\+cpp.
+
+
+
+Benutzt start\+Polling().
+
+
+
+Wird benutzt von main().
+
+\mbox{\Hypertarget{class_rasp_input_controller_a7e15590d321b382fcb5f4d70959a5cbe}\label{class_rasp_input_controller_a7e15590d321b382fcb5f4d70959a5cbe}} 
+\index{Rasp\+Input\+Controller@{Rasp\+Input\+Controller}!start\+Polling@{start\+Polling}}
+\index{start\+Polling@{start\+Polling}!Rasp\+Input\+Controller@{Rasp\+Input\+Controller}}
+\subsubsection{\texorpdfstring{start\+Polling()}{startPolling()}}
+{\footnotesize\ttfamily void Rasp\+Input\+Controller\+::start\+Polling (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definiert in Zeile 20 der Datei Rasp\+Input\+Controller.\+cpp.
+
+
+
+Benutzt button\+State\+Map, get\+Input\+Events(), input\+Listener\+List, output\+Map, polling\+Timer, rotary\+Polling\+Timer, Timer\+::start(), inputs\+::\+V\+O\+L\+U\+M\+E\+\_\+\+B\+P\+M\+\_\+\+D\+O\+W\+N\+\_\+\+B\+U\+T\+T\+ON und inputs\+::\+V\+O\+L\+U\+M\+E\+\_\+\+B\+P\+M\+\_\+\+U\+P\+\_\+\+B\+U\+T\+T\+ON.
+
+
+
+Wird benutzt von start().
+
+\mbox{\Hypertarget{class_rasp_input_controller_a7d9523be1a83acde964cb5d2b1d281ed}\label{class_rasp_input_controller_a7d9523be1a83acde964cb5d2b1d281ed}} 
+\index{Rasp\+Input\+Controller@{Rasp\+Input\+Controller}!stop@{stop}}
+\index{stop@{stop}!Rasp\+Input\+Controller@{Rasp\+Input\+Controller}}
+\subsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void Rasp\+Input\+Controller\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definiert in Zeile 102 der Datei Rasp\+Input\+Controller.\+cpp.
+
+
+
+Benutzt polling\+Timer, rotary\+Polling\+Timer und Timer\+::stop().
+
+
+
+\subsection{Dokumentation der Datenelemente}
+\mbox{\Hypertarget{class_rasp_input_controller_ae02dcbb81abe6b6e6e3eaaeef4f3bf4a}\label{class_rasp_input_controller_ae02dcbb81abe6b6e6e3eaaeef4f3bf4a}} 
+\index{Rasp\+Input\+Controller@{Rasp\+Input\+Controller}!button\+State\+Map@{button\+State\+Map}}
+\index{button\+State\+Map@{button\+State\+Map}!Rasp\+Input\+Controller@{Rasp\+Input\+Controller}}
+\subsubsection{\texorpdfstring{button\+State\+Map}{buttonStateMap}}
+{\footnotesize\ttfamily map$<$unsigned short, bool$>$ Rasp\+Input\+Controller\+::button\+State\+Map\hspace{0.3cm}{\ttfamily [private]}}
+
+{\bfseries Initialisierung\+:}
+\begin{DoxyCode}
+= \{
+            \{\hyperlink{namespaceinputs_ab1d58fe937ccabff6ec4011a74028bfb}{VOLUME\_BPM\_UP\_BUTTON},   \textcolor{keyword}{false}\},
+            \{\hyperlink{namespaceinputs_af3cad6ab00b2670e1710698945d28c17}{VOLUME\_BPM\_DOWN\_BUTTON}, \textcolor{keyword}{false}\},
+            \{\hyperlink{namespaceinputs_af0075a72395787966efcec2403306b43}{MUTE\_BUTTON},            \textcolor{keyword}{false}\},
+            \{\hyperlink{namespaceinputs_a39dbaf6935309e198c1a0bc6e3468c45}{SAMPLE1\_BUTTON},         \textcolor{keyword}{false}\},
+            \{\hyperlink{namespaceinputs_afcf2086c7f58f801e5654d8e573d928c}{SAMPLE2\_BUTTON},         \textcolor{keyword}{false}\},
+            \{\hyperlink{namespaceinputs_a17158d35ca30fb91c6f9f757ce0d7ccc}{SAMPLE3\_BUTTON},         \textcolor{keyword}{false}\},
+            \{\hyperlink{namespaceinputs_ac9ccac580f0955e454a367ddc6421d78}{SAMPLE4\_BUTTON},         \textcolor{keyword}{false}\},
+            \{\hyperlink{namespaceinputs_ad22ade847b4a38fd418dccda07814551}{SAMPLE5\_BUTTON},         \textcolor{keyword}{false}\},
+            \{\hyperlink{namespaceinputs_a88edcfa8b89df1abcca33bcec05974c4}{SAMPLE6\_BUTTON},         \textcolor{keyword}{false}\},
+            \{\hyperlink{namespaceinputs_a50972dcf524a7b7c420ca75b0ba72a29}{SAMPLE7\_BUTTON},         \textcolor{keyword}{false}\},
+            \{\hyperlink{namespaceinputs_a85f389284c616cd584390d04ad192ced}{SAMPLE8\_BUTTON},         \textcolor{keyword}{false}\},
+            \{\hyperlink{namespaceinputs_af62021422f469c370f42c78a72504a66}{BEAT1\_BUTTON},           \textcolor{keyword}{false}\},
+            \{\hyperlink{namespaceinputs_a8cdd33c9e53b617a2cf8bd32a5b74484}{BEAT2\_BUTTON},           \textcolor{keyword}{false}\},
+            \{\hyperlink{namespaceinputs_ab60a6fc2188a034f76d3fbe554efe314}{BEAT3\_BUTTON},           \textcolor{keyword}{false}\},
+            \{\hyperlink{namespaceinputs_af65f26f63a9572003a2bc49e7955e319}{BEAT4\_BUTTON},           \textcolor{keyword}{false}\},
+            \{\hyperlink{namespaceinputs_a8a027829529daa53a24ece7b8334164b}{BEAT5\_BUTTON},           \textcolor{keyword}{false}\},
+            \{\hyperlink{namespaceinputs_a6afdc23bce21454342081cf937e47ab9}{BEAT6\_BUTTON},           \textcolor{keyword}{false}\},
+            \{\hyperlink{namespaceinputs_ac74e302394a578b31f0cf44df8cbb1a9}{BEAT7\_BUTTON},           \textcolor{keyword}{false}\},
+            \{\hyperlink{namespaceinputs_abfcd4d28221c436391131a27402ea620}{BEAT8\_BUTTON},           \textcolor{keyword}{false}\},
+            \{\hyperlink{namespaceinputs_af628ea84bf7114a62249d4bb425ed06a}{BEAT9\_BUTTON},           \textcolor{keyword}{false}\},
+            \{\hyperlink{namespaceinputs_a9778bcf3a44a9d16ae156bac6d745a24}{BEAT10\_BUTTON},          \textcolor{keyword}{false}\},
+            \{\hyperlink{namespaceinputs_ad09e4010a8b08721988599b198645372}{BEAT11\_BUTTON},          \textcolor{keyword}{false}\},
+            \{\hyperlink{namespaceinputs_a7b6bb44b9241cac31ff9909c3fc88271}{BEAT12\_BUTTON},          \textcolor{keyword}{false}\},
+            \{\hyperlink{namespaceinputs_a8f9d547eaa8c52cebfa64221341f266a}{BEAT13\_BUTTON},          \textcolor{keyword}{false}\},
+            \{\hyperlink{namespaceinputs_a4dfd34a5656f72c71f1b2dd8efc963dc}{BEAT14\_BUTTON},          \textcolor{keyword}{false}\},
+            \{\hyperlink{namespaceinputs_a1952aa2d27b65c8d8899a1ae1cfb7bb9}{BEAT15\_BUTTON},          \textcolor{keyword}{false}\},
+            \{\hyperlink{namespaceinputs_af0f3099a06352ba4eb0808091b908178}{BEAT16\_BUTTON},          \textcolor{keyword}{false}\},
+            \{\hyperlink{namespaceinputs_ab1d04ae8b7a7f4d11849c110f20fae10}{START\_STOP\_BUTTON},      \textcolor{keyword}{false}\}
+    \}
+\end{DoxyCode}
+
+
+Definiert in Zeile 55 der Datei Rasp\+Input\+Controller.\+h.
+
+
+
+Wird benutzt von get\+Input\+Events() und start\+Polling().
+
+\mbox{\Hypertarget{class_rasp_input_controller_a5a5a8d99d69c35e206ddf7467e36cfae}\label{class_rasp_input_controller_a5a5a8d99d69c35e206ddf7467e36cfae}} 
+\index{Rasp\+Input\+Controller@{Rasp\+Input\+Controller}!input\+Listener\+List@{input\+Listener\+List}}
+\index{input\+Listener\+List@{input\+Listener\+List}!Rasp\+Input\+Controller@{Rasp\+Input\+Controller}}
+\subsubsection{\texorpdfstring{input\+Listener\+List}{inputListenerList}}
+{\footnotesize\ttfamily vector$<$\hyperlink{class_input_listener}{Input\+Listener} $\ast$$>$ Rasp\+Input\+Controller\+::input\+Listener\+List\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definiert in Zeile 86 der Datei Rasp\+Input\+Controller.\+h.
+
+
+
+Wird benutzt von add\+Input\+Listener() und start\+Polling().
+
+\mbox{\Hypertarget{class_rasp_input_controller_a7b59eba5cc562eccc91347ddbd777e50}\label{class_rasp_input_controller_a7b59eba5cc562eccc91347ddbd777e50}} 
+\index{Rasp\+Input\+Controller@{Rasp\+Input\+Controller}!output\+Map@{output\+Map}}
+\index{output\+Map@{output\+Map}!Rasp\+Input\+Controller@{Rasp\+Input\+Controller}}
+\subsubsection{\texorpdfstring{output\+Map}{outputMap}}
+{\footnotesize\ttfamily map$<$unsigned short, unsigned short$>$ Rasp\+Input\+Controller\+::output\+Map\hspace{0.3cm}{\ttfamily [private]}}
+
+{\bfseries Initialisierung\+:}
+\begin{DoxyCode}
+= \{
+            \{\hyperlink{namespaceinputs_ab1d58fe937ccabff6ec4011a74028bfb}{VOLUME\_BPM\_UP\_BUTTON},   2\},
+            \{\hyperlink{namespaceinputs_af3cad6ab00b2670e1710698945d28c17}{VOLUME\_BPM\_DOWN\_BUTTON}, 1\},
+            \{\hyperlink{namespaceinputs_af0075a72395787966efcec2403306b43}{MUTE\_BUTTON},            3\},
+            \{\hyperlink{namespaceinputs_a39dbaf6935309e198c1a0bc6e3468c45}{SAMPLE1\_BUTTON},         501\},
+            \{\hyperlink{namespaceinputs_afcf2086c7f58f801e5654d8e573d928c}{SAMPLE2\_BUTTON},         503\},
+            \{\hyperlink{namespaceinputs_a17158d35ca30fb91c6f9f757ce0d7ccc}{SAMPLE3\_BUTTON},         514\},
+            \{\hyperlink{namespaceinputs_ac9ccac580f0955e454a367ddc6421d78}{SAMPLE4\_BUTTON},         512\},
+            \{\hyperlink{namespaceinputs_ad22ade847b4a38fd418dccda07814551}{SAMPLE5\_BUTTON},         510\},
+            \{\hyperlink{namespaceinputs_a88edcfa8b89df1abcca33bcec05974c4}{SAMPLE6\_BUTTON},         508\},
+            \{\hyperlink{namespaceinputs_a50972dcf524a7b7c420ca75b0ba72a29}{SAMPLE7\_BUTTON},         505\},
+            \{\hyperlink{namespaceinputs_a85f389284c616cd584390d04ad192ced}{SAMPLE8\_BUTTON},         507\},
+            \{\hyperlink{namespaceinputs_af62021422f469c370f42c78a72504a66}{BEAT1\_BUTTON},           113\},
+            \{\hyperlink{namespaceinputs_a8cdd33c9e53b617a2cf8bd32a5b74484}{BEAT2\_BUTTON},           109\},
+            \{\hyperlink{namespaceinputs_ab60a6fc2188a034f76d3fbe554efe314}{BEAT3\_BUTTON},           213\},
+            \{\hyperlink{namespaceinputs_af65f26f63a9572003a2bc49e7955e319}{BEAT4\_BUTTON},           209\},
+            \{\hyperlink{namespaceinputs_a8a027829529daa53a24ece7b8334164b}{BEAT5\_BUTTON},           102\},
+            \{\hyperlink{namespaceinputs_a6afdc23bce21454342081cf937e47ab9}{BEAT6\_BUTTON},           106\},
+            \{\hyperlink{namespaceinputs_ac74e302394a578b31f0cf44df8cbb1a9}{BEAT7\_BUTTON},           202\},
+            \{\hyperlink{namespaceinputs_abfcd4d28221c436391131a27402ea620}{BEAT8\_BUTTON},           206\},
+            \{\hyperlink{namespaceinputs_a8f9d547eaa8c52cebfa64221341f266a}{BEAT13\_BUTTON},          313\},
+            \{\hyperlink{namespaceinputs_a4dfd34a5656f72c71f1b2dd8efc963dc}{BEAT14\_BUTTON},          309\},
+            \{\hyperlink{namespaceinputs_a1952aa2d27b65c8d8899a1ae1cfb7bb9}{BEAT15\_BUTTON},          413\},
+            \{\hyperlink{namespaceinputs_af0f3099a06352ba4eb0808091b908178}{BEAT16\_BUTTON},          409\},
+            \{\hyperlink{namespaceinputs_af628ea84bf7114a62249d4bb425ed06a}{BEAT9\_BUTTON},           302\},
+            \{\hyperlink{namespaceinputs_a9778bcf3a44a9d16ae156bac6d745a24}{BEAT10\_BUTTON},          306\},
+            \{\hyperlink{namespaceinputs_ad09e4010a8b08721988599b198645372}{BEAT11\_BUTTON},          402\},
+            \{\hyperlink{namespaceinputs_a7b6bb44b9241cac31ff9909c3fc88271}{BEAT12\_BUTTON},          406\},
+            \{\hyperlink{namespaceinputs_ab1d04ae8b7a7f4d11849c110f20fae10}{START\_STOP\_BUTTON},      0\}
+    \}
+\end{DoxyCode}
+
+
+Definiert in Zeile 24 der Datei Rasp\+Input\+Controller.\+h.
+
+
+
+Wird benutzt von get\+Input\+Events(), initialize\+Pins() und start\+Polling().
+
+\mbox{\Hypertarget{class_rasp_input_controller_a388779c1ddf9f5910a92cd350cc59e5c}\label{class_rasp_input_controller_a388779c1ddf9f5910a92cd350cc59e5c}} 
+\index{Rasp\+Input\+Controller@{Rasp\+Input\+Controller}!polling\+Timer@{polling\+Timer}}
+\index{polling\+Timer@{polling\+Timer}!Rasp\+Input\+Controller@{Rasp\+Input\+Controller}}
+\subsubsection{\texorpdfstring{polling\+Timer}{pollingTimer}}
+{\footnotesize\ttfamily \hyperlink{class_timer}{Timer} Rasp\+Input\+Controller\+::polling\+Timer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definiert in Zeile 87 der Datei Rasp\+Input\+Controller.\+h.
+
+
+
+Wird benutzt von start\+Polling() und stop().
+
+\mbox{\Hypertarget{class_rasp_input_controller_a55b065ae154806341fd900a8b61110a5}\label{class_rasp_input_controller_a55b065ae154806341fd900a8b61110a5}} 
+\index{Rasp\+Input\+Controller@{Rasp\+Input\+Controller}!rotary\+Polling\+Timer@{rotary\+Polling\+Timer}}
+\index{rotary\+Polling\+Timer@{rotary\+Polling\+Timer}!Rasp\+Input\+Controller@{Rasp\+Input\+Controller}}
+\subsubsection{\texorpdfstring{rotary\+Polling\+Timer}{rotaryPollingTimer}}
+{\footnotesize\ttfamily \hyperlink{class_timer}{Timer} Rasp\+Input\+Controller\+::rotary\+Polling\+Timer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definiert in Zeile 88 der Datei Rasp\+Input\+Controller.\+h.
+
+
+
+Wird benutzt von start\+Polling() und stop().
+
+
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_rasp_input_controller_8h}{Rasp\+Input\+Controller.\+h}\item 
+\hyperlink{_rasp_input_controller_8cpp}{Rasp\+Input\+Controller.\+cpp}\end{DoxyCompactItemize}

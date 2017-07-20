@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_a_output_controller">
+<title>AOutputController class Reference</title>
+<para>
+    <programlisting>#include <link linkend="_a_output_controller_8h">&lt;AOutputController.h&gt;</link></programlisting>
+</para>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="class_a_output_controller_1a5a818a40e2911411d378032b8b2fb6c8">positionChange</link> (
+unsigned short newPosition)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="class_a_output_controller_1ac2b87aa6291c38cc65185bf6a37ae300">activeSampleChange</link> (
+unsigned short newActiveSample, unsigned short oldActiveSample)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="class_a_output_controller_1a7bad658dfc3eb1223ace0c0454130818">playPositionChange</link> (
+vector&lt; unsigned short &gt; &amp; newPlayArray)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="class_a_output_controller_1a15c1300df5606bf7d4838b41a45c31e3">playPositionChange</link> (
+unsigned short, unsigned short)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="class_a_output_controller_1ac685432fc57d2441ecb548386554d2c9">setBeatDuration</link> (
+unsigned int beatDuration)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="class_a_output_controller_1ace7df9de71110b3615156b9bd06a9349">showMainScreen</link> (
+unsigned int bpm)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="class_a_output_controller_1aab53d12a6aa6f38d0e4ead69e85ed4fe">showSampleScreen</link> (
+unsigned int bpm, float volume)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="class_a_output_controller_1a5a818a40e2911411d378032b8b2fb6c8">
+                <title>virtual void AOutputController::positionChange (unsigned short newPosition)=0</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_a_output_controller_1ac2b87aa6291c38cc65185bf6a37ae300">
+                <title>virtual void AOutputController::activeSampleChange (unsigned short newActiveSample, unsigned short oldActiveSample)=0</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_a_output_controller_1a7bad658dfc3eb1223ace0c0454130818">
+                <title>virtual void AOutputController::playPositionChange (vector&lt; unsigned short &gt; &amp;newPlayArray)=0</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_a_output_controller_1a15c1300df5606bf7d4838b41a45c31e3">
+                <title>virtual void AOutputController::playPositionChange (unsigned short, unsigned short)=0</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_a_output_controller_1ac685432fc57d2441ecb548386554d2c9">
+                <title>virtual void AOutputController::setBeatDuration (unsigned int beatDuration)=0</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_a_output_controller_1ace7df9de71110b3615156b9bd06a9349">
+                <title>virtual void AOutputController::showMainScreen (unsigned int bpm)=0</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_a_output_controller_1aab53d12a6aa6f38d0e4ead69e85ed4fe">
+                <title>virtual void AOutputController::showSampleScreen (unsigned int bpm, float volume)=0</title> <emphasis></emphasis>
+                
+            </section>
+</section>

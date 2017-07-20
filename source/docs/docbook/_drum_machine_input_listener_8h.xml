@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_drum_machine_input_listener_8h">
+    <title>DrumMachineInputListener.h File Reference</title>
+    <programlisting>#include &quot;DrumMachine.h&quot;</programlisting>
+    <programlisting>#include &quot;InputListener.h&quot;</programlisting>
+        <section>
+            <title> Klassen </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_drum_machine_input_listener">DrumMachineInputListener</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Ausführliche Beschreibung</title>
+    <para>Definition in file /Users/kilian/Development/EntwMM/Arduino Drum Machine/source/DrumMachineInputListener.h</para>
+    </simplesect>
+</section>

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="namespacestate">
+<title>state</title>
+        <section>
+            <title>Variablen</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespacestate_1afea5348759175ad498402b0148f8b6b2">PLAY</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short <link linkend="namespacestate_1a925633150a5fb17786e9c8d9aaa69c9d">MUTE</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+</section>

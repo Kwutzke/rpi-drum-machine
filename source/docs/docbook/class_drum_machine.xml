@@ -1,0 +1,300 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_drum_machine">
+<title>DrumMachine class Reference</title>
+<para>
+    <programlisting>#include <link linkend="_drum_machine_8h">&lt;DrumMachine.h&gt;</link></programlisting>
+</para>
+        <section>
+            <title>Private Attribute</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const int TOTAL_BEATS</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const long LOOP_PRECISION_NANOS</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>unsigned short bpm</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>unsigned short currentBeat</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int sixteenthNoteMillis</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool loopRunning</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float volume</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>AOutputController &amp; outputController</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>unsigned short activeSample</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Timer loop</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>vector&lt; Sample &gt; samples</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_drum_machine_1a5a42497c3a1f390537b6c12fddab1619">allocateChannels</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_drum_machine_1afd65a07ff84b6c7854ddd9ee3a529382">openAudio</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_drum_machine_1a2b038c37477e742bd3ce70e7f7bb6af5">DrumMachine</link> (
+<link linkend="class_a_output_controller">AOutputController</link> &amp; )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_drum_machine_1ac42508031bbf331d41c8004ed663c1c1">startLoop</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_drum_machine_1af1564a42f1c2717534a61437617070b3">stopLoop</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_drum_machine_1a530ac2c3529492c62a01619786fb3765">addSample</link> (
+<link linkend="class_sample">Sample</link> )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_drum_machine_1ac4cda2cfef390426515f11cf9ee3199c">increaseActiveSampleVolume</link> (
+float )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_drum_machine_1ab40423c6a37efad94389ffb19a0ccae9">increaseBpm</link> (
+unsigned short)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_drum_machine_1ac34e64779cd419a75628630f71a3041b">toggleSampleAtBeat</link> (
+unsigned short beat)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="class_drum_machine_1aaa0c2e00a5009b239aac709c37602c7d">isLoopRunning</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_drum_machine_1aaa50ac48ccdbf81a9ed5c7b3e2a5560d">setBPM</link> (
+unsigned short)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>unsigned short <link linkend="class_drum_machine_1a9a7a34dca1803071fec5b6687cb98343">getBPM</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_drum_machine_1a2723072af5049c67e990b1eba9351d81">setMasterVolume</link> (
+float )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>float <link linkend="class_drum_machine_1a3590f99d021aad35cca24fdcb0f8a246">getMasterVolume</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_drum_machine_1a28c17f251dc26e48b518e4863c33d6e8">setActiveSample</link> (
+unsigned short)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>unsigned short <link linkend="class_drum_machine_1ac8ef152a82bbce61bc1e2715c3e476b9">getActiveSample</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_drum_machine_1ab823055aa6c1fa1dd91b1e45f3e66f0f">increaseVolume</link> (
+float value)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Dokumentation der Datenelemente</title>
+        </section>
+            <section xml:id="class_drum_machine_1a5a42497c3a1f390537b6c12fddab1619">
+                <title>void DrumMachine::allocateChannels ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_drum_machine_1afd65a07ff84b6c7854ddd9ee3a529382">
+                <title>void DrumMachine::openAudio ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_drum_machine_1a2b038c37477e742bd3ce70e7f7bb6af5">
+                <title>DrumMachine::DrumMachine (AOutputController &amp;)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_drum_machine_1ac42508031bbf331d41c8004ed663c1c1">
+                <title>void DrumMachine::startLoop ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_drum_machine_1af1564a42f1c2717534a61437617070b3">
+                <title>void DrumMachine::stopLoop ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_drum_machine_1a530ac2c3529492c62a01619786fb3765">
+                <title>void DrumMachine::addSample (Sample)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_drum_machine_1ac4cda2cfef390426515f11cf9ee3199c">
+                <title>void DrumMachine::increaseActiveSampleVolume (float)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_drum_machine_1ab40423c6a37efad94389ffb19a0ccae9">
+                <title>void DrumMachine::increaseBpm (unsigned short)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_drum_machine_1ac34e64779cd419a75628630f71a3041b">
+                <title>void DrumMachine::toggleSampleAtBeat (unsigned short beat)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_drum_machine_1aaa0c2e00a5009b239aac709c37602c7d">
+                <title>bool DrumMachine::isLoopRunning ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_drum_machine_1aaa50ac48ccdbf81a9ed5c7b3e2a5560d">
+                <title>void DrumMachine::setBPM (unsigned short)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_drum_machine_1a9a7a34dca1803071fec5b6687cb98343">
+                <title>unsigned short DrumMachine::getBPM ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_drum_machine_1a2723072af5049c67e990b1eba9351d81">
+                <title>void DrumMachine::setMasterVolume (float)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_drum_machine_1a3590f99d021aad35cca24fdcb0f8a246">
+                <title>float DrumMachine::getMasterVolume ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_drum_machine_1a28c17f251dc26e48b518e4863c33d6e8">
+                <title>void DrumMachine::setActiveSample (unsigned short)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_drum_machine_1ac8ef152a82bbce61bc1e2715c3e476b9">
+                <title>unsigned short DrumMachine::getActiveSample ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_drum_machine_1ab823055aa6c1fa1dd91b1e45f3e66f0f">
+                <title>void DrumMachine::increaseVolume (float value)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

@@ -1,0 +1,120 @@
+\hypertarget{class_drum_machine_input_listener}{}\section{Drum\+Machine\+Input\+Listener Klassenreferenz}
+\label{class_drum_machine_input_listener}\index{Drum\+Machine\+Input\+Listener@{Drum\+Machine\+Input\+Listener}}
+
+
+{\ttfamily \#include $<$Drum\+Machine\+Input\+Listener.\+h$>$}
+
+Klassendiagramm für Drum\+Machine\+Input\+Listener\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_drum_machine_input_listener}
+\end{center}
+\end{figure}
+\subsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_drum_machine_input_listener_a7552c36ebae9e6ae49f8929ae9853354}{Drum\+Machine\+Input\+Listener} (\hyperlink{class_drum_machine}{Drum\+Machine} \&\hyperlink{class_drum_machine_input_listener_ae3f80aad0a5c4b2e4ad2712423102feb}{drum\+Machine})
+\item 
+void \hyperlink{class_drum_machine_input_listener_a44a620b09b35885a26befe84fa6e1ab0}{input\+Event} (unsigned short event) override
+\end{DoxyCompactItemize}
+\subsection*{Private Attribute}
+\begin{DoxyCompactItemize}
+\item 
+const float \hyperlink{class_drum_machine_input_listener_a983e85ff0ebfbb3de0a917134488570c}{V\+O\+L\+U\+M\+E\+\_\+\+S\+T\+E\+P\+\_\+\+S\+I\+ZE} = 0.\+05f
+\item 
+const unsigned short \hyperlink{class_drum_machine_input_listener_ad4f83d21be6ff1ba703a27d8c9a04c9a}{B\+P\+M\+\_\+\+S\+T\+E\+P\+\_\+\+S\+I\+ZE} = 1
+\item 
+\hyperlink{class_drum_machine}{Drum\+Machine} \& \hyperlink{class_drum_machine_input_listener_ae3f80aad0a5c4b2e4ad2712423102feb}{drum\+Machine}
+\end{DoxyCompactItemize}
+
+
+\subsection{Ausführliche Beschreibung}
+
+
+Definiert in Zeile 8 der Datei Drum\+Machine\+Input\+Listener.\+h.
+
+
+
+\subsection{Beschreibung der Konstruktoren und Destruktoren}
+\mbox{\Hypertarget{class_drum_machine_input_listener_a7552c36ebae9e6ae49f8929ae9853354}\label{class_drum_machine_input_listener_a7552c36ebae9e6ae49f8929ae9853354}} 
+\index{Drum\+Machine\+Input\+Listener@{Drum\+Machine\+Input\+Listener}!Drum\+Machine\+Input\+Listener@{Drum\+Machine\+Input\+Listener}}
+\index{Drum\+Machine\+Input\+Listener@{Drum\+Machine\+Input\+Listener}!Drum\+Machine\+Input\+Listener@{Drum\+Machine\+Input\+Listener}}
+\subsubsection{\texorpdfstring{Drum\+Machine\+Input\+Listener()}{DrumMachineInputListener()}}
+{\footnotesize\ttfamily Drum\+Machine\+Input\+Listener\+::\+Drum\+Machine\+Input\+Listener (\begin{DoxyParamCaption}\item[{\hyperlink{class_drum_machine}{Drum\+Machine} \&}]{drum\+Machine }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Definiert in Zeile 8 der Datei Drum\+Machine\+Input\+Listener.\+cpp.
+
+
+
+\subsection{Dokumentation der Elementfunktionen}
+\mbox{\Hypertarget{class_drum_machine_input_listener_a44a620b09b35885a26befe84fa6e1ab0}\label{class_drum_machine_input_listener_a44a620b09b35885a26befe84fa6e1ab0}} 
+\index{Drum\+Machine\+Input\+Listener@{Drum\+Machine\+Input\+Listener}!input\+Event@{input\+Event}}
+\index{input\+Event@{input\+Event}!Drum\+Machine\+Input\+Listener@{Drum\+Machine\+Input\+Listener}}
+\subsubsection{\texorpdfstring{input\+Event()}{inputEvent()}}
+{\footnotesize\ttfamily void Drum\+Machine\+Input\+Listener\+::input\+Event (\begin{DoxyParamCaption}\item[{unsigned short}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implementiert \hyperlink{class_input_listener_a1a3d74f2ffc108c773511ea4be250f7d}{Input\+Listener}.
+
+
+
+Definiert in Zeile 10 der Datei Drum\+Machine\+Input\+Listener.\+cpp.
+
+
+
+Benutzt beat\+::\+B\+E\+A\+T1, beat\+::\+B\+E\+A\+T10, inputs\+::\+B\+E\+A\+T10\+\_\+\+B\+U\+T\+T\+ON, beat\+::\+B\+E\+A\+T11, inputs\+::\+B\+E\+A\+T11\+\_\+\+B\+U\+T\+T\+ON, beat\+::\+B\+E\+A\+T12, inputs\+::\+B\+E\+A\+T12\+\_\+\+B\+U\+T\+T\+ON, beat\+::\+B\+E\+A\+T13, inputs\+::\+B\+E\+A\+T13\+\_\+\+B\+U\+T\+T\+ON, beat\+::\+B\+E\+A\+T14, inputs\+::\+B\+E\+A\+T14\+\_\+\+B\+U\+T\+T\+ON, beat\+::\+B\+E\+A\+T15, inputs\+::\+B\+E\+A\+T15\+\_\+\+B\+U\+T\+T\+ON, beat\+::\+B\+E\+A\+T16, inputs\+::\+B\+E\+A\+T16\+\_\+\+B\+U\+T\+T\+ON, inputs\+::\+B\+E\+A\+T1\+\_\+\+B\+U\+T\+T\+ON, beat\+::\+B\+E\+A\+T2, inputs\+::\+B\+E\+A\+T2\+\_\+\+B\+U\+T\+T\+ON, beat\+::\+B\+E\+A\+T3, inputs\+::\+B\+E\+A\+T3\+\_\+\+B\+U\+T\+T\+ON, beat\+::\+B\+E\+A\+T4, inputs\+::\+B\+E\+A\+T4\+\_\+\+B\+U\+T\+T\+ON, beat\+::\+B\+E\+A\+T5, inputs\+::\+B\+E\+A\+T5\+\_\+\+B\+U\+T\+T\+ON, beat\+::\+B\+E\+A\+T6, inputs\+::\+B\+E\+A\+T6\+\_\+\+B\+U\+T\+T\+ON, beat\+::\+B\+E\+A\+T7, inputs\+::\+B\+E\+A\+T7\+\_\+\+B\+U\+T\+T\+ON, beat\+::\+B\+E\+A\+T8, inputs\+::\+B\+E\+A\+T8\+\_\+\+B\+U\+T\+T\+ON, beat\+::\+B\+E\+A\+T9, inputs\+::\+B\+E\+A\+T9\+\_\+\+B\+U\+T\+T\+ON, B\+P\+M\+\_\+\+S\+T\+E\+P\+\_\+\+S\+I\+ZE, drum\+Machine, Drum\+Machine\+::get\+Active\+Sample(), Drum\+Machine\+::get\+B\+P\+M(), Drum\+Machine\+::get\+Master\+Volume(), Drum\+Machine\+::increase\+Active\+Sample\+Volume(), Drum\+Machine\+::increase\+Bpm(), Drum\+Machine\+::is\+Loop\+Running(), sample\+::\+N\+O\+\_\+\+S\+A\+M\+P\+LE, sample\+::\+S\+A\+M\+P\+L\+E1, inputs\+::\+S\+A\+M\+P\+L\+E1\+\_\+\+B\+U\+T\+T\+ON, sample\+::\+S\+A\+M\+P\+L\+E2, inputs\+::\+S\+A\+M\+P\+L\+E2\+\_\+\+B\+U\+T\+T\+ON, sample\+::\+S\+A\+M\+P\+L\+E3, inputs\+::\+S\+A\+M\+P\+L\+E3\+\_\+\+B\+U\+T\+T\+ON, sample\+::\+S\+A\+M\+P\+L\+E4, inputs\+::\+S\+A\+M\+P\+L\+E4\+\_\+\+B\+U\+T\+T\+ON, sample\+::\+S\+A\+M\+P\+L\+E5, inputs\+::\+S\+A\+M\+P\+L\+E5\+\_\+\+B\+U\+T\+T\+ON, sample\+::\+S\+A\+M\+P\+L\+E6, inputs\+::\+S\+A\+M\+P\+L\+E6\+\_\+\+B\+U\+T\+T\+ON, sample\+::\+S\+A\+M\+P\+L\+E7, inputs\+::\+S\+A\+M\+P\+L\+E7\+\_\+\+B\+U\+T\+T\+ON, sample\+::\+S\+A\+M\+P\+L\+E8, inputs\+::\+S\+A\+M\+P\+L\+E8\+\_\+\+B\+U\+T\+T\+ON, Drum\+Machine\+::set\+Active\+Sample(), inputs\+::\+S\+T\+A\+R\+T\+\_\+\+S\+T\+O\+P\+\_\+\+B\+U\+T\+T\+ON, Drum\+Machine\+::start\+Loop(), Drum\+Machine\+::stop\+Loop(), Drum\+Machine\+::toggle\+Sample\+At\+Beat(), inputs\+::\+V\+O\+L\+U\+M\+E\+\_\+\+B\+P\+M\+\_\+\+D\+O\+W\+N\+\_\+\+B\+U\+T\+T\+ON, inputs\+::\+V\+O\+L\+U\+M\+E\+\_\+\+B\+P\+M\+\_\+\+U\+P\+\_\+\+B\+U\+T\+T\+ON und V\+O\+L\+U\+M\+E\+\_\+\+S\+T\+E\+P\+\_\+\+S\+I\+ZE.
+
+
+
+\subsection{Dokumentation der Datenelemente}
+\mbox{\Hypertarget{class_drum_machine_input_listener_ad4f83d21be6ff1ba703a27d8c9a04c9a}\label{class_drum_machine_input_listener_ad4f83d21be6ff1ba703a27d8c9a04c9a}} 
+\index{Drum\+Machine\+Input\+Listener@{Drum\+Machine\+Input\+Listener}!B\+P\+M\+\_\+\+S\+T\+E\+P\+\_\+\+S\+I\+ZE@{B\+P\+M\+\_\+\+S\+T\+E\+P\+\_\+\+S\+I\+ZE}}
+\index{B\+P\+M\+\_\+\+S\+T\+E\+P\+\_\+\+S\+I\+ZE@{B\+P\+M\+\_\+\+S\+T\+E\+P\+\_\+\+S\+I\+ZE}!Drum\+Machine\+Input\+Listener@{Drum\+Machine\+Input\+Listener}}
+\subsubsection{\texorpdfstring{B\+P\+M\+\_\+\+S\+T\+E\+P\+\_\+\+S\+I\+ZE}{BPM\_STEP\_SIZE}}
+{\footnotesize\ttfamily const unsigned short Drum\+Machine\+Input\+Listener\+::\+B\+P\+M\+\_\+\+S\+T\+E\+P\+\_\+\+S\+I\+ZE = 1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definiert in Zeile 11 der Datei Drum\+Machine\+Input\+Listener.\+h.
+
+
+
+Wird benutzt von input\+Event().
+
+\mbox{\Hypertarget{class_drum_machine_input_listener_ae3f80aad0a5c4b2e4ad2712423102feb}\label{class_drum_machine_input_listener_ae3f80aad0a5c4b2e4ad2712423102feb}} 
+\index{Drum\+Machine\+Input\+Listener@{Drum\+Machine\+Input\+Listener}!drum\+Machine@{drum\+Machine}}
+\index{drum\+Machine@{drum\+Machine}!Drum\+Machine\+Input\+Listener@{Drum\+Machine\+Input\+Listener}}
+\subsubsection{\texorpdfstring{drum\+Machine}{drumMachine}}
+{\footnotesize\ttfamily \hyperlink{class_drum_machine}{Drum\+Machine}\& Drum\+Machine\+Input\+Listener\+::drum\+Machine\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definiert in Zeile 13 der Datei Drum\+Machine\+Input\+Listener.\+h.
+
+
+
+Wird benutzt von input\+Event().
+
+\mbox{\Hypertarget{class_drum_machine_input_listener_a983e85ff0ebfbb3de0a917134488570c}\label{class_drum_machine_input_listener_a983e85ff0ebfbb3de0a917134488570c}} 
+\index{Drum\+Machine\+Input\+Listener@{Drum\+Machine\+Input\+Listener}!V\+O\+L\+U\+M\+E\+\_\+\+S\+T\+E\+P\+\_\+\+S\+I\+ZE@{V\+O\+L\+U\+M\+E\+\_\+\+S\+T\+E\+P\+\_\+\+S\+I\+ZE}}
+\index{V\+O\+L\+U\+M\+E\+\_\+\+S\+T\+E\+P\+\_\+\+S\+I\+ZE@{V\+O\+L\+U\+M\+E\+\_\+\+S\+T\+E\+P\+\_\+\+S\+I\+ZE}!Drum\+Machine\+Input\+Listener@{Drum\+Machine\+Input\+Listener}}
+\subsubsection{\texorpdfstring{V\+O\+L\+U\+M\+E\+\_\+\+S\+T\+E\+P\+\_\+\+S\+I\+ZE}{VOLUME\_STEP\_SIZE}}
+{\footnotesize\ttfamily const float Drum\+Machine\+Input\+Listener\+::\+V\+O\+L\+U\+M\+E\+\_\+\+S\+T\+E\+P\+\_\+\+S\+I\+ZE = 0.\+05f\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definiert in Zeile 10 der Datei Drum\+Machine\+Input\+Listener.\+h.
+
+
+
+Wird benutzt von input\+Event().
+
+
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_drum_machine_input_listener_8h}{Drum\+Machine\+Input\+Listener.\+h}\item 
+\hyperlink{_drum_machine_input_listener_8cpp}{Drum\+Machine\+Input\+Listener.\+cpp}\end{DoxyCompactItemize}

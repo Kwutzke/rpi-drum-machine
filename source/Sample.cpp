@@ -32,10 +32,6 @@ void Sample::playAtBeat(unsigned int beatPosition) {
     playArray.at(beatPosition) = 1;
 }
 
-void Sample::muteAtBeat(unsigned int beatPosition) {
-    playArray.at(beatPosition) = 0;
-}
-
 void Sample::setVolume(float volume) {
     if (volume >= 1) {
         this->volume = 1;
@@ -70,7 +66,7 @@ vector<unsigned short, allocator<unsigned short>> &Sample::getPlayArray() {
     return playArray;
 }
 
-void Sample::togglePlayAtBeat(unsigned int beat) {
+void Sample::togglePlayAtBeat(unsigned short beat) {
     if (playArray.at(beat) == PLAY) {
         playArray.at(beat) = MUTE;
     } else {

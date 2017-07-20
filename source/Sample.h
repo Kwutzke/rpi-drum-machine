@@ -23,40 +23,69 @@ namespace state {
     const unsigned short PLAY = 1, MUTE = 0;
 }
 
+/**
+ * @brief   A class that holds and maintains information about a sample audio file,
+ *          which can be played by the Drum Machine
+ *
+ */
+
 class Sample {
 public:
 
+    /**
+     * Constructor
+     * @param samplePath defines where to find the audio sample file
+     */
     explicit Sample(const char *samplePath);
 
+    /**
+     * Checks if the sample is active for the passed beat position and if so, plays it
+     * @param currentBeat the current beat position of the running loop
+     */
     void playSample(int currentBeat);
 
+    /// Plays sample, when called
     void play();
 
-    void playAtBeat(unsigned int);
+    /**
+     * Activates sample at the passed beatPosition
+     * @param beatPosition the beat position, where to activate the sample
+     */
+    void playAtBeat(unsigned int beatPosition);
 
-    void muteAtBeat(unsigned int);
-
-    void togglePlayAtBeat(unsigned int);
+    /**
+     * Toggles sample state at the passed beatPosition from active to inactive or vice versa
+     * @param beatPosition the beat position where to toggle the sample state
+     */
+    void togglePlayAtBeat(unsigned short beatPosition);
 
     // Getters and Setters
-    void setVolume(float);
 
+    ///Setter of member volume
+    void setVolume(float volume);
+
+    ///Getter of member volume
     float getVolume();
 
-    void setMasterVolume(float);
+    ///Setter of member masterVolume
+    void setMasterVolume(float volume);
 
+     // Getter of member playArray
     vector<unsigned short> &getPlayArray();
 
 private:
+    //@todo extend the documentation
+    Mix_Chunk *sampleFile;              ///< Pointer to
+    vector<unsigned short> playArray;   ///< Vector that holds 16 zeroes or ones. One stands for an active state and zero for an inactive state
+    float volume;                       ///< The volume of the sample
+    //@todo extend the documentation
+    float masterVolume;                 ///< The master volume of the sample
 
-    Mix_Chunk *sampleFile;
-    vector<unsigned short> playArray;
-    float volume;
-    float masterVolume;
-
+    //@todo extend the documentation
+    ///Sets the mix volume
     void setMixVolume();
 
+    ///Getter of master Volume
+    float getMasterVolume();
 };
-
-
 #endif //DRUMMACHINE_SAMPLE_H

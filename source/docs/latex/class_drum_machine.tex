@@ -1,0 +1,533 @@
+\hypertarget{class_drum_machine}{}\section{Drum\+Machine Klassenreferenz}
+\label{class_drum_machine}\index{Drum\+Machine@{Drum\+Machine}}
+
+
+{\ttfamily \#include $<$Drum\+Machine.\+h$>$}
+
+\subsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_drum_machine_a2b038c37477e742bd3ce70e7f7bb6af5}{Drum\+Machine} (\hyperlink{class_a_output_controller}{A\+Output\+Controller} \&)
+\item 
+void \hyperlink{class_drum_machine_ac42508031bbf331d41c8004ed663c1c1}{start\+Loop} ()
+\item 
+void \hyperlink{class_drum_machine_af1564a42f1c2717534a61437617070b3}{stop\+Loop} ()
+\item 
+void \hyperlink{class_drum_machine_a530ac2c3529492c62a01619786fb3765}{add\+Sample} (\hyperlink{class_sample}{Sample})
+\item 
+void \hyperlink{class_drum_machine_ac4cda2cfef390426515f11cf9ee3199c}{increase\+Active\+Sample\+Volume} (float)
+\item 
+void \hyperlink{class_drum_machine_ab40423c6a37efad94389ffb19a0ccae9}{increase\+Bpm} (unsigned short)
+\item 
+void \hyperlink{class_drum_machine_ac34e64779cd419a75628630f71a3041b}{toggle\+Sample\+At\+Beat} (unsigned short beat)
+\item 
+bool \hyperlink{class_drum_machine_aaa0c2e00a5009b239aac709c37602c7d}{is\+Loop\+Running} ()
+\item 
+void \hyperlink{class_drum_machine_aaa50ac48ccdbf81a9ed5c7b3e2a5560d}{set\+B\+PM} (unsigned short)
+\item 
+unsigned short \hyperlink{class_drum_machine_a9a7a34dca1803071fec5b6687cb98343}{get\+B\+PM} ()
+\item 
+void \hyperlink{class_drum_machine_a2723072af5049c67e990b1eba9351d81}{set\+Master\+Volume} (float)
+\item 
+float \hyperlink{class_drum_machine_a3590f99d021aad35cca24fdcb0f8a246}{get\+Master\+Volume} ()
+\item 
+void \hyperlink{class_drum_machine_a28c17f251dc26e48b518e4863c33d6e8}{set\+Active\+Sample} (unsigned short)
+\item 
+unsigned short \hyperlink{class_drum_machine_ac8ef152a82bbce61bc1e2715c3e476b9}{get\+Active\+Sample} ()
+\item 
+void \hyperlink{class_drum_machine_ab823055aa6c1fa1dd91b1e45f3e66f0f}{increase\+Volume} (float value)
+\end{DoxyCompactItemize}
+\subsection*{Private Methoden}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_drum_machine_a5a42497c3a1f390537b6c12fddab1619}{allocate\+Channels} ()
+\item 
+void \hyperlink{class_drum_machine_afd65a07ff84b6c7854ddd9ee3a529382}{open\+Audio} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attribute}
+\begin{DoxyCompactItemize}
+\item 
+const int \hyperlink{class_drum_machine_a455f582474a17cbd618940a3d4a4791d}{T\+O\+T\+A\+L\+\_\+\+B\+E\+A\+TS} = 16
+\item 
+const long \hyperlink{class_drum_machine_aefcf483d61e72bec26f9215a800c705c}{L\+O\+O\+P\+\_\+\+P\+R\+E\+C\+I\+S\+I\+O\+N\+\_\+\+N\+A\+N\+OS} = 10000
+\item 
+unsigned short \hyperlink{class_drum_machine_afaa80be4a66f759ab590a5f67f327b67}{bpm}
+\item 
+unsigned short \hyperlink{class_drum_machine_a46f20be98c71d1429a473e03bf092df3}{current\+Beat}
+\item 
+int \hyperlink{class_drum_machine_a55ad96f0aa2452d631e49bcdde9fd538}{sixteenth\+Note\+Millis}
+\item 
+bool \hyperlink{class_drum_machine_a4ac5a8c113e5a32a557f069e8d93cca8}{loop\+Running}
+\item 
+float \hyperlink{class_drum_machine_af1401c2a8e1d016ec32c662968e581fd}{volume}
+\item 
+\hyperlink{class_a_output_controller}{A\+Output\+Controller} \& \hyperlink{class_drum_machine_a4a5b4d6cc6e4a3ce2c2893e52fd0e951}{output\+Controller}
+\item 
+unsigned short \hyperlink{class_drum_machine_a9e12916e5724251791689e6f14c8513a}{active\+Sample}
+\item 
+\hyperlink{class_timer}{Timer} \hyperlink{class_drum_machine_ab190b1b114840e3fb41fff54d0099e93}{loop}
+\item 
+vector$<$ \hyperlink{class_sample}{Sample} $>$ \hyperlink{class_drum_machine_acf215ead70c41e760556497281aa562e}{samples}
+\end{DoxyCompactItemize}
+
+
+\subsection{Ausführliche Beschreibung}
+
+
+Definiert in Zeile 25 der Datei Drum\+Machine.\+h.
+
+
+
+\subsection{Beschreibung der Konstruktoren und Destruktoren}
+\mbox{\Hypertarget{class_drum_machine_a2b038c37477e742bd3ce70e7f7bb6af5}\label{class_drum_machine_a2b038c37477e742bd3ce70e7f7bb6af5}} 
+\index{Drum\+Machine@{Drum\+Machine}!Drum\+Machine@{Drum\+Machine}}
+\index{Drum\+Machine@{Drum\+Machine}!Drum\+Machine@{Drum\+Machine}}
+\subsubsection{\texorpdfstring{Drum\+Machine()}{DrumMachine()}}
+{\footnotesize\ttfamily Drum\+Machine\+::\+Drum\+Machine (\begin{DoxyParamCaption}\item[{\hyperlink{class_a_output_controller}{A\+Output\+Controller} \&}]{rasp\+Output\+Controller }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Definiert in Zeile 10 der Datei Drum\+Machine.\+cpp.
+
+
+
+Benutzt allocate\+Channels() und open\+Audio().
+
+
+
+\subsection{Dokumentation der Elementfunktionen}
+\mbox{\Hypertarget{class_drum_machine_a530ac2c3529492c62a01619786fb3765}\label{class_drum_machine_a530ac2c3529492c62a01619786fb3765}} 
+\index{Drum\+Machine@{Drum\+Machine}!add\+Sample@{add\+Sample}}
+\index{add\+Sample@{add\+Sample}!Drum\+Machine@{Drum\+Machine}}
+\subsubsection{\texorpdfstring{add\+Sample()}{addSample()}}
+{\footnotesize\ttfamily void Drum\+Machine\+::add\+Sample (\begin{DoxyParamCaption}\item[{\hyperlink{class_sample}{Sample}}]{sample }\end{DoxyParamCaption})}
+
+
+
+Definiert in Zeile 117 der Datei Drum\+Machine.\+cpp.
+
+
+
+Benutzt samples, Sample\+::set\+Master\+Volume() und volume.
+
+
+
+Wird benutzt von setup().
+
+\mbox{\Hypertarget{class_drum_machine_a5a42497c3a1f390537b6c12fddab1619}\label{class_drum_machine_a5a42497c3a1f390537b6c12fddab1619}} 
+\index{Drum\+Machine@{Drum\+Machine}!allocate\+Channels@{allocate\+Channels}}
+\index{allocate\+Channels@{allocate\+Channels}!Drum\+Machine@{Drum\+Machine}}
+\subsubsection{\texorpdfstring{allocate\+Channels()}{allocateChannels()}}
+{\footnotesize\ttfamily void Drum\+Machine\+::allocate\+Channels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definiert in Zeile 29 der Datei Drum\+Machine.\+cpp.
+
+
+
+Wird benutzt von Drum\+Machine().
+
+\mbox{\Hypertarget{class_drum_machine_ac8ef152a82bbce61bc1e2715c3e476b9}\label{class_drum_machine_ac8ef152a82bbce61bc1e2715c3e476b9}} 
+\index{Drum\+Machine@{Drum\+Machine}!get\+Active\+Sample@{get\+Active\+Sample}}
+\index{get\+Active\+Sample@{get\+Active\+Sample}!Drum\+Machine@{Drum\+Machine}}
+\subsubsection{\texorpdfstring{get\+Active\+Sample()}{getActiveSample()}}
+{\footnotesize\ttfamily unsigned short Drum\+Machine\+::get\+Active\+Sample (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definiert in Zeile 156 der Datei Drum\+Machine.\+cpp.
+
+
+
+Benutzt active\+Sample.
+
+
+
+Wird benutzt von Drum\+Machine\+Input\+Listener\+::input\+Event().
+
+\mbox{\Hypertarget{class_drum_machine_a9a7a34dca1803071fec5b6687cb98343}\label{class_drum_machine_a9a7a34dca1803071fec5b6687cb98343}} 
+\index{Drum\+Machine@{Drum\+Machine}!get\+B\+PM@{get\+B\+PM}}
+\index{get\+B\+PM@{get\+B\+PM}!Drum\+Machine@{Drum\+Machine}}
+\subsubsection{\texorpdfstring{get\+B\+P\+M()}{getBPM()}}
+{\footnotesize\ttfamily unsigned short Drum\+Machine\+::get\+B\+PM (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definiert in Zeile 96 der Datei Drum\+Machine.\+cpp.
+
+
+
+Benutzt bpm.
+
+
+
+Wird benutzt von increase\+Active\+Sample\+Volume(), increase\+Bpm(), Drum\+Machine\+Input\+Listener\+::input\+Event() und set\+Active\+Sample().
+
+\mbox{\Hypertarget{class_drum_machine_a3590f99d021aad35cca24fdcb0f8a246}\label{class_drum_machine_a3590f99d021aad35cca24fdcb0f8a246}} 
+\index{Drum\+Machine@{Drum\+Machine}!get\+Master\+Volume@{get\+Master\+Volume}}
+\index{get\+Master\+Volume@{get\+Master\+Volume}!Drum\+Machine@{Drum\+Machine}}
+\subsubsection{\texorpdfstring{get\+Master\+Volume()}{getMasterVolume()}}
+{\footnotesize\ttfamily float Drum\+Machine\+::get\+Master\+Volume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definiert in Zeile 113 der Datei Drum\+Machine.\+cpp.
+
+
+
+Benutzt volume.
+
+
+
+Wird benutzt von Drum\+Machine\+Input\+Listener\+::input\+Event().
+
+\mbox{\Hypertarget{class_drum_machine_ac4cda2cfef390426515f11cf9ee3199c}\label{class_drum_machine_ac4cda2cfef390426515f11cf9ee3199c}} 
+\index{Drum\+Machine@{Drum\+Machine}!increase\+Active\+Sample\+Volume@{increase\+Active\+Sample\+Volume}}
+\index{increase\+Active\+Sample\+Volume@{increase\+Active\+Sample\+Volume}!Drum\+Machine@{Drum\+Machine}}
+\subsubsection{\texorpdfstring{increase\+Active\+Sample\+Volume()}{increaseActiveSampleVolume()}}
+{\footnotesize\ttfamily void Drum\+Machine\+::increase\+Active\+Sample\+Volume (\begin{DoxyParamCaption}\item[{float}]{volume }\end{DoxyParamCaption})}
+
+
+
+Definiert in Zeile 74 der Datei Drum\+Machine.\+cpp.
+
+
+
+Benutzt active\+Sample, get\+B\+P\+M(), output\+Controller, samples und A\+Output\+Controller\+::show\+Sample\+Screen().
+
+
+
+Wird benutzt von Drum\+Machine\+Input\+Listener\+::input\+Event().
+
+\mbox{\Hypertarget{class_drum_machine_ab40423c6a37efad94389ffb19a0ccae9}\label{class_drum_machine_ab40423c6a37efad94389ffb19a0ccae9}} 
+\index{Drum\+Machine@{Drum\+Machine}!increase\+Bpm@{increase\+Bpm}}
+\index{increase\+Bpm@{increase\+Bpm}!Drum\+Machine@{Drum\+Machine}}
+\subsubsection{\texorpdfstring{increase\+Bpm()}{increaseBpm()}}
+{\footnotesize\ttfamily void Drum\+Machine\+::increase\+Bpm (\begin{DoxyParamCaption}\item[{unsigned short}]{value }\end{DoxyParamCaption})}
+
+
+
+Definiert in Zeile 160 der Datei Drum\+Machine.\+cpp.
+
+
+
+Benutzt get\+B\+P\+M() und set\+B\+P\+M().
+
+
+
+Wird benutzt von Drum\+Machine\+Input\+Listener\+::input\+Event().
+
+\mbox{\Hypertarget{class_drum_machine_ab823055aa6c1fa1dd91b1e45f3e66f0f}\label{class_drum_machine_ab823055aa6c1fa1dd91b1e45f3e66f0f}} 
+\index{Drum\+Machine@{Drum\+Machine}!increase\+Volume@{increase\+Volume}}
+\index{increase\+Volume@{increase\+Volume}!Drum\+Machine@{Drum\+Machine}}
+\subsubsection{\texorpdfstring{increase\+Volume()}{increaseVolume()}}
+{\footnotesize\ttfamily void Drum\+Machine\+::increase\+Volume (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})}
+
+
+
+Definiert in Zeile 64 der Datei Drum\+Machine.\+cpp.
+
+
+
+Benutzt set\+Master\+Volume() und volume.
+
+\mbox{\Hypertarget{class_drum_machine_aaa0c2e00a5009b239aac709c37602c7d}\label{class_drum_machine_aaa0c2e00a5009b239aac709c37602c7d}} 
+\index{Drum\+Machine@{Drum\+Machine}!is\+Loop\+Running@{is\+Loop\+Running}}
+\index{is\+Loop\+Running@{is\+Loop\+Running}!Drum\+Machine@{Drum\+Machine}}
+\subsubsection{\texorpdfstring{is\+Loop\+Running()}{isLoopRunning()}}
+{\footnotesize\ttfamily bool Drum\+Machine\+::is\+Loop\+Running (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definiert in Zeile 122 der Datei Drum\+Machine.\+cpp.
+
+
+
+Benutzt loop\+Running.
+
+
+
+Wird benutzt von Drum\+Machine\+Input\+Listener\+::input\+Event().
+
+\mbox{\Hypertarget{class_drum_machine_afd65a07ff84b6c7854ddd9ee3a529382}\label{class_drum_machine_afd65a07ff84b6c7854ddd9ee3a529382}} 
+\index{Drum\+Machine@{Drum\+Machine}!open\+Audio@{open\+Audio}}
+\index{open\+Audio@{open\+Audio}!Drum\+Machine@{Drum\+Machine}}
+\subsubsection{\texorpdfstring{open\+Audio()}{openAudio()}}
+{\footnotesize\ttfamily void Drum\+Machine\+::open\+Audio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definiert in Zeile 19 der Datei Drum\+Machine.\+cpp.
+
+
+
+Wird benutzt von Drum\+Machine().
+
+\mbox{\Hypertarget{class_drum_machine_a28c17f251dc26e48b518e4863c33d6e8}\label{class_drum_machine_a28c17f251dc26e48b518e4863c33d6e8}} 
+\index{Drum\+Machine@{Drum\+Machine}!set\+Active\+Sample@{set\+Active\+Sample}}
+\index{set\+Active\+Sample@{set\+Active\+Sample}!Drum\+Machine@{Drum\+Machine}}
+\subsubsection{\texorpdfstring{set\+Active\+Sample()}{setActiveSample()}}
+{\footnotesize\ttfamily void Drum\+Machine\+::set\+Active\+Sample (\begin{DoxyParamCaption}\item[{unsigned short}]{new\+Active\+Sample }\end{DoxyParamCaption})}
+
+
+
+Definiert in Zeile 126 der Datei Drum\+Machine.\+cpp.
+
+
+
+Benutzt active\+Sample, A\+Output\+Controller\+::active\+Sample\+Change(), get\+B\+P\+M(), sample\+::\+N\+O\+\_\+\+S\+A\+M\+P\+LE, output\+Controller, A\+Output\+Controller\+::play\+Position\+Change(), samples, A\+Output\+Controller\+::show\+Main\+Screen() und A\+Output\+Controller\+::show\+Sample\+Screen().
+
+
+
+Wird benutzt von Drum\+Machine\+Input\+Listener\+::input\+Event().
+
+\mbox{\Hypertarget{class_drum_machine_aaa50ac48ccdbf81a9ed5c7b3e2a5560d}\label{class_drum_machine_aaa50ac48ccdbf81a9ed5c7b3e2a5560d}} 
+\index{Drum\+Machine@{Drum\+Machine}!set\+B\+PM@{set\+B\+PM}}
+\index{set\+B\+PM@{set\+B\+PM}!Drum\+Machine@{Drum\+Machine}}
+\subsubsection{\texorpdfstring{set\+B\+P\+M()}{setBPM()}}
+{\footnotesize\ttfamily void Drum\+Machine\+::set\+B\+PM (\begin{DoxyParamCaption}\item[{unsigned short}]{bpm }\end{DoxyParamCaption})}
+
+
+
+Definiert in Zeile 86 der Datei Drum\+Machine.\+cpp.
+
+
+
+Benutzt bpm, loop, output\+Controller, A\+Output\+Controller\+::set\+Beat\+Duration(), Timer\+::set\+Interval(), A\+Output\+Controller\+::show\+Main\+Screen() und sixteenth\+Note\+Millis.
+
+
+
+Wird benutzt von increase\+Bpm() und setup().
+
+\mbox{\Hypertarget{class_drum_machine_a2723072af5049c67e990b1eba9351d81}\label{class_drum_machine_a2723072af5049c67e990b1eba9351d81}} 
+\index{Drum\+Machine@{Drum\+Machine}!set\+Master\+Volume@{set\+Master\+Volume}}
+\index{set\+Master\+Volume@{set\+Master\+Volume}!Drum\+Machine@{Drum\+Machine}}
+\subsubsection{\texorpdfstring{set\+Master\+Volume()}{setMasterVolume()}}
+{\footnotesize\ttfamily void Drum\+Machine\+::set\+Master\+Volume (\begin{DoxyParamCaption}\item[{float}]{volume }\end{DoxyParamCaption})}
+
+
+
+Definiert in Zeile 100 der Datei Drum\+Machine.\+cpp.
+
+
+
+Benutzt samples und volume.
+
+
+
+Wird benutzt von increase\+Volume().
+
+\mbox{\Hypertarget{class_drum_machine_ac42508031bbf331d41c8004ed663c1c1}\label{class_drum_machine_ac42508031bbf331d41c8004ed663c1c1}} 
+\index{Drum\+Machine@{Drum\+Machine}!start\+Loop@{start\+Loop}}
+\index{start\+Loop@{start\+Loop}!Drum\+Machine@{Drum\+Machine}}
+\subsubsection{\texorpdfstring{start\+Loop()}{startLoop()}}
+{\footnotesize\ttfamily void Drum\+Machine\+::start\+Loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definiert in Zeile 37 der Datei Drum\+Machine.\+cpp.
+
+
+
+Benutzt current\+Beat, loop, loop\+Running, output\+Controller, A\+Output\+Controller\+::position\+Change(), samples, Timer\+::set\+Interval(), sixteenth\+Note\+Millis, Timer\+::start() und T\+O\+T\+A\+L\+\_\+\+B\+E\+A\+TS.
+
+
+
+Wird benutzt von Drum\+Machine\+Input\+Listener\+::input\+Event().
+
+\mbox{\Hypertarget{class_drum_machine_af1564a42f1c2717534a61437617070b3}\label{class_drum_machine_af1564a42f1c2717534a61437617070b3}} 
+\index{Drum\+Machine@{Drum\+Machine}!stop\+Loop@{stop\+Loop}}
+\index{stop\+Loop@{stop\+Loop}!Drum\+Machine@{Drum\+Machine}}
+\subsubsection{\texorpdfstring{stop\+Loop()}{stopLoop()}}
+{\footnotesize\ttfamily void Drum\+Machine\+::stop\+Loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definiert in Zeile 58 der Datei Drum\+Machine.\+cpp.
+
+
+
+Benutzt current\+Beat, loop, loop\+Running und Timer\+::stop().
+
+
+
+Wird benutzt von Drum\+Machine\+Input\+Listener\+::input\+Event().
+
+\mbox{\Hypertarget{class_drum_machine_ac34e64779cd419a75628630f71a3041b}\label{class_drum_machine_ac34e64779cd419a75628630f71a3041b}} 
+\index{Drum\+Machine@{Drum\+Machine}!toggle\+Sample\+At\+Beat@{toggle\+Sample\+At\+Beat}}
+\index{toggle\+Sample\+At\+Beat@{toggle\+Sample\+At\+Beat}!Drum\+Machine@{Drum\+Machine}}
+\subsubsection{\texorpdfstring{toggle\+Sample\+At\+Beat()}{toggleSampleAtBeat()}}
+{\footnotesize\ttfamily void Drum\+Machine\+::toggle\+Sample\+At\+Beat (\begin{DoxyParamCaption}\item[{unsigned short}]{beat }\end{DoxyParamCaption})}
+
+
+
+Definiert in Zeile 145 der Datei Drum\+Machine.\+cpp.
+
+
+
+Benutzt active\+Sample, sample\+::\+N\+O\+\_\+\+S\+A\+M\+P\+LE, output\+Controller, A\+Output\+Controller\+::play\+Position\+Change() und samples.
+
+
+
+Wird benutzt von Drum\+Machine\+Input\+Listener\+::input\+Event().
+
+
+
+\subsection{Dokumentation der Datenelemente}
+\mbox{\Hypertarget{class_drum_machine_a9e12916e5724251791689e6f14c8513a}\label{class_drum_machine_a9e12916e5724251791689e6f14c8513a}} 
+\index{Drum\+Machine@{Drum\+Machine}!active\+Sample@{active\+Sample}}
+\index{active\+Sample@{active\+Sample}!Drum\+Machine@{Drum\+Machine}}
+\subsubsection{\texorpdfstring{active\+Sample}{activeSample}}
+{\footnotesize\ttfamily unsigned short Drum\+Machine\+::active\+Sample\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definiert in Zeile 36 der Datei Drum\+Machine.\+h.
+
+
+
+Wird benutzt von get\+Active\+Sample(), increase\+Active\+Sample\+Volume(), set\+Active\+Sample() und toggle\+Sample\+At\+Beat().
+
+\mbox{\Hypertarget{class_drum_machine_afaa80be4a66f759ab590a5f67f327b67}\label{class_drum_machine_afaa80be4a66f759ab590a5f67f327b67}} 
+\index{Drum\+Machine@{Drum\+Machine}!bpm@{bpm}}
+\index{bpm@{bpm}!Drum\+Machine@{Drum\+Machine}}
+\subsubsection{\texorpdfstring{bpm}{bpm}}
+{\footnotesize\ttfamily unsigned short Drum\+Machine\+::bpm\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definiert in Zeile 30 der Datei Drum\+Machine.\+h.
+
+
+
+Wird benutzt von get\+B\+P\+M() und set\+B\+P\+M().
+
+\mbox{\Hypertarget{class_drum_machine_a46f20be98c71d1429a473e03bf092df3}\label{class_drum_machine_a46f20be98c71d1429a473e03bf092df3}} 
+\index{Drum\+Machine@{Drum\+Machine}!current\+Beat@{current\+Beat}}
+\index{current\+Beat@{current\+Beat}!Drum\+Machine@{Drum\+Machine}}
+\subsubsection{\texorpdfstring{current\+Beat}{currentBeat}}
+{\footnotesize\ttfamily unsigned short Drum\+Machine\+::current\+Beat\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definiert in Zeile 31 der Datei Drum\+Machine.\+h.
+
+
+
+Wird benutzt von start\+Loop() und stop\+Loop().
+
+\mbox{\Hypertarget{class_drum_machine_ab190b1b114840e3fb41fff54d0099e93}\label{class_drum_machine_ab190b1b114840e3fb41fff54d0099e93}} 
+\index{Drum\+Machine@{Drum\+Machine}!loop@{loop}}
+\index{loop@{loop}!Drum\+Machine@{Drum\+Machine}}
+\subsubsection{\texorpdfstring{loop}{loop}}
+{\footnotesize\ttfamily \hyperlink{class_timer}{Timer} Drum\+Machine\+::loop\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definiert in Zeile 38 der Datei Drum\+Machine.\+h.
+
+
+
+Wird benutzt von set\+B\+P\+M(), start\+Loop() und stop\+Loop().
+
+\mbox{\Hypertarget{class_drum_machine_aefcf483d61e72bec26f9215a800c705c}\label{class_drum_machine_aefcf483d61e72bec26f9215a800c705c}} 
+\index{Drum\+Machine@{Drum\+Machine}!L\+O\+O\+P\+\_\+\+P\+R\+E\+C\+I\+S\+I\+O\+N\+\_\+\+N\+A\+N\+OS@{L\+O\+O\+P\+\_\+\+P\+R\+E\+C\+I\+S\+I\+O\+N\+\_\+\+N\+A\+N\+OS}}
+\index{L\+O\+O\+P\+\_\+\+P\+R\+E\+C\+I\+S\+I\+O\+N\+\_\+\+N\+A\+N\+OS@{L\+O\+O\+P\+\_\+\+P\+R\+E\+C\+I\+S\+I\+O\+N\+\_\+\+N\+A\+N\+OS}!Drum\+Machine@{Drum\+Machine}}
+\subsubsection{\texorpdfstring{L\+O\+O\+P\+\_\+\+P\+R\+E\+C\+I\+S\+I\+O\+N\+\_\+\+N\+A\+N\+OS}{LOOP\_PRECISION\_NANOS}}
+{\footnotesize\ttfamily const long Drum\+Machine\+::\+L\+O\+O\+P\+\_\+\+P\+R\+E\+C\+I\+S\+I\+O\+N\+\_\+\+N\+A\+N\+OS = 10000\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definiert in Zeile 28 der Datei Drum\+Machine.\+h.
+
+\mbox{\Hypertarget{class_drum_machine_a4ac5a8c113e5a32a557f069e8d93cca8}\label{class_drum_machine_a4ac5a8c113e5a32a557f069e8d93cca8}} 
+\index{Drum\+Machine@{Drum\+Machine}!loop\+Running@{loop\+Running}}
+\index{loop\+Running@{loop\+Running}!Drum\+Machine@{Drum\+Machine}}
+\subsubsection{\texorpdfstring{loop\+Running}{loopRunning}}
+{\footnotesize\ttfamily bool Drum\+Machine\+::loop\+Running\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definiert in Zeile 33 der Datei Drum\+Machine.\+h.
+
+
+
+Wird benutzt von is\+Loop\+Running(), start\+Loop() und stop\+Loop().
+
+\mbox{\Hypertarget{class_drum_machine_a4a5b4d6cc6e4a3ce2c2893e52fd0e951}\label{class_drum_machine_a4a5b4d6cc6e4a3ce2c2893e52fd0e951}} 
+\index{Drum\+Machine@{Drum\+Machine}!output\+Controller@{output\+Controller}}
+\index{output\+Controller@{output\+Controller}!Drum\+Machine@{Drum\+Machine}}
+\subsubsection{\texorpdfstring{output\+Controller}{outputController}}
+{\footnotesize\ttfamily \hyperlink{class_a_output_controller}{A\+Output\+Controller}\& Drum\+Machine\+::output\+Controller\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definiert in Zeile 35 der Datei Drum\+Machine.\+h.
+
+
+
+Wird benutzt von increase\+Active\+Sample\+Volume(), set\+Active\+Sample(), set\+B\+P\+M(), start\+Loop() und toggle\+Sample\+At\+Beat().
+
+\mbox{\Hypertarget{class_drum_machine_acf215ead70c41e760556497281aa562e}\label{class_drum_machine_acf215ead70c41e760556497281aa562e}} 
+\index{Drum\+Machine@{Drum\+Machine}!samples@{samples}}
+\index{samples@{samples}!Drum\+Machine@{Drum\+Machine}}
+\subsubsection{\texorpdfstring{samples}{samples}}
+{\footnotesize\ttfamily vector$<$\hyperlink{class_sample}{Sample}$>$ Drum\+Machine\+::samples\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definiert in Zeile 39 der Datei Drum\+Machine.\+h.
+
+
+
+Wird benutzt von add\+Sample(), increase\+Active\+Sample\+Volume(), set\+Active\+Sample(), set\+Master\+Volume(), start\+Loop() und toggle\+Sample\+At\+Beat().
+
+\mbox{\Hypertarget{class_drum_machine_a55ad96f0aa2452d631e49bcdde9fd538}\label{class_drum_machine_a55ad96f0aa2452d631e49bcdde9fd538}} 
+\index{Drum\+Machine@{Drum\+Machine}!sixteenth\+Note\+Millis@{sixteenth\+Note\+Millis}}
+\index{sixteenth\+Note\+Millis@{sixteenth\+Note\+Millis}!Drum\+Machine@{Drum\+Machine}}
+\subsubsection{\texorpdfstring{sixteenth\+Note\+Millis}{sixteenthNoteMillis}}
+{\footnotesize\ttfamily int Drum\+Machine\+::sixteenth\+Note\+Millis\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definiert in Zeile 32 der Datei Drum\+Machine.\+h.
+
+
+
+Wird benutzt von set\+B\+P\+M() und start\+Loop().
+
+\mbox{\Hypertarget{class_drum_machine_a455f582474a17cbd618940a3d4a4791d}\label{class_drum_machine_a455f582474a17cbd618940a3d4a4791d}} 
+\index{Drum\+Machine@{Drum\+Machine}!T\+O\+T\+A\+L\+\_\+\+B\+E\+A\+TS@{T\+O\+T\+A\+L\+\_\+\+B\+E\+A\+TS}}
+\index{T\+O\+T\+A\+L\+\_\+\+B\+E\+A\+TS@{T\+O\+T\+A\+L\+\_\+\+B\+E\+A\+TS}!Drum\+Machine@{Drum\+Machine}}
+\subsubsection{\texorpdfstring{T\+O\+T\+A\+L\+\_\+\+B\+E\+A\+TS}{TOTAL\_BEATS}}
+{\footnotesize\ttfamily const int Drum\+Machine\+::\+T\+O\+T\+A\+L\+\_\+\+B\+E\+A\+TS = 16\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definiert in Zeile 27 der Datei Drum\+Machine.\+h.
+
+
+
+Wird benutzt von start\+Loop().
+
+\mbox{\Hypertarget{class_drum_machine_af1401c2a8e1d016ec32c662968e581fd}\label{class_drum_machine_af1401c2a8e1d016ec32c662968e581fd}} 
+\index{Drum\+Machine@{Drum\+Machine}!volume@{volume}}
+\index{volume@{volume}!Drum\+Machine@{Drum\+Machine}}
+\subsubsection{\texorpdfstring{volume}{volume}}
+{\footnotesize\ttfamily float Drum\+Machine\+::volume\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definiert in Zeile 34 der Datei Drum\+Machine.\+h.
+
+
+
+Wird benutzt von add\+Sample(), get\+Master\+Volume(), increase\+Volume() und set\+Master\+Volume().
+
+
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_drum_machine_8h}{Drum\+Machine.\+h}\item 
+\hyperlink{_drum_machine_8cpp}{Drum\+Machine.\+cpp}\end{DoxyCompactItemize}

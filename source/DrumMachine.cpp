@@ -119,12 +119,6 @@ void DrumMachine::addSample(Sample sample) {
     this->samples.push_back(sample);
 }
 
-void DrumMachine::addSamples(vector<Sample> samples) {
-    for (unsigned short i = 0; samples.size(); i++) {
-        addSample(samples[i]);
-    }
-}
-
 bool DrumMachine::isLoopRunning() {
     return loopRunning;
 }

@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_drum_machine_input_listener">
+<title>DrumMachineInputListener class Reference</title>
+<para>
+    <programlisting>#include <link linkend="_drum_machine_input_listener_8h">&lt;DrumMachineInputListener.h&gt;</link></programlisting>
+</para>
+        <section>
+            <title>Private Attribute</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const float VOLUME_STEP_SIZE</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const unsigned short BPM_STEP_SIZE</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DrumMachine &amp; drumMachine</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_drum_machine_input_listener_1a7552c36ebae9e6ae49f8929ae9853354">DrumMachineInputListener</link> (
+<link linkend="class_drum_machine">DrumMachine</link> &amp; drumMachine)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_drum_machine_input_listener_1a44a620b09b35885a26befe84fa6e1ab0">inputEvent</link> (
+unsigned short event)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Dokumentation der Datenelemente</title>
+        </section>
+            <section xml:id="class_drum_machine_input_listener_1a7552c36ebae9e6ae49f8929ae9853354">
+                <title>DrumMachineInputListener::DrumMachineInputListener (DrumMachine &amp;drumMachine)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_drum_machine_input_listener_1a44a620b09b35885a26befe84fa6e1ab0">
+                <title>void DrumMachineInputListener::inputEvent (unsigned short event) override</title> <emphasis></emphasis>
+                
+            </section>
+</section>

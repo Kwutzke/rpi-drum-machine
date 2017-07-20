@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_rasp_input_controller_8h">
+    <title>RaspInputController.h File Reference</title>
+    <programlisting>#include &quot;DrumMachine.h&quot;</programlisting>
+    <programlisting>#include &quot;InputListener.h&quot;</programlisting>
+    <programlisting>#include &lt;wiringPi.h&gt;</programlisting>
+        <section>
+            <title> Klassen </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_rasp_input_controller">RaspInputController</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title> Namensbereiche </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespaceinputs">inputs</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Ausführliche Beschreibung</title>
+    <para>Definition in file /Users/kilian/Development/EntwMM/Arduino Drum Machine/source/RaspInputController.h</para>
+    </simplesect>
+</section>

@@ -37,13 +37,29 @@ using namespace outputs;
 
 class RaspOutputController : virtual public AOutputController {
 public:
+    /**
+     * Constructor
+     */
     RaspOutputController();
 
+    /**
+     * Refreshes the position LED
+     * @param newPosition the new beat position
+     */
     void positionChange(unsigned short newPosition) override;
 
+    /**
+     * Activates the passed sample LED. Turns sample LED off, when zero is passed as newActiveSample
+     * @param newActiveSample the sample, which LED should be turned on
+     * @param oldActiveSample the sample, which LED should be turned off
+     */
     void activeSampleChange(unsigned short newActiveSample, unsigned short oldActiveSample) override;
 
-    void playPositionChange(vector<unsigned short> &) override;
+    /**
+     * 
+     * @param newPlayArray
+     */
+    void playPositionChange(vector<unsigned short> &newPlayArray) override;
 
     void playPositionChange(unsigned short position, unsigned short playState) override;
 
