@@ -80,7 +80,7 @@ void RaspOutputController::playPositionChange(unsigned short position, unsigned 
         digitalWrite(position, LOW);
     } else if (playState == MUTE) {
         digitalWrite(position, LOW);
-        if (position == 0 | position == 4 | i == 8 | i == 12)
+        if (position == 0 | position == 4 | position == 8 | position == 12)
             digitalWrite(position, HIGH);
     }
 }

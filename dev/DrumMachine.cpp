@@ -1,4 +1,4 @@
-#include <SDL2/SDL.h>
+
 #include <chrono>
 #include <iostream>
 #include "DrumMachine.h"
