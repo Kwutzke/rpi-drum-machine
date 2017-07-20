@@ -18,13 +18,10 @@ set(SOURCE_FILES
         Sample.cpp
         Timer.h
         Timer.cpp
-<<<<<<< HEAD
         AOutputController.h
         InputListener.h
         Display.h
         Display.cpp
-=======
->>>>>>> parent of 7e2d26a... cleaned up dev folder
         )
 
 add_executable(DrumMachine ${SOURCE_FILES})
@@ -33,8 +30,5 @@ target_link_libraries(${PROJECT_NAME} SDL2_image)
 target_link_libraries(${PROJECT_NAME} SDL2_mixer)
 target_link_libraries(${PROJECT_NAME} pthread)
 target_link_libraries(${PROJECT_NAME} wiringPi)
-<<<<<<< HEAD
 target_link_libraries(${PROJECT_NAME} ssd1306)
-=======
 
->>>>>>> parent of 7e2d26a... cleaned up dev folder
