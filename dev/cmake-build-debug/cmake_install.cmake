@@ -1,4 +1,4 @@
-# Install script for directory: /Users/kilian/Development/EntwMM/Arduino Drum Machine/DrumMachine
+# Install script for directory: /Users/kilian/Development/EntwMM/Arduino Drum Machine/dev
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,5 +35,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/kilian/Development/EntwMM/Arduino Drum Machine/DrumMachine/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/kilian/Development/EntwMM/Arduino Drum Machine/dev/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
