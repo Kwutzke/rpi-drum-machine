@@ -56,22 +56,45 @@ public:
     void activeSampleChange(unsigned short newActiveSample, unsigned short oldActiveSample) override;
 
     /**
-     * 
-     * @param newPlayArray
+     * Changes the active position LED bar to the passed vector, a one activates a LED and a zero deactivates it
+     * @param newPlayArray a vector with 16 ones or zeroes
      */
     void playPositionChange(vector<unsigned short> &newPlayArray) override;
 
+    /**
+     * Toggles one active position LED. If the position is a first beat position, the blue position LED is turned on,
+     * if the state toggles from active to inactive
+     * @param position the position where to toggle
+     * @param playState the new state for the passed position
+     */
     void playPositionChange(unsigned short position, unsigned short playState) override;
 
-    void blink(int);
+    /**
+     * Blinks the LED on the passed LED pin. The blink duration is stored in the beatDuration member
+     * @param ledPin the hardware pin of the connected LED
+     */
+    void blink(int ledPin);
 
+    /// Setter of beatDuration
     void setBeatDuration(unsigned int beatDuration) override;
 
+    /**
+     * Activates the main screen view on the display
+     * @param bpm the speed of the loop
+     */
     void showMainScreen(unsigned int bpm) override;
 
+    /**
+     * Activates the sample screen on the display
+     * @param bpm the speed of the loop
+     * @param volume the volume of the active sample
+     */
     void showSampleScreen(unsigned int bpm, float volume) override;
 
 private:
+    /**
+     * All output pins mapped to their functionality
+     */
     const map<unsigned short, unsigned short> outputPinMap = {
             {BEAT1_RED,    115},
             {BEAT1_GREEN,  114},
@@ -131,37 +154,38 @@ private:
             {SAMPLE8_LED,  506},
     };
 
+
     const vector<unsigned short> redLedList = {
             BEAT1_RED, BEAT2_RED, BEAT3_RED, BEAT4_RED, BEAT5_RED, BEAT6_RED, BEAT7_RED, BEAT8_RED, BEAT9_RED,
             BEAT10_RED, BEAT11_RED, BEAT12_RED, BEAT13_RED, BEAT14_RED, BEAT15_RED, BEAT16_RED
-    };
+    }; //< All red LED's order from low to high position
 
     const vector<unsigned short> greenLedList = {
             BEAT1_GREEN, BEAT2_GREEN, BEAT3_GREEN, BEAT4_GREEN, BEAT5_GREEN, BEAT6_GREEN, BEAT7_GREEN, BEAT8_GREEN,
             BEAT9_GREEN, BEAT10_GREEN, BEAT11_GREEN, BEAT12_GREEN, BEAT13_GREEN, BEAT14_GREEN, BEAT15_GREEN,
             BEAT16_GREEN
-    };
+    }; //< All green LED's ordered from low to high position
 
     const vector<unsigned short> blueLedList = {
             BEAT1_BLUE, BEAT2_BLUE, BEAT3_BLUE, BEAT4_BLUE, BEAT5_BLUE, BEAT6_BLUE, BEAT7_BLUE, BEAT8_BLUE, BEAT9_BLUE,
             BEAT10_BLUE, BEAT11_BLUE, BEAT12_BLUE, BEAT13_BLUE, BEAT14_BLUE, BEAT15_BLUE, BEAT16_BLUE
-    };
+    }; //< All blue LED's ordered from low to high position
 
     const vector<unsigned short> sampleLedList = {
             SAMPLE1_LED, SAMPLE2_LED, SAMPLE3_LED, SAMPLE4_LED, SAMPLE5_LED, SAMPLE6_LED, SAMPLE7_LED, SAMPLE8_LED
-    };
+    }; //< All sample Led's ordered from low to high position
 
-    Display display;
+    Display display; //< The OLED display
 
-    void switchOffAllLed();
+    void switchOffAllLed(); //< Turns all LED's off
 
-    void switchOffAllRedBeatLeds();
+    void switchOffAllRedBeatLeds(); //< Turns all red LED's off
 
-    unsigned int beatBlinkDelay;
+    unsigned int beatBlinkDelay; //< The duration from the moment a sample starts to play, until the next sample starts to play
 
-    void initializePins();
+    void initializePins(); //< Sets all output pins into mode output
 
-    void switchOnFirstBeatLed();
+    void switchOnFirstBeatLed(); //< Turns the first beat position LED's on
 
 };
 
