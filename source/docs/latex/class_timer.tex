@@ -2,20 +2,25 @@
 \label{class_timer}\index{Timer@{Timer}}
 
 
+Call a callback function in a given interval, determining the time with a given precision. Higher precision means higher demand in resources.  
+
+
+
+
 {\ttfamily \#include $<$Timer.\+h$>$}
 
 \subsection*{Öffentliche Methoden}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_timer_a5712c673f940c048eaa49440e9a57fab}{Timer} (int, int)
+\hyperlink{class_timer_a5b659c4fb572c549dad183a7b32b08df}{Timer} (unsigned int \hyperlink{class_timer_aaf9bce1286b714658a0f4484d8fee960}{interval}, unsigned int \hyperlink{class_timer_a3d1026dd88596a97cb6b768f475ed57f}{precision})
 \item 
 {\footnotesize template$<$typename Function , typename... Args$>$ }\\void \hyperlink{class_timer_adcf70b5065e31461e27309c96065437a}{start} (Function \&\&callback, Args \&\&... args)
 \item 
 void \hyperlink{class_timer_a63f0eb44b27402196590a03781515dba}{stop} ()
 \item 
-int \hyperlink{class_timer_a998fabc8cce38394c4b4536fc81db438}{get\+Interval} () const
+unsigned int \hyperlink{class_timer_a6cbb88b5073d95fd871a012966005618}{get\+Interval} () const
 \item 
-void \hyperlink{class_timer_aa88ef228247b40496f8474253bda3a0e}{set\+Interval} (int \hyperlink{class_timer_a8bdff3d549795a1efc0588edaa127b15}{interval})
+void \hyperlink{class_timer_a0b24293bfc154f7432b1c52ac857d853}{set\+Interval} (unsigned int \hyperlink{class_timer_aaf9bce1286b714658a0f4484d8fee960}{interval})
 \end{DoxyCompactItemize}
 \subsection*{Private Methoden}
 \begin{DoxyCompactItemize}
@@ -25,28 +30,35 @@ long long \hyperlink{class_timer_a39a332f8ce3a45ed8d78c772755342c8}{get\+Current
 \subsection*{Private Attribute}
 \begin{DoxyCompactItemize}
 \item 
-int \hyperlink{class_timer_a71742840f2c6d4d6ab085b2eb439545a}{precision}
-\item 
-int \hyperlink{class_timer_a8bdff3d549795a1efc0588edaa127b15}{interval}
-\item 
+unsigned int \hyperlink{class_timer_a3d1026dd88596a97cb6b768f475ed57f}{precision}
+\begin{DoxyCompactList}\small\item\em The precision in nanoseconds. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_timer_aaf9bce1286b714658a0f4484d8fee960}{interval}
+\begin{DoxyCompactList}\small\item\em The interval in milliseconds. \end{DoxyCompactList}\item 
 bool \hyperlink{class_timer_a3b8bb57a0a252c88f85c0592715ea425}{running}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Is the timer currently running. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Ausführliche Beschreibung}
+Call a callback function in a given interval, determining the time with a given precision. Higher precision means higher demand in resources. 
 
-
-Definiert in Zeile 13 der Datei Timer.\+h.
+Definiert in Zeile 17 der Datei Timer.\+h.
 
 
 
 \subsection{Beschreibung der Konstruktoren und Destruktoren}
-\mbox{\Hypertarget{class_timer_a5712c673f940c048eaa49440e9a57fab}\label{class_timer_a5712c673f940c048eaa49440e9a57fab}} 
+\mbox{\Hypertarget{class_timer_a5b659c4fb572c549dad183a7b32b08df}\label{class_timer_a5b659c4fb572c549dad183a7b32b08df}} 
 \index{Timer@{Timer}!Timer@{Timer}}
 \index{Timer@{Timer}!Timer@{Timer}}
 \subsubsection{\texorpdfstring{Timer()}{Timer()}}
-{\footnotesize\ttfamily Timer\+::\+Timer (\begin{DoxyParamCaption}\item[{int}]{interval,  }\item[{int}]{precision }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Timer\+::\+Timer (\begin{DoxyParamCaption}\item[{unsigned int}]{interval,  }\item[{unsigned int}]{precision }\end{DoxyParamCaption})}
 
+Constructor 
+\begin{DoxyParams}{Parameter}
+{\em interval} & the interval in milliseconds in which the callback function is called. \\
+\hline
+{\em precision} & the precision in nanoseconds with which to determine the current time. Higher precision means higher demand in resources. \\
+\hline
+\end{DoxyParams}
 
 
 Definiert in Zeile 5 der Datei Timer.\+cpp.
@@ -60,16 +72,19 @@ Definiert in Zeile 5 der Datei Timer.\+cpp.
 \subsubsection{\texorpdfstring{get\+Current\+Time\+Millis()}{getCurrentTimeMillis()}}
 {\footnotesize\ttfamily long long Timer\+::get\+Current\+Time\+Millis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
 
+$<$ Helper function to get the current time in milliseconds 
 
+Definiert in Zeile 23 der Datei Timer.\+h.
 
-Definiert in Zeile 19 der Datei Timer.\+h.
-
-\mbox{\Hypertarget{class_timer_a998fabc8cce38394c4b4536fc81db438}\label{class_timer_a998fabc8cce38394c4b4536fc81db438}} 
+\mbox{\Hypertarget{class_timer_a6cbb88b5073d95fd871a012966005618}\label{class_timer_a6cbb88b5073d95fd871a012966005618}} 
 \index{Timer@{Timer}!get\+Interval@{get\+Interval}}
 \index{get\+Interval@{get\+Interval}!Timer@{Timer}}
 \subsubsection{\texorpdfstring{get\+Interval()}{getInterval()}}
-{\footnotesize\ttfamily int Timer\+::get\+Interval (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily unsigned int Timer\+::get\+Interval (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+\begin{DoxyReturn}{Rückgabe}
+the interval with which the timer calls the callback function. 
+\end{DoxyReturn}
 
 
 Definiert in Zeile 11 der Datei Timer.\+cpp.
@@ -78,12 +93,17 @@ Definiert in Zeile 11 der Datei Timer.\+cpp.
 
 Benutzt interval.
 
-\mbox{\Hypertarget{class_timer_aa88ef228247b40496f8474253bda3a0e}\label{class_timer_aa88ef228247b40496f8474253bda3a0e}} 
+\mbox{\Hypertarget{class_timer_a0b24293bfc154f7432b1c52ac857d853}\label{class_timer_a0b24293bfc154f7432b1c52ac857d853}} 
 \index{Timer@{Timer}!set\+Interval@{set\+Interval}}
 \index{set\+Interval@{set\+Interval}!Timer@{Timer}}
 \subsubsection{\texorpdfstring{set\+Interval()}{setInterval()}}
-{\footnotesize\ttfamily void Timer\+::set\+Interval (\begin{DoxyParamCaption}\item[{int}]{interval }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Timer\+::set\+Interval (\begin{DoxyParamCaption}\item[{unsigned int}]{interval }\end{DoxyParamCaption})}
 
+
+\begin{DoxyParams}{Parameter}
+{\em interval} & the interval with which the timer calls the callback function. \\
+\hline
+\end{DoxyParams}
 
 
 Definiert in Zeile 15 der Datei Timer.\+cpp.
@@ -103,9 +123,16 @@ Wird benutzt von Drum\+Machine\+::set\+B\+P\+M() und Drum\+Machine\+::start\+Loo
 {\footnotesize\ttfamily template$<$typename Function , typename... Args$>$ \\
 void Timer\+::start (\begin{DoxyParamCaption}\item[{Function \&\&}]{callback,  }\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+Starts the timer. 
+\begin{DoxyParams}{Parameter}
+{\em callback} & the callback function the timer calls in the determined interval. \\
+\hline
+{\em args} & arguments to pass to the callback function upon call. \\
+\hline
+\end{DoxyParams}
 
 
-Definiert in Zeile 27 der Datei Timer.\+h.
+Definiert in Zeile 42 der Datei Timer.\+h.
 
 
 
@@ -117,7 +144,7 @@ Wird benutzt von Drum\+Machine\+::start\+Loop() und Rasp\+Input\+Controller\+::s
 \subsubsection{\texorpdfstring{stop()}{stop()}}
 {\footnotesize\ttfamily void Timer\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
+Stops the timer 
 
 Definiert in Zeile 7 der Datei Timer.\+cpp.
 
@@ -132,29 +159,37 @@ Wird benutzt von Rasp\+Input\+Controller\+::stop() und Drum\+Machine\+::stop\+Lo
 
 
 \subsection{Dokumentation der Datenelemente}
-\mbox{\Hypertarget{class_timer_a8bdff3d549795a1efc0588edaa127b15}\label{class_timer_a8bdff3d549795a1efc0588edaa127b15}} 
+\mbox{\Hypertarget{class_timer_aaf9bce1286b714658a0f4484d8fee960}\label{class_timer_aaf9bce1286b714658a0f4484d8fee960}} 
 \index{Timer@{Timer}!interval@{interval}}
 \index{interval@{interval}!Timer@{Timer}}
 \subsubsection{\texorpdfstring{interval}{interval}}
-{\footnotesize\ttfamily int Timer\+::interval\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily unsigned int Timer\+::interval\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Definiert in Zeile 16 der Datei Timer.\+h.
+The interval in milliseconds. 
+
+
+
+Definiert in Zeile 20 der Datei Timer.\+h.
 
 
 
 Wird benutzt von get\+Interval() und set\+Interval().
 
-\mbox{\Hypertarget{class_timer_a71742840f2c6d4d6ab085b2eb439545a}\label{class_timer_a71742840f2c6d4d6ab085b2eb439545a}} 
+\mbox{\Hypertarget{class_timer_a3d1026dd88596a97cb6b768f475ed57f}\label{class_timer_a3d1026dd88596a97cb6b768f475ed57f}} 
 \index{Timer@{Timer}!precision@{precision}}
 \index{precision@{precision}!Timer@{Timer}}
 \subsubsection{\texorpdfstring{precision}{precision}}
-{\footnotesize\ttfamily int Timer\+::precision\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily unsigned int Timer\+::precision\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Definiert in Zeile 15 der Datei Timer.\+h.
+The precision in nanoseconds. 
+
+
+
+Definiert in Zeile 19 der Datei Timer.\+h.
 
 \mbox{\Hypertarget{class_timer_a3b8bb57a0a252c88f85c0592715ea425}\label{class_timer_a3b8bb57a0a252c88f85c0592715ea425}} 
 \index{Timer@{Timer}!running@{running}}
@@ -164,7 +199,11 @@ Definiert in Zeile 15 der Datei Timer.\+h.
 
 
 
-Definiert in Zeile 17 der Datei Timer.\+h.
+Is the timer currently running. 
+
+
+
+Definiert in Zeile 21 der Datei Timer.\+h.
 
 
 

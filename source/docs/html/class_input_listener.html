@@ -88,6 +88,9 @@ $(document).ready(function(){initNavTree('class_input_listener.html','');});
 </div><!--header-->
 <div class="contents">
 
+<p>Interface for input listeners to register in the <a class="el" href="class_rasp_input_controller.html" title="Responsible for detecting any inputs and passing them to the registered listener to handle them...">RaspInputController</a>.  
+ <a href="class_input_listener.html#details">Mehr ...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_input_listener_8h_source.html">InputListener.h</a>&gt;</code></p>
 <div class="dynheader">
 Klassendiagramm für InputListener:</div>
@@ -95,7 +98,7 @@ Klassendiagramm für InputListener:</div>
  <div class="center">
   <img src="class_input_listener.png" usemap="#InputListener_map" alt=""/>
   <map id="InputListener_map" name="InputListener_map">
-<area href="class_drum_machine_input_listener.html" alt="DrumMachineInputListener" shape="rect" coords="0,56,163,80"/>
+<area href="class_drum_machine_input_listener.html" title="InputListener implementation for the drum machine to handle input events. " alt="DrumMachineInputListener" shape="rect" coords="0,56,163,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -105,8 +108,9 @@ Klassendiagramm für InputListener:</div>
 <tr class="separator:a1a3d74f2ffc108c773511ea4be250f7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
-<div class="textblock">
-<p class="definition">Definiert in Zeile <a class="el" href="_input_listener_8h_source.html#l00008">8</a> der Datei <a class="el" href="_input_listener_8h_source.html">InputListener.h</a>.</p>
+<div class="textblock"><p>Interface for input listeners to register in the <a class="el" href="class_rasp_input_controller.html" title="Responsible for detecting any inputs and passing them to the registered listener to handle them...">RaspInputController</a>. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_input_listener_8h_source.html#l00011">11</a> der Datei <a class="el" href="_input_listener_8h_source.html">InputListener.h</a>.</p>
 </div><h2 class="groupheader">Dokumentation der Elementfunktionen</h2>
 <a id="a1a3d74f2ffc108c773511ea4be250f7d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1a3d74f2ffc108c773511ea4be250f7d">&#9670;&nbsp;</a></span>inputEvent()</h2>
@@ -131,6 +135,12 @@ Klassendiagramm für InputListener:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Called when new input events are detected </p><dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">input</td><td>the input that was detected. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implementiert in <a class="el" href="class_drum_machine_input_listener.html#a44a620b09b35885a26befe84fa6e1ab0">DrumMachineInputListener</a>.</p>
 

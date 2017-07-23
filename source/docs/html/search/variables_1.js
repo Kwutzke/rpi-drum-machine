@@ -81,6 +81,8 @@ var searchData=
   ['beat9_5fgreen',['BEAT9_GREEN',['../namespaceoutputs.html#a0600b91e575643cfee3eb9e9e5b14839',1,'outputs']]],
   ['beat9_5fred',['BEAT9_RED',['../namespaceoutputs.html#a57a4d2c831b8b263bc763032afddaa03',1,'outputs']]],
   ['beatblinkdelay',['beatBlinkDelay',['../class_rasp_output_controller.html#a4deb199f7d611c2be39dc2d59ea45bba',1,'RaspOutputController']]],
+  ['beatmillis',['beatMillis',['../class_drum_machine.html#a91179ac48de4159d04052291ad25fa02',1,'DrumMachine']]],
+  ['beats_5fper_5fwhole_5fbeat',['BEATS_PER_WHOLE_BEAT',['../class_drum_machine.html#ab4d2056f29b6eb959aa379afcc6b70f0',1,'DrumMachine']]],
   ['blueledlist',['blueLedList',['../class_rasp_output_controller.html#a9b5e5c4ee94d43d62e41961e6c8bea3b',1,'RaspOutputController']]],
   ['bpm',['bpm',['../class_drum_machine.html#afaa80be4a66f759ab590a5f67f327b67',1,'DrumMachine']]],
   ['bpm_5fstep_5fsize',['BPM_STEP_SIZE',['../class_drum_machine_input_listener.html#ad4f83d21be6ff1ba703a27d8c9a04c9a',1,'DrumMachineInputListener']]],

@@ -27,33 +27,91 @@
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>void <link linkend="class_display_1a1a47a3c1e96d0ade385063c87197182f">showMainScreen</link> (
-unsigned int bpm)</para>
+                        <para>void <link linkend="class_display_1aae248dcbc4c44b911c35918feacaf31a">showMainScreen</link> (
+unsigned short bpm)</para>
                     </listitem>
                 </itemizedlist>
             </para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>void <link linkend="class_display_1a74eafd254fbd1f6757ea77501b2b4d04">showSampleScreen</link> (
-unsigned int bpm, float volume)</para>
+                        <para>void <link linkend="class_display_1ae00838dd994556524fb8d86d7e855770">showSampleScreen</link> (
+unsigned short bpm, float volume)</para>
                     </listitem>
                 </itemizedlist>
             </para>
         </section>
+        <simplesect>
+            <title>Ausführliche Beschreibung</title>
+
+<para>A class that holds information an maintains the functionalaty of an Adafruit SSD1306 <link linkend="class_display">Display</link> </para>
+                <para>Definition at line 12 of file Display.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Display.h</para></listitem></itemizedlist></para>
+        </simplesect>
         <section>
             <title>Dokumentation der Datenelemente</title>
         </section>
             <section xml:id="class_display_1ae972fffea6f7ca1d627ef48c3d841bb3">
                 <title>Display::Display ()</title> <emphasis></emphasis>
                 
+<para>Constructor </para>
+
             </section>
-            <section xml:id="class_display_1a1a47a3c1e96d0ade385063c87197182f">
-                <title>void Display::showMainScreen (unsigned int bpm)</title> <emphasis></emphasis>
+            <section xml:id="class_display_1aae248dcbc4c44b911c35918feacaf31a">
+                <title>void Display::showMainScreen (unsigned short bpm)</title> <emphasis></emphasis>
                 
+<para>Activates the main screen 
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameter                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>bpm</entry>
+                                <entry>
+<para>the speed of the loop, is shown in the display </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
             </section>
-            <section xml:id="class_display_1a74eafd254fbd1f6757ea77501b2b4d04">
-                <title>void Display::showSampleScreen (unsigned int bpm, float volume)</title> <emphasis></emphasis>
+            <section xml:id="class_display_1ae00838dd994556524fb8d86d7e855770">
+                <title>void Display::showSampleScreen (unsigned short bpm, float volume)</title> <emphasis></emphasis>
                 
+<para>Activates the sample screen 
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameter                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>bpm</entry>
+                                <entry>
+<para>the speed of the loop, is shown in the display </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>volume</entry>
+                                <entry>
+<para>the volume of the active sample </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
             </section>
 </section>

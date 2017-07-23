@@ -12,6 +12,8 @@
                 <itemizedlist>
                     <listitem>
                         <para>struct <link linkend="class_timer">Timer</link></para>
+<para><emphasis>Call a callback function in a given interval, determining the time with a given precision. Higher precision
+         means higher demand in resources.</emphasis></para>
                     </listitem>
                 </itemizedlist>
             </para>

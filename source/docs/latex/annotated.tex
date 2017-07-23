@@ -2,11 +2,11 @@
 Hier folgt die Aufzählung aller Klassen, Strukturen, Varianten und Schnittstellen mit einer Kurzbeschreibung\+:\begin{DoxyCompactList}
 \item\contentsline{section}{\hyperlink{class_a_output_controller}{A\+Output\+Controller} }{\pageref{class_a_output_controller}}{}
 \item\contentsline{section}{\hyperlink{class_display}{Display} }{\pageref{class_display}}{}
-\item\contentsline{section}{\hyperlink{class_drum_machine}{Drum\+Machine} }{\pageref{class_drum_machine}}{}
-\item\contentsline{section}{\hyperlink{class_drum_machine_input_listener}{Drum\+Machine\+Input\+Listener} }{\pageref{class_drum_machine_input_listener}}{}
-\item\contentsline{section}{\hyperlink{class_input_listener}{Input\+Listener} }{\pageref{class_input_listener}}{}
-\item\contentsline{section}{\hyperlink{class_rasp_input_controller}{Rasp\+Input\+Controller} }{\pageref{class_rasp_input_controller}}{}
+\item\contentsline{section}{\hyperlink{class_drum_machine}{Drum\+Machine} \\*Handles the beat loop and samples including correct timing for the give B\+PM, playing them at the correct beat steps and increasing and decreasing the volume }{\pageref{class_drum_machine}}{}
+\item\contentsline{section}{\hyperlink{class_drum_machine_input_listener}{Drum\+Machine\+Input\+Listener} \\*\hyperlink{class_input_listener}{Input\+Listener} implementation for the drum machine to handle input events }{\pageref{class_drum_machine_input_listener}}{}
+\item\contentsline{section}{\hyperlink{class_input_listener}{Input\+Listener} \\*Interface for input listeners to register in the \hyperlink{class_rasp_input_controller}{Rasp\+Input\+Controller} }{\pageref{class_input_listener}}{}
+\item\contentsline{section}{\hyperlink{class_rasp_input_controller}{Rasp\+Input\+Controller} \\*Responsible for detecting any inputs and passing them to the registered listener to handle them }{\pageref{class_rasp_input_controller}}{}
 \item\contentsline{section}{\hyperlink{class_rasp_output_controller}{Rasp\+Output\+Controller} }{\pageref{class_rasp_output_controller}}{}
 \item\contentsline{section}{\hyperlink{class_sample}{Sample} \\*A class that holds and maintains information about a sample audio file, which can be played by the Drum Machine }{\pageref{class_sample}}{}
-\item\contentsline{section}{\hyperlink{class_timer}{Timer} }{\pageref{class_timer}}{}
+\item\contentsline{section}{\hyperlink{class_timer}{Timer} \\*Call a callback function in a given interval, determining the time with a given precision. Higher precision means higher demand in resources }{\pageref{class_timer}}{}
 \end{DoxyCompactList}

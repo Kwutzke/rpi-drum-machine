@@ -2,9 +2,9 @@ var class_rasp_output_controller =
 [
     [ "RaspOutputController", "class_rasp_output_controller.html#afd7487de7ff81c6b092f4072d4fa80a5", null ],
     [ "activeSampleChange", "class_rasp_output_controller.html#a92954cf26d4dd5f7d8835d1d508302c0", null ],
-    [ "blink", "class_rasp_output_controller.html#a27fcbf9e1a1f9c3cefefefd537acc401", null ],
+    [ "blink", "class_rasp_output_controller.html#a23987d33142c3c09abf8126773f32d99", null ],
     [ "initializePins", "class_rasp_output_controller.html#a1172c2966777bbcee89cbe4e6de027d5", null ],
-    [ "playPositionChange", "class_rasp_output_controller.html#aa084e570bcf25c75b9389ca63c875f0c", null ],
+    [ "playPositionChange", "class_rasp_output_controller.html#af0304196681872f9c1f6d6f2e2db14a6", null ],
     [ "playPositionChange", "class_rasp_output_controller.html#a0778395ee8ec044d04fbfcb2f3b2eb04", null ],
     [ "positionChange", "class_rasp_output_controller.html#afce87d510c0564567e4250b22639d5e0", null ],
     [ "setBeatDuration", "class_rasp_output_controller.html#a5fd551f1aba056356befd71e5bff23f1", null ],

@@ -9,9 +9,9 @@
 \item 
 \hyperlink{class_display_ae972fffea6f7ca1d627ef48c3d841bb3}{Display} ()
 \item 
-void \hyperlink{class_display_a1a47a3c1e96d0ade385063c87197182f}{show\+Main\+Screen} (unsigned int bpm)
+void \hyperlink{class_display_aae248dcbc4c44b911c35918feacaf31a}{show\+Main\+Screen} (unsigned short bpm)
 \item 
-void \hyperlink{class_display_a74eafd254fbd1f6757ea77501b2b4d04}{show\+Sample\+Screen} (unsigned int bpm, float volume)
+void \hyperlink{class_display_ae00838dd994556524fb8d86d7e855770}{show\+Sample\+Screen} (unsigned short bpm, float volume)
 \end{DoxyCompactItemize}
 \subsection*{Private Attribute}
 \begin{DoxyCompactItemize}
@@ -21,9 +21,9 @@ Adafruit\+\_\+\+S\+S\+D1306 \hyperlink{class_display_ad8b8ca65d118eb16461932c663
 
 
 \subsection{Ausführliche Beschreibung}
+A class that holds information an maintains the functionalaty of an Adafruit S\+S\+D1306 \hyperlink{class_display}{Display} 
 
-
-Definiert in Zeile 8 der Datei Display.\+h.
+Definiert in Zeile 12 der Datei Display.\+h.
 
 
 
@@ -34,7 +34,7 @@ Definiert in Zeile 8 der Datei Display.\+h.
 \subsubsection{\texorpdfstring{Display()}{Display()}}
 {\footnotesize\ttfamily Display\+::\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
+Constructor 
 
 Definiert in Zeile 3 der Datei Display.\+cpp.
 
@@ -45,12 +45,17 @@ Benutzt display.
 
 
 \subsection{Dokumentation der Elementfunktionen}
-\mbox{\Hypertarget{class_display_a1a47a3c1e96d0ade385063c87197182f}\label{class_display_a1a47a3c1e96d0ade385063c87197182f}} 
+\mbox{\Hypertarget{class_display_aae248dcbc4c44b911c35918feacaf31a}\label{class_display_aae248dcbc4c44b911c35918feacaf31a}} 
 \index{Display@{Display}!show\+Main\+Screen@{show\+Main\+Screen}}
 \index{show\+Main\+Screen@{show\+Main\+Screen}!Display@{Display}}
 \subsubsection{\texorpdfstring{show\+Main\+Screen()}{showMainScreen()}}
-{\footnotesize\ttfamily void Display\+::show\+Main\+Screen (\begin{DoxyParamCaption}\item[{unsigned int}]{bpm }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Display\+::show\+Main\+Screen (\begin{DoxyParamCaption}\item[{unsigned short}]{bpm }\end{DoxyParamCaption})}
 
+Activates the main screen 
+\begin{DoxyParams}{Parameter}
+{\em bpm} & the speed of the loop, is shown in the display \\
+\hline
+\end{DoxyParams}
 
 
 Definiert in Zeile 8 der Datei Display.\+cpp.
@@ -63,12 +68,19 @@ Benutzt display.
 
 Wird benutzt von Rasp\+Output\+Controller\+::show\+Main\+Screen().
 
-\mbox{\Hypertarget{class_display_a74eafd254fbd1f6757ea77501b2b4d04}\label{class_display_a74eafd254fbd1f6757ea77501b2b4d04}} 
+\mbox{\Hypertarget{class_display_ae00838dd994556524fb8d86d7e855770}\label{class_display_ae00838dd994556524fb8d86d7e855770}} 
 \index{Display@{Display}!show\+Sample\+Screen@{show\+Sample\+Screen}}
 \index{show\+Sample\+Screen@{show\+Sample\+Screen}!Display@{Display}}
 \subsubsection{\texorpdfstring{show\+Sample\+Screen()}{showSampleScreen()}}
-{\footnotesize\ttfamily void Display\+::show\+Sample\+Screen (\begin{DoxyParamCaption}\item[{unsigned int}]{bpm,  }\item[{float}]{volume }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Display\+::show\+Sample\+Screen (\begin{DoxyParamCaption}\item[{unsigned short}]{bpm,  }\item[{float}]{volume }\end{DoxyParamCaption})}
 
+Activates the sample screen 
+\begin{DoxyParams}{Parameter}
+{\em bpm} & the speed of the loop, is shown in the display \\
+\hline
+{\em volume} & the volume of the active sample \\
+\hline
+\end{DoxyParams}
 
 
 Definiert in Zeile 18 der Datei Display.\+cpp.
@@ -92,7 +104,7 @@ Wird benutzt von Rasp\+Output\+Controller\+::show\+Sample\+Screen().
 
 
 
-Definiert in Zeile 17 der Datei Display.\+h.
+Definiert in Zeile 33 der Datei Display.\+h.
 
 
 

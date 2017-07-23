@@ -15,8 +15,33 @@ unsigned short input)</para>
                 </itemizedlist>
             </para>
         </section>
+    <simplesect>
+
+<para>Interface for input listeners to register in the <link linkend="class_rasp_input_controller">RaspInputController</link>. </para>
+    </simplesect>
             <section xml:id="class_input_listener_1a1a3d74f2ffc108c773511ea4be250f7d">
                 <title>virtual void InputListener::inputEvent (unsigned short input)=0</title> <emphasis></emphasis>
                 
+<para>Called when new input events are detected 
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameter                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>input</entry>
+                                <entry>
+<para>the input that was detected. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
             </section>
 </section>

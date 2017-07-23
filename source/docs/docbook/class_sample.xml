@@ -16,21 +16,21 @@
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>vector&lt; unsigned short &gt; playArray<para><emphasis>Vector that holds 16 zeroes or ones. One stands for an active state an zero for inactive.</emphasis></para></para>
+                        <para>vector&lt; unsigned short &gt; playArray<para><emphasis>Vector that holds 16 zeroes or ones. One stands for an active state and zero for an inactive state.</emphasis></para></para>
                     </listitem>
                 </itemizedlist>
             </para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>float volume</para>
+                        <para>float volume<para><emphasis>The volume of the sample.</emphasis></para></para>
                     </listitem>
                 </itemizedlist>
             </para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>float masterVolume</para>
+                        <para>float masterVolume<para><emphasis>The master volume of the sample.</emphasis></para></para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -48,8 +48,8 @@ const char * samplePath)</para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>void <link linkend="class_sample_1a5c016261d1f93a28c323a53af3ee545a">playSample</link> (
-int currentBeat)</para>
+                        <para>void <link linkend="class_sample_1a720e0e4edc0eacfb6170951177eabc31">playSample</link> (
+unsigned short currentBeat)</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -65,8 +65,8 @@ int currentBeat)</para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>void <link linkend="class_sample_1a287eada639aedccb8908d1ae6bf67874">playAtBeat</link> (
-unsigned int beatPosition)</para>
+                        <para>void <link linkend="class_sample_1a26322924f7a05091e13380c6494896da">playAtBeat</link> (
+unsigned short beatPosition)</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -120,7 +120,8 @@ float volume)<para><emphasis>Setter of member masterVolume.</emphasis></para>
                 <itemizedlist>
                     <listitem>
                         <para>void <link linkend="class_sample_1a6d13988721d2190947f65969d4737a48">setMixVolume</link> (
-)</para>
+)<para><emphasis>Sets the mix volume.</emphasis></para>
+</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -128,7 +129,8 @@ float volume)<para><emphasis>Setter of member masterVolume.</emphasis></para>
                 <itemizedlist>
                     <listitem>
                         <para>float <link linkend="class_sample_1afceddb412ab50a67cb98ca6b72456f24">getMasterVolume</link> (
-)</para>
+)<para><emphasis>Getter of master Volume.</emphasis></para>
+</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -155,7 +157,7 @@ float volume)<para><emphasis>Setter of member masterVolume.</emphasis></para>
                             <row>
                                 <entry>samplePath</entry>
                                 <entry>
-<para>char[] defines where to find the audio sample file </para>
+<para>defines where to find the audio sample file </para>
 </entry>
                             </row>
                         </tbody>
@@ -165,8 +167,8 @@ float volume)<para><emphasis>Setter of member masterVolume.</emphasis></para>
                 </para>
 
             </section>
-            <section xml:id="class_sample_1a5c016261d1f93a28c323a53af3ee545a">
-                <title>void Sample::playSample (int currentBeat)</title> <emphasis></emphasis>
+            <section xml:id="class_sample_1a720e0e4edc0eacfb6170951177eabc31">
+                <title>void Sample::playSample (unsigned short currentBeat)</title> <emphasis></emphasis>
                 
 <para>Checks if the sample is active for the passed beat position and if so, plays it 
                 <formalpara>
@@ -194,8 +196,8 @@ float volume)<para><emphasis>Setter of member masterVolume.</emphasis></para>
                 <title>void Sample::play ()</title> <emphasis>Plays sample, when called.</emphasis>
                 
             </section>
-            <section xml:id="class_sample_1a287eada639aedccb8908d1ae6bf67874">
-                <title>void Sample::playAtBeat (unsigned int beatPosition)</title> <emphasis></emphasis>
+            <section xml:id="class_sample_1a26322924f7a05091e13380c6494896da">
+                <title>void Sample::playAtBeat (unsigned short beatPosition)</title> <emphasis></emphasis>
                 
 <para>Activates sample at the passed beatPosition 
                 <formalpara>
@@ -261,17 +263,11 @@ float volume)<para><emphasis>Setter of member masterVolume.</emphasis></para>
                 
             </section>
             <section xml:id="class_sample_1a6d13988721d2190947f65969d4737a48">
-                <title>void Sample::setMixVolume ()</title> <emphasis></emphasis>
+                <title>void Sample::setMixVolume ()</title> <emphasis>Sets the mix volume.</emphasis>
                 
             </section>
             <section xml:id="class_sample_1afceddb412ab50a67cb98ca6b72456f24">
-                <title>float Sample::getMasterVolume ()</title> <emphasis></emphasis>
+                <title>float Sample::getMasterVolume ()</title> <emphasis>Getter of master Volume.</emphasis>
                 
-<para><formalpara><title>Rückgabe: </title>
-
-<para></para>
-</formalpara>
-</para>
-
             </section>
 </section>

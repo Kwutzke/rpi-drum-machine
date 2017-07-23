@@ -90,79 +90,108 @@ $(document).ready(function(){initNavTree('class_drum_machine.html','');});
 </div><!--header-->
 <div class="contents">
 
+<p>Handles the beat loop and samples including correct timing for the give BPM, playing them at the correct beat steps and increasing and decreasing the volume.  
+ <a href="class_drum_machine.html#details">Mehr ...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_drum_machine_8h_source.html">DrumMachine.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Öffentliche Methoden</h2></td></tr>
-<tr class="memitem:a2b038c37477e742bd3ce70e7f7bb6af5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drum_machine.html#a2b038c37477e742bd3ce70e7f7bb6af5">DrumMachine</a> (<a class="el" href="class_a_output_controller.html">AOutputController</a> &amp;)</td></tr>
-<tr class="separator:a2b038c37477e742bd3ce70e7f7bb6af5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acacd501a2615a2f0215c04873860ce98"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drum_machine.html#acacd501a2615a2f0215c04873860ce98">DrumMachine</a> (<a class="el" href="class_a_output_controller.html">AOutputController</a> &amp;<a class="el" href="class_drum_machine.html#a4a5b4d6cc6e4a3ce2c2893e52fd0e951">outputController</a>)</td></tr>
+<tr class="separator:acacd501a2615a2f0215c04873860ce98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac42508031bbf331d41c8004ed663c1c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drum_machine.html#ac42508031bbf331d41c8004ed663c1c1">startLoop</a> ()</td></tr>
 <tr class="separator:ac42508031bbf331d41c8004ed663c1c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1564a42f1c2717534a61437617070b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drum_machine.html#af1564a42f1c2717534a61437617070b3">stopLoop</a> ()</td></tr>
 <tr class="separator:af1564a42f1c2717534a61437617070b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a530ac2c3529492c62a01619786fb3765"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drum_machine.html#a530ac2c3529492c62a01619786fb3765">addSample</a> (<a class="el" href="class_sample.html">Sample</a>)</td></tr>
 <tr class="separator:a530ac2c3529492c62a01619786fb3765"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4cda2cfef390426515f11cf9ee3199c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drum_machine.html#ac4cda2cfef390426515f11cf9ee3199c">increaseActiveSampleVolume</a> (float)</td></tr>
-<tr class="separator:ac4cda2cfef390426515f11cf9ee3199c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab40423c6a37efad94389ffb19a0ccae9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drum_machine.html#ab40423c6a37efad94389ffb19a0ccae9">increaseBpm</a> (unsigned short)</td></tr>
-<tr class="separator:ab40423c6a37efad94389ffb19a0ccae9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab823055aa6c1fa1dd91b1e45f3e66f0f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drum_machine.html#ab823055aa6c1fa1dd91b1e45f3e66f0f">increaseVolume</a> (float value)</td></tr>
+<tr class="separator:ab823055aa6c1fa1dd91b1e45f3e66f0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2316557d08fecdaa8936be2562749e95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drum_machine.html#a2316557d08fecdaa8936be2562749e95">increaseActiveSampleVolume</a> (float value)</td></tr>
+<tr class="separator:a2316557d08fecdaa8936be2562749e95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbaa7d80f7aa34f1ca190e163515e3e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drum_machine.html#adbaa7d80f7aa34f1ca190e163515e3e6">increaseBpm</a> (unsigned short value)</td></tr>
+<tr class="separator:adbaa7d80f7aa34f1ca190e163515e3e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac34e64779cd419a75628630f71a3041b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drum_machine.html#ac34e64779cd419a75628630f71a3041b">toggleSampleAtBeat</a> (unsigned short beat)</td></tr>
 <tr class="separator:ac34e64779cd419a75628630f71a3041b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa0c2e00a5009b239aac709c37602c7d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drum_machine.html#aaa0c2e00a5009b239aac709c37602c7d">isLoopRunning</a> ()</td></tr>
 <tr class="separator:aaa0c2e00a5009b239aac709c37602c7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa50ac48ccdbf81a9ed5c7b3e2a5560d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drum_machine.html#aaa50ac48ccdbf81a9ed5c7b3e2a5560d">setBPM</a> (unsigned short)</td></tr>
-<tr class="separator:aaa50ac48ccdbf81a9ed5c7b3e2a5560d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac554a614388d11543698f407b0e11e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drum_machine.html#aac554a614388d11543698f407b0e11e6">setBPM</a> (unsigned short <a class="el" href="class_drum_machine.html#afaa80be4a66f759ab590a5f67f327b67">bpm</a>)</td></tr>
+<tr class="separator:aac554a614388d11543698f407b0e11e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a7a34dca1803071fec5b6687cb98343"><td class="memItemLeft" align="right" valign="top">unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drum_machine.html#a9a7a34dca1803071fec5b6687cb98343">getBPM</a> ()</td></tr>
 <tr class="separator:a9a7a34dca1803071fec5b6687cb98343"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2723072af5049c67e990b1eba9351d81"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drum_machine.html#a2723072af5049c67e990b1eba9351d81">setMasterVolume</a> (float)</td></tr>
-<tr class="separator:a2723072af5049c67e990b1eba9351d81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19af9f5fbe3242cee5685f1ede574a26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drum_machine.html#a19af9f5fbe3242cee5685f1ede574a26">setMasterVolume</a> (float <a class="el" href="class_drum_machine.html#af1401c2a8e1d016ec32c662968e581fd">volume</a>)</td></tr>
+<tr class="separator:a19af9f5fbe3242cee5685f1ede574a26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3590f99d021aad35cca24fdcb0f8a246"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drum_machine.html#a3590f99d021aad35cca24fdcb0f8a246">getMasterVolume</a> ()</td></tr>
 <tr class="separator:a3590f99d021aad35cca24fdcb0f8a246"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28c17f251dc26e48b518e4863c33d6e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drum_machine.html#a28c17f251dc26e48b518e4863c33d6e8">setActiveSample</a> (unsigned short)</td></tr>
-<tr class="separator:a28c17f251dc26e48b518e4863c33d6e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b6ff2afd815b9981e8a008c857c1847"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drum_machine.html#a1b6ff2afd815b9981e8a008c857c1847">setActiveSample</a> (unsigned short newActiveSample)</td></tr>
+<tr class="separator:a1b6ff2afd815b9981e8a008c857c1847"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8ef152a82bbce61bc1e2715c3e476b9"><td class="memItemLeft" align="right" valign="top">unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drum_machine.html#ac8ef152a82bbce61bc1e2715c3e476b9">getActiveSample</a> ()</td></tr>
 <tr class="separator:ac8ef152a82bbce61bc1e2715c3e476b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab823055aa6c1fa1dd91b1e45f3e66f0f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drum_machine.html#ab823055aa6c1fa1dd91b1e45f3e66f0f">increaseVolume</a> (float value)</td></tr>
-<tr class="separator:ab823055aa6c1fa1dd91b1e45f3e66f0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Methoden</h2></td></tr>
 <tr class="memitem:a5a42497c3a1f390537b6c12fddab1619"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drum_machine.html#a5a42497c3a1f390537b6c12fddab1619">allocateChannels</a> ()</td></tr>
+<tr class="memdesc:a5a42497c3a1f390537b6c12fddab1619"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function which allocates the audio channels.  <a href="#a5a42497c3a1f390537b6c12fddab1619">Mehr ...</a><br /></td></tr>
 <tr class="separator:a5a42497c3a1f390537b6c12fddab1619"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd65a07ff84b6c7854ddd9ee3a529382"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drum_machine.html#afd65a07ff84b6c7854ddd9ee3a529382">openAudio</a> ()</td></tr>
+<tr class="memdesc:afd65a07ff84b6c7854ddd9ee3a529382"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the audio.  <a href="#afd65a07ff84b6c7854ddd9ee3a529382">Mehr ...</a><br /></td></tr>
 <tr class="separator:afd65a07ff84b6c7854ddd9ee3a529382"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attribute</h2></td></tr>
-<tr class="memitem:a455f582474a17cbd618940a3d4a4791d"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drum_machine.html#a455f582474a17cbd618940a3d4a4791d">TOTAL_BEATS</a> = 16</td></tr>
-<tr class="separator:a455f582474a17cbd618940a3d4a4791d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefcf483d61e72bec26f9215a800c705c"><td class="memItemLeft" align="right" valign="top">const long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drum_machine.html#aefcf483d61e72bec26f9215a800c705c">LOOP_PRECISION_NANOS</a> = 10000</td></tr>
-<tr class="separator:aefcf483d61e72bec26f9215a800c705c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a221c0cd8b5cf3f2342f57ad539d3628a"><td class="memItemLeft" align="right" valign="top">const unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drum_machine.html#a221c0cd8b5cf3f2342f57ad539d3628a">MIN_BPM</a> = 20</td></tr>
+<tr class="memdesc:a221c0cd8b5cf3f2342f57ad539d3628a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The lowest value the bpm can be.  <a href="#a221c0cd8b5cf3f2342f57ad539d3628a">Mehr ...</a><br /></td></tr>
+<tr class="separator:a221c0cd8b5cf3f2342f57ad539d3628a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b64f2e265bb9fc06729090b7e05c005"><td class="memItemLeft" align="right" valign="top">const unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drum_machine.html#a0b64f2e265bb9fc06729090b7e05c005">MAX_BPM</a> = 220</td></tr>
+<tr class="memdesc:a0b64f2e265bb9fc06729090b7e05c005"><td class="mdescLeft">&#160;</td><td class="mdescRight">The highest value the bpm can be.  <a href="#a0b64f2e265bb9fc06729090b7e05c005">Mehr ...</a><br /></td></tr>
+<tr class="separator:a0b64f2e265bb9fc06729090b7e05c005"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54e06658e13970dc7679051e8194f546"><td class="memItemLeft" align="right" valign="top">const unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drum_machine.html#a54e06658e13970dc7679051e8194f546">WHOLE_BEATS</a> = 4</td></tr>
+<tr class="memdesc:a54e06658e13970dc7679051e8194f546"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of whole beats the loop has.  <a href="#a54e06658e13970dc7679051e8194f546">Mehr ...</a><br /></td></tr>
+<tr class="separator:a54e06658e13970dc7679051e8194f546"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4d2056f29b6eb959aa379afcc6b70f0"><td class="memItemLeft" align="right" valign="top">const unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drum_machine.html#ab4d2056f29b6eb959aa379afcc6b70f0">BEATS_PER_WHOLE_BEAT</a> = 4</td></tr>
+<tr class="memdesc:ab4d2056f29b6eb959aa379afcc6b70f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of beats one whole beat has.  <a href="#ab4d2056f29b6eb959aa379afcc6b70f0">Mehr ...</a><br /></td></tr>
+<tr class="separator:ab4d2056f29b6eb959aa379afcc6b70f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25ff7c6556614ab787a626a5c6ec1683"><td class="memItemLeft" align="right" valign="top">const unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drum_machine.html#a25ff7c6556614ab787a626a5c6ec1683">TOTAL_BEATS</a> = <a class="el" href="class_drum_machine.html#a54e06658e13970dc7679051e8194f546">WHOLE_BEATS</a> * <a class="el" href="class_drum_machine.html#ab4d2056f29b6eb959aa379afcc6b70f0">BEATS_PER_WHOLE_BEAT</a></td></tr>
+<tr class="memdesc:a25ff7c6556614ab787a626a5c6ec1683"><td class="mdescLeft">&#160;</td><td class="mdescRight">The resulting total beats the loop has.  <a href="#a25ff7c6556614ab787a626a5c6ec1683">Mehr ...</a><br /></td></tr>
+<tr class="separator:a25ff7c6556614ab787a626a5c6ec1683"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a847e09081c90dbb33c602506d5adb743"><td class="memItemLeft" align="right" valign="top">const unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drum_machine.html#a847e09081c90dbb33c602506d5adb743">LOOP_PRECISION_NANOS</a> = 10000</td></tr>
+<tr class="memdesc:a847e09081c90dbb33c602506d5adb743"><td class="mdescLeft">&#160;</td><td class="mdescRight">The precision with which the loop timer runs.  <a href="#a847e09081c90dbb33c602506d5adb743">Mehr ...</a><br /></td></tr>
+<tr class="separator:a847e09081c90dbb33c602506d5adb743"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afaa80be4a66f759ab590a5f67f327b67"><td class="memItemLeft" align="right" valign="top">unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drum_machine.html#afaa80be4a66f759ab590a5f67f327b67">bpm</a></td></tr>
+<tr class="memdesc:afaa80be4a66f759ab590a5f67f327b67"><td class="mdescLeft">&#160;</td><td class="mdescRight">BPM at which the loop runs.  <a href="#afaa80be4a66f759ab590a5f67f327b67">Mehr ...</a><br /></td></tr>
 <tr class="separator:afaa80be4a66f759ab590a5f67f327b67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46f20be98c71d1429a473e03bf092df3"><td class="memItemLeft" align="right" valign="top">unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drum_machine.html#a46f20be98c71d1429a473e03bf092df3">currentBeat</a></td></tr>
+<tr class="memdesc:a46f20be98c71d1429a473e03bf092df3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of the current beat.  <a href="#a46f20be98c71d1429a473e03bf092df3">Mehr ...</a><br /></td></tr>
 <tr class="separator:a46f20be98c71d1429a473e03bf092df3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55ad96f0aa2452d631e49bcdde9fd538"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drum_machine.html#a55ad96f0aa2452d631e49bcdde9fd538">beatMillis</a></td></tr>
-<tr class="separator:a55ad96f0aa2452d631e49bcdde9fd538"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e12916e5724251791689e6f14c8513a"><td class="memItemLeft" align="right" valign="top">unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drum_machine.html#a9e12916e5724251791689e6f14c8513a">activeSample</a></td></tr>
+<tr class="memdesc:a9e12916e5724251791689e6f14c8513a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The index of the active sample.  <a href="#a9e12916e5724251791689e6f14c8513a">Mehr ...</a><br /></td></tr>
+<tr class="separator:a9e12916e5724251791689e6f14c8513a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91179ac48de4159d04052291ad25fa02"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drum_machine.html#a91179ac48de4159d04052291ad25fa02">beatMillis</a></td></tr>
+<tr class="memdesc:a91179ac48de4159d04052291ad25fa02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Milliseconds that one beat lasts.  <a href="#a91179ac48de4159d04052291ad25fa02">Mehr ...</a><br /></td></tr>
+<tr class="separator:a91179ac48de4159d04052291ad25fa02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ac5a8c113e5a32a557f069e8d93cca8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drum_machine.html#a4ac5a8c113e5a32a557f069e8d93cca8">loopRunning</a></td></tr>
+<tr class="memdesc:a4ac5a8c113e5a32a557f069e8d93cca8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores whether the loop is running or not.  <a href="#a4ac5a8c113e5a32a557f069e8d93cca8">Mehr ...</a><br /></td></tr>
 <tr class="separator:a4ac5a8c113e5a32a557f069e8d93cca8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1401c2a8e1d016ec32c662968e581fd"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drum_machine.html#af1401c2a8e1d016ec32c662968e581fd">volume</a></td></tr>
+<tr class="memdesc:af1401c2a8e1d016ec32c662968e581fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current master volume.  <a href="#af1401c2a8e1d016ec32c662968e581fd">Mehr ...</a><br /></td></tr>
 <tr class="separator:af1401c2a8e1d016ec32c662968e581fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a5b4d6cc6e4a3ce2c2893e52fd0e951"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_a_output_controller.html">AOutputController</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drum_machine.html#a4a5b4d6cc6e4a3ce2c2893e52fd0e951">outputController</a></td></tr>
+<tr class="memdesc:a4a5b4d6cc6e4a3ce2c2893e52fd0e951"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference to the regsitered OutputController.  <a href="#a4a5b4d6cc6e4a3ce2c2893e52fd0e951">Mehr ...</a><br /></td></tr>
 <tr class="separator:a4a5b4d6cc6e4a3ce2c2893e52fd0e951"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e12916e5724251791689e6f14c8513a"><td class="memItemLeft" align="right" valign="top">unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drum_machine.html#a9e12916e5724251791689e6f14c8513a">activeSample</a></td></tr>
-<tr class="separator:a9e12916e5724251791689e6f14c8513a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab190b1b114840e3fb41fff54d0099e93"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_timer.html">Timer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drum_machine.html#ab190b1b114840e3fb41fff54d0099e93">loop</a></td></tr>
+<tr class="memdesc:ab190b1b114840e3fb41fff54d0099e93"><td class="mdescLeft">&#160;</td><td class="mdescRight">The loop timer.  <a href="#ab190b1b114840e3fb41fff54d0099e93">Mehr ...</a><br /></td></tr>
 <tr class="separator:ab190b1b114840e3fb41fff54d0099e93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf215ead70c41e760556497281aa562e"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="class_sample.html">Sample</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drum_machine.html#acf215ead70c41e760556497281aa562e">samples</a></td></tr>
+<tr class="memdesc:acf215ead70c41e760556497281aa562e"><td class="mdescLeft">&#160;</td><td class="mdescRight">A List of all added samples.  <a href="#acf215ead70c41e760556497281aa562e">Mehr ...</a><br /></td></tr>
 <tr class="separator:acf215ead70c41e760556497281aa562e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
-<div class="textblock">
-<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8h_source.html#l00025">25</a> der Datei <a class="el" href="_drum_machine_8h_source.html">DrumMachine.h</a>.</p>
+<div class="textblock"><p>Handles the beat loop and samples including correct timing for the give BPM, playing them at the correct beat steps and increasing and decreasing the volume. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8h_source.html#l00029">29</a> der Datei <a class="el" href="_drum_machine_8h_source.html">DrumMachine.h</a>.</p>
 </div><h2 class="groupheader">Beschreibung der Konstruktoren und Destruktoren</h2>
-<a id="a2b038c37477e742bd3ce70e7f7bb6af5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2b038c37477e742bd3ce70e7f7bb6af5">&#9670;&nbsp;</a></span>DrumMachine()</h2>
+<a id="acacd501a2615a2f0215c04873860ce98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acacd501a2615a2f0215c04873860ce98">&#9670;&nbsp;</a></span>DrumMachine()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -174,7 +203,7 @@ Private Attribute</h2></td></tr>
           <td class="memname">DrumMachine::DrumMachine </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_a_output_controller.html">AOutputController</a> &amp;&#160;</td>
-          <td class="paramname"><em>raspOutputController</em></td><td>)</td>
+          <td class="paramname"><em>outputController</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -184,6 +213,12 @@ Private Attribute</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Constructor </p><dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">outputController</td><td>the outputController the drum machine passes events to </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8cpp_source.html#l00010">10</a> der Datei <a class="el" href="_drum_machine_8cpp_source.html">DrumMachine.cpp</a>.</p>
 
@@ -207,10 +242,11 @@ Private Attribute</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Add a sample to be available for use in the drum machine. The order of adding samples determines the buttons they are mapped to </p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8cpp_source.html#l00117">117</a> der Datei <a class="el" href="_drum_machine_8cpp_source.html">DrumMachine.cpp</a>.</p>
+<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8cpp_source.html#l00122">122</a> der Datei <a class="el" href="_drum_machine_8cpp_source.html">DrumMachine.cpp</a>.</p>
 
-<p class="reference">Benutzt <a class="el" href="_drum_machine_8h_source.html#l00039">samples</a>, <a class="el" href="_sample_8cpp_source.html#l00050">Sample::setMasterVolume()</a> und <a class="el" href="_drum_machine_8h_source.html#l00034">volume</a>.</p>
+<p class="reference">Benutzt <a class="el" href="_drum_machine_8h_source.html#l00047">samples</a>, <a class="el" href="_sample_8cpp_source.html#l00050">Sample::setMasterVolume()</a> und <a class="el" href="_drum_machine_8h_source.html#l00043">volume</a>.</p>
 
 <p class="reference">Wird benutzt von <a class="el" href="main_8cpp_source.html#l00011">setup()</a>.</p>
 
@@ -239,6 +275,8 @@ Private Attribute</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Helper function which allocates the audio channels. </p>
+
 <p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8cpp_source.html#l00029">29</a> der Datei <a class="el" href="_drum_machine_8cpp_source.html">DrumMachine.cpp</a>.</p>
 
 <p class="reference">Wird benutzt von <a class="el" href="_drum_machine_8cpp_source.html#l00010">DrumMachine()</a>.</p>
@@ -259,10 +297,11 @@ Private Attribute</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Rückgabe</dt><dd>The number of the currently active sample </dd></dl>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8cpp_source.html#l00156">156</a> der Datei <a class="el" href="_drum_machine_8cpp_source.html">DrumMachine.cpp</a>.</p>
+<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8cpp_source.html#l00166">166</a> der Datei <a class="el" href="_drum_machine_8cpp_source.html">DrumMachine.cpp</a>.</p>
 
-<p class="reference">Benutzt <a class="el" href="_drum_machine_8h_source.html#l00036">activeSample</a>.</p>
+<p class="reference">Benutzt <a class="el" href="_drum_machine_8h_source.html#l00040">activeSample</a>.</p>
 
 <p class="reference">Wird benutzt von <a class="el" href="_drum_machine_input_listener_8cpp_source.html#l00010">DrumMachineInputListener::inputEvent()</a>.</p>
 
@@ -282,12 +321,13 @@ Private Attribute</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Rückgabe</dt><dd>the current BPM </dd></dl>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8cpp_source.html#l00096">96</a> der Datei <a class="el" href="_drum_machine_8cpp_source.html">DrumMachine.cpp</a>.</p>
+<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8cpp_source.html#l00101">101</a> der Datei <a class="el" href="_drum_machine_8cpp_source.html">DrumMachine.cpp</a>.</p>
 
-<p class="reference">Benutzt <a class="el" href="_drum_machine_8h_source.html#l00030">bpm</a>.</p>
+<p class="reference">Benutzt <a class="el" href="_drum_machine_8h_source.html#l00038">bpm</a>.</p>
 
-<p class="reference">Wird benutzt von <a class="el" href="_drum_machine_8cpp_source.html#l00074">increaseActiveSampleVolume()</a>, <a class="el" href="_drum_machine_8cpp_source.html#l00160">increaseBpm()</a>, <a class="el" href="_drum_machine_input_listener_8cpp_source.html#l00010">DrumMachineInputListener::inputEvent()</a> und <a class="el" href="_drum_machine_8cpp_source.html#l00126">setActiveSample()</a>.</p>
+<p class="reference">Wird benutzt von <a class="el" href="_drum_machine_8cpp_source.html#l00077">increaseActiveSampleVolume()</a>, <a class="el" href="_drum_machine_8cpp_source.html#l00170">increaseBpm()</a>, <a class="el" href="_drum_machine_input_listener_8cpp_source.html#l00010">DrumMachineInputListener::inputEvent()</a> und <a class="el" href="_drum_machine_8cpp_source.html#l00131">setActiveSample()</a>.</p>
 
 </div>
 </div>
@@ -305,17 +345,18 @@ Private Attribute</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Rückgabe</dt><dd>the current master volume </dd></dl>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8cpp_source.html#l00113">113</a> der Datei <a class="el" href="_drum_machine_8cpp_source.html">DrumMachine.cpp</a>.</p>
+<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8cpp_source.html#l00118">118</a> der Datei <a class="el" href="_drum_machine_8cpp_source.html">DrumMachine.cpp</a>.</p>
 
-<p class="reference">Benutzt <a class="el" href="_drum_machine_8h_source.html#l00034">volume</a>.</p>
+<p class="reference">Benutzt <a class="el" href="_drum_machine_8h_source.html#l00043">volume</a>.</p>
 
 <p class="reference">Wird benutzt von <a class="el" href="_drum_machine_input_listener_8cpp_source.html#l00010">DrumMachineInputListener::inputEvent()</a>.</p>
 
 </div>
 </div>
-<a id="ac4cda2cfef390426515f11cf9ee3199c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac4cda2cfef390426515f11cf9ee3199c">&#9670;&nbsp;</a></span>increaseActiveSampleVolume()</h2>
+<a id="a2316557d08fecdaa8936be2562749e95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2316557d08fecdaa8936be2562749e95">&#9670;&nbsp;</a></span>increaseActiveSampleVolume()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -324,22 +365,28 @@ Private Attribute</h2></td></tr>
           <td class="memname">void DrumMachine::increaseActiveSampleVolume </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>volume</em></td><td>)</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Increases the volume of the currently active sample by a given value. </p><dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>value to increase the active sample volume by </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8cpp_source.html#l00074">74</a> der Datei <a class="el" href="_drum_machine_8cpp_source.html">DrumMachine.cpp</a>.</p>
+<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8cpp_source.html#l00077">77</a> der Datei <a class="el" href="_drum_machine_8cpp_source.html">DrumMachine.cpp</a>.</p>
 
-<p class="reference">Benutzt <a class="el" href="_drum_machine_8h_source.html#l00036">activeSample</a>, <a class="el" href="_drum_machine_8cpp_source.html#l00096">getBPM()</a>, <a class="el" href="_drum_machine_8h_source.html#l00035">outputController</a>, <a class="el" href="_drum_machine_8h_source.html#l00039">samples</a> und <a class="el" href="class_a_output_controller.html#aab53d12a6aa6f38d0e4ead69e85ed4fe">AOutputController::showSampleScreen()</a>.</p>
+<p class="reference">Benutzt <a class="el" href="_drum_machine_8h_source.html#l00040">activeSample</a>, <a class="el" href="_drum_machine_8cpp_source.html#l00101">getBPM()</a>, <a class="el" href="_drum_machine_8h_source.html#l00045">outputController</a>, <a class="el" href="_drum_machine_8h_source.html#l00047">samples</a> und <a class="el" href="class_a_output_controller.html#aab53d12a6aa6f38d0e4ead69e85ed4fe">AOutputController::showSampleScreen()</a>.</p>
 
 <p class="reference">Wird benutzt von <a class="el" href="_drum_machine_input_listener_8cpp_source.html#l00010">DrumMachineInputListener::inputEvent()</a>.</p>
 
 </div>
 </div>
-<a id="ab40423c6a37efad94389ffb19a0ccae9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab40423c6a37efad94389ffb19a0ccae9">&#9670;&nbsp;</a></span>increaseBpm()</h2>
+<a id="adbaa7d80f7aa34f1ca190e163515e3e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbaa7d80f7aa34f1ca190e163515e3e6">&#9670;&nbsp;</a></span>increaseBpm()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -353,10 +400,16 @@ Private Attribute</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Increases the BPM by a given value. </p><dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>value to increase the bpm by </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8cpp_source.html#l00160">160</a> der Datei <a class="el" href="_drum_machine_8cpp_source.html">DrumMachine.cpp</a>.</p>
+<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8cpp_source.html#l00170">170</a> der Datei <a class="el" href="_drum_machine_8cpp_source.html">DrumMachine.cpp</a>.</p>
 
-<p class="reference">Benutzt <a class="el" href="_drum_machine_8cpp_source.html#l00096">getBPM()</a> und <a class="el" href="_drum_machine_8cpp_source.html#l00086">setBPM()</a>.</p>
+<p class="reference">Benutzt <a class="el" href="_drum_machine_8cpp_source.html#l00101">getBPM()</a> und <a class="el" href="_drum_machine_8cpp_source.html#l00089">setBPM()</a>.</p>
 
 <p class="reference">Wird benutzt von <a class="el" href="_drum_machine_input_listener_8cpp_source.html#l00010">DrumMachineInputListener::inputEvent()</a>.</p>
 
@@ -377,10 +430,16 @@ Private Attribute</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Increases the volume by a given value. </p><dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>value to increase the master volume by </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8cpp_source.html#l00064">64</a> der Datei <a class="el" href="_drum_machine_8cpp_source.html">DrumMachine.cpp</a>.</p>
+<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8cpp_source.html#l00067">67</a> der Datei <a class="el" href="_drum_machine_8cpp_source.html">DrumMachine.cpp</a>.</p>
 
-<p class="reference">Benutzt <a class="el" href="_drum_machine_8cpp_source.html#l00100">setMasterVolume()</a> und <a class="el" href="_drum_machine_8h_source.html#l00034">volume</a>.</p>
+<p class="reference">Benutzt <a class="el" href="_drum_machine_8cpp_source.html#l00105">setMasterVolume()</a> und <a class="el" href="_drum_machine_8h_source.html#l00043">volume</a>.</p>
 
 </div>
 </div>
@@ -398,10 +457,11 @@ Private Attribute</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Rückgabe</dt><dd>whether the loop is currently running </dd></dl>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8cpp_source.html#l00122">122</a> der Datei <a class="el" href="_drum_machine_8cpp_source.html">DrumMachine.cpp</a>.</p>
+<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8cpp_source.html#l00127">127</a> der Datei <a class="el" href="_drum_machine_8cpp_source.html">DrumMachine.cpp</a>.</p>
 
-<p class="reference">Benutzt <a class="el" href="_drum_machine_8h_source.html#l00033">loopRunning</a>.</p>
+<p class="reference">Benutzt <a class="el" href="_drum_machine_8h_source.html#l00042">loopRunning</a>.</p>
 
 <p class="reference">Wird benutzt von <a class="el" href="_drum_machine_input_listener_8cpp_source.html#l00010">DrumMachineInputListener::inputEvent()</a>.</p>
 
@@ -430,14 +490,16 @@ Private Attribute</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Initializes the audio. </p>
+
 <p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8cpp_source.html#l00019">19</a> der Datei <a class="el" href="_drum_machine_8cpp_source.html">DrumMachine.cpp</a>.</p>
 
 <p class="reference">Wird benutzt von <a class="el" href="_drum_machine_8cpp_source.html#l00010">DrumMachine()</a>.</p>
 
 </div>
 </div>
-<a id="a28c17f251dc26e48b518e4863c33d6e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a28c17f251dc26e48b518e4863c33d6e8">&#9670;&nbsp;</a></span>setActiveSample()</h2>
+<a id="a1b6ff2afd815b9981e8a008c857c1847"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b6ff2afd815b9981e8a008c857c1847">&#9670;&nbsp;</a></span>setActiveSample()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -451,17 +513,23 @@ Private Attribute</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Sets the active sample </p><dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newActiveSample</td><td>The number of the new active sample </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8cpp_source.html#l00126">126</a> der Datei <a class="el" href="_drum_machine_8cpp_source.html">DrumMachine.cpp</a>.</p>
+<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8cpp_source.html#l00131">131</a> der Datei <a class="el" href="_drum_machine_8cpp_source.html">DrumMachine.cpp</a>.</p>
 
-<p class="reference">Benutzt <a class="el" href="_drum_machine_8h_source.html#l00036">activeSample</a>, <a class="el" href="class_a_output_controller.html#ac2b87aa6291c38cc65185bf6a37ae300">AOutputController::activeSampleChange()</a>, <a class="el" href="_drum_machine_8cpp_source.html#l00096">getBPM()</a>, <a class="el" href="_drum_machine_8h_source.html#l00016">sample::NO_SAMPLE</a>, <a class="el" href="_drum_machine_8h_source.html#l00035">outputController</a>, <a class="el" href="class_a_output_controller.html#a7bad658dfc3eb1223ace0c0454130818">AOutputController::playPositionChange()</a>, <a class="el" href="_drum_machine_8h_source.html#l00039">samples</a>, <a class="el" href="class_a_output_controller.html#ace7df9de71110b3615156b9bd06a9349">AOutputController::showMainScreen()</a> und <a class="el" href="class_a_output_controller.html#aab53d12a6aa6f38d0e4ead69e85ed4fe">AOutputController::showSampleScreen()</a>.</p>
+<p class="reference">Benutzt <a class="el" href="_drum_machine_8h_source.html#l00040">activeSample</a>, <a class="el" href="class_a_output_controller.html#ac2b87aa6291c38cc65185bf6a37ae300">AOutputController::activeSampleChange()</a>, <a class="el" href="_drum_machine_8cpp_source.html#l00101">getBPM()</a>, <a class="el" href="_drum_machine_8h_source.html#l00016">sample::NO_SAMPLE</a>, <a class="el" href="_drum_machine_8h_source.html#l00045">outputController</a>, <a class="el" href="class_a_output_controller.html#a7bad658dfc3eb1223ace0c0454130818">AOutputController::playPositionChange()</a>, <a class="el" href="_drum_machine_8h_source.html#l00047">samples</a>, <a class="el" href="class_a_output_controller.html#ace7df9de71110b3615156b9bd06a9349">AOutputController::showMainScreen()</a> und <a class="el" href="class_a_output_controller.html#aab53d12a6aa6f38d0e4ead69e85ed4fe">AOutputController::showSampleScreen()</a>.</p>
 
 <p class="reference">Wird benutzt von <a class="el" href="_drum_machine_input_listener_8cpp_source.html#l00010">DrumMachineInputListener::inputEvent()</a>.</p>
 
 </div>
 </div>
-<a id="aaa50ac48ccdbf81a9ed5c7b3e2a5560d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaa50ac48ccdbf81a9ed5c7b3e2a5560d">&#9670;&nbsp;</a></span>setBPM()</h2>
+<a id="aac554a614388d11543698f407b0e11e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac554a614388d11543698f407b0e11e6">&#9670;&nbsp;</a></span>setBPM()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -475,17 +543,23 @@ Private Attribute</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Sets the BPM to a specific value </p><dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bpm</td><td>the new bpm value </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8cpp_source.html#l00086">86</a> der Datei <a class="el" href="_drum_machine_8cpp_source.html">DrumMachine.cpp</a>.</p>
+<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8cpp_source.html#l00089">89</a> der Datei <a class="el" href="_drum_machine_8cpp_source.html">DrumMachine.cpp</a>.</p>
 
-<p class="reference">Benutzt <a class="el" href="_drum_machine_8h_source.html#l00030">bpm</a>, <a class="el" href="_drum_machine_8h_source.html#l00038">loop</a>, <a class="el" href="_drum_machine_8h_source.html#l00035">outputController</a>, <a class="el" href="class_a_output_controller.html#ac685432fc57d2441ecb548386554d2c9">AOutputController::setBeatDuration()</a>, <a class="el" href="_timer_8cpp_source.html#l00015">Timer::setInterval()</a>, <a class="el" href="class_a_output_controller.html#ace7df9de71110b3615156b9bd06a9349">AOutputController::showMainScreen()</a> und <a class="el" href="_drum_machine_8h_source.html#l00032">beatMillis</a>.</p>
+<p class="reference">Benutzt <a class="el" href="_drum_machine_8h_source.html#l00041">beatMillis</a>, <a class="el" href="_drum_machine_8h_source.html#l00034">BEATS_PER_WHOLE_BEAT</a>, <a class="el" href="_drum_machine_8h_source.html#l00038">bpm</a>, <a class="el" href="_drum_machine_8h_source.html#l00046">loop</a>, <a class="el" href="_drum_machine_8h_source.html#l00032">MAX_BPM</a>, <a class="el" href="_drum_machine_8h_source.html#l00031">MIN_BPM</a>, <a class="el" href="_drum_machine_8h_source.html#l00045">outputController</a>, <a class="el" href="class_a_output_controller.html#ac685432fc57d2441ecb548386554d2c9">AOutputController::setBeatDuration()</a>, <a class="el" href="_timer_8cpp_source.html#l00015">Timer::setInterval()</a> und <a class="el" href="class_a_output_controller.html#ace7df9de71110b3615156b9bd06a9349">AOutputController::showMainScreen()</a>.</p>
 
-<p class="reference">Wird benutzt von <a class="el" href="_drum_machine_8cpp_source.html#l00160">increaseBpm()</a> und <a class="el" href="main_8cpp_source.html#l00011">setup()</a>.</p>
+<p class="reference">Wird benutzt von <a class="el" href="_drum_machine_8cpp_source.html#l00170">increaseBpm()</a> und <a class="el" href="main_8cpp_source.html#l00011">setup()</a>.</p>
 
 </div>
 </div>
-<a id="a2723072af5049c67e990b1eba9351d81"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2723072af5049c67e990b1eba9351d81">&#9670;&nbsp;</a></span>setMasterVolume()</h2>
+<a id="a19af9f5fbe3242cee5685f1ede574a26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19af9f5fbe3242cee5685f1ede574a26">&#9670;&nbsp;</a></span>setMasterVolume()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -499,12 +573,18 @@ Private Attribute</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Sets the master volume to a specific value </p><dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">volume</td><td>the new master volume </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8cpp_source.html#l00100">100</a> der Datei <a class="el" href="_drum_machine_8cpp_source.html">DrumMachine.cpp</a>.</p>
+<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8cpp_source.html#l00105">105</a> der Datei <a class="el" href="_drum_machine_8cpp_source.html">DrumMachine.cpp</a>.</p>
 
-<p class="reference">Benutzt <a class="el" href="_drum_machine_8h_source.html#l00039">samples</a> und <a class="el" href="_drum_machine_8h_source.html#l00034">volume</a>.</p>
+<p class="reference">Benutzt <a class="el" href="_drum_machine_8h_source.html#l00047">samples</a> und <a class="el" href="_drum_machine_8h_source.html#l00043">volume</a>.</p>
 
-<p class="reference">Wird benutzt von <a class="el" href="_drum_machine_8cpp_source.html#l00064">increaseVolume()</a>.</p>
+<p class="reference">Wird benutzt von <a class="el" href="_drum_machine_8cpp_source.html#l00067">increaseVolume()</a>.</p>
 
 </div>
 </div>
@@ -522,10 +602,11 @@ Private Attribute</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Starts the beat loop. </p>
 
 <p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8cpp_source.html#l00037">37</a> der Datei <a class="el" href="_drum_machine_8cpp_source.html">DrumMachine.cpp</a>.</p>
 
-<p class="reference">Benutzt <a class="el" href="_drum_machine_8h_source.html#l00031">currentBeat</a>, <a class="el" href="_drum_machine_8h_source.html#l00038">loop</a>, <a class="el" href="_drum_machine_8h_source.html#l00033">loopRunning</a>, <a class="el" href="_drum_machine_8h_source.html#l00035">outputController</a>, <a class="el" href="class_a_output_controller.html#a5a818a40e2911411d378032b8b2fb6c8">AOutputController::positionChange()</a>, <a class="el" href="_drum_machine_8h_source.html#l00039">samples</a>, <a class="el" href="_timer_8cpp_source.html#l00015">Timer::setInterval()</a>, <a class="el" href="_drum_machine_8h_source.html#l00032">beatMillis</a>, <a class="el" href="_timer_8h_source.html#l00027">Timer::start()</a> und <a class="el" href="_drum_machine_8h_source.html#l00027">TOTAL_BEATS</a>.</p>
+<p class="reference">Benutzt <a class="el" href="_drum_machine_8h_source.html#l00041">beatMillis</a>, <a class="el" href="_drum_machine_8h_source.html#l00039">currentBeat</a>, <a class="el" href="_drum_machine_8h_source.html#l00046">loop</a>, <a class="el" href="_drum_machine_8h_source.html#l00042">loopRunning</a>, <a class="el" href="_drum_machine_8h_source.html#l00045">outputController</a>, <a class="el" href="class_a_output_controller.html#a5a818a40e2911411d378032b8b2fb6c8">AOutputController::positionChange()</a>, <a class="el" href="_drum_machine_8h_source.html#l00047">samples</a>, <a class="el" href="_timer_8cpp_source.html#l00015">Timer::setInterval()</a>, <a class="el" href="_timer_8h_source.html#l00042">Timer::start()</a> und <a class="el" href="_drum_machine_8h_source.html#l00035">TOTAL_BEATS</a>.</p>
 
 <p class="reference">Wird benutzt von <a class="el" href="_drum_machine_input_listener_8cpp_source.html#l00010">DrumMachineInputListener::inputEvent()</a>.</p>
 
@@ -545,10 +626,11 @@ Private Attribute</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Stops the beat loop. </p>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8cpp_source.html#l00058">58</a> der Datei <a class="el" href="_drum_machine_8cpp_source.html">DrumMachine.cpp</a>.</p>
+<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8cpp_source.html#l00061">61</a> der Datei <a class="el" href="_drum_machine_8cpp_source.html">DrumMachine.cpp</a>.</p>
 
-<p class="reference">Benutzt <a class="el" href="_drum_machine_8h_source.html#l00031">currentBeat</a>, <a class="el" href="_drum_machine_8h_source.html#l00038">loop</a>, <a class="el" href="_drum_machine_8h_source.html#l00033">loopRunning</a> und <a class="el" href="_timer_8cpp_source.html#l00007">Timer::stop()</a>.</p>
+<p class="reference">Benutzt <a class="el" href="_drum_machine_8h_source.html#l00039">currentBeat</a>, <a class="el" href="_drum_machine_8h_source.html#l00046">loop</a>, <a class="el" href="_drum_machine_8h_source.html#l00042">loopRunning</a> und <a class="el" href="_timer_8cpp_source.html#l00007">Timer::stop()</a>.</p>
 
 <p class="reference">Wird benutzt von <a class="el" href="_drum_machine_input_listener_8cpp_source.html#l00010">DrumMachineInputListener::inputEvent()</a>.</p>
 
@@ -569,10 +651,16 @@ Private Attribute</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Toggles whether the current sample is played at a specific beat </p><dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">beat</td><td>the beat the sample should be toggled at </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8cpp_source.html#l00145">145</a> der Datei <a class="el" href="_drum_machine_8cpp_source.html">DrumMachine.cpp</a>.</p>
+<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8cpp_source.html#l00152">152</a> der Datei <a class="el" href="_drum_machine_8cpp_source.html">DrumMachine.cpp</a>.</p>
 
-<p class="reference">Benutzt <a class="el" href="_drum_machine_8h_source.html#l00036">activeSample</a>, <a class="el" href="_drum_machine_8h_source.html#l00016">sample::NO_SAMPLE</a>, <a class="el" href="_drum_machine_8h_source.html#l00035">outputController</a>, <a class="el" href="class_a_output_controller.html#a7bad658dfc3eb1223ace0c0454130818">AOutputController::playPositionChange()</a> und <a class="el" href="_drum_machine_8h_source.html#l00039">samples</a>.</p>
+<p class="reference">Benutzt <a class="el" href="_drum_machine_8h_source.html#l00040">activeSample</a>, <a class="el" href="_drum_machine_8h_source.html#l00016">sample::NO_SAMPLE</a>, <a class="el" href="_drum_machine_8h_source.html#l00045">outputController</a>, <a class="el" href="class_a_output_controller.html#a7bad658dfc3eb1223ace0c0454130818">AOutputController::playPositionChange()</a> und <a class="el" href="_drum_machine_8h_source.html#l00047">samples</a>.</p>
 
 <p class="reference">Wird benutzt von <a class="el" href="_drum_machine_input_listener_8cpp_source.html#l00010">DrumMachineInputListener::inputEvent()</a>.</p>
 
@@ -599,9 +687,67 @@ Private Attribute</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8h_source.html#l00036">36</a> der Datei <a class="el" href="_drum_machine_8h_source.html">DrumMachine.h</a>.</p>
+<p>The index of the active sample. </p>
 
-<p class="reference">Wird benutzt von <a class="el" href="_drum_machine_8cpp_source.html#l00156">getActiveSample()</a>, <a class="el" href="_drum_machine_8cpp_source.html#l00074">increaseActiveSampleVolume()</a>, <a class="el" href="_drum_machine_8cpp_source.html#l00126">setActiveSample()</a> und <a class="el" href="_drum_machine_8cpp_source.html#l00145">toggleSampleAtBeat()</a>.</p>
+<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8h_source.html#l00040">40</a> der Datei <a class="el" href="_drum_machine_8h_source.html">DrumMachine.h</a>.</p>
+
+<p class="reference">Wird benutzt von <a class="el" href="_drum_machine_8cpp_source.html#l00166">getActiveSample()</a>, <a class="el" href="_drum_machine_8cpp_source.html#l00077">increaseActiveSampleVolume()</a>, <a class="el" href="_drum_machine_8cpp_source.html#l00131">setActiveSample()</a> und <a class="el" href="_drum_machine_8cpp_source.html#l00152">toggleSampleAtBeat()</a>.</p>
+
+</div>
+</div>
+<a id="a91179ac48de4159d04052291ad25fa02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91179ac48de4159d04052291ad25fa02">&#9670;&nbsp;</a></span>beatMillis</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int DrumMachine::beatMillis</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Milliseconds that one beat lasts. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8h_source.html#l00041">41</a> der Datei <a class="el" href="_drum_machine_8h_source.html">DrumMachine.h</a>.</p>
+
+<p class="reference">Wird benutzt von <a class="el" href="_drum_machine_8cpp_source.html#l00089">setBPM()</a> und <a class="el" href="_drum_machine_8cpp_source.html#l00037">startLoop()</a>.</p>
+
+</div>
+</div>
+<a id="ab4d2056f29b6eb959aa379afcc6b70f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4d2056f29b6eb959aa379afcc6b70f0">&#9670;&nbsp;</a></span>BEATS_PER_WHOLE_BEAT</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned short DrumMachine::BEATS_PER_WHOLE_BEAT = 4</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The number of beats one whole beat has. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8h_source.html#l00034">34</a> der Datei <a class="el" href="_drum_machine_8h_source.html">DrumMachine.h</a>.</p>
+
+<p class="reference">Wird benutzt von <a class="el" href="_drum_machine_8cpp_source.html#l00089">setBPM()</a>.</p>
 
 </div>
 </div>
@@ -625,9 +771,11 @@ Private Attribute</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8h_source.html#l00030">30</a> der Datei <a class="el" href="_drum_machine_8h_source.html">DrumMachine.h</a>.</p>
+<p>BPM at which the loop runs. </p>
 
-<p class="reference">Wird benutzt von <a class="el" href="_drum_machine_8cpp_source.html#l00096">getBPM()</a> und <a class="el" href="_drum_machine_8cpp_source.html#l00086">setBPM()</a>.</p>
+<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8h_source.html#l00038">38</a> der Datei <a class="el" href="_drum_machine_8h_source.html">DrumMachine.h</a>.</p>
+
+<p class="reference">Wird benutzt von <a class="el" href="_drum_machine_8cpp_source.html#l00101">getBPM()</a> und <a class="el" href="_drum_machine_8cpp_source.html#l00089">setBPM()</a>.</p>
 
 </div>
 </div>
@@ -651,9 +799,11 @@ Private Attribute</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8h_source.html#l00031">31</a> der Datei <a class="el" href="_drum_machine_8h_source.html">DrumMachine.h</a>.</p>
+<p>The number of the current beat. </p>
 
-<p class="reference">Wird benutzt von <a class="el" href="_drum_machine_8cpp_source.html#l00037">startLoop()</a> und <a class="el" href="_drum_machine_8cpp_source.html#l00058">stopLoop()</a>.</p>
+<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8h_source.html#l00039">39</a> der Datei <a class="el" href="_drum_machine_8h_source.html">DrumMachine.h</a>.</p>
+
+<p class="reference">Wird benutzt von <a class="el" href="_drum_machine_8cpp_source.html#l00037">startLoop()</a> und <a class="el" href="_drum_machine_8cpp_source.html#l00061">stopLoop()</a>.</p>
 
 </div>
 </div>
@@ -677,14 +827,16 @@ Private Attribute</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8h_source.html#l00038">38</a> der Datei <a class="el" href="_drum_machine_8h_source.html">DrumMachine.h</a>.</p>
+<p>The loop timer. </p>
 
-<p class="reference">Wird benutzt von <a class="el" href="_drum_machine_8cpp_source.html#l00086">setBPM()</a>, <a class="el" href="_drum_machine_8cpp_source.html#l00037">startLoop()</a> und <a class="el" href="_drum_machine_8cpp_source.html#l00058">stopLoop()</a>.</p>
+<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8h_source.html#l00046">46</a> der Datei <a class="el" href="_drum_machine_8h_source.html">DrumMachine.h</a>.</p>
+
+<p class="reference">Wird benutzt von <a class="el" href="_drum_machine_8cpp_source.html#l00089">setBPM()</a>, <a class="el" href="_drum_machine_8cpp_source.html#l00037">startLoop()</a> und <a class="el" href="_drum_machine_8cpp_source.html#l00061">stopLoop()</a>.</p>
 
 </div>
 </div>
-<a id="aefcf483d61e72bec26f9215a800c705c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aefcf483d61e72bec26f9215a800c705c">&#9670;&nbsp;</a></span>LOOP_PRECISION_NANOS</h2>
+<a id="a847e09081c90dbb33c602506d5adb743"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a847e09081c90dbb33c602506d5adb743">&#9670;&nbsp;</a></span>LOOP_PRECISION_NANOS</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -693,7 +845,7 @@ Private Attribute</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const long DrumMachine::LOOP_PRECISION_NANOS = 10000</td>
+          <td class="memname">const unsigned long DrumMachine::LOOP_PRECISION_NANOS = 10000</td>
         </tr>
       </table>
   </td>
@@ -703,7 +855,9 @@ Private Attribute</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8h_source.html#l00028">28</a> der Datei <a class="el" href="_drum_machine_8h_source.html">DrumMachine.h</a>.</p>
+<p>The precision with which the loop timer runs. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8h_source.html#l00036">36</a> der Datei <a class="el" href="_drum_machine_8h_source.html">DrumMachine.h</a>.</p>
 
 </div>
 </div>
@@ -727,9 +881,67 @@ Private Attribute</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8h_source.html#l00033">33</a> der Datei <a class="el" href="_drum_machine_8h_source.html">DrumMachine.h</a>.</p>
+<p>Stores whether the loop is running or not. </p>
 
-<p class="reference">Wird benutzt von <a class="el" href="_drum_machine_8cpp_source.html#l00122">isLoopRunning()</a>, <a class="el" href="_drum_machine_8cpp_source.html#l00037">startLoop()</a> und <a class="el" href="_drum_machine_8cpp_source.html#l00058">stopLoop()</a>.</p>
+<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8h_source.html#l00042">42</a> der Datei <a class="el" href="_drum_machine_8h_source.html">DrumMachine.h</a>.</p>
+
+<p class="reference">Wird benutzt von <a class="el" href="_drum_machine_8cpp_source.html#l00127">isLoopRunning()</a>, <a class="el" href="_drum_machine_8cpp_source.html#l00037">startLoop()</a> und <a class="el" href="_drum_machine_8cpp_source.html#l00061">stopLoop()</a>.</p>
+
+</div>
+</div>
+<a id="a0b64f2e265bb9fc06729090b7e05c005"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b64f2e265bb9fc06729090b7e05c005">&#9670;&nbsp;</a></span>MAX_BPM</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned short DrumMachine::MAX_BPM = 220</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The highest value the bpm can be. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8h_source.html#l00032">32</a> der Datei <a class="el" href="_drum_machine_8h_source.html">DrumMachine.h</a>.</p>
+
+<p class="reference">Wird benutzt von <a class="el" href="_drum_machine_8cpp_source.html#l00089">setBPM()</a>.</p>
+
+</div>
+</div>
+<a id="a221c0cd8b5cf3f2342f57ad539d3628a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a221c0cd8b5cf3f2342f57ad539d3628a">&#9670;&nbsp;</a></span>MIN_BPM</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned short DrumMachine::MIN_BPM = 20</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The lowest value the bpm can be. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8h_source.html#l00031">31</a> der Datei <a class="el" href="_drum_machine_8h_source.html">DrumMachine.h</a>.</p>
+
+<p class="reference">Wird benutzt von <a class="el" href="_drum_machine_8cpp_source.html#l00089">setBPM()</a>.</p>
 
 </div>
 </div>
@@ -753,9 +965,11 @@ Private Attribute</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8h_source.html#l00035">35</a> der Datei <a class="el" href="_drum_machine_8h_source.html">DrumMachine.h</a>.</p>
+<p>Reference to the regsitered OutputController. </p>
 
-<p class="reference">Wird benutzt von <a class="el" href="_drum_machine_8cpp_source.html#l00074">increaseActiveSampleVolume()</a>, <a class="el" href="_drum_machine_8cpp_source.html#l00126">setActiveSample()</a>, <a class="el" href="_drum_machine_8cpp_source.html#l00086">setBPM()</a>, <a class="el" href="_drum_machine_8cpp_source.html#l00037">startLoop()</a> und <a class="el" href="_drum_machine_8cpp_source.html#l00145">toggleSampleAtBeat()</a>.</p>
+<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8h_source.html#l00045">45</a> der Datei <a class="el" href="_drum_machine_8h_source.html">DrumMachine.h</a>.</p>
+
+<p class="reference">Wird benutzt von <a class="el" href="_drum_machine_8cpp_source.html#l00077">increaseActiveSampleVolume()</a>, <a class="el" href="_drum_machine_8cpp_source.html#l00131">setActiveSample()</a>, <a class="el" href="_drum_machine_8cpp_source.html#l00089">setBPM()</a>, <a class="el" href="_drum_machine_8cpp_source.html#l00037">startLoop()</a> und <a class="el" href="_drum_machine_8cpp_source.html#l00152">toggleSampleAtBeat()</a>.</p>
 
 </div>
 </div>
@@ -779,14 +993,16 @@ Private Attribute</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8h_source.html#l00039">39</a> der Datei <a class="el" href="_drum_machine_8h_source.html">DrumMachine.h</a>.</p>
+<p>A List of all added samples. </p>
 
-<p class="reference">Wird benutzt von <a class="el" href="_drum_machine_8cpp_source.html#l00117">addSample()</a>, <a class="el" href="_drum_machine_8cpp_source.html#l00074">increaseActiveSampleVolume()</a>, <a class="el" href="_drum_machine_8cpp_source.html#l00126">setActiveSample()</a>, <a class="el" href="_drum_machine_8cpp_source.html#l00100">setMasterVolume()</a>, <a class="el" href="_drum_machine_8cpp_source.html#l00037">startLoop()</a> und <a class="el" href="_drum_machine_8cpp_source.html#l00145">toggleSampleAtBeat()</a>.</p>
+<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8h_source.html#l00047">47</a> der Datei <a class="el" href="_drum_machine_8h_source.html">DrumMachine.h</a>.</p>
+
+<p class="reference">Wird benutzt von <a class="el" href="_drum_machine_8cpp_source.html#l00122">addSample()</a>, <a class="el" href="_drum_machine_8cpp_source.html#l00077">increaseActiveSampleVolume()</a>, <a class="el" href="_drum_machine_8cpp_source.html#l00131">setActiveSample()</a>, <a class="el" href="_drum_machine_8cpp_source.html#l00105">setMasterVolume()</a>, <a class="el" href="_drum_machine_8cpp_source.html#l00037">startLoop()</a> und <a class="el" href="_drum_machine_8cpp_source.html#l00152">toggleSampleAtBeat()</a>.</p>
 
 </div>
 </div>
-<a id="a55ad96f0aa2452d631e49bcdde9fd538"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a55ad96f0aa2452d631e49bcdde9fd538">&#9670;&nbsp;</a></span>beatMillis</h2>
+<a id="a25ff7c6556614ab787a626a5c6ec1683"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25ff7c6556614ab787a626a5c6ec1683">&#9670;&nbsp;</a></span>TOTAL_BEATS</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -795,7 +1011,7 @@ Private Attribute</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int DrumMachine::beatMillis</td>
+          <td class="memname">const unsigned short DrumMachine::TOTAL_BEATS = <a class="el" href="class_drum_machine.html#a54e06658e13970dc7679051e8194f546">WHOLE_BEATS</a> * <a class="el" href="class_drum_machine.html#ab4d2056f29b6eb959aa379afcc6b70f0">BEATS_PER_WHOLE_BEAT</a></td>
         </tr>
       </table>
   </td>
@@ -805,33 +1021,9 @@ Private Attribute</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8h_source.html#l00032">32</a> der Datei <a class="el" href="_drum_machine_8h_source.html">DrumMachine.h</a>.</p>
+<p>The resulting total beats the loop has. </p>
 
-<p class="reference">Wird benutzt von <a class="el" href="_drum_machine_8cpp_source.html#l00086">setBPM()</a> und <a class="el" href="_drum_machine_8cpp_source.html#l00037">startLoop()</a>.</p>
-
-</div>
-</div>
-<a id="a455f582474a17cbd618940a3d4a4791d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a455f582474a17cbd618940a3d4a4791d">&#9670;&nbsp;</a></span>TOTAL_BEATS</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int DrumMachine::TOTAL_BEATS = 16</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8h_source.html#l00027">27</a> der Datei <a class="el" href="_drum_machine_8h_source.html">DrumMachine.h</a>.</p>
+<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8h_source.html#l00035">35</a> der Datei <a class="el" href="_drum_machine_8h_source.html">DrumMachine.h</a>.</p>
 
 <p class="reference">Wird benutzt von <a class="el" href="_drum_machine_8cpp_source.html#l00037">startLoop()</a>.</p>
 
@@ -857,9 +1049,37 @@ Private Attribute</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8h_source.html#l00034">34</a> der Datei <a class="el" href="_drum_machine_8h_source.html">DrumMachine.h</a>.</p>
+<p>The current master volume. </p>
 
-<p class="reference">Wird benutzt von <a class="el" href="_drum_machine_8cpp_source.html#l00117">addSample()</a>, <a class="el" href="_drum_machine_8cpp_source.html#l00113">getMasterVolume()</a>, <a class="el" href="_drum_machine_8cpp_source.html#l00064">increaseVolume()</a> und <a class="el" href="_drum_machine_8cpp_source.html#l00100">setMasterVolume()</a>.</p>
+<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8h_source.html#l00043">43</a> der Datei <a class="el" href="_drum_machine_8h_source.html">DrumMachine.h</a>.</p>
+
+<p class="reference">Wird benutzt von <a class="el" href="_drum_machine_8cpp_source.html#l00122">addSample()</a>, <a class="el" href="_drum_machine_8cpp_source.html#l00118">getMasterVolume()</a>, <a class="el" href="_drum_machine_8cpp_source.html#l00067">increaseVolume()</a> und <a class="el" href="_drum_machine_8cpp_source.html#l00105">setMasterVolume()</a>.</p>
+
+</div>
+</div>
+<a id="a54e06658e13970dc7679051e8194f546"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54e06658e13970dc7679051e8194f546">&#9670;&nbsp;</a></span>WHOLE_BEATS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned short DrumMachine::WHOLE_BEATS = 4</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The number of whole beats the loop has. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8h_source.html#l00033">33</a> der Datei <a class="el" href="_drum_machine_8h_source.html">DrumMachine.h</a>.</p>
 
 </div>
 </div>

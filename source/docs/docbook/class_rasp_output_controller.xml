@@ -85,8 +85,8 @@ unsigned short newActiveSample, unsigned short oldActiveSample)</para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>void <link linkend="class_rasp_output_controller_1aa084e570bcf25c75b9389ca63c875f0c">playPositionChange</link> (
-vector&lt; unsigned short &gt; &amp; )</para>
+                        <para>void <link linkend="class_rasp_output_controller_1af0304196681872f9c1f6d6f2e2db14a6">playPositionChange</link> (
+vector&lt; unsigned short &gt; &amp; newPlayArray)</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -101,8 +101,8 @@ unsigned short position, unsigned short playState)</para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>void <link linkend="class_rasp_output_controller_1a27fcbf9e1a1f9c3cefefefd537acc401">blink</link> (
-int )</para>
+                        <para>void <link linkend="class_rasp_output_controller_1a23987d33142c3c09abf8126773f32d99">blink</link> (
+int ledPin)</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -110,7 +110,8 @@ int )</para>
                 <itemizedlist>
                     <listitem>
                         <para>void <link linkend="class_rasp_output_controller_1a5fd551f1aba056356befd71e5bff23f1">setBeatDuration</link> (
-unsigned int beatDuration)</para>
+unsigned int beatDuration)<para><emphasis>Setter of beatDuration.</emphasis></para>
+</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -168,42 +169,217 @@ unsigned int bpm, float volume)</para>
         </section>
         <section>
             <title>Dokumentation der Datenelemente</title>
+            <simplesect>
+                <title>const map&lt;unsigned short, unsigned short&gt; RaspOutputController::outputPinMap</title>                
+<para>All output pins mapped to their functionality </para>
+
+                <para>Definition at line 98 of file RaspOutputController.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>RaspOutputController.h</para></listitem></itemizedlist></para>
+            </simplesect>
         </section>
             <section xml:id="class_rasp_output_controller_1afd7487de7ff81c6b092f4072d4fa80a5">
                 <title>RaspOutputController::RaspOutputController ()</title> <emphasis></emphasis>
                 
+<para>Constructor </para>
+
             </section>
             <section xml:id="class_rasp_output_controller_1afce87d510c0564567e4250b22639d5e0">
                 <title>void RaspOutputController::positionChange (unsigned short newPosition) override</title> <emphasis></emphasis>
                 
+<para>Refreshes the position LED 
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameter                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>newPosition</entry>
+                                <entry>
+<para>the new beat position </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
             </section>
             <section xml:id="class_rasp_output_controller_1a92954cf26d4dd5f7d8835d1d508302c0">
                 <title>void RaspOutputController::activeSampleChange (unsigned short newActiveSample, unsigned short oldActiveSample) override</title> <emphasis></emphasis>
                 
+<para>Activates the passed sample LED. Turns sample LED off, when zero is passed as newActiveSample 
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameter                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>newActiveSample</entry>
+                                <entry>
+<para>the sample, which LED should be turned on </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>oldActiveSample</entry>
+                                <entry>
+<para>the sample, which LED should be turned off </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
             </section>
-            <section xml:id="class_rasp_output_controller_1aa084e570bcf25c75b9389ca63c875f0c">
-                <title>void RaspOutputController::playPositionChange (vector&lt; unsigned short &gt; &amp;) override</title> <emphasis></emphasis>
+            <section xml:id="class_rasp_output_controller_1af0304196681872f9c1f6d6f2e2db14a6">
+                <title>void RaspOutputController::playPositionChange (vector&lt; unsigned short &gt; &amp;newPlayArray) override</title> <emphasis></emphasis>
                 
+<para>Changes the active position LED bar to the passed vector, a one activates a LED and a zero deactivates it 
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameter                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>newPlayArray</entry>
+                                <entry>
+<para>a vector with 16 ones or zeroes </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
             </section>
             <section xml:id="class_rasp_output_controller_1a0778395ee8ec044d04fbfcb2f3b2eb04">
                 <title>void RaspOutputController::playPositionChange (unsigned short position, unsigned short playState) override</title> <emphasis></emphasis>
                 
+<para>Toggles one active position LED. If the position is a first beat position, the blue position LED is turned on, if the state toggles from active to inactive 
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameter                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>position</entry>
+                                <entry>
+<para>the position where to toggle </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>playState</entry>
+                                <entry>
+<para>the new state for the passed position </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
             </section>
-            <section xml:id="class_rasp_output_controller_1a27fcbf9e1a1f9c3cefefefd537acc401">
-                <title>void RaspOutputController::blink (int)</title> <emphasis></emphasis>
+            <section xml:id="class_rasp_output_controller_1a23987d33142c3c09abf8126773f32d99">
+                <title>void RaspOutputController::blink (int ledPin)</title> <emphasis></emphasis>
                 
+<para>Blinks the LED on the passed LED pin. The blink duration is stored in the beatDuration member 
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameter                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>ledPin</entry>
+                                <entry>
+<para>the hardware pin of the connected LED </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
             </section>
             <section xml:id="class_rasp_output_controller_1a5fd551f1aba056356befd71e5bff23f1">
-                <title>void RaspOutputController::setBeatDuration (unsigned int beatDuration) override</title> <emphasis></emphasis>
+                <title>void RaspOutputController::setBeatDuration (unsigned int beatDuration) override</title> <emphasis>Setter of beatDuration.</emphasis>
                 
             </section>
             <section xml:id="class_rasp_output_controller_1ad195a3d664b7c7e5680cd8949203c1fc">
                 <title>void RaspOutputController::showMainScreen (unsigned int bpm) override</title> <emphasis></emphasis>
                 
+<para>Activates the main screen view on the display 
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameter                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>bpm</entry>
+                                <entry>
+<para>the speed of the loop </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
             </section>
             <section xml:id="class_rasp_output_controller_1a613d3a1d1ceb31875be95e4a4b733fba">
                 <title>void RaspOutputController::showSampleScreen (unsigned int bpm, float volume) override</title> <emphasis></emphasis>
                 
+<para>Activates the sample screen on the display 
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameter                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>bpm</entry>
+                                <entry>
+<para>the speed of the loop </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>volume</entry>
+                                <entry>
+<para>the volume of the active sample </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
             </section>
             <section xml:id="class_rasp_output_controller_1afdd3bcfa82341a9d2539233abe7cb617">
                 <title>void RaspOutputController::switchOffAllLed ()</title> <emphasis></emphasis>

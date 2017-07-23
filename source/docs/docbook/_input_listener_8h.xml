@@ -8,6 +8,7 @@
                 <itemizedlist>
                     <listitem>
                         <para>struct <link linkend="class_input_listener">InputListener</link></para>
+<para><emphasis>Interface for input listeners to register in the RaspInputController.</emphasis></para>
                     </listitem>
                 </itemizedlist>
             </para>

@@ -10,6 +10,7 @@
                 <itemizedlist>
                     <listitem>
                         <para>struct <link linkend="class_rasp_input_controller">RaspInputController</link></para>
+<para><emphasis>Responsible for detecting any inputs and passing them to the registered listener to handle them.</emphasis></para>
                     </listitem>
                 </itemizedlist>
             </para>

@@ -27,6 +27,5 @@ var searchData=
   ['samplefile',['sampleFile',['../class_sample.html#ae158342c8d18a05de1c85802f7cfbd2a',1,'Sample']]],
   ['sampleledlist',['sampleLedList',['../class_rasp_output_controller.html#ad0ad19b081450eb1d9cd6548c14a23ea',1,'RaspOutputController']]],
   ['samples',['samples',['../class_drum_machine.html#acf215ead70c41e760556497281aa562e',1,'DrumMachine']]],
-  ['sixteenthnotemillis',['sixteenthNoteMillis',['../class_drum_machine.html#a55ad96f0aa2452d631e49bcdde9fd538',1,'DrumMachine']]],
   ['start_5fstop_5fbutton',['START_STOP_BUTTON',['../namespaceinputs.html#ab1d04ae8b7a7f4d11849c110f20fae10',1,'inputs']]]
 ];

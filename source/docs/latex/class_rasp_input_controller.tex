@@ -2,6 +2,11 @@
 \label{class_rasp_input_controller}\index{Rasp\+Input\+Controller@{Rasp\+Input\+Controller}}
 
 
+Responsible for detecting any inputs and passing them to the registered listener to handle them.  
+
+
+
+
 {\ttfamily \#include $<$Rasp\+Input\+Controller.\+h$>$}
 
 \subsection*{Öffentliche Methoden}
@@ -19,30 +24,30 @@ void \hyperlink{class_rasp_input_controller_a8cb185caa124285987d6b98122cfbea4}{s
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{class_rasp_input_controller_a7e15590d321b382fcb5f4d70959a5cbe}{start\+Polling} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Start polling input events in a specific interval. \end{DoxyCompactList}\item 
 vector$<$ unsigned short $>$ \hyperlink{class_rasp_input_controller_a95a42703b4c0bca34ba966745bad5dff}{get\+Input\+Events} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Check all pins for changes. \end{DoxyCompactList}\item 
 void \hyperlink{class_rasp_input_controller_a5ffc6f68b0c74f31a9b595ff8acc49f1}{initialize\+Pins} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Initialize all pins in order to use them. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attribute}
 \begin{DoxyCompactItemize}
 \item 
 map$<$ unsigned short, unsigned short $>$ \hyperlink{class_rasp_input_controller_a7b59eba5cc562eccc91347ddbd777e50}{output\+Map}
-\item 
+\begin{DoxyCompactList}\small\item\em A physical pin for every button. \end{DoxyCompactList}\item 
 map$<$ unsigned short, bool $>$ \hyperlink{class_rasp_input_controller_ae02dcbb81abe6b6e6e3eaaeef4f3bf4a}{button\+State\+Map}
-\item 
+\begin{DoxyCompactList}\small\item\em Holds the state of every button\+: true means is currently hold down, false means is currently released. \end{DoxyCompactList}\item 
 vector$<$ \hyperlink{class_input_listener}{Input\+Listener} $\ast$ $>$ \hyperlink{class_rasp_input_controller_a5a5a8d99d69c35e206ddf7467e36cfae}{input\+Listener\+List}
-\item 
+\begin{DoxyCompactList}\small\item\em A list of all registered input listeners. \end{DoxyCompactList}\item 
 \hyperlink{class_timer}{Timer} \hyperlink{class_rasp_input_controller_a388779c1ddf9f5910a92cd350cc59e5c}{polling\+Timer}
-\item 
+\begin{DoxyCompactList}\small\item\em A \hyperlink{class_timer}{Timer} for checking all the inputs, lower precision. \end{DoxyCompactList}\item 
 \hyperlink{class_timer}{Timer} \hyperlink{class_rasp_input_controller_a55b065ae154806341fd900a8b61110a5}{rotary\+Polling\+Timer}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em A \hyperlink{class_timer}{Timer} for checking inputs of the rotary button, higher precision. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Ausführliche Beschreibung}
+Responsible for detecting any inputs and passing them to the registered listener to handle them. 
 
-
-Definiert in Zeile 22 der Datei Rasp\+Input\+Controller.\+h.
+Definiert in Zeile 25 der Datei Rasp\+Input\+Controller.\+h.
 
 
 
@@ -53,7 +58,7 @@ Definiert in Zeile 22 der Datei Rasp\+Input\+Controller.\+h.
 \subsubsection{\texorpdfstring{Rasp\+Input\+Controller()}{RaspInputController()}}
 {\footnotesize\ttfamily Rasp\+Input\+Controller\+::\+Rasp\+Input\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
+Constructor 
 
 Definiert in Zeile 4 der Datei Rasp\+Input\+Controller.\+cpp.
 
@@ -70,9 +75,14 @@ Benutzt initialize\+Pins().
 \subsubsection{\texorpdfstring{add\+Input\+Listener()}{addInputListener()}}
 {\footnotesize\ttfamily void Rasp\+Input\+Controller\+::add\+Input\+Listener (\begin{DoxyParamCaption}\item[{\hyperlink{class_input_listener}{Input\+Listener} \&}]{listener }\end{DoxyParamCaption})}
 
+Register a new input listener 
+\begin{DoxyParams}{Parameter}
+{\em listener} & the listener to register. \\
+\hline
+\end{DoxyParams}
 
 
-Definiert in Zeile 98 der Datei Rasp\+Input\+Controller.\+cpp.
+Definiert in Zeile 114 der Datei Rasp\+Input\+Controller.\+cpp.
 
 
 
@@ -90,7 +100,11 @@ Wird benutzt von main().
 
 
 
-Definiert in Zeile 77 der Datei Rasp\+Input\+Controller.\+cpp.
+Check all pins for changes. 
+
+
+
+Definiert in Zeile 88 der Datei Rasp\+Input\+Controller.\+cpp.
 
 
 
@@ -105,6 +119,10 @@ Wird benutzt von start\+Polling().
 \index{initialize\+Pins@{initialize\+Pins}!Rasp\+Input\+Controller@{Rasp\+Input\+Controller}}
 \subsubsection{\texorpdfstring{initialize\+Pins()}{initializePins()}}
 {\footnotesize\ttfamily void Rasp\+Input\+Controller\+::initialize\+Pins (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Initialize all pins in order to use them. 
 
 
 
@@ -124,9 +142,9 @@ Wird benutzt von Rasp\+Input\+Controller().
 \subsubsection{\texorpdfstring{start()}{start()}}
 {\footnotesize\ttfamily void Rasp\+Input\+Controller\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Starts the input listener. 
 
-
-Definiert in Zeile 107 der Datei Rasp\+Input\+Controller.\+cpp.
+Definiert in Zeile 123 der Datei Rasp\+Input\+Controller.\+cpp.
 
 
 
@@ -141,6 +159,10 @@ Wird benutzt von main().
 \index{start\+Polling@{start\+Polling}!Rasp\+Input\+Controller@{Rasp\+Input\+Controller}}
 \subsubsection{\texorpdfstring{start\+Polling()}{startPolling()}}
 {\footnotesize\ttfamily void Rasp\+Input\+Controller\+::start\+Polling (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Start polling input events in a specific interval. 
 
 
 
@@ -160,9 +182,9 @@ Wird benutzt von start().
 \subsubsection{\texorpdfstring{stop()}{stop()}}
 {\footnotesize\ttfamily void Rasp\+Input\+Controller\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+Stops the input listener. 
 
-
-Definiert in Zeile 102 der Datei Rasp\+Input\+Controller.\+cpp.
+Definiert in Zeile 118 der Datei Rasp\+Input\+Controller.\+cpp.
 
 
 
@@ -212,7 +234,11 @@ Benutzt polling\+Timer, rotary\+Polling\+Timer und Timer\+::stop().
 \end{DoxyCode}
 
 
-Definiert in Zeile 55 der Datei Rasp\+Input\+Controller.\+h.
+Holds the state of every button\+: true means is currently hold down, false means is currently released. 
+
+
+
+Definiert in Zeile 58 der Datei Rasp\+Input\+Controller.\+h.
 
 
 
@@ -226,7 +252,11 @@ Wird benutzt von get\+Input\+Events() und start\+Polling().
 
 
 
-Definiert in Zeile 86 der Datei Rasp\+Input\+Controller.\+h.
+A list of all registered input listeners. 
+
+
+
+Definiert in Zeile 89 der Datei Rasp\+Input\+Controller.\+h.
 
 
 
@@ -273,7 +303,11 @@ Wird benutzt von add\+Input\+Listener() und start\+Polling().
 \end{DoxyCode}
 
 
-Definiert in Zeile 24 der Datei Rasp\+Input\+Controller.\+h.
+A physical pin for every button. 
+
+
+
+Definiert in Zeile 27 der Datei Rasp\+Input\+Controller.\+h.
 
 
 
@@ -287,7 +321,11 @@ Wird benutzt von get\+Input\+Events(), initialize\+Pins() und start\+Polling().
 
 
 
-Definiert in Zeile 87 der Datei Rasp\+Input\+Controller.\+h.
+A \hyperlink{class_timer}{Timer} for checking all the inputs, lower precision. 
+
+
+
+Definiert in Zeile 90 der Datei Rasp\+Input\+Controller.\+h.
 
 
 
@@ -301,7 +339,11 @@ Wird benutzt von start\+Polling() und stop().
 
 
 
-Definiert in Zeile 88 der Datei Rasp\+Input\+Controller.\+h.
+A \hyperlink{class_timer}{Timer} for checking inputs of the rotary button, higher precision. 
+
+
+
+Definiert in Zeile 91 der Datei Rasp\+Input\+Controller.\+h.
 
 
 

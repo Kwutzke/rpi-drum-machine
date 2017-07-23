@@ -9,21 +9,21 @@
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>const float VOLUME_STEP_SIZE</para>
+                        <para>const float VOLUME_STEP_SIZE<para><emphasis>Value to increase the volume in one step.</emphasis></para></para>
                     </listitem>
                 </itemizedlist>
             </para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>const unsigned short BPM_STEP_SIZE</para>
+                        <para>const unsigned short BPM_STEP_SIZE<para><emphasis>Value to increase the bpm in one step.</emphasis></para></para>
                     </listitem>
                 </itemizedlist>
             </para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>DrumMachine &amp; drumMachine</para>
+                        <para>DrumMachine &amp; drumMachine<para><emphasis>Reference to the drum machine thats used by the listener.</emphasis></para></para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -42,20 +42,66 @@
                 <itemizedlist>
                     <listitem>
                         <para>void <link linkend="class_drum_machine_input_listener_1a44a620b09b35885a26befe84fa6e1ab0">inputEvent</link> (
-unsigned short event)</para>
+unsigned short input)</para>
                     </listitem>
                 </itemizedlist>
             </para>
         </section>
+    <simplesect>
+
+<para><link linkend="class_input_listener">InputListener</link> implementation for the drum machine to handle input events. </para>
+    </simplesect>
         <section>
             <title>Dokumentation der Datenelemente</title>
         </section>
             <section xml:id="class_drum_machine_input_listener_1a7552c36ebae9e6ae49f8929ae9853354">
                 <title>DrumMachineInputListener::DrumMachineInputListener (DrumMachine &amp;drumMachine)</title> <emphasis></emphasis>
                 
+<para>Constructor 
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameter                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>drumMachine</entry>
+                                <entry>
+<para>the drum machine to be used by the listener </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
             </section>
             <section xml:id="class_drum_machine_input_listener_1a44a620b09b35885a26befe84fa6e1ab0">
                 <title>void DrumMachineInputListener::inputEvent (unsigned short event) override</title> <emphasis></emphasis>
                 
+<para>Called when new input events are detected 
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameter                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>input</entry>
+                                <entry>
+<para>the input that was detected. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
             </section>
 </section>

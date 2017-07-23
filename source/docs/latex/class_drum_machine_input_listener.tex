@@ -2,6 +2,11 @@
 \label{class_drum_machine_input_listener}\index{Drum\+Machine\+Input\+Listener@{Drum\+Machine\+Input\+Listener}}
 
 
+\hyperlink{class_input_listener}{Input\+Listener} implementation for the drum machine to handle input events.  
+
+
+
+
 {\ttfamily \#include $<$Drum\+Machine\+Input\+Listener.\+h$>$}
 
 Klassendiagramm für Drum\+Machine\+Input\+Listener\+:\begin{figure}[H]
@@ -21,17 +26,17 @@ void \hyperlink{class_drum_machine_input_listener_a44a620b09b35885a26befe84fa6e1
 \begin{DoxyCompactItemize}
 \item 
 const float \hyperlink{class_drum_machine_input_listener_a983e85ff0ebfbb3de0a917134488570c}{V\+O\+L\+U\+M\+E\+\_\+\+S\+T\+E\+P\+\_\+\+S\+I\+ZE} = 0.\+05f
-\item 
+\begin{DoxyCompactList}\small\item\em Value to increase the volume in one step. \end{DoxyCompactList}\item 
 const unsigned short \hyperlink{class_drum_machine_input_listener_ad4f83d21be6ff1ba703a27d8c9a04c9a}{B\+P\+M\+\_\+\+S\+T\+E\+P\+\_\+\+S\+I\+ZE} = 1
-\item 
+\begin{DoxyCompactList}\small\item\em Value to increase the bpm in one step. \end{DoxyCompactList}\item 
 \hyperlink{class_drum_machine}{Drum\+Machine} \& \hyperlink{class_drum_machine_input_listener_ae3f80aad0a5c4b2e4ad2712423102feb}{drum\+Machine}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Reference to the drum machine thats used by the listener. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Ausführliche Beschreibung}
+\hyperlink{class_input_listener}{Input\+Listener} implementation for the drum machine to handle input events. 
 
-
-Definiert in Zeile 8 der Datei Drum\+Machine\+Input\+Listener.\+h.
+Definiert in Zeile 11 der Datei Drum\+Machine\+Input\+Listener.\+h.
 
 
 
@@ -42,6 +47,11 @@ Definiert in Zeile 8 der Datei Drum\+Machine\+Input\+Listener.\+h.
 \subsubsection{\texorpdfstring{Drum\+Machine\+Input\+Listener()}{DrumMachineInputListener()}}
 {\footnotesize\ttfamily Drum\+Machine\+Input\+Listener\+::\+Drum\+Machine\+Input\+Listener (\begin{DoxyParamCaption}\item[{\hyperlink{class_drum_machine}{Drum\+Machine} \&}]{drum\+Machine }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
+Constructor 
+\begin{DoxyParams}{Parameter}
+{\em drum\+Machine} & the drum machine to be used by the listener \\
+\hline
+\end{DoxyParams}
 
 
 Definiert in Zeile 8 der Datei Drum\+Machine\+Input\+Listener.\+cpp.
@@ -53,8 +63,13 @@ Definiert in Zeile 8 der Datei Drum\+Machine\+Input\+Listener.\+cpp.
 \index{Drum\+Machine\+Input\+Listener@{Drum\+Machine\+Input\+Listener}!input\+Event@{input\+Event}}
 \index{input\+Event@{input\+Event}!Drum\+Machine\+Input\+Listener@{Drum\+Machine\+Input\+Listener}}
 \subsubsection{\texorpdfstring{input\+Event()}{inputEvent()}}
-{\footnotesize\ttfamily void Drum\+Machine\+Input\+Listener\+::input\+Event (\begin{DoxyParamCaption}\item[{unsigned short}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Drum\+Machine\+Input\+Listener\+::input\+Event (\begin{DoxyParamCaption}\item[{unsigned short}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
+Called when new input events are detected 
+\begin{DoxyParams}{Parameter}
+{\em input} & the input that was detected. \\
+\hline
+\end{DoxyParams}
 
 
 Implementiert \hyperlink{class_input_listener_a1a3d74f2ffc108c773511ea4be250f7d}{Input\+Listener}.
@@ -78,7 +93,11 @@ Benutzt beat\+::\+B\+E\+A\+T1, beat\+::\+B\+E\+A\+T10, inputs\+::\+B\+E\+A\+T10\
 
 
 
-Definiert in Zeile 11 der Datei Drum\+Machine\+Input\+Listener.\+h.
+Value to increase the bpm in one step. 
+
+
+
+Definiert in Zeile 14 der Datei Drum\+Machine\+Input\+Listener.\+h.
 
 
 
@@ -92,7 +111,11 @@ Wird benutzt von input\+Event().
 
 
 
-Definiert in Zeile 13 der Datei Drum\+Machine\+Input\+Listener.\+h.
+Reference to the drum machine thats used by the listener. 
+
+
+
+Definiert in Zeile 16 der Datei Drum\+Machine\+Input\+Listener.\+h.
 
 
 
@@ -106,7 +129,11 @@ Wird benutzt von input\+Event().
 
 
 
-Definiert in Zeile 10 der Datei Drum\+Machine\+Input\+Listener.\+h.
+Value to increase the volume in one step. 
+
+
+
+Definiert in Zeile 13 der Datei Drum\+Machine\+Input\+Listener.\+h.
 
 
 

@@ -9,21 +9,21 @@
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>int precision</para>
+                        <para>unsigned int precision<para><emphasis>The precision in nanoseconds.</emphasis></para></para>
                     </listitem>
                 </itemizedlist>
             </para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>int interval</para>
+                        <para>unsigned int interval<para><emphasis>The interval in milliseconds.</emphasis></para></para>
                     </listitem>
                 </itemizedlist>
             </para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>bool running</para>
+                        <para>bool running<para><emphasis>Is the timer currently running.</emphasis></para></para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -44,8 +44,8 @@
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para> <link linkend="class_timer_1a5712c673f940c048eaa49440e9a57fab">Timer</link> (
-int , int )</para>
+                        <para> <link linkend="class_timer_1a5b659c4fb572c549dad183a7b32b08df">Timer</link> (
+unsigned int interval, unsigned int precision)</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -68,7 +68,7 @@ Function &amp;&amp; callback, Args &amp;&amp;... args)</para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>int <link linkend="class_timer_1a998fabc8cce38394c4b4536fc81db438">getInterval</link> (
+                        <para>unsigned int <link linkend="class_timer_1a6cbb88b5073d95fd871a012966005618">getInterval</link> (
 )</para>
                     </listitem>
                 </itemizedlist>
@@ -76,12 +76,16 @@ Function &amp;&amp; callback, Args &amp;&amp;... args)</para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>void <link linkend="class_timer_1aa88ef228247b40496f8474253bda3a0e">setInterval</link> (
-int interval)</para>
+                        <para>void <link linkend="class_timer_1a0b24293bfc154f7432b1c52ac857d853">setInterval</link> (
+unsigned int interval)</para>
                     </listitem>
                 </itemizedlist>
             </para>
         </section>
+    <simplesect>
+
+<para>Call a callback function in a given interval, determining the time with a given precision. Higher precision means higher demand in resources. </para>
+    </simplesect>
         <section>
             <title>Dokumentation der Datenelemente</title>
         </section>
@@ -89,24 +93,107 @@ int interval)</para>
                 <title>long long Timer::getCurrentTimeMillis ()</title> <emphasis></emphasis>
                 
             </section>
-            <section xml:id="class_timer_1a5712c673f940c048eaa49440e9a57fab">
-                <title>Timer::Timer (int, int)</title> <emphasis></emphasis>
+            <section xml:id="class_timer_1a5b659c4fb572c549dad183a7b32b08df">
+                <title>Timer::Timer (unsigned int interval, unsigned int precision)</title> <emphasis></emphasis>
                 
+<para>Constructor 
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameter                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>interval</entry>
+                                <entry>
+<para>the interval in milliseconds in which the callback function is called. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>precision</entry>
+                                <entry>
+<para>the precision in nanoseconds with which to determine the current time. Higher precision means higher demand in resources. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
             </section>
             <section xml:id="class_timer_1adcf70b5065e31461e27309c96065437a">
                 <title>void Timer::start (Function &amp;&amp;callback, Args &amp;&amp;... args)</title> <emphasis></emphasis>
                 
+<para>Starts the timer. 
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameter                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>callback</entry>
+                                <entry>
+<para>the callback function the timer calls in the determined interval. </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>args</entry>
+                                <entry>
+<para>arguments to pass to the callback function upon call. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
             </section>
             <section xml:id="class_timer_1a63f0eb44b27402196590a03781515dba">
                 <title>void Timer::stop ()</title> <emphasis></emphasis>
                 
+<para>Stops the timer </para>
+
             </section>
-            <section xml:id="class_timer_1a998fabc8cce38394c4b4536fc81db438">
-                <title>int Timer::getInterval () const</title> <emphasis></emphasis>
+            <section xml:id="class_timer_1a6cbb88b5073d95fd871a012966005618">
+                <title>unsigned int Timer::getInterval () const</title> <emphasis></emphasis>
                 
+<para><formalpara><title>Rückgabe: </title>
+
+<para>the interval with which the timer calls the callback function. </para>
+</formalpara>
+</para>
+
             </section>
-            <section xml:id="class_timer_1aa88ef228247b40496f8474253bda3a0e">
-                <title>void Timer::setInterval (int interval)</title> <emphasis></emphasis>
+            <section xml:id="class_timer_1a0b24293bfc154f7432b1c52ac857d853">
+                <title>void Timer::setInterval (unsigned int interval)</title> <emphasis></emphasis>
                 
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameter                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>interval</entry>
+                                <entry>
+<para>the interval with which the timer calls the callback function. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
             </section>
 </section>

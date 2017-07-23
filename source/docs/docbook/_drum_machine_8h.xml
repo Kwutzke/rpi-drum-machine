@@ -12,6 +12,8 @@
                 <itemizedlist>
                     <listitem>
                         <para>struct <link linkend="class_drum_machine">DrumMachine</link></para>
+<para><emphasis>Handles the beat loop and samples including correct timing for the give BPM,
+         playing them at the correct beat steps and increasing and decreasing the volume.</emphasis></para>
                     </listitem>
                 </itemizedlist>
             </para>

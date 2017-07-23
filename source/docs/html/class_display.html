@@ -95,10 +95,10 @@ $(document).ready(function(){initNavTree('class_display.html','');});
 Öffentliche Methoden</h2></td></tr>
 <tr class="memitem:ae972fffea6f7ca1d627ef48c3d841bb3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_display.html#ae972fffea6f7ca1d627ef48c3d841bb3">Display</a> ()</td></tr>
 <tr class="separator:ae972fffea6f7ca1d627ef48c3d841bb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a47a3c1e96d0ade385063c87197182f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_display.html#a1a47a3c1e96d0ade385063c87197182f">showMainScreen</a> (unsigned int bpm)</td></tr>
-<tr class="separator:a1a47a3c1e96d0ade385063c87197182f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74eafd254fbd1f6757ea77501b2b4d04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_display.html#a74eafd254fbd1f6757ea77501b2b4d04">showSampleScreen</a> (unsigned int bpm, float volume)</td></tr>
-<tr class="separator:a74eafd254fbd1f6757ea77501b2b4d04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae248dcbc4c44b911c35918feacaf31a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_display.html#aae248dcbc4c44b911c35918feacaf31a">showMainScreen</a> (unsigned short bpm)</td></tr>
+<tr class="separator:aae248dcbc4c44b911c35918feacaf31a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae00838dd994556524fb8d86d7e855770"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_display.html#ae00838dd994556524fb8d86d7e855770">showSampleScreen</a> (unsigned short bpm, float volume)</td></tr>
+<tr class="separator:ae00838dd994556524fb8d86d7e855770"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attribute</h2></td></tr>
@@ -106,8 +106,9 @@ Private Attribute</h2></td></tr>
 <tr class="separator:ad8b8ca65d118eb16461932c6630463a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
-<div class="textblock">
-<p class="definition">Definiert in Zeile <a class="el" href="_display_8h_source.html#l00008">8</a> der Datei <a class="el" href="_display_8h_source.html">Display.h</a>.</p>
+<div class="textblock"><p>A class that holds information an maintains the functionalaty of an Adafruit SSD1306 <a class="el" href="class_display.html">Display</a> </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_display_8h_source.html#l00012">12</a> der Datei <a class="el" href="_display_8h_source.html">Display.h</a>.</p>
 </div><h2 class="groupheader">Beschreibung der Konstruktoren und Destruktoren</h2>
 <a id="ae972fffea6f7ca1d627ef48c3d841bb3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae972fffea6f7ca1d627ef48c3d841bb3">&#9670;&nbsp;</a></span>Display()</h2>
@@ -123,16 +124,17 @@ Private Attribute</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Constructor </p>
 
 <p class="definition">Definiert in Zeile <a class="el" href="_display_8cpp_source.html#l00003">3</a> der Datei <a class="el" href="_display_8cpp_source.html">Display.cpp</a>.</p>
 
-<p class="reference">Benutzt <a class="el" href="_display_8h_source.html#l00017">display</a>.</p>
+<p class="reference">Benutzt <a class="el" href="_display_8h_source.html#l00033">display</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Dokumentation der Elementfunktionen</h2>
-<a id="a1a47a3c1e96d0ade385063c87197182f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1a47a3c1e96d0ade385063c87197182f">&#9670;&nbsp;</a></span>showMainScreen()</h2>
+<a id="aae248dcbc4c44b911c35918feacaf31a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae248dcbc4c44b911c35918feacaf31a">&#9670;&nbsp;</a></span>showMainScreen()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -140,23 +142,29 @@ Private Attribute</h2></td></tr>
         <tr>
           <td class="memname">void Display::showMainScreen </td>
           <td>(</td>
-          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramtype">unsigned short&#160;</td>
           <td class="paramname"><em>bpm</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Activates the main screen </p><dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bpm</td><td>the speed of the loop, is shown in the display </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definiert in Zeile <a class="el" href="_display_8cpp_source.html#l00008">8</a> der Datei <a class="el" href="_display_8cpp_source.html">Display.cpp</a>.</p>
 
-<p class="reference">Benutzt <a class="el" href="_display_8h_source.html#l00017">display</a>.</p>
+<p class="reference">Benutzt <a class="el" href="_display_8h_source.html#l00033">display</a>.</p>
 
 <p class="reference">Wird benutzt von <a class="el" href="_rasp_output_controller_8cpp_source.html#l00092">RaspOutputController::showMainScreen()</a>.</p>
 
 </div>
 </div>
-<a id="a74eafd254fbd1f6757ea77501b2b4d04"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a74eafd254fbd1f6757ea77501b2b4d04">&#9670;&nbsp;</a></span>showSampleScreen()</h2>
+<a id="ae00838dd994556524fb8d86d7e855770"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae00838dd994556524fb8d86d7e855770">&#9670;&nbsp;</a></span>showSampleScreen()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -164,7 +172,7 @@ Private Attribute</h2></td></tr>
         <tr>
           <td class="memname">void Display::showSampleScreen </td>
           <td>(</td>
-          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramtype">unsigned short&#160;</td>
           <td class="paramname"><em>bpm</em>, </td>
         </tr>
         <tr>
@@ -180,10 +188,17 @@ Private Attribute</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Activates the sample screen </p><dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bpm</td><td>the speed of the loop, is shown in the display </td></tr>
+    <tr><td class="paramname">volume</td><td>the volume of the active sample </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definiert in Zeile <a class="el" href="_display_8cpp_source.html#l00018">18</a> der Datei <a class="el" href="_display_8cpp_source.html">Display.cpp</a>.</p>
 
-<p class="reference">Benutzt <a class="el" href="_display_8h_source.html#l00017">display</a>.</p>
+<p class="reference">Benutzt <a class="el" href="_display_8h_source.html#l00033">display</a>.</p>
 
 <p class="reference">Wird benutzt von <a class="el" href="_rasp_output_controller_8cpp_source.html#l00096">RaspOutputController::showSampleScreen()</a>.</p>
 
@@ -210,7 +225,7 @@ Private Attribute</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definiert in Zeile <a class="el" href="_display_8h_source.html#l00017">17</a> der Datei <a class="el" href="_display_8h_source.html">Display.h</a>.</p>
+<p class="definition">Definiert in Zeile <a class="el" href="_display_8h_source.html#l00033">33</a> der Datei <a class="el" href="_display_8h_source.html">Display.h</a>.</p>
 
 <p class="reference">Wird benutzt von <a class="el" href="_display_8cpp_source.html#l00003">Display()</a>, <a class="el" href="_display_8cpp_source.html#l00008">showMainScreen()</a> und <a class="el" href="_display_8cpp_source.html#l00018">showSampleScreen()</a>.</p>
 

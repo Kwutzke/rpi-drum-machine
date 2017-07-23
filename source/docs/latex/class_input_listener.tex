@@ -2,6 +2,11 @@
 \label{class_input_listener}\index{Input\+Listener@{Input\+Listener}}
 
 
+Interface for input listeners to register in the \hyperlink{class_rasp_input_controller}{Rasp\+Input\+Controller}.  
+
+
+
+
 {\ttfamily \#include $<$Input\+Listener.\+h$>$}
 
 Klassendiagramm für Input\+Listener\+:\begin{figure}[H]
@@ -18,9 +23,9 @@ virtual void \hyperlink{class_input_listener_a1a3d74f2ffc108c773511ea4be250f7d}{
 
 
 \subsection{Ausführliche Beschreibung}
+Interface for input listeners to register in the \hyperlink{class_rasp_input_controller}{Rasp\+Input\+Controller}. 
 
-
-Definiert in Zeile 8 der Datei Input\+Listener.\+h.
+Definiert in Zeile 11 der Datei Input\+Listener.\+h.
 
 
 
@@ -31,6 +36,11 @@ Definiert in Zeile 8 der Datei Input\+Listener.\+h.
 \subsubsection{\texorpdfstring{input\+Event()}{inputEvent()}}
 {\footnotesize\ttfamily virtual void Input\+Listener\+::input\+Event (\begin{DoxyParamCaption}\item[{unsigned short}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
+Called when new input events are detected 
+\begin{DoxyParams}{Parameter}
+{\em input} & the input that was detected. \\
+\hline
+\end{DoxyParams}
 
 
 Implementiert in \hyperlink{class_drum_machine_input_listener_a44a620b09b35885a26befe84fa6e1ab0}{Drum\+Machine\+Input\+Listener}.

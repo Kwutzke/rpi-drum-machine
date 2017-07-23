@@ -9,6 +9,7 @@
                 <itemizedlist>
                     <listitem>
                         <para>struct <link linkend="class_drum_machine_input_listener">DrumMachineInputListener</link></para>
+<para><emphasis>InputListener implementation for the drum machine to handle input events.</emphasis></para>
                     </listitem>
                 </itemizedlist>
             </para>

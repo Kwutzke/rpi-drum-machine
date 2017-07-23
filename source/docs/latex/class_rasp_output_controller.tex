@@ -19,14 +19,14 @@ void \hyperlink{class_rasp_output_controller_afce87d510c0564567e4250b22639d5e0}{
 \item 
 void \hyperlink{class_rasp_output_controller_a92954cf26d4dd5f7d8835d1d508302c0}{active\+Sample\+Change} (unsigned short new\+Active\+Sample, unsigned short old\+Active\+Sample) override
 \item 
-void \hyperlink{class_rasp_output_controller_aa084e570bcf25c75b9389ca63c875f0c}{play\+Position\+Change} (vector$<$ unsigned short $>$ \&) override
+void \hyperlink{class_rasp_output_controller_af0304196681872f9c1f6d6f2e2db14a6}{play\+Position\+Change} (vector$<$ unsigned short $>$ \&new\+Play\+Array) override
 \item 
 void \hyperlink{class_rasp_output_controller_a0778395ee8ec044d04fbfcb2f3b2eb04}{play\+Position\+Change} (unsigned short position, unsigned short play\+State) override
 \item 
-void \hyperlink{class_rasp_output_controller_a27fcbf9e1a1f9c3cefefefd537acc401}{blink} (int)
+void \hyperlink{class_rasp_output_controller_a23987d33142c3c09abf8126773f32d99}{blink} (int led\+Pin)
 \item 
 void \hyperlink{class_rasp_output_controller_a5fd551f1aba056356befd71e5bff23f1}{set\+Beat\+Duration} (unsigned int beat\+Duration) override
-\item 
+\begin{DoxyCompactList}\small\item\em Setter of beat\+Duration. \end{DoxyCompactList}\item 
 void \hyperlink{class_rasp_output_controller_ad195a3d664b7c7e5680cd8949203c1fc}{show\+Main\+Screen} (unsigned int bpm) override
 \item 
 void \hyperlink{class_rasp_output_controller_a613d3a1d1ceb31875be95e4a4b733fba}{show\+Sample\+Screen} (unsigned int bpm, float volume) override
@@ -75,7 +75,7 @@ Definiert in Zeile 38 der Datei Rasp\+Output\+Controller.\+h.
 \subsubsection{\texorpdfstring{Rasp\+Output\+Controller()}{RaspOutputController()}}
 {\footnotesize\ttfamily Rasp\+Output\+Controller\+::\+Rasp\+Output\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
+Constructor 
 
 Definiert in Zeile 10 der Datei Rasp\+Output\+Controller.\+cpp.
 
@@ -92,6 +92,13 @@ Benutzt initialize\+Pins(), switch\+Off\+All\+Led() und switch\+On\+First\+Beat\
 \subsubsection{\texorpdfstring{active\+Sample\+Change()}{activeSampleChange()}}
 {\footnotesize\ttfamily void Rasp\+Output\+Controller\+::active\+Sample\+Change (\begin{DoxyParamCaption}\item[{unsigned short}]{new\+Active\+Sample,  }\item[{unsigned short}]{old\+Active\+Sample }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
+Activates the passed sample L\+ED. Turns sample L\+ED off, when zero is passed as new\+Active\+Sample 
+\begin{DoxyParams}{Parameter}
+{\em new\+Active\+Sample} & the sample, which L\+ED should be turned on \\
+\hline
+{\em old\+Active\+Sample} & the sample, which L\+ED should be turned off \\
+\hline
+\end{DoxyParams}
 
 
 Implementiert \hyperlink{class_a_output_controller_ac2b87aa6291c38cc65185bf6a37ae300}{A\+Output\+Controller}.
@@ -104,12 +111,17 @@ Definiert in Zeile 57 der Datei Rasp\+Output\+Controller.\+cpp.
 
 Benutzt sample\+::\+N\+O\+\_\+\+S\+A\+M\+P\+LE, output\+Pin\+Map, switch\+Off\+All\+Red\+Beat\+Leds() und switch\+On\+First\+Beat\+Led().
 
-\mbox{\Hypertarget{class_rasp_output_controller_a27fcbf9e1a1f9c3cefefefd537acc401}\label{class_rasp_output_controller_a27fcbf9e1a1f9c3cefefefd537acc401}} 
+\mbox{\Hypertarget{class_rasp_output_controller_a23987d33142c3c09abf8126773f32d99}\label{class_rasp_output_controller_a23987d33142c3c09abf8126773f32d99}} 
 \index{Rasp\+Output\+Controller@{Rasp\+Output\+Controller}!blink@{blink}}
 \index{blink@{blink}!Rasp\+Output\+Controller@{Rasp\+Output\+Controller}}
 \subsubsection{\texorpdfstring{blink()}{blink()}}
 {\footnotesize\ttfamily void Rasp\+Output\+Controller\+::blink (\begin{DoxyParamCaption}\item[{int}]{led\+Pin }\end{DoxyParamCaption})}
 
+Blinks the L\+ED on the passed L\+ED pin. The blink duration is stored in the beat\+Duration member 
+\begin{DoxyParams}{Parameter}
+{\em led\+Pin} & the hardware pin of the connected L\+ED \\
+\hline
+\end{DoxyParams}
 
 
 Definiert in Zeile 51 der Datei Rasp\+Output\+Controller.\+cpp.
@@ -140,12 +152,17 @@ Benutzt output\+Pin\+Map.
 
 Wird benutzt von Rasp\+Output\+Controller().
 
-\mbox{\Hypertarget{class_rasp_output_controller_aa084e570bcf25c75b9389ca63c875f0c}\label{class_rasp_output_controller_aa084e570bcf25c75b9389ca63c875f0c}} 
+\mbox{\Hypertarget{class_rasp_output_controller_af0304196681872f9c1f6d6f2e2db14a6}\label{class_rasp_output_controller_af0304196681872f9c1f6d6f2e2db14a6}} 
 \index{Rasp\+Output\+Controller@{Rasp\+Output\+Controller}!play\+Position\+Change@{play\+Position\+Change}}
 \index{play\+Position\+Change@{play\+Position\+Change}!Rasp\+Output\+Controller@{Rasp\+Output\+Controller}}
 \subsubsection{\texorpdfstring{play\+Position\+Change()}{playPositionChange()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily void Rasp\+Output\+Controller\+::play\+Position\+Change (\begin{DoxyParamCaption}\item[{vector$<$ unsigned short $>$ \&}]{new\+Play\+Array }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
+Changes the active position L\+ED bar to the passed vector, a one activates a L\+ED and a zero deactivates it 
+\begin{DoxyParams}{Parameter}
+{\em new\+Play\+Array} & a vector with 16 ones or zeroes \\
+\hline
+\end{DoxyParams}
 
 
 Implementiert \hyperlink{class_a_output_controller_a7bad658dfc3eb1223ace0c0454130818}{A\+Output\+Controller}.
@@ -160,6 +177,13 @@ Definiert in Zeile 70 der Datei Rasp\+Output\+Controller.\+cpp.
 \subsubsection{\texorpdfstring{play\+Position\+Change()}{playPositionChange()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily void Rasp\+Output\+Controller\+::play\+Position\+Change (\begin{DoxyParamCaption}\item[{unsigned short}]{position,  }\item[{unsigned short}]{play\+State }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
+Toggles one active position L\+ED. If the position is a first beat position, the blue position L\+ED is turned on, if the state toggles from active to inactive 
+\begin{DoxyParams}{Parameter}
+{\em position} & the position where to toggle \\
+\hline
+{\em play\+State} & the new state for the passed position \\
+\hline
+\end{DoxyParams}
 
 
 Implementiert \hyperlink{class_a_output_controller_a15c1300df5606bf7d4838b41a45c31e3}{A\+Output\+Controller}.
@@ -178,6 +202,11 @@ Benutzt state\+::\+M\+U\+TE, output\+Pin\+Map und state\+::\+P\+L\+AY.
 \subsubsection{\texorpdfstring{position\+Change()}{positionChange()}}
 {\footnotesize\ttfamily void Rasp\+Output\+Controller\+::position\+Change (\begin{DoxyParamCaption}\item[{unsigned short}]{new\+Position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
+Refreshes the position L\+ED 
+\begin{DoxyParams}{Parameter}
+{\em new\+Position} & the new beat position \\
+\hline
+\end{DoxyParams}
 
 
 Implementiert \hyperlink{class_a_output_controller_a5a818a40e2911411d378032b8b2fb6c8}{A\+Output\+Controller}.
@@ -198,6 +227,10 @@ Benutzt blink() und output\+Pin\+Map.
 
 
 
+Setter of beat\+Duration. 
+
+
+
 Implementiert \hyperlink{class_a_output_controller_ac685432fc57d2441ecb548386554d2c9}{A\+Output\+Controller}.
 
 
@@ -214,6 +247,11 @@ Benutzt beat\+Blink\+Delay.
 \subsubsection{\texorpdfstring{show\+Main\+Screen()}{showMainScreen()}}
 {\footnotesize\ttfamily void Rasp\+Output\+Controller\+::show\+Main\+Screen (\begin{DoxyParamCaption}\item[{unsigned int}]{bpm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
+Activates the main screen view on the display 
+\begin{DoxyParams}{Parameter}
+{\em bpm} & the speed of the loop \\
+\hline
+\end{DoxyParams}
 
 
 Implementiert \hyperlink{class_a_output_controller_ace7df9de71110b3615156b9bd06a9349}{A\+Output\+Controller}.
@@ -232,6 +270,13 @@ Benutzt display und Display\+::show\+Main\+Screen().
 \subsubsection{\texorpdfstring{show\+Sample\+Screen()}{showSampleScreen()}}
 {\footnotesize\ttfamily void Rasp\+Output\+Controller\+::show\+Sample\+Screen (\begin{DoxyParamCaption}\item[{unsigned int}]{bpm,  }\item[{float}]{volume }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
+Activates the sample screen on the display 
+\begin{DoxyParams}{Parameter}
+{\em bpm} & the speed of the loop \\
+\hline
+{\em volume} & the volume of the active sample \\
+\hline
+\end{DoxyParams}
 
 
 Implementiert \hyperlink{class_a_output_controller_aab53d12a6aa6f38d0e4ead69e85ed4fe}{A\+Output\+Controller}.
@@ -309,7 +354,7 @@ Wird benutzt von active\+Sample\+Change() und Rasp\+Output\+Controller().
 
 
 
-Definiert in Zeile 144 der Datei Rasp\+Output\+Controller.\+h.
+Definiert in Zeile 180 der Datei Rasp\+Output\+Controller.\+h.
 
 
 
@@ -334,7 +379,7 @@ Wird benutzt von blink() und set\+Beat\+Duration().
 \end{DoxyCode}
 
 
-Definiert in Zeile 129 der Datei Rasp\+Output\+Controller.\+h.
+Definiert in Zeile 169 der Datei Rasp\+Output\+Controller.\+h.
 
 \mbox{\Hypertarget{class_rasp_output_controller_a0bb52cfee18c44cd2ed64dea27d5ccc4}\label{class_rasp_output_controller_a0bb52cfee18c44cd2ed64dea27d5ccc4}} 
 \index{Rasp\+Output\+Controller@{Rasp\+Output\+Controller}!display@{display}}
@@ -344,7 +389,7 @@ Definiert in Zeile 129 der Datei Rasp\+Output\+Controller.\+h.
 
 
 
-Definiert in Zeile 138 der Datei Rasp\+Output\+Controller.\+h.
+Definiert in Zeile 178 der Datei Rasp\+Output\+Controller.\+h.
 
 
 
@@ -370,7 +415,7 @@ Wird benutzt von show\+Main\+Screen() und show\+Sample\+Screen().
 \end{DoxyCode}
 
 
-Definiert in Zeile 123 der Datei Rasp\+Output\+Controller.\+h.
+Definiert in Zeile 163 der Datei Rasp\+Output\+Controller.\+h.
 
 \mbox{\Hypertarget{class_rasp_output_controller_afd8a9fff94ee9bcf63bcbe6fa810aa32}\label{class_rasp_output_controller_afd8a9fff94ee9bcf63bcbe6fa810aa32}} 
 \index{Rasp\+Output\+Controller@{Rasp\+Output\+Controller}!output\+Pin\+Map@{output\+Pin\+Map}}
@@ -378,9 +423,9 @@ Definiert in Zeile 123 der Datei Rasp\+Output\+Controller.\+h.
 \subsubsection{\texorpdfstring{output\+Pin\+Map}{outputPinMap}}
 {\footnotesize\ttfamily const map$<$unsigned short, unsigned short$>$ Rasp\+Output\+Controller\+::output\+Pin\+Map\hspace{0.3cm}{\ttfamily [private]}}
 
+All output pins mapped to their functionality 
 
-
-Definiert in Zeile 59 der Datei Rasp\+Output\+Controller.\+h.
+Definiert in Zeile 98 der Datei Rasp\+Output\+Controller.\+h.
 
 
 
@@ -404,7 +449,7 @@ Wird benutzt von active\+Sample\+Change(), initialize\+Pins(), play\+Position\+C
 \end{DoxyCode}
 
 
-Definiert in Zeile 118 der Datei Rasp\+Output\+Controller.\+h.
+Definiert in Zeile 158 der Datei Rasp\+Output\+Controller.\+h.
 
 
 
@@ -426,7 +471,7 @@ Wird benutzt von switch\+Off\+All\+Red\+Beat\+Leds().
 \end{DoxyCode}
 
 
-Definiert in Zeile 134 der Datei Rasp\+Output\+Controller.\+h.
+Definiert in Zeile 174 der Datei Rasp\+Output\+Controller.\+h.
 
 
 
