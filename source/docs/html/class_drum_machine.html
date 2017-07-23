@@ -142,7 +142,7 @@ Private Attribute</h2></td></tr>
 <tr class="separator:afaa80be4a66f759ab590a5f67f327b67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46f20be98c71d1429a473e03bf092df3"><td class="memItemLeft" align="right" valign="top">unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drum_machine.html#a46f20be98c71d1429a473e03bf092df3">currentBeat</a></td></tr>
 <tr class="separator:a46f20be98c71d1429a473e03bf092df3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55ad96f0aa2452d631e49bcdde9fd538"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drum_machine.html#a55ad96f0aa2452d631e49bcdde9fd538">sixteenthNoteMillis</a></td></tr>
+<tr class="memitem:a55ad96f0aa2452d631e49bcdde9fd538"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drum_machine.html#a55ad96f0aa2452d631e49bcdde9fd538">beatMillis</a></td></tr>
 <tr class="separator:a55ad96f0aa2452d631e49bcdde9fd538"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ac5a8c113e5a32a557f069e8d93cca8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drum_machine.html#a4ac5a8c113e5a32a557f069e8d93cca8">loopRunning</a></td></tr>
 <tr class="separator:a4ac5a8c113e5a32a557f069e8d93cca8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -478,7 +478,7 @@ Private Attribute</h2></td></tr>
 
 <p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8cpp_source.html#l00086">86</a> der Datei <a class="el" href="_drum_machine_8cpp_source.html">DrumMachine.cpp</a>.</p>
 
-<p class="reference">Benutzt <a class="el" href="_drum_machine_8h_source.html#l00030">bpm</a>, <a class="el" href="_drum_machine_8h_source.html#l00038">loop</a>, <a class="el" href="_drum_machine_8h_source.html#l00035">outputController</a>, <a class="el" href="class_a_output_controller.html#ac685432fc57d2441ecb548386554d2c9">AOutputController::setBeatDuration()</a>, <a class="el" href="_timer_8cpp_source.html#l00015">Timer::setInterval()</a>, <a class="el" href="class_a_output_controller.html#ace7df9de71110b3615156b9bd06a9349">AOutputController::showMainScreen()</a> und <a class="el" href="_drum_machine_8h_source.html#l00032">sixteenthNoteMillis</a>.</p>
+<p class="reference">Benutzt <a class="el" href="_drum_machine_8h_source.html#l00030">bpm</a>, <a class="el" href="_drum_machine_8h_source.html#l00038">loop</a>, <a class="el" href="_drum_machine_8h_source.html#l00035">outputController</a>, <a class="el" href="class_a_output_controller.html#ac685432fc57d2441ecb548386554d2c9">AOutputController::setBeatDuration()</a>, <a class="el" href="_timer_8cpp_source.html#l00015">Timer::setInterval()</a>, <a class="el" href="class_a_output_controller.html#ace7df9de71110b3615156b9bd06a9349">AOutputController::showMainScreen()</a> und <a class="el" href="_drum_machine_8h_source.html#l00032">beatMillis</a>.</p>
 
 <p class="reference">Wird benutzt von <a class="el" href="_drum_machine_8cpp_source.html#l00160">increaseBpm()</a> und <a class="el" href="main_8cpp_source.html#l00011">setup()</a>.</p>
 
@@ -525,7 +525,7 @@ Private Attribute</h2></td></tr>
 
 <p class="definition">Definiert in Zeile <a class="el" href="_drum_machine_8cpp_source.html#l00037">37</a> der Datei <a class="el" href="_drum_machine_8cpp_source.html">DrumMachine.cpp</a>.</p>
 
-<p class="reference">Benutzt <a class="el" href="_drum_machine_8h_source.html#l00031">currentBeat</a>, <a class="el" href="_drum_machine_8h_source.html#l00038">loop</a>, <a class="el" href="_drum_machine_8h_source.html#l00033">loopRunning</a>, <a class="el" href="_drum_machine_8h_source.html#l00035">outputController</a>, <a class="el" href="class_a_output_controller.html#a5a818a40e2911411d378032b8b2fb6c8">AOutputController::positionChange()</a>, <a class="el" href="_drum_machine_8h_source.html#l00039">samples</a>, <a class="el" href="_timer_8cpp_source.html#l00015">Timer::setInterval()</a>, <a class="el" href="_drum_machine_8h_source.html#l00032">sixteenthNoteMillis</a>, <a class="el" href="_timer_8h_source.html#l00027">Timer::start()</a> und <a class="el" href="_drum_machine_8h_source.html#l00027">TOTAL_BEATS</a>.</p>
+<p class="reference">Benutzt <a class="el" href="_drum_machine_8h_source.html#l00031">currentBeat</a>, <a class="el" href="_drum_machine_8h_source.html#l00038">loop</a>, <a class="el" href="_drum_machine_8h_source.html#l00033">loopRunning</a>, <a class="el" href="_drum_machine_8h_source.html#l00035">outputController</a>, <a class="el" href="class_a_output_controller.html#a5a818a40e2911411d378032b8b2fb6c8">AOutputController::positionChange()</a>, <a class="el" href="_drum_machine_8h_source.html#l00039">samples</a>, <a class="el" href="_timer_8cpp_source.html#l00015">Timer::setInterval()</a>, <a class="el" href="_drum_machine_8h_source.html#l00032">beatMillis</a>, <a class="el" href="_timer_8h_source.html#l00027">Timer::start()</a> und <a class="el" href="_drum_machine_8h_source.html#l00027">TOTAL_BEATS</a>.</p>
 
 <p class="reference">Wird benutzt von <a class="el" href="_drum_machine_input_listener_8cpp_source.html#l00010">DrumMachineInputListener::inputEvent()</a>.</p>
 
@@ -786,7 +786,7 @@ Private Attribute</h2></td></tr>
 </div>
 </div>
 <a id="a55ad96f0aa2452d631e49bcdde9fd538"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a55ad96f0aa2452d631e49bcdde9fd538">&#9670;&nbsp;</a></span>sixteenthNoteMillis</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a55ad96f0aa2452d631e49bcdde9fd538">&#9670;&nbsp;</a></span>beatMillis</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -795,7 +795,7 @@ Private Attribute</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int DrumMachine::sixteenthNoteMillis</td>
+          <td class="memname">int DrumMachine::beatMillis</td>
         </tr>
       </table>
   </td>

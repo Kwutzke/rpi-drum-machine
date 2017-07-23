@@ -8,6 +8,7 @@ using namespace beat;
 DrumMachineInputListener::DrumMachineInputListener(DrumMachine& drumMachine): drumMachine(drumMachine) { }
 
 void DrumMachineInputListener::inputEvent(unsigned short input) {
+    // Evaluate the pressed button and call corresponding events in drum machine
     switch (input) {
         case START_STOP_BUTTON:
             if (drumMachine.isLoopRunning()) {

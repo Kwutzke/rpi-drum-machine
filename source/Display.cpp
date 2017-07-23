@@ -5,7 +5,7 @@ Display::Display() {
     display.begin();
 }
 
-void Display::showMainScreen(unsigned int bpm) {
+void Display::showMainScreen(unsigned short bpm) {
     display.clearDisplay();
 
     display.setTextColor(WHITE);
@@ -15,7 +15,7 @@ void Display::showMainScreen(unsigned int bpm) {
     display.display();
 }
 
-void Display::showSampleScreen(unsigned int bpm, float volume) {
+void Display::showSampleScreen(unsigned short bpm, float volume) {
     display.clearDisplay();
 
     display.setTextColor(WHITE);

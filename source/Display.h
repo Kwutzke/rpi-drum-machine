@@ -20,14 +20,14 @@ public:
      * Activates the main screen
      * @param bpm the speed of the loop, is shown in the display
      */
-    void showMainScreen(unsigned int bpm);
+    void showMainScreen(unsigned short bpm);
 
     /**
      * Activates the sample screen
      * @param bpm the speed of the loop, is shown in the display
      * @param volume the volume of the active sample
      */
-    void showSampleScreen(unsigned int bpm, float volume);
+    void showSampleScreen(unsigned short bpm, float volume);
 
 private:
     Adafruit_SSD1306 display; //< The display

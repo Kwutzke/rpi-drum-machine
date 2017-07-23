@@ -10,19 +10,34 @@
 using namespace std;
 using namespace std::chrono;
 
+/**
+ * @brief   Call a callback function in a given interval, determining the time with a given precision. Higher precision
+ *          means higher demand in resources.
+ */
 class Timer {
 private:
-    int precision;
-    int interval;
-    bool running;
+    unsigned int precision; ///< The precision in nanoseconds
+    unsigned int interval;  ///< The interval in milliseconds
+    bool running;           ///< Is the timer currently running
 
-    long long getCurrentTimeMillis() {
+    long long getCurrentTimeMillis() { ///< Helper function to get the current time in milliseconds
         return duration_cast<milliseconds>(system_clock::now().time_since_epoch()).count();
     }
 
 public:
-    Timer(int, int);
+    /**
+     * Constructor
+     * @param interval the interval in milliseconds in which the callback function is called.
+     * @param precision the precision in nanoseconds with which to determine the current time. Higher precision
+     *                  means higher demand in resources.
+     */
+    Timer(unsigned int interval, unsigned int precision);
 
+    /**
+     * Starts the timer.
+     * @param callback the callback function the timer calls in the determined interval.
+     * @param args arguments to pass to the callback function upon call.
+     */
     template<typename Function, typename... Args>
     void start(Function &&callback, Args &&... args) {
         running = true;
@@ -41,11 +56,20 @@ public:
         }
     }
 
+    /**
+     * Stops the timer
+     */
     void stop();
 
-    int getInterval() const;
+    /**
+     * @return the interval with which the timer calls the callback function.
+     */
+    unsigned int getInterval() const;
 
-    void setInterval(int interval);
+    /**
+     * @param interval the interval with which the timer calls the callback function.
+     */
+    void setInterval(unsigned int interval);
 };
 
 

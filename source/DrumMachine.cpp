@@ -7,9 +7,9 @@ using namespace std::chrono;
 using namespace std;
 using namespace sample;
 
-DrumMachine::DrumMachine(AOutputController &raspOutputController) : loopRunning(false), currentBeat(0), volume(1),
-                                                                    outputController(raspOutputController),
-                                                                    loop(sixteenthNoteMillis,
+DrumMachine::DrumMachine(AOutputController &outputController) : loopRunning(false), currentBeat(0), volume(1),
+                                                                    outputController(outputController),
+                                                                    loop(beatMillis,
                                                                          (int) LOOP_PRECISION_NANOS),
                                                                     activeSample(NO_SAMPLE) {
     this->openAudio();
@@ -37,12 +37,15 @@ void DrumMachine::allocateChannels() {
 void DrumMachine::startLoop() {
     if (!loopRunning) {
         loopRunning = true;
-        loop.setInterval(sixteenthNoteMillis);
+        // Set the interval for the timer
+        loop.setInterval(beatMillis);
         loop.start([this]() {
+            // play samples, let them determine if they are active on the current beat
             for (size_t i = 0; i < samples.size(); i++) {
                 this->samples.at(i).playSample(currentBeat);
             }
 
+            // Fire event
             this->outputController.positionChange(currentBeat);
 
             // next beat
@@ -84,11 +87,13 @@ void DrumMachine::increaseActiveSampleVolume(float volume) {
 }
 
 void DrumMachine::setBPM(unsigned short bpm) {
-    if (bpm >= 20 && bpm <= 220) {
+    if (bpm >= this->MIN_BPM && bpm <= this->MAX_BPM) {
         this->bpm = bpm;
-        this->sixteenthNoteMillis = 60000 / bpm / 4;
-        this->loop.setInterval(sixteenthNoteMillis);
-        this->outputController.setBeatDuration((unsigned int) (sixteenthNoteMillis * .8f));
+        this->beatMillis = static_cast<unsigned int>(60000 / bpm / BEATS_PER_WHOLE_BEAT);
+        // The timer needs to be updated
+        this->loop.setInterval(beatMillis);
+        // Fire events
+        this->outputController.setBeatDuration((unsigned int) (beatMillis * .8f));
         this->outputController.showMainScreen(bpm);
     }
 }
@@ -124,18 +129,20 @@ bool DrumMachine::isLoopRunning() {
 }
 
 void DrumMachine::setActiveSample(unsigned short newActiveSample) {
-
+    // Check if samples were deselected
     if (newActiveSample == this->activeSample) {
         newActiveSample = NO_SAMPLE;
         this->outputController.showMainScreen(getBPM());
     }
 
+    // Fire events for the change
     this->outputController.activeSampleChange(newActiveSample, this->activeSample);
     this->activeSample = newActiveSample;
 
     if (newActiveSample >= this->samples.size()) {
         cout << "WARNING: No Sample " << newActiveSample << "found!" << endl;
     } else {
+        // Fire more events
         cout << "Old active sample: " << this->activeSample << " new active sample: " << newActiveSample << endl;
         this->outputController.playPositionChange(this->samples.at(this->activeSample).getPlayArray());
         this->outputController.showSampleScreen(getBPM(), this->samples.at(this->activeSample).getVolume());
@@ -144,9 +151,12 @@ void DrumMachine::setActiveSample(unsigned short newActiveSample) {
 
 void DrumMachine::toggleSampleAtBeat(unsigned short beat) {
     if (this->activeSample != NO_SAMPLE) {
+        // Store the new information in the active sample
         this->samples.at(activeSample).togglePlayAtBeat(beat);
+        // Fire events
         this->outputController.playPositionChange(beat, this->samples.at(this->activeSample).getPlayArray().at(beat));
     } else {
+        // When no samples are active, beat buttons function as preview for each sample
         if (beat >= 0 && beat < this->samples.size()) {
             this->samples.at(beat).play();
         }

@@ -19,6 +19,9 @@ namespace inputs {
 
 using namespace inputs;
 
+/**
+ * @brief   Responsible for detecting any inputs and passing them to the registered listener to handle them.
+ */
 class RaspInputController {
 private:
     map<unsigned short, unsigned short> outputMap = {
@@ -50,7 +53,7 @@ private:
             {BEAT11_BUTTON,          402},
             {BEAT12_BUTTON,          406},
             {START_STOP_BUTTON,      0}
-    };
+    }; ///< A physical pin for every button
 
     map<unsigned short, bool> buttonStateMap = {
             {VOLUME_BPM_UP_BUTTON,   false},
@@ -81,27 +84,40 @@ private:
             {BEAT15_BUTTON,          false},
             {BEAT16_BUTTON,          false},
             {START_STOP_BUTTON,      false}
-    }; ///<
+    }; ///< Holds the state of every button: true means is currently hold down, false means is currently released
 
-    vector<InputListener *> inputListenerList;
-    Timer pollingTimer;
-    Timer rotaryPollingTimer;
+    vector<InputListener *> inputListenerList;  ///< A list of all registered input listeners
+    Timer pollingTimer;                         ///< A Timer for checking all the inputs, lower precision
+    Timer rotaryPollingTimer;                   ///< A Timer for checking inputs of the rotary button, higher precision
 
 
-    void startPolling();
+    void startPolling();                        ///< Start polling input events in a specific interval
 
-    vector<unsigned short> getInputEvents();
+    vector<unsigned short> getInputEvents();    ///< Check all pins for changes
 
-    void initializePins();
+    void initializePins();                      ///< Initialize all pins in order to use them
 
 public:
 
+    /**
+     * Constructor
+     */
     RaspInputController();
 
+    /**
+     * Register a new input listener
+     * @param listener the listener to register.
+     */
     void addInputListener(InputListener &listener);
 
+    /**
+     * Stops the input listener.
+     */
     void stop();
 
+    /**
+     * Starts the input listener.
+     */
     void start();
 };
 

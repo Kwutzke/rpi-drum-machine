@@ -9,7 +9,7 @@ Sample::Sample(const char *samplePath) : playArray(16, 0), volume(1), masterVolu
     }
 }
 
-void Sample::playSample(int currentBeat) {
+void Sample::playSample(unsigned short currentBeat) {
     if (this->playArray.at((unsigned long) currentBeat) == 1) {
         thread t([this]() {
             this->play();
@@ -28,7 +28,7 @@ void Sample::setMixVolume() {
     Mix_VolumeChunk(this->sampleFile, volume);
 }
 
-void Sample::playAtBeat(unsigned int beatPosition) {
+void Sample::playAtBeat(unsigned short beatPosition) {
     playArray.at(beatPosition) = 1;
 }
 

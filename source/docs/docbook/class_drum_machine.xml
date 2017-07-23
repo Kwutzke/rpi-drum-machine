@@ -37,7 +37,7 @@
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>int sixteenthNoteMillis</para>
+                        <para>int beatMillis</para>
                     </listitem>
                 </itemizedlist>
             </para>

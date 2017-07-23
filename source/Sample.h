@@ -42,7 +42,7 @@ public:
      * Checks if the sample is active for the passed beat position and if so, plays it
      * @param currentBeat the current beat position of the running loop
      */
-    void playSample(int currentBeat);
+    void playSample(unsigned short currentBeat);
 
     /// Plays sample, when called
     void play();
@@ -51,7 +51,7 @@ public:
      * Activates sample at the passed beatPosition
      * @param beatPosition the beat position, where to activate the sample
      */
-    void playAtBeat(unsigned int beatPosition);
+    void playAtBeat(unsigned short beatPosition);
 
     /**
      * Toggles sample state at the passed beatPosition from active to inactive or vice versa

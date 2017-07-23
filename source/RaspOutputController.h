@@ -177,11 +177,11 @@ private:
 
     Display display; //< The OLED display
 
+    unsigned int beatBlinkDelay; //< The duration from the moment a sample starts to play, until the next sample starts to play
+
     void switchOffAllLed(); //< Turns all LED's off
 
     void switchOffAllRedBeatLeds(); //< Turns all red LED's off
-
-    unsigned int beatBlinkDelay; //< The duration from the moment a sample starts to play, until the next sample starts to play
 
     void initializePins(); //< Sets all output pins into mode output
 
