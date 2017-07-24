@@ -1,28 +1,28 @@
 var menudata={children:[
-{text:"Hauptseite",url:"index.html"},
-{text:"Namensbereiche",url:"namespaces.html",children:[
-{text:"Liste aller Namensbereiche",url:"namespaces.html"},
-{text:"Elemente eines Namensbereiches",url:"namespacemembers.html",children:[
-{text:"Alle",url:"namespacemembers.html",children:[
+{text:"Main Page",url:"index.html"},
+{text:"Namespaces",url:"namespaces.html",children:[
+{text:"Namespace List",url:"namespaces.html"},
+{text:"Namespace Members",url:"namespacemembers.html",children:[
+{text:"All",url:"namespacemembers.html",children:[
 {text:"b",url:"namespacemembers.html#index_b"},
 {text:"m",url:"namespacemembers.html#index_m"},
 {text:"n",url:"namespacemembers.html#index_n"},
 {text:"p",url:"namespacemembers.html#index_p"},
 {text:"s",url:"namespacemembers.html#index_s"},
 {text:"v",url:"namespacemembers.html#index_v"}]},
-{text:"Variablen",url:"namespacemembers_vars.html",children:[
+{text:"Variables",url:"namespacemembers_vars.html",children:[
 {text:"b",url:"namespacemembers_vars.html#index_b"},
 {text:"m",url:"namespacemembers_vars.html#index_m"},
 {text:"n",url:"namespacemembers_vars.html#index_n"},
 {text:"p",url:"namespacemembers_vars.html#index_p"},
 {text:"s",url:"namespacemembers_vars.html#index_s"},
 {text:"v",url:"namespacemembers_vars.html#index_v"}]}]}]},
-{text:"Klassen",url:"annotated.html",children:[
-{text:"Auflistung der Klassen",url:"annotated.html"},
-{text:"Klassen-Verzeichnis",url:"classes.html"},
-{text:"Klassenhierarchie",url:"hierarchy.html"},
-{text:"Klassen-Elemente",url:"functions.html",children:[
-{text:"Alle",url:"functions.html",children:[
+{text:"Classes",url:"annotated.html",children:[
+{text:"Class List",url:"annotated.html"},
+{text:"Class Index",url:"classes.html"},
+{text:"Class Hierarchy",url:"hierarchy.html"},
+{text:"Class Members",url:"functions.html",children:[
+{text:"All",url:"functions.html",children:[
 {text:"a",url:"functions.html#index_a"},
 {text:"b",url:"functions.html#index_b"},
 {text:"c",url:"functions.html#index_c"},
@@ -38,7 +38,7 @@ var menudata={children:[
 {text:"t",url:"functions.html#index_t"},
 {text:"v",url:"functions.html#index_v"},
 {text:"w",url:"functions.html#index_w"}]},
-{text:"Funktionen",url:"functions_func.html",children:[
+{text:"Functions",url:"functions_func.html",children:[
 {text:"a",url:"functions_func.html#index_a"},
 {text:"b",url:"functions_func.html#index_b"},
 {text:"d",url:"functions_func.html#index_d"},
@@ -49,7 +49,7 @@ var menudata={children:[
 {text:"r",url:"functions_func.html#index_r"},
 {text:"s",url:"functions_func.html#index_s"},
 {text:"t",url:"functions_func.html#index_t"}]},
-{text:"Variablen",url:"functions_vars.html",children:[
+{text:"Variables",url:"functions_vars.html",children:[
 {text:"a",url:"functions_vars.html#index_a"},
 {text:"b",url:"functions_vars.html#index_b"},
 {text:"c",url:"functions_vars.html#index_c"},
@@ -65,8 +65,8 @@ var menudata={children:[
 {text:"t",url:"functions_vars.html#index_t"},
 {text:"v",url:"functions_vars.html#index_v"},
 {text:"w",url:"functions_vars.html#index_w"}]}]}]},
-{text:"Dateien",url:"files.html",children:[
-{text:"Auflistung der Dateien",url:"files.html"},
-{text:"Datei-Elemente",url:"globals.html",children:[
-{text:"Alle",url:"globals.html"},
-{text:"Funktionen",url:"globals_func.html"}]}]}]}
+{text:"Files",url:"files.html",children:[
+{text:"File List",url:"files.html"},
+{text:"File Members",url:"globals.html",children:[
+{text:"All",url:"globals.html"},
+{text:"Functions",url:"globals_func.html"}]}]}]}

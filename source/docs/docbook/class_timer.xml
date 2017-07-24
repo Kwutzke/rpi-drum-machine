@@ -5,7 +5,7 @@
     <programlisting>#include <link linkend="_timer_8h">&lt;Timer.h&gt;</link></programlisting>
 </para>
         <section>
-            <title>Private Attribute</title>
+            <title>Private Attributes</title>
             <para>
                 <itemizedlist>
                     <listitem>
@@ -87,7 +87,7 @@ unsigned int interval)</para>
 <para>Call a callback function in a given interval, determining the time with a given precision. Higher precision means higher demand in resources. </para>
     </simplesect>
         <section>
-            <title>Dokumentation der Datenelemente</title>
+            <title>Member Data Documentation</title>
         </section>
             <section xml:id="class_timer_1a39a332f8ce3a45ed8d78c772755342c8">
                 <title>long long Timer::getCurrentTimeMillis ()</title> <emphasis></emphasis>
@@ -100,7 +100,7 @@ unsigned int interval)</para>
                 <formalpara>
                     <title/>
                     <table frame="all">
-                        <title>Parameter                        </title>
+                        <title>Parameters                        </title>
                         <tgroup cols="2" align="left" colsep="1" rowsep="1">
                         <colspec colwidth="1*"/>
                         <colspec colwidth="4*"/>
@@ -131,7 +131,7 @@ unsigned int interval)</para>
                 <formalpara>
                     <title/>
                     <table frame="all">
-                        <title>Parameter                        </title>
+                        <title>Parameters                        </title>
                         <tgroup cols="2" align="left" colsep="1" rowsep="1">
                         <colspec colwidth="1*"/>
                         <colspec colwidth="4*"/>
@@ -164,7 +164,7 @@ unsigned int interval)</para>
             <section xml:id="class_timer_1a6cbb88b5073d95fd871a012966005618">
                 <title>unsigned int Timer::getInterval () const</title> <emphasis></emphasis>
                 
-<para><formalpara><title>Rückgabe: </title>
+<para><formalpara><title>Returns: </title>
 
 <para>the interval with which the timer calls the callback function. </para>
 </formalpara>
@@ -178,7 +178,7 @@ unsigned int interval)</para>
                 <formalpara>
                     <title/>
                     <table frame="all">
-                        <title>Parameter                        </title>
+                        <title>Parameters                        </title>
                         <tgroup cols="2" align="left" colsep="1" rowsep="1">
                         <colspec colwidth="1*"/>
                         <colspec colwidth="4*"/>

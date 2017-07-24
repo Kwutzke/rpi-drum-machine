@@ -8,7 +8,7 @@
     <programlisting>#include &quot;RaspInputController.h&quot;</programlisting>
     <programlisting>#include &quot;DrumMachineInputListener.h&quot;</programlisting>
         <section>
-            <title>Funktionen</title>
+            <title>Functions</title>
             <para>
                 <itemizedlist>
                     <listitem>
@@ -27,7 +27,7 @@
             </para>
         </section>
     <simplesect>
-        <title>Ausführliche Beschreibung</title>
+        <title>Detailed Description</title>
     <para>Definition in file /Users/kilian/Development/EntwMM/Arduino Drum Machine/source/main.cpp</para>
     </simplesect>
 </section>

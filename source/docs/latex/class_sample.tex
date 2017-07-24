@@ -1,4 +1,4 @@
-\hypertarget{class_sample}{}\section{Sample Klassenreferenz}
+\hypertarget{class_sample}{}\section{Sample Class Reference}
 \label{class_sample}\index{Sample@{Sample}}
 
 
@@ -9,7 +9,7 @@ A class that holds and maintains information about a sample audio file, which ca
 
 {\ttfamily \#include $<$Sample.\+h$>$}
 
-\subsection*{Öffentliche Methoden}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_sample_a7aea6b090998a430341aa6d1d6222c63}{Sample} (const char $\ast$sample\+Path)
@@ -30,14 +30,14 @@ void \hyperlink{class_sample_af8ad49b65a536c535393e3968516b871}{set\+Master\+Vol
 \begin{DoxyCompactList}\small\item\em Setter of member master\+Volume. \end{DoxyCompactList}\item 
 vector$<$ unsigned short $>$ \& \hyperlink{class_sample_a5728b28ce6f6ee19a1b84eddded4fa97}{get\+Play\+Array} ()
 \end{DoxyCompactItemize}
-\subsection*{Private Methoden}
+\subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{class_sample_a6d13988721d2190947f65969d4737a48}{set\+Mix\+Volume} ()
 \begin{DoxyCompactList}\small\item\em Sets the mix volume. \end{DoxyCompactList}\item 
 float \hyperlink{class_sample_afceddb412ab50a67cb98ca6b72456f24}{get\+Master\+Volume} ()
 \begin{DoxyCompactList}\small\item\em Getter of master Volume. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Private Attribute}
+\subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 Mix\+\_\+\+Chunk $\ast$ \hyperlink{class_sample_ae158342c8d18a05de1c85802f7cfbd2a}{sample\+File}
@@ -50,14 +50,14 @@ float \hyperlink{class_sample_a2d48ff8caf8425c37cf74130afb0c87a}{master\+Volume}
 \begin{DoxyCompactList}\small\item\em The master volume of the sample. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Ausführliche Beschreibung}
+\subsection{Detailed Description}
 A class that holds and maintains information about a sample audio file, which can be played by the Drum Machine. 
 
-Definiert in Zeile 32 der Datei Sample.\+h.
+Definition at line 32 of file Sample.\+h.
 
 
 
-\subsection{Beschreibung der Konstruktoren und Destruktoren}
+\subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_sample_a7aea6b090998a430341aa6d1d6222c63}\label{class_sample_a7aea6b090998a430341aa6d1d6222c63}} 
 \index{Sample@{Sample}!Sample@{Sample}}
 \index{Sample@{Sample}!Sample@{Sample}}
@@ -65,21 +65,21 @@ Definiert in Zeile 32 der Datei Sample.\+h.
 {\footnotesize\ttfamily Sample\+::\+Sample (\begin{DoxyParamCaption}\item[{const char $\ast$}]{sample\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
 Constructor 
-\begin{DoxyParams}{Parameter}
+\begin{DoxyParams}{Parameters}
 {\em sample\+Path} & defines where to find the audio sample file \\
 \hline
 \end{DoxyParams}
 
 
-Definiert in Zeile 5 der Datei Sample.\+cpp.
+Definition at line 5 of file Sample.\+cpp.
 
 
 
-Benutzt sample\+File.
+References sample\+File.
 
 
 
-\subsection{Dokumentation der Elementfunktionen}
+\subsection{Member Function Documentation}
 \mbox{\Hypertarget{class_sample_afceddb412ab50a67cb98ca6b72456f24}\label{class_sample_afceddb412ab50a67cb98ca6b72456f24}} 
 \index{Sample@{Sample}!get\+Master\+Volume@{get\+Master\+Volume}}
 \index{get\+Master\+Volume@{get\+Master\+Volume}!Sample@{Sample}}
@@ -92,11 +92,11 @@ Getter of master Volume.
 
 
 
-Definiert in Zeile 61 der Datei Sample.\+cpp.
+Definition at line 61 of file Sample.\+cpp.
 
 
 
-Benutzt master\+Volume.
+References master\+Volume.
 
 \mbox{\Hypertarget{class_sample_a5728b28ce6f6ee19a1b84eddded4fa97}\label{class_sample_a5728b28ce6f6ee19a1b84eddded4fa97}} 
 \index{Sample@{Sample}!get\+Play\+Array@{get\+Play\+Array}}
@@ -106,11 +106,11 @@ Benutzt master\+Volume.
 
 
 
-Definiert in Zeile 65 der Datei Sample.\+cpp.
+Definition at line 65 of file Sample.\+cpp.
 
 
 
-Benutzt play\+Array.
+References play\+Array.
 
 \mbox{\Hypertarget{class_sample_a9f3c251183832a53ec1967331d022575}\label{class_sample_a9f3c251183832a53ec1967331d022575}} 
 \index{Sample@{Sample}!get\+Volume@{get\+Volume}}
@@ -124,11 +124,11 @@ Getter of member volume.
 
 
 
-Definiert in Zeile 46 der Datei Sample.\+cpp.
+Definition at line 46 of file Sample.\+cpp.
 
 
 
-Benutzt volume.
+References volume.
 
 \mbox{\Hypertarget{class_sample_a2ccc1c5571e54ba6725714cd795698f3}\label{class_sample_a2ccc1c5571e54ba6725714cd795698f3}} 
 \index{Sample@{Sample}!play@{play}}
@@ -142,15 +142,15 @@ Plays sample, when called.
 
 
 
-Definiert in Zeile 21 der Datei Sample.\+cpp.
+Definition at line 21 of file Sample.\+cpp.
 
 
 
-Benutzt sample\+File.
+References sample\+File.
 
 
 
-Wird benutzt von play\+Sample().
+Referenced by play\+Sample().
 
 \mbox{\Hypertarget{class_sample_a26322924f7a05091e13380c6494896da}\label{class_sample_a26322924f7a05091e13380c6494896da}} 
 \index{Sample@{Sample}!play\+At\+Beat@{play\+At\+Beat}}
@@ -159,21 +159,21 @@ Wird benutzt von play\+Sample().
 {\footnotesize\ttfamily void Sample\+::play\+At\+Beat (\begin{DoxyParamCaption}\item[{unsigned short}]{beat\+Position }\end{DoxyParamCaption})}
 
 Activates sample at the passed beat\+Position 
-\begin{DoxyParams}{Parameter}
+\begin{DoxyParams}{Parameters}
 {\em beat\+Position} & the beat position, where to activate the sample \\
 \hline
 \end{DoxyParams}
 
 
-Definiert in Zeile 31 der Datei Sample.\+cpp.
+Definition at line 31 of file Sample.\+cpp.
 
 
 
-Benutzt play\+Array.
+References play\+Array.
 
 
 
-Wird benutzt von setup().
+Referenced by setup().
 
 \mbox{\Hypertarget{class_sample_a720e0e4edc0eacfb6170951177eabc31}\label{class_sample_a720e0e4edc0eacfb6170951177eabc31}} 
 \index{Sample@{Sample}!play\+Sample@{play\+Sample}}
@@ -182,17 +182,17 @@ Wird benutzt von setup().
 {\footnotesize\ttfamily void Sample\+::play\+Sample (\begin{DoxyParamCaption}\item[{unsigned short}]{current\+Beat }\end{DoxyParamCaption})}
 
 Checks if the sample is active for the passed beat position and if so, plays it 
-\begin{DoxyParams}{Parameter}
+\begin{DoxyParams}{Parameters}
 {\em current\+Beat} & the current beat position of the running loop \\
 \hline
 \end{DoxyParams}
 
 
-Definiert in Zeile 12 der Datei Sample.\+cpp.
+Definition at line 12 of file Sample.\+cpp.
 
 
 
-Benutzt play() und play\+Array.
+References play(), and play\+Array.
 
 \mbox{\Hypertarget{class_sample_af8ad49b65a536c535393e3968516b871}\label{class_sample_af8ad49b65a536c535393e3968516b871}} 
 \index{Sample@{Sample}!set\+Master\+Volume@{set\+Master\+Volume}}
@@ -206,15 +206,15 @@ Setter of member master\+Volume.
 
 
 
-Definiert in Zeile 50 der Datei Sample.\+cpp.
+Definition at line 50 of file Sample.\+cpp.
 
 
 
-Benutzt master\+Volume, set\+Mix\+Volume() und volume.
+References master\+Volume, set\+Mix\+Volume(), and volume.
 
 
 
-Wird benutzt von Drum\+Machine\+::add\+Sample().
+Referenced by Drum\+Machine\+::add\+Sample().
 
 \mbox{\Hypertarget{class_sample_a6d13988721d2190947f65969d4737a48}\label{class_sample_a6d13988721d2190947f65969d4737a48}} 
 \index{Sample@{Sample}!set\+Mix\+Volume@{set\+Mix\+Volume}}
@@ -228,15 +228,15 @@ Sets the mix volume.
 
 
 
-Definiert in Zeile 25 der Datei Sample.\+cpp.
+Definition at line 25 of file Sample.\+cpp.
 
 
 
-Benutzt master\+Volume, sample\+File und volume.
+References master\+Volume, sample\+File, and volume.
 
 
 
-Wird benutzt von set\+Master\+Volume() und set\+Volume().
+Referenced by set\+Master\+Volume(), and set\+Volume().
 
 \mbox{\Hypertarget{class_sample_ae298bfb5c8c1c3c867fa962e799a2fa5}\label{class_sample_ae298bfb5c8c1c3c867fa962e799a2fa5}} 
 \index{Sample@{Sample}!set\+Volume@{set\+Volume}}
@@ -250,11 +250,11 @@ Setter of member volume.
 
 
 
-Definiert in Zeile 35 der Datei Sample.\+cpp.
+Definition at line 35 of file Sample.\+cpp.
 
 
 
-Benutzt set\+Mix\+Volume() und volume.
+References set\+Mix\+Volume(), and volume.
 
 \mbox{\Hypertarget{class_sample_a4bf009853c35f7a29955fa2554d8e799}\label{class_sample_a4bf009853c35f7a29955fa2554d8e799}} 
 \index{Sample@{Sample}!toggle\+Play\+At\+Beat@{toggle\+Play\+At\+Beat}}
@@ -263,21 +263,21 @@ Benutzt set\+Mix\+Volume() und volume.
 {\footnotesize\ttfamily void Sample\+::toggle\+Play\+At\+Beat (\begin{DoxyParamCaption}\item[{unsigned short}]{beat\+Position }\end{DoxyParamCaption})}
 
 Toggles sample state at the passed beat\+Position from active to inactive or vice versa 
-\begin{DoxyParams}{Parameter}
+\begin{DoxyParams}{Parameters}
 {\em beat\+Position} & the beat position where to toggle the sample state \\
 \hline
 \end{DoxyParams}
 
 
-Definiert in Zeile 69 der Datei Sample.\+cpp.
+Definition at line 69 of file Sample.\+cpp.
 
 
 
-Benutzt state\+::\+M\+U\+TE, state\+::\+P\+L\+AY und play\+Array.
+References state\+::\+M\+U\+TE, state\+::\+P\+L\+AY, and play\+Array.
 
 
 
-\subsection{Dokumentation der Datenelemente}
+\subsection{Member Data Documentation}
 \mbox{\Hypertarget{class_sample_a2d48ff8caf8425c37cf74130afb0c87a}\label{class_sample_a2d48ff8caf8425c37cf74130afb0c87a}} 
 \index{Sample@{Sample}!master\+Volume@{master\+Volume}}
 \index{master\+Volume@{master\+Volume}!Sample@{Sample}}
@@ -290,11 +290,11 @@ The master volume of the sample.
 
 
 
-Definiert in Zeile 82 der Datei Sample.\+h.
+Definition at line 82 of file Sample.\+h.
 
 
 
-Wird benutzt von get\+Master\+Volume(), set\+Master\+Volume() und set\+Mix\+Volume().
+Referenced by get\+Master\+Volume(), set\+Master\+Volume(), and set\+Mix\+Volume().
 
 \mbox{\Hypertarget{class_sample_a824014df7294cb94445e7ee89cc15987}\label{class_sample_a824014df7294cb94445e7ee89cc15987}} 
 \index{Sample@{Sample}!play\+Array@{play\+Array}}
@@ -308,11 +308,11 @@ Vector that holds 16 zeroes or ones. One stands for an active state and zero for
 
 
 
-Definiert in Zeile 79 der Datei Sample.\+h.
+Definition at line 79 of file Sample.\+h.
 
 
 
-Wird benutzt von get\+Play\+Array(), play\+At\+Beat(), play\+Sample() und toggle\+Play\+At\+Beat().
+Referenced by get\+Play\+Array(), play\+At\+Beat(), play\+Sample(), and toggle\+Play\+At\+Beat().
 
 \mbox{\Hypertarget{class_sample_ae158342c8d18a05de1c85802f7cfbd2a}\label{class_sample_ae158342c8d18a05de1c85802f7cfbd2a}} 
 \index{Sample@{Sample}!sample\+File@{sample\+File}}
@@ -326,11 +326,11 @@ Pointer to.
 
 
 
-Definiert in Zeile 78 der Datei Sample.\+h.
+Definition at line 78 of file Sample.\+h.
 
 
 
-Wird benutzt von play(), Sample() und set\+Mix\+Volume().
+Referenced by play(), Sample(), and set\+Mix\+Volume().
 
 \mbox{\Hypertarget{class_sample_a74a4b4799b2bdec9fdde363992b9cec8}\label{class_sample_a74a4b4799b2bdec9fdde363992b9cec8}} 
 \index{Sample@{Sample}!volume@{volume}}
@@ -344,15 +344,15 @@ The volume of the sample.
 
 
 
-Definiert in Zeile 80 der Datei Sample.\+h.
+Definition at line 80 of file Sample.\+h.
 
 
 
-Wird benutzt von get\+Volume(), set\+Master\+Volume(), set\+Mix\+Volume() und set\+Volume().
+Referenced by get\+Volume(), set\+Master\+Volume(), set\+Mix\+Volume(), and set\+Volume().
 
 
 
-Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 \hyperlink{_sample_8h}{Sample.\+h}\item 
 \hyperlink{_sample_8cpp}{Sample.\+cpp}\end{DoxyCompactItemize}

@@ -8,7 +8,7 @@
     <programlisting>#include &lt;thread&gt;</programlisting>
     <programlisting>#include &lt;iostream&gt;</programlisting>
         <section>
-            <title> Klassen </title>
+            <title> Classes </title>
             <para>
                 <itemizedlist>
                     <listitem>
@@ -20,7 +20,7 @@
             </para>
         </section>
         <simplesect>
-            <title> Namensbereiche </title>
+            <title> Namespaces </title>
             <para>
                 <itemizedlist>
                     <listitem>
@@ -30,7 +30,7 @@
             </para>
         </simplesect>
     <simplesect>
-        <title>Ausführliche Beschreibung</title>
+        <title>Detailed Description</title>
     <para>Definition in file /Users/kilian/Development/EntwMM/Arduino Drum Machine/source/Sample.h</para>
     </simplesect>
 </section>

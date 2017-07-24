@@ -1,4 +1,4 @@
-\hypertarget{class_drum_machine}{}\section{Drum\+Machine Klassenreferenz}
+\hypertarget{class_drum_machine}{}\section{Drum\+Machine Class Reference}
 \label{class_drum_machine}\index{Drum\+Machine@{Drum\+Machine}}
 
 
@@ -9,7 +9,7 @@ Handles the beat loop and samples including correct timing for the give B\+PM, p
 
 {\ttfamily \#include $<$Drum\+Machine.\+h$>$}
 
-\subsection*{Öffentliche Methoden}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_drum_machine_acacd501a2615a2f0215c04873860ce98}{Drum\+Machine} (\hyperlink{class_a_output_controller}{A\+Output\+Controller} \&\hyperlink{class_drum_machine_a4a5b4d6cc6e4a3ce2c2893e52fd0e951}{output\+Controller})
@@ -42,14 +42,14 @@ void \hyperlink{class_drum_machine_a1b6ff2afd815b9981e8a008c857c1847}{set\+Activ
 \item 
 unsigned short \hyperlink{class_drum_machine_ac8ef152a82bbce61bc1e2715c3e476b9}{get\+Active\+Sample} ()
 \end{DoxyCompactItemize}
-\subsection*{Private Methoden}
+\subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{class_drum_machine_a5a42497c3a1f390537b6c12fddab1619}{allocate\+Channels} ()
 \begin{DoxyCompactList}\small\item\em Helper function which allocates the audio channels. \end{DoxyCompactList}\item 
 void \hyperlink{class_drum_machine_afd65a07ff84b6c7854ddd9ee3a529382}{open\+Audio} ()
 \begin{DoxyCompactList}\small\item\em Initializes the audio. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Private Attribute}
+\subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 const unsigned short \hyperlink{class_drum_machine_a221c0cd8b5cf3f2342f57ad539d3628a}{M\+I\+N\+\_\+\+B\+PM} = 20
@@ -84,14 +84,14 @@ vector$<$ \hyperlink{class_sample}{Sample} $>$ \hyperlink{class_drum_machine_acf
 \begin{DoxyCompactList}\small\item\em A List of all added samples. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Ausführliche Beschreibung}
+\subsection{Detailed Description}
 Handles the beat loop and samples including correct timing for the give B\+PM, playing them at the correct beat steps and increasing and decreasing the volume. 
 
-Definiert in Zeile 29 der Datei Drum\+Machine.\+h.
+Definition at line 29 of file Drum\+Machine.\+h.
 
 
 
-\subsection{Beschreibung der Konstruktoren und Destruktoren}
+\subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_drum_machine_acacd501a2615a2f0215c04873860ce98}\label{class_drum_machine_acacd501a2615a2f0215c04873860ce98}} 
 \index{Drum\+Machine@{Drum\+Machine}!Drum\+Machine@{Drum\+Machine}}
 \index{Drum\+Machine@{Drum\+Machine}!Drum\+Machine@{Drum\+Machine}}
@@ -99,21 +99,21 @@ Definiert in Zeile 29 der Datei Drum\+Machine.\+h.
 {\footnotesize\ttfamily Drum\+Machine\+::\+Drum\+Machine (\begin{DoxyParamCaption}\item[{\hyperlink{class_a_output_controller}{A\+Output\+Controller} \&}]{output\+Controller }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
 Constructor 
-\begin{DoxyParams}{Parameter}
+\begin{DoxyParams}{Parameters}
 {\em output\+Controller} & the output\+Controller the drum machine passes events to \\
 \hline
 \end{DoxyParams}
 
 
-Definiert in Zeile 10 der Datei Drum\+Machine.\+cpp.
+Definition at line 10 of file Drum\+Machine.\+cpp.
 
 
 
-Benutzt allocate\+Channels() und open\+Audio().
+References allocate\+Channels(), and open\+Audio().
 
 
 
-\subsection{Dokumentation der Elementfunktionen}
+\subsection{Member Function Documentation}
 \mbox{\Hypertarget{class_drum_machine_a530ac2c3529492c62a01619786fb3765}\label{class_drum_machine_a530ac2c3529492c62a01619786fb3765}} 
 \index{Drum\+Machine@{Drum\+Machine}!add\+Sample@{add\+Sample}}
 \index{add\+Sample@{add\+Sample}!Drum\+Machine@{Drum\+Machine}}
@@ -122,15 +122,15 @@ Benutzt allocate\+Channels() und open\+Audio().
 
 Add a sample to be available for use in the drum machine. The order of adding samples determines the buttons they are mapped to 
 
-Definiert in Zeile 122 der Datei Drum\+Machine.\+cpp.
+Definition at line 122 of file Drum\+Machine.\+cpp.
 
 
 
-Benutzt samples, Sample\+::set\+Master\+Volume() und volume.
+References samples, Sample\+::set\+Master\+Volume(), and volume.
 
 
 
-Wird benutzt von setup().
+Referenced by setup().
 
 \mbox{\Hypertarget{class_drum_machine_a5a42497c3a1f390537b6c12fddab1619}\label{class_drum_machine_a5a42497c3a1f390537b6c12fddab1619}} 
 \index{Drum\+Machine@{Drum\+Machine}!allocate\+Channels@{allocate\+Channels}}
@@ -144,11 +144,11 @@ Helper function which allocates the audio channels.
 
 
 
-Definiert in Zeile 29 der Datei Drum\+Machine.\+cpp.
+Definition at line 29 of file Drum\+Machine.\+cpp.
 
 
 
-Wird benutzt von Drum\+Machine().
+Referenced by Drum\+Machine().
 
 \mbox{\Hypertarget{class_drum_machine_ac8ef152a82bbce61bc1e2715c3e476b9}\label{class_drum_machine_ac8ef152a82bbce61bc1e2715c3e476b9}} 
 \index{Drum\+Machine@{Drum\+Machine}!get\+Active\+Sample@{get\+Active\+Sample}}
@@ -156,20 +156,20 @@ Wird benutzt von Drum\+Machine().
 \subsubsection{\texorpdfstring{get\+Active\+Sample()}{getActiveSample()}}
 {\footnotesize\ttfamily unsigned short Drum\+Machine\+::get\+Active\+Sample (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\begin{DoxyReturn}{Rückgabe}
+\begin{DoxyReturn}{Returns}
 The number of the currently active sample 
 \end{DoxyReturn}
 
 
-Definiert in Zeile 166 der Datei Drum\+Machine.\+cpp.
+Definition at line 166 of file Drum\+Machine.\+cpp.
 
 
 
-Benutzt active\+Sample.
+References active\+Sample.
 
 
 
-Wird benutzt von Drum\+Machine\+Input\+Listener\+::input\+Event().
+Referenced by Drum\+Machine\+Input\+Listener\+::input\+Event().
 
 \mbox{\Hypertarget{class_drum_machine_a9a7a34dca1803071fec5b6687cb98343}\label{class_drum_machine_a9a7a34dca1803071fec5b6687cb98343}} 
 \index{Drum\+Machine@{Drum\+Machine}!get\+B\+PM@{get\+B\+PM}}
@@ -177,20 +177,20 @@ Wird benutzt von Drum\+Machine\+Input\+Listener\+::input\+Event().
 \subsubsection{\texorpdfstring{get\+B\+P\+M()}{getBPM()}}
 {\footnotesize\ttfamily unsigned short Drum\+Machine\+::get\+B\+PM (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\begin{DoxyReturn}{Rückgabe}
+\begin{DoxyReturn}{Returns}
 the current B\+PM 
 \end{DoxyReturn}
 
 
-Definiert in Zeile 101 der Datei Drum\+Machine.\+cpp.
+Definition at line 101 of file Drum\+Machine.\+cpp.
 
 
 
-Benutzt bpm.
+References bpm.
 
 
 
-Wird benutzt von increase\+Active\+Sample\+Volume(), increase\+Bpm(), Drum\+Machine\+Input\+Listener\+::input\+Event() und set\+Active\+Sample().
+Referenced by increase\+Active\+Sample\+Volume(), increase\+Bpm(), Drum\+Machine\+Input\+Listener\+::input\+Event(), and set\+Active\+Sample().
 
 \mbox{\Hypertarget{class_drum_machine_a3590f99d021aad35cca24fdcb0f8a246}\label{class_drum_machine_a3590f99d021aad35cca24fdcb0f8a246}} 
 \index{Drum\+Machine@{Drum\+Machine}!get\+Master\+Volume@{get\+Master\+Volume}}
@@ -198,20 +198,20 @@ Wird benutzt von increase\+Active\+Sample\+Volume(), increase\+Bpm(), Drum\+Mach
 \subsubsection{\texorpdfstring{get\+Master\+Volume()}{getMasterVolume()}}
 {\footnotesize\ttfamily float Drum\+Machine\+::get\+Master\+Volume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\begin{DoxyReturn}{Rückgabe}
+\begin{DoxyReturn}{Returns}
 the current master volume 
 \end{DoxyReturn}
 
 
-Definiert in Zeile 118 der Datei Drum\+Machine.\+cpp.
+Definition at line 118 of file Drum\+Machine.\+cpp.
 
 
 
-Benutzt volume.
+References volume.
 
 
 
-Wird benutzt von Drum\+Machine\+Input\+Listener\+::input\+Event().
+Referenced by Drum\+Machine\+Input\+Listener\+::input\+Event().
 
 \mbox{\Hypertarget{class_drum_machine_a2316557d08fecdaa8936be2562749e95}\label{class_drum_machine_a2316557d08fecdaa8936be2562749e95}} 
 \index{Drum\+Machine@{Drum\+Machine}!increase\+Active\+Sample\+Volume@{increase\+Active\+Sample\+Volume}}
@@ -220,21 +220,21 @@ Wird benutzt von Drum\+Machine\+Input\+Listener\+::input\+Event().
 {\footnotesize\ttfamily void Drum\+Machine\+::increase\+Active\+Sample\+Volume (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})}
 
 Increases the volume of the currently active sample by a given value. 
-\begin{DoxyParams}{Parameter}
+\begin{DoxyParams}{Parameters}
 {\em value} & value to increase the active sample volume by \\
 \hline
 \end{DoxyParams}
 
 
-Definiert in Zeile 77 der Datei Drum\+Machine.\+cpp.
+Definition at line 77 of file Drum\+Machine.\+cpp.
 
 
 
-Benutzt active\+Sample, get\+B\+P\+M(), output\+Controller, samples und A\+Output\+Controller\+::show\+Sample\+Screen().
+References active\+Sample, get\+B\+P\+M(), output\+Controller, samples, and A\+Output\+Controller\+::show\+Sample\+Screen().
 
 
 
-Wird benutzt von Drum\+Machine\+Input\+Listener\+::input\+Event().
+Referenced by Drum\+Machine\+Input\+Listener\+::input\+Event().
 
 \mbox{\Hypertarget{class_drum_machine_adbaa7d80f7aa34f1ca190e163515e3e6}\label{class_drum_machine_adbaa7d80f7aa34f1ca190e163515e3e6}} 
 \index{Drum\+Machine@{Drum\+Machine}!increase\+Bpm@{increase\+Bpm}}
@@ -243,21 +243,21 @@ Wird benutzt von Drum\+Machine\+Input\+Listener\+::input\+Event().
 {\footnotesize\ttfamily void Drum\+Machine\+::increase\+Bpm (\begin{DoxyParamCaption}\item[{unsigned short}]{value }\end{DoxyParamCaption})}
 
 Increases the B\+PM by a given value. 
-\begin{DoxyParams}{Parameter}
+\begin{DoxyParams}{Parameters}
 {\em value} & value to increase the bpm by \\
 \hline
 \end{DoxyParams}
 
 
-Definiert in Zeile 170 der Datei Drum\+Machine.\+cpp.
+Definition at line 170 of file Drum\+Machine.\+cpp.
 
 
 
-Benutzt get\+B\+P\+M() und set\+B\+P\+M().
+References get\+B\+P\+M(), and set\+B\+P\+M().
 
 
 
-Wird benutzt von Drum\+Machine\+Input\+Listener\+::input\+Event().
+Referenced by Drum\+Machine\+Input\+Listener\+::input\+Event().
 
 \mbox{\Hypertarget{class_drum_machine_ab823055aa6c1fa1dd91b1e45f3e66f0f}\label{class_drum_machine_ab823055aa6c1fa1dd91b1e45f3e66f0f}} 
 \index{Drum\+Machine@{Drum\+Machine}!increase\+Volume@{increase\+Volume}}
@@ -266,17 +266,17 @@ Wird benutzt von Drum\+Machine\+Input\+Listener\+::input\+Event().
 {\footnotesize\ttfamily void Drum\+Machine\+::increase\+Volume (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})}
 
 Increases the volume by a given value. 
-\begin{DoxyParams}{Parameter}
+\begin{DoxyParams}{Parameters}
 {\em value} & value to increase the master volume by \\
 \hline
 \end{DoxyParams}
 
 
-Definiert in Zeile 67 der Datei Drum\+Machine.\+cpp.
+Definition at line 67 of file Drum\+Machine.\+cpp.
 
 
 
-Benutzt set\+Master\+Volume() und volume.
+References set\+Master\+Volume(), and volume.
 
 \mbox{\Hypertarget{class_drum_machine_aaa0c2e00a5009b239aac709c37602c7d}\label{class_drum_machine_aaa0c2e00a5009b239aac709c37602c7d}} 
 \index{Drum\+Machine@{Drum\+Machine}!is\+Loop\+Running@{is\+Loop\+Running}}
@@ -284,20 +284,20 @@ Benutzt set\+Master\+Volume() und volume.
 \subsubsection{\texorpdfstring{is\+Loop\+Running()}{isLoopRunning()}}
 {\footnotesize\ttfamily bool Drum\+Machine\+::is\+Loop\+Running (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\begin{DoxyReturn}{Rückgabe}
+\begin{DoxyReturn}{Returns}
 whether the loop is currently running 
 \end{DoxyReturn}
 
 
-Definiert in Zeile 127 der Datei Drum\+Machine.\+cpp.
+Definition at line 127 of file Drum\+Machine.\+cpp.
 
 
 
-Benutzt loop\+Running.
+References loop\+Running.
 
 
 
-Wird benutzt von Drum\+Machine\+Input\+Listener\+::input\+Event().
+Referenced by Drum\+Machine\+Input\+Listener\+::input\+Event().
 
 \mbox{\Hypertarget{class_drum_machine_afd65a07ff84b6c7854ddd9ee3a529382}\label{class_drum_machine_afd65a07ff84b6c7854ddd9ee3a529382}} 
 \index{Drum\+Machine@{Drum\+Machine}!open\+Audio@{open\+Audio}}
@@ -311,11 +311,11 @@ Initializes the audio.
 
 
 
-Definiert in Zeile 19 der Datei Drum\+Machine.\+cpp.
+Definition at line 19 of file Drum\+Machine.\+cpp.
 
 
 
-Wird benutzt von Drum\+Machine().
+Referenced by Drum\+Machine().
 
 \mbox{\Hypertarget{class_drum_machine_a1b6ff2afd815b9981e8a008c857c1847}\label{class_drum_machine_a1b6ff2afd815b9981e8a008c857c1847}} 
 \index{Drum\+Machine@{Drum\+Machine}!set\+Active\+Sample@{set\+Active\+Sample}}
@@ -324,21 +324,21 @@ Wird benutzt von Drum\+Machine().
 {\footnotesize\ttfamily void Drum\+Machine\+::set\+Active\+Sample (\begin{DoxyParamCaption}\item[{unsigned short}]{new\+Active\+Sample }\end{DoxyParamCaption})}
 
 Sets the active sample 
-\begin{DoxyParams}{Parameter}
+\begin{DoxyParams}{Parameters}
 {\em new\+Active\+Sample} & The number of the new active sample \\
 \hline
 \end{DoxyParams}
 
 
-Definiert in Zeile 131 der Datei Drum\+Machine.\+cpp.
+Definition at line 131 of file Drum\+Machine.\+cpp.
 
 
 
-Benutzt active\+Sample, A\+Output\+Controller\+::active\+Sample\+Change(), get\+B\+P\+M(), sample\+::\+N\+O\+\_\+\+S\+A\+M\+P\+LE, output\+Controller, A\+Output\+Controller\+::play\+Position\+Change(), samples, A\+Output\+Controller\+::show\+Main\+Screen() und A\+Output\+Controller\+::show\+Sample\+Screen().
+References active\+Sample, A\+Output\+Controller\+::active\+Sample\+Change(), get\+B\+P\+M(), sample\+::\+N\+O\+\_\+\+S\+A\+M\+P\+LE, output\+Controller, A\+Output\+Controller\+::play\+Position\+Change(), samples, A\+Output\+Controller\+::show\+Main\+Screen(), and A\+Output\+Controller\+::show\+Sample\+Screen().
 
 
 
-Wird benutzt von Drum\+Machine\+Input\+Listener\+::input\+Event().
+Referenced by Drum\+Machine\+Input\+Listener\+::input\+Event().
 
 \mbox{\Hypertarget{class_drum_machine_aac554a614388d11543698f407b0e11e6}\label{class_drum_machine_aac554a614388d11543698f407b0e11e6}} 
 \index{Drum\+Machine@{Drum\+Machine}!set\+B\+PM@{set\+B\+PM}}
@@ -347,21 +347,21 @@ Wird benutzt von Drum\+Machine\+Input\+Listener\+::input\+Event().
 {\footnotesize\ttfamily void Drum\+Machine\+::set\+B\+PM (\begin{DoxyParamCaption}\item[{unsigned short}]{bpm }\end{DoxyParamCaption})}
 
 Sets the B\+PM to a specific value 
-\begin{DoxyParams}{Parameter}
+\begin{DoxyParams}{Parameters}
 {\em bpm} & the new bpm value \\
 \hline
 \end{DoxyParams}
 
 
-Definiert in Zeile 89 der Datei Drum\+Machine.\+cpp.
+Definition at line 89 of file Drum\+Machine.\+cpp.
 
 
 
-Benutzt beat\+Millis, B\+E\+A\+T\+S\+\_\+\+P\+E\+R\+\_\+\+W\+H\+O\+L\+E\+\_\+\+B\+E\+AT, bpm, loop, M\+A\+X\+\_\+\+B\+PM, M\+I\+N\+\_\+\+B\+PM, output\+Controller, A\+Output\+Controller\+::set\+Beat\+Duration(), Timer\+::set\+Interval() und A\+Output\+Controller\+::show\+Main\+Screen().
+References beat\+Millis, B\+E\+A\+T\+S\+\_\+\+P\+E\+R\+\_\+\+W\+H\+O\+L\+E\+\_\+\+B\+E\+AT, bpm, loop, M\+A\+X\+\_\+\+B\+PM, M\+I\+N\+\_\+\+B\+PM, output\+Controller, A\+Output\+Controller\+::set\+Beat\+Duration(), Timer\+::set\+Interval(), and A\+Output\+Controller\+::show\+Main\+Screen().
 
 
 
-Wird benutzt von increase\+Bpm() und setup().
+Referenced by increase\+Bpm(), and setup().
 
 \mbox{\Hypertarget{class_drum_machine_a19af9f5fbe3242cee5685f1ede574a26}\label{class_drum_machine_a19af9f5fbe3242cee5685f1ede574a26}} 
 \index{Drum\+Machine@{Drum\+Machine}!set\+Master\+Volume@{set\+Master\+Volume}}
@@ -370,21 +370,21 @@ Wird benutzt von increase\+Bpm() und setup().
 {\footnotesize\ttfamily void Drum\+Machine\+::set\+Master\+Volume (\begin{DoxyParamCaption}\item[{float}]{volume }\end{DoxyParamCaption})}
 
 Sets the master volume to a specific value 
-\begin{DoxyParams}{Parameter}
+\begin{DoxyParams}{Parameters}
 {\em volume} & the new master volume \\
 \hline
 \end{DoxyParams}
 
 
-Definiert in Zeile 105 der Datei Drum\+Machine.\+cpp.
+Definition at line 105 of file Drum\+Machine.\+cpp.
 
 
 
-Benutzt samples und volume.
+References samples, and volume.
 
 
 
-Wird benutzt von increase\+Volume().
+Referenced by increase\+Volume().
 
 \mbox{\Hypertarget{class_drum_machine_ac42508031bbf331d41c8004ed663c1c1}\label{class_drum_machine_ac42508031bbf331d41c8004ed663c1c1}} 
 \index{Drum\+Machine@{Drum\+Machine}!start\+Loop@{start\+Loop}}
@@ -394,15 +394,15 @@ Wird benutzt von increase\+Volume().
 
 Starts the beat loop. 
 
-Definiert in Zeile 37 der Datei Drum\+Machine.\+cpp.
+Definition at line 37 of file Drum\+Machine.\+cpp.
 
 
 
-Benutzt beat\+Millis, current\+Beat, loop, loop\+Running, output\+Controller, A\+Output\+Controller\+::position\+Change(), samples, Timer\+::set\+Interval(), Timer\+::start() und T\+O\+T\+A\+L\+\_\+\+B\+E\+A\+TS.
+References beat\+Millis, current\+Beat, loop, loop\+Running, output\+Controller, A\+Output\+Controller\+::position\+Change(), samples, Timer\+::set\+Interval(), Timer\+::start(), and T\+O\+T\+A\+L\+\_\+\+B\+E\+A\+TS.
 
 
 
-Wird benutzt von Drum\+Machine\+Input\+Listener\+::input\+Event().
+Referenced by Drum\+Machine\+Input\+Listener\+::input\+Event().
 
 \mbox{\Hypertarget{class_drum_machine_af1564a42f1c2717534a61437617070b3}\label{class_drum_machine_af1564a42f1c2717534a61437617070b3}} 
 \index{Drum\+Machine@{Drum\+Machine}!stop\+Loop@{stop\+Loop}}
@@ -412,15 +412,15 @@ Wird benutzt von Drum\+Machine\+Input\+Listener\+::input\+Event().
 
 Stops the beat loop. 
 
-Definiert in Zeile 61 der Datei Drum\+Machine.\+cpp.
+Definition at line 61 of file Drum\+Machine.\+cpp.
 
 
 
-Benutzt current\+Beat, loop, loop\+Running und Timer\+::stop().
+References current\+Beat, loop, loop\+Running, and Timer\+::stop().
 
 
 
-Wird benutzt von Drum\+Machine\+Input\+Listener\+::input\+Event().
+Referenced by Drum\+Machine\+Input\+Listener\+::input\+Event().
 
 \mbox{\Hypertarget{class_drum_machine_ac34e64779cd419a75628630f71a3041b}\label{class_drum_machine_ac34e64779cd419a75628630f71a3041b}} 
 \index{Drum\+Machine@{Drum\+Machine}!toggle\+Sample\+At\+Beat@{toggle\+Sample\+At\+Beat}}
@@ -429,25 +429,25 @@ Wird benutzt von Drum\+Machine\+Input\+Listener\+::input\+Event().
 {\footnotesize\ttfamily void Drum\+Machine\+::toggle\+Sample\+At\+Beat (\begin{DoxyParamCaption}\item[{unsigned short}]{beat }\end{DoxyParamCaption})}
 
 Toggles whether the current sample is played at a specific beat 
-\begin{DoxyParams}{Parameter}
+\begin{DoxyParams}{Parameters}
 {\em beat} & the beat the sample should be toggled at \\
 \hline
 \end{DoxyParams}
 
 
-Definiert in Zeile 152 der Datei Drum\+Machine.\+cpp.
+Definition at line 152 of file Drum\+Machine.\+cpp.
 
 
 
-Benutzt active\+Sample, sample\+::\+N\+O\+\_\+\+S\+A\+M\+P\+LE, output\+Controller, A\+Output\+Controller\+::play\+Position\+Change() und samples.
+References active\+Sample, sample\+::\+N\+O\+\_\+\+S\+A\+M\+P\+LE, output\+Controller, A\+Output\+Controller\+::play\+Position\+Change(), and samples.
 
 
 
-Wird benutzt von Drum\+Machine\+Input\+Listener\+::input\+Event().
+Referenced by Drum\+Machine\+Input\+Listener\+::input\+Event().
 
 
 
-\subsection{Dokumentation der Datenelemente}
+\subsection{Member Data Documentation}
 \mbox{\Hypertarget{class_drum_machine_a9e12916e5724251791689e6f14c8513a}\label{class_drum_machine_a9e12916e5724251791689e6f14c8513a}} 
 \index{Drum\+Machine@{Drum\+Machine}!active\+Sample@{active\+Sample}}
 \index{active\+Sample@{active\+Sample}!Drum\+Machine@{Drum\+Machine}}
@@ -460,11 +460,11 @@ The index of the active sample.
 
 
 
-Definiert in Zeile 40 der Datei Drum\+Machine.\+h.
+Definition at line 40 of file Drum\+Machine.\+h.
 
 
 
-Wird benutzt von get\+Active\+Sample(), increase\+Active\+Sample\+Volume(), set\+Active\+Sample() und toggle\+Sample\+At\+Beat().
+Referenced by get\+Active\+Sample(), increase\+Active\+Sample\+Volume(), set\+Active\+Sample(), and toggle\+Sample\+At\+Beat().
 
 \mbox{\Hypertarget{class_drum_machine_a91179ac48de4159d04052291ad25fa02}\label{class_drum_machine_a91179ac48de4159d04052291ad25fa02}} 
 \index{Drum\+Machine@{Drum\+Machine}!beat\+Millis@{beat\+Millis}}
@@ -478,11 +478,11 @@ Milliseconds that one beat lasts.
 
 
 
-Definiert in Zeile 41 der Datei Drum\+Machine.\+h.
+Definition at line 41 of file Drum\+Machine.\+h.
 
 
 
-Wird benutzt von set\+B\+P\+M() und start\+Loop().
+Referenced by set\+B\+P\+M(), and start\+Loop().
 
 \mbox{\Hypertarget{class_drum_machine_ab4d2056f29b6eb959aa379afcc6b70f0}\label{class_drum_machine_ab4d2056f29b6eb959aa379afcc6b70f0}} 
 \index{Drum\+Machine@{Drum\+Machine}!B\+E\+A\+T\+S\+\_\+\+P\+E\+R\+\_\+\+W\+H\+O\+L\+E\+\_\+\+B\+E\+AT@{B\+E\+A\+T\+S\+\_\+\+P\+E\+R\+\_\+\+W\+H\+O\+L\+E\+\_\+\+B\+E\+AT}}
@@ -496,11 +496,11 @@ The number of beats one whole beat has.
 
 
 
-Definiert in Zeile 34 der Datei Drum\+Machine.\+h.
+Definition at line 34 of file Drum\+Machine.\+h.
 
 
 
-Wird benutzt von set\+B\+P\+M().
+Referenced by set\+B\+P\+M().
 
 \mbox{\Hypertarget{class_drum_machine_afaa80be4a66f759ab590a5f67f327b67}\label{class_drum_machine_afaa80be4a66f759ab590a5f67f327b67}} 
 \index{Drum\+Machine@{Drum\+Machine}!bpm@{bpm}}
@@ -514,11 +514,11 @@ B\+PM at which the loop runs.
 
 
 
-Definiert in Zeile 38 der Datei Drum\+Machine.\+h.
+Definition at line 38 of file Drum\+Machine.\+h.
 
 
 
-Wird benutzt von get\+B\+P\+M() und set\+B\+P\+M().
+Referenced by get\+B\+P\+M(), and set\+B\+P\+M().
 
 \mbox{\Hypertarget{class_drum_machine_a46f20be98c71d1429a473e03bf092df3}\label{class_drum_machine_a46f20be98c71d1429a473e03bf092df3}} 
 \index{Drum\+Machine@{Drum\+Machine}!current\+Beat@{current\+Beat}}
@@ -532,11 +532,11 @@ The number of the current beat.
 
 
 
-Definiert in Zeile 39 der Datei Drum\+Machine.\+h.
+Definition at line 39 of file Drum\+Machine.\+h.
 
 
 
-Wird benutzt von start\+Loop() und stop\+Loop().
+Referenced by start\+Loop(), and stop\+Loop().
 
 \mbox{\Hypertarget{class_drum_machine_ab190b1b114840e3fb41fff54d0099e93}\label{class_drum_machine_ab190b1b114840e3fb41fff54d0099e93}} 
 \index{Drum\+Machine@{Drum\+Machine}!loop@{loop}}
@@ -550,11 +550,11 @@ The loop timer.
 
 
 
-Definiert in Zeile 46 der Datei Drum\+Machine.\+h.
+Definition at line 46 of file Drum\+Machine.\+h.
 
 
 
-Wird benutzt von set\+B\+P\+M(), start\+Loop() und stop\+Loop().
+Referenced by set\+B\+P\+M(), start\+Loop(), and stop\+Loop().
 
 \mbox{\Hypertarget{class_drum_machine_a847e09081c90dbb33c602506d5adb743}\label{class_drum_machine_a847e09081c90dbb33c602506d5adb743}} 
 \index{Drum\+Machine@{Drum\+Machine}!L\+O\+O\+P\+\_\+\+P\+R\+E\+C\+I\+S\+I\+O\+N\+\_\+\+N\+A\+N\+OS@{L\+O\+O\+P\+\_\+\+P\+R\+E\+C\+I\+S\+I\+O\+N\+\_\+\+N\+A\+N\+OS}}
@@ -568,7 +568,7 @@ The precision with which the loop timer runs.
 
 
 
-Definiert in Zeile 36 der Datei Drum\+Machine.\+h.
+Definition at line 36 of file Drum\+Machine.\+h.
 
 \mbox{\Hypertarget{class_drum_machine_a4ac5a8c113e5a32a557f069e8d93cca8}\label{class_drum_machine_a4ac5a8c113e5a32a557f069e8d93cca8}} 
 \index{Drum\+Machine@{Drum\+Machine}!loop\+Running@{loop\+Running}}
@@ -582,11 +582,11 @@ Stores whether the loop is running or not.
 
 
 
-Definiert in Zeile 42 der Datei Drum\+Machine.\+h.
+Definition at line 42 of file Drum\+Machine.\+h.
 
 
 
-Wird benutzt von is\+Loop\+Running(), start\+Loop() und stop\+Loop().
+Referenced by is\+Loop\+Running(), start\+Loop(), and stop\+Loop().
 
 \mbox{\Hypertarget{class_drum_machine_a0b64f2e265bb9fc06729090b7e05c005}\label{class_drum_machine_a0b64f2e265bb9fc06729090b7e05c005}} 
 \index{Drum\+Machine@{Drum\+Machine}!M\+A\+X\+\_\+\+B\+PM@{M\+A\+X\+\_\+\+B\+PM}}
@@ -600,11 +600,11 @@ The highest value the bpm can be.
 
 
 
-Definiert in Zeile 32 der Datei Drum\+Machine.\+h.
+Definition at line 32 of file Drum\+Machine.\+h.
 
 
 
-Wird benutzt von set\+B\+P\+M().
+Referenced by set\+B\+P\+M().
 
 \mbox{\Hypertarget{class_drum_machine_a221c0cd8b5cf3f2342f57ad539d3628a}\label{class_drum_machine_a221c0cd8b5cf3f2342f57ad539d3628a}} 
 \index{Drum\+Machine@{Drum\+Machine}!M\+I\+N\+\_\+\+B\+PM@{M\+I\+N\+\_\+\+B\+PM}}
@@ -618,11 +618,11 @@ The lowest value the bpm can be.
 
 
 
-Definiert in Zeile 31 der Datei Drum\+Machine.\+h.
+Definition at line 31 of file Drum\+Machine.\+h.
 
 
 
-Wird benutzt von set\+B\+P\+M().
+Referenced by set\+B\+P\+M().
 
 \mbox{\Hypertarget{class_drum_machine_a4a5b4d6cc6e4a3ce2c2893e52fd0e951}\label{class_drum_machine_a4a5b4d6cc6e4a3ce2c2893e52fd0e951}} 
 \index{Drum\+Machine@{Drum\+Machine}!output\+Controller@{output\+Controller}}
@@ -636,11 +636,11 @@ Reference to the regsitered Output\+Controller.
 
 
 
-Definiert in Zeile 45 der Datei Drum\+Machine.\+h.
+Definition at line 45 of file Drum\+Machine.\+h.
 
 
 
-Wird benutzt von increase\+Active\+Sample\+Volume(), set\+Active\+Sample(), set\+B\+P\+M(), start\+Loop() und toggle\+Sample\+At\+Beat().
+Referenced by increase\+Active\+Sample\+Volume(), set\+Active\+Sample(), set\+B\+P\+M(), start\+Loop(), and toggle\+Sample\+At\+Beat().
 
 \mbox{\Hypertarget{class_drum_machine_acf215ead70c41e760556497281aa562e}\label{class_drum_machine_acf215ead70c41e760556497281aa562e}} 
 \index{Drum\+Machine@{Drum\+Machine}!samples@{samples}}
@@ -654,11 +654,11 @@ A List of all added samples.
 
 
 
-Definiert in Zeile 47 der Datei Drum\+Machine.\+h.
+Definition at line 47 of file Drum\+Machine.\+h.
 
 
 
-Wird benutzt von add\+Sample(), increase\+Active\+Sample\+Volume(), set\+Active\+Sample(), set\+Master\+Volume(), start\+Loop() und toggle\+Sample\+At\+Beat().
+Referenced by add\+Sample(), increase\+Active\+Sample\+Volume(), set\+Active\+Sample(), set\+Master\+Volume(), start\+Loop(), and toggle\+Sample\+At\+Beat().
 
 \mbox{\Hypertarget{class_drum_machine_a25ff7c6556614ab787a626a5c6ec1683}\label{class_drum_machine_a25ff7c6556614ab787a626a5c6ec1683}} 
 \index{Drum\+Machine@{Drum\+Machine}!T\+O\+T\+A\+L\+\_\+\+B\+E\+A\+TS@{T\+O\+T\+A\+L\+\_\+\+B\+E\+A\+TS}}
@@ -672,11 +672,11 @@ The resulting total beats the loop has.
 
 
 
-Definiert in Zeile 35 der Datei Drum\+Machine.\+h.
+Definition at line 35 of file Drum\+Machine.\+h.
 
 
 
-Wird benutzt von start\+Loop().
+Referenced by start\+Loop().
 
 \mbox{\Hypertarget{class_drum_machine_af1401c2a8e1d016ec32c662968e581fd}\label{class_drum_machine_af1401c2a8e1d016ec32c662968e581fd}} 
 \index{Drum\+Machine@{Drum\+Machine}!volume@{volume}}
@@ -690,11 +690,11 @@ The current master volume.
 
 
 
-Definiert in Zeile 43 der Datei Drum\+Machine.\+h.
+Definition at line 43 of file Drum\+Machine.\+h.
 
 
 
-Wird benutzt von add\+Sample(), get\+Master\+Volume(), increase\+Volume() und set\+Master\+Volume().
+Referenced by add\+Sample(), get\+Master\+Volume(), increase\+Volume(), and set\+Master\+Volume().
 
 \mbox{\Hypertarget{class_drum_machine_a54e06658e13970dc7679051e8194f546}\label{class_drum_machine_a54e06658e13970dc7679051e8194f546}} 
 \index{Drum\+Machine@{Drum\+Machine}!W\+H\+O\+L\+E\+\_\+\+B\+E\+A\+TS@{W\+H\+O\+L\+E\+\_\+\+B\+E\+A\+TS}}
@@ -708,11 +708,11 @@ The number of whole beats the loop has.
 
 
 
-Definiert in Zeile 33 der Datei Drum\+Machine.\+h.
+Definition at line 33 of file Drum\+Machine.\+h.
 
 
 
-Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 \hyperlink{_drum_machine_8h}{Drum\+Machine.\+h}\item 
 \hyperlink{_drum_machine_8cpp}{Drum\+Machine.\+cpp}\end{DoxyCompactItemize}

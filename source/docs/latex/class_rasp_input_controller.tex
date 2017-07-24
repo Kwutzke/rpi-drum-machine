@@ -1,4 +1,4 @@
-\hypertarget{class_rasp_input_controller}{}\section{Rasp\+Input\+Controller Klassenreferenz}
+\hypertarget{class_rasp_input_controller}{}\section{Rasp\+Input\+Controller Class Reference}
 \label{class_rasp_input_controller}\index{Rasp\+Input\+Controller@{Rasp\+Input\+Controller}}
 
 
@@ -9,7 +9,7 @@ Responsible for detecting any inputs and passing them to the registered listener
 
 {\ttfamily \#include $<$Rasp\+Input\+Controller.\+h$>$}
 
-\subsection*{Öffentliche Methoden}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_rasp_input_controller_a63a9e2ab7d0eb5aed2da6068454caa65}{Rasp\+Input\+Controller} ()
@@ -20,7 +20,7 @@ void \hyperlink{class_rasp_input_controller_a7d9523be1a83acde964cb5d2b1d281ed}{s
 \item 
 void \hyperlink{class_rasp_input_controller_a8cb185caa124285987d6b98122cfbea4}{start} ()
 \end{DoxyCompactItemize}
-\subsection*{Private Methoden}
+\subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{class_rasp_input_controller_a7e15590d321b382fcb5f4d70959a5cbe}{start\+Polling} ()
@@ -29,7 +29,7 @@ vector$<$ unsigned short $>$ \hyperlink{class_rasp_input_controller_a95a42703b4c
 \begin{DoxyCompactList}\small\item\em Check all pins for changes. \end{DoxyCompactList}\item 
 void \hyperlink{class_rasp_input_controller_a5ffc6f68b0c74f31a9b595ff8acc49f1}{initialize\+Pins} ()
 \begin{DoxyCompactList}\small\item\em Initialize all pins in order to use them. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Private Attribute}
+\subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 map$<$ unsigned short, unsigned short $>$ \hyperlink{class_rasp_input_controller_a7b59eba5cc562eccc91347ddbd777e50}{output\+Map}
@@ -44,14 +44,14 @@ vector$<$ \hyperlink{class_input_listener}{Input\+Listener} $\ast$ $>$ \hyperlin
 \begin{DoxyCompactList}\small\item\em A \hyperlink{class_timer}{Timer} for checking inputs of the rotary button, higher precision. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Ausführliche Beschreibung}
+\subsection{Detailed Description}
 Responsible for detecting any inputs and passing them to the registered listener to handle them. 
 
-Definiert in Zeile 25 der Datei Rasp\+Input\+Controller.\+h.
+Definition at line 25 of file Rasp\+Input\+Controller.\+h.
 
 
 
-\subsection{Beschreibung der Konstruktoren und Destruktoren}
+\subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_rasp_input_controller_a63a9e2ab7d0eb5aed2da6068454caa65}\label{class_rasp_input_controller_a63a9e2ab7d0eb5aed2da6068454caa65}} 
 \index{Rasp\+Input\+Controller@{Rasp\+Input\+Controller}!Rasp\+Input\+Controller@{Rasp\+Input\+Controller}}
 \index{Rasp\+Input\+Controller@{Rasp\+Input\+Controller}!Rasp\+Input\+Controller@{Rasp\+Input\+Controller}}
@@ -60,15 +60,15 @@ Definiert in Zeile 25 der Datei Rasp\+Input\+Controller.\+h.
 
 Constructor 
 
-Definiert in Zeile 4 der Datei Rasp\+Input\+Controller.\+cpp.
+Definition at line 4 of file Rasp\+Input\+Controller.\+cpp.
 
 
 
-Benutzt initialize\+Pins().
+References initialize\+Pins().
 
 
 
-\subsection{Dokumentation der Elementfunktionen}
+\subsection{Member Function Documentation}
 \mbox{\Hypertarget{class_rasp_input_controller_a31d6f6befaea44931f0010175bfe1a17}\label{class_rasp_input_controller_a31d6f6befaea44931f0010175bfe1a17}} 
 \index{Rasp\+Input\+Controller@{Rasp\+Input\+Controller}!add\+Input\+Listener@{add\+Input\+Listener}}
 \index{add\+Input\+Listener@{add\+Input\+Listener}!Rasp\+Input\+Controller@{Rasp\+Input\+Controller}}
@@ -76,21 +76,21 @@ Benutzt initialize\+Pins().
 {\footnotesize\ttfamily void Rasp\+Input\+Controller\+::add\+Input\+Listener (\begin{DoxyParamCaption}\item[{\hyperlink{class_input_listener}{Input\+Listener} \&}]{listener }\end{DoxyParamCaption})}
 
 Register a new input listener 
-\begin{DoxyParams}{Parameter}
+\begin{DoxyParams}{Parameters}
 {\em listener} & the listener to register. \\
 \hline
 \end{DoxyParams}
 
 
-Definiert in Zeile 114 der Datei Rasp\+Input\+Controller.\+cpp.
+Definition at line 114 of file Rasp\+Input\+Controller.\+cpp.
 
 
 
-Benutzt input\+Listener\+List.
+References input\+Listener\+List.
 
 
 
-Wird benutzt von main().
+Referenced by main().
 
 \mbox{\Hypertarget{class_rasp_input_controller_a95a42703b4c0bca34ba966745bad5dff}\label{class_rasp_input_controller_a95a42703b4c0bca34ba966745bad5dff}} 
 \index{Rasp\+Input\+Controller@{Rasp\+Input\+Controller}!get\+Input\+Events@{get\+Input\+Events}}
@@ -104,15 +104,15 @@ Check all pins for changes.
 
 
 
-Definiert in Zeile 88 der Datei Rasp\+Input\+Controller.\+cpp.
+Definition at line 88 of file Rasp\+Input\+Controller.\+cpp.
 
 
 
-Benutzt button\+State\+Map, output\+Map, inputs\+::\+V\+O\+L\+U\+M\+E\+\_\+\+B\+P\+M\+\_\+\+D\+O\+W\+N\+\_\+\+B\+U\+T\+T\+ON und inputs\+::\+V\+O\+L\+U\+M\+E\+\_\+\+B\+P\+M\+\_\+\+U\+P\+\_\+\+B\+U\+T\+T\+ON.
+References button\+State\+Map, output\+Map, inputs\+::\+V\+O\+L\+U\+M\+E\+\_\+\+B\+P\+M\+\_\+\+D\+O\+W\+N\+\_\+\+B\+U\+T\+T\+ON, and inputs\+::\+V\+O\+L\+U\+M\+E\+\_\+\+B\+P\+M\+\_\+\+U\+P\+\_\+\+B\+U\+T\+T\+ON.
 
 
 
-Wird benutzt von start\+Polling().
+Referenced by start\+Polling().
 
 \mbox{\Hypertarget{class_rasp_input_controller_a5ffc6f68b0c74f31a9b595ff8acc49f1}\label{class_rasp_input_controller_a5ffc6f68b0c74f31a9b595ff8acc49f1}} 
 \index{Rasp\+Input\+Controller@{Rasp\+Input\+Controller}!initialize\+Pins@{initialize\+Pins}}
@@ -126,15 +126,15 @@ Initialize all pins in order to use them.
 
 
 
-Definiert in Zeile 8 der Datei Rasp\+Input\+Controller.\+cpp.
+Definition at line 8 of file Rasp\+Input\+Controller.\+cpp.
 
 
 
-Benutzt output\+Map.
+References output\+Map.
 
 
 
-Wird benutzt von Rasp\+Input\+Controller().
+Referenced by Rasp\+Input\+Controller().
 
 \mbox{\Hypertarget{class_rasp_input_controller_a8cb185caa124285987d6b98122cfbea4}\label{class_rasp_input_controller_a8cb185caa124285987d6b98122cfbea4}} 
 \index{Rasp\+Input\+Controller@{Rasp\+Input\+Controller}!start@{start}}
@@ -144,15 +144,15 @@ Wird benutzt von Rasp\+Input\+Controller().
 
 Starts the input listener. 
 
-Definiert in Zeile 123 der Datei Rasp\+Input\+Controller.\+cpp.
+Definition at line 123 of file Rasp\+Input\+Controller.\+cpp.
 
 
 
-Benutzt start\+Polling().
+References start\+Polling().
 
 
 
-Wird benutzt von main().
+Referenced by main().
 
 \mbox{\Hypertarget{class_rasp_input_controller_a7e15590d321b382fcb5f4d70959a5cbe}\label{class_rasp_input_controller_a7e15590d321b382fcb5f4d70959a5cbe}} 
 \index{Rasp\+Input\+Controller@{Rasp\+Input\+Controller}!start\+Polling@{start\+Polling}}
@@ -166,15 +166,15 @@ Start polling input events in a specific interval.
 
 
 
-Definiert in Zeile 20 der Datei Rasp\+Input\+Controller.\+cpp.
+Definition at line 20 of file Rasp\+Input\+Controller.\+cpp.
 
 
 
-Benutzt button\+State\+Map, get\+Input\+Events(), input\+Listener\+List, output\+Map, polling\+Timer, rotary\+Polling\+Timer, Timer\+::start(), inputs\+::\+V\+O\+L\+U\+M\+E\+\_\+\+B\+P\+M\+\_\+\+D\+O\+W\+N\+\_\+\+B\+U\+T\+T\+ON und inputs\+::\+V\+O\+L\+U\+M\+E\+\_\+\+B\+P\+M\+\_\+\+U\+P\+\_\+\+B\+U\+T\+T\+ON.
+References button\+State\+Map, get\+Input\+Events(), input\+Listener\+List, output\+Map, polling\+Timer, rotary\+Polling\+Timer, Timer\+::start(), inputs\+::\+V\+O\+L\+U\+M\+E\+\_\+\+B\+P\+M\+\_\+\+D\+O\+W\+N\+\_\+\+B\+U\+T\+T\+ON, and inputs\+::\+V\+O\+L\+U\+M\+E\+\_\+\+B\+P\+M\+\_\+\+U\+P\+\_\+\+B\+U\+T\+T\+ON.
 
 
 
-Wird benutzt von start().
+Referenced by start().
 
 \mbox{\Hypertarget{class_rasp_input_controller_a7d9523be1a83acde964cb5d2b1d281ed}\label{class_rasp_input_controller_a7d9523be1a83acde964cb5d2b1d281ed}} 
 \index{Rasp\+Input\+Controller@{Rasp\+Input\+Controller}!stop@{stop}}
@@ -184,22 +184,22 @@ Wird benutzt von start().
 
 Stops the input listener. 
 
-Definiert in Zeile 118 der Datei Rasp\+Input\+Controller.\+cpp.
+Definition at line 118 of file Rasp\+Input\+Controller.\+cpp.
 
 
 
-Benutzt polling\+Timer, rotary\+Polling\+Timer und Timer\+::stop().
+References polling\+Timer, rotary\+Polling\+Timer, and Timer\+::stop().
 
 
 
-\subsection{Dokumentation der Datenelemente}
+\subsection{Member Data Documentation}
 \mbox{\Hypertarget{class_rasp_input_controller_ae02dcbb81abe6b6e6e3eaaeef4f3bf4a}\label{class_rasp_input_controller_ae02dcbb81abe6b6e6e3eaaeef4f3bf4a}} 
 \index{Rasp\+Input\+Controller@{Rasp\+Input\+Controller}!button\+State\+Map@{button\+State\+Map}}
 \index{button\+State\+Map@{button\+State\+Map}!Rasp\+Input\+Controller@{Rasp\+Input\+Controller}}
 \subsubsection{\texorpdfstring{button\+State\+Map}{buttonStateMap}}
 {\footnotesize\ttfamily map$<$unsigned short, bool$>$ Rasp\+Input\+Controller\+::button\+State\+Map\hspace{0.3cm}{\ttfamily [private]}}
 
-{\bfseries Initialisierung\+:}
+{\bfseries Initial value\+:}
 \begin{DoxyCode}
 = \{
             \{\hyperlink{namespaceinputs_ab1d58fe937ccabff6ec4011a74028bfb}{VOLUME\_BPM\_UP\_BUTTON},   \textcolor{keyword}{false}\},
@@ -238,11 +238,11 @@ Holds the state of every button\+: true means is currently hold down, false mean
 
 
 
-Definiert in Zeile 58 der Datei Rasp\+Input\+Controller.\+h.
+Definition at line 58 of file Rasp\+Input\+Controller.\+h.
 
 
 
-Wird benutzt von get\+Input\+Events() und start\+Polling().
+Referenced by get\+Input\+Events(), and start\+Polling().
 
 \mbox{\Hypertarget{class_rasp_input_controller_a5a5a8d99d69c35e206ddf7467e36cfae}\label{class_rasp_input_controller_a5a5a8d99d69c35e206ddf7467e36cfae}} 
 \index{Rasp\+Input\+Controller@{Rasp\+Input\+Controller}!input\+Listener\+List@{input\+Listener\+List}}
@@ -256,11 +256,11 @@ A list of all registered input listeners.
 
 
 
-Definiert in Zeile 89 der Datei Rasp\+Input\+Controller.\+h.
+Definition at line 89 of file Rasp\+Input\+Controller.\+h.
 
 
 
-Wird benutzt von add\+Input\+Listener() und start\+Polling().
+Referenced by add\+Input\+Listener(), and start\+Polling().
 
 \mbox{\Hypertarget{class_rasp_input_controller_a7b59eba5cc562eccc91347ddbd777e50}\label{class_rasp_input_controller_a7b59eba5cc562eccc91347ddbd777e50}} 
 \index{Rasp\+Input\+Controller@{Rasp\+Input\+Controller}!output\+Map@{output\+Map}}
@@ -268,7 +268,7 @@ Wird benutzt von add\+Input\+Listener() und start\+Polling().
 \subsubsection{\texorpdfstring{output\+Map}{outputMap}}
 {\footnotesize\ttfamily map$<$unsigned short, unsigned short$>$ Rasp\+Input\+Controller\+::output\+Map\hspace{0.3cm}{\ttfamily [private]}}
 
-{\bfseries Initialisierung\+:}
+{\bfseries Initial value\+:}
 \begin{DoxyCode}
 = \{
             \{\hyperlink{namespaceinputs_ab1d58fe937ccabff6ec4011a74028bfb}{VOLUME\_BPM\_UP\_BUTTON},   2\},
@@ -307,11 +307,11 @@ A physical pin for every button.
 
 
 
-Definiert in Zeile 27 der Datei Rasp\+Input\+Controller.\+h.
+Definition at line 27 of file Rasp\+Input\+Controller.\+h.
 
 
 
-Wird benutzt von get\+Input\+Events(), initialize\+Pins() und start\+Polling().
+Referenced by get\+Input\+Events(), initialize\+Pins(), and start\+Polling().
 
 \mbox{\Hypertarget{class_rasp_input_controller_a388779c1ddf9f5910a92cd350cc59e5c}\label{class_rasp_input_controller_a388779c1ddf9f5910a92cd350cc59e5c}} 
 \index{Rasp\+Input\+Controller@{Rasp\+Input\+Controller}!polling\+Timer@{polling\+Timer}}
@@ -325,11 +325,11 @@ A \hyperlink{class_timer}{Timer} for checking all the inputs, lower precision.
 
 
 
-Definiert in Zeile 90 der Datei Rasp\+Input\+Controller.\+h.
+Definition at line 90 of file Rasp\+Input\+Controller.\+h.
 
 
 
-Wird benutzt von start\+Polling() und stop().
+Referenced by start\+Polling(), and stop().
 
 \mbox{\Hypertarget{class_rasp_input_controller_a55b065ae154806341fd900a8b61110a5}\label{class_rasp_input_controller_a55b065ae154806341fd900a8b61110a5}} 
 \index{Rasp\+Input\+Controller@{Rasp\+Input\+Controller}!rotary\+Polling\+Timer@{rotary\+Polling\+Timer}}
@@ -343,15 +343,15 @@ A \hyperlink{class_timer}{Timer} for checking inputs of the rotary button, highe
 
 
 
-Definiert in Zeile 91 der Datei Rasp\+Input\+Controller.\+h.
+Definition at line 91 of file Rasp\+Input\+Controller.\+h.
 
 
 
-Wird benutzt von start\+Polling() und stop().
+Referenced by start\+Polling(), and stop().
 
 
 
-Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 \hyperlink{_rasp_input_controller_8h}{Rasp\+Input\+Controller.\+h}\item 
 \hyperlink{_rasp_input_controller_8cpp}{Rasp\+Input\+Controller.\+cpp}\end{DoxyCompactItemize}

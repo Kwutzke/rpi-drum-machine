@@ -5,7 +5,7 @@
     <programlisting>#include <link linkend="_sample_8h">&lt;Sample.h&gt;</link></programlisting>
 </para>
         <section>
-            <title>Private Attribute</title>
+            <title>Private Attributes</title>
             <para>
                 <itemizedlist>
                     <listitem>
@@ -140,7 +140,7 @@ float volume)<para><emphasis>Setter of member masterVolume.</emphasis></para>
 <para>A class that holds and maintains information about a sample audio file, which can be played by the Drum Machine. </para>
     </simplesect>
         <section>
-            <title>Dokumentation der Datenelemente</title>
+            <title>Member Data Documentation</title>
         </section>
             <section xml:id="class_sample_1a7aea6b090998a430341aa6d1d6222c63">
                 <title>Sample::Sample (const char *samplePath)</title> <emphasis></emphasis>
@@ -149,7 +149,7 @@ float volume)<para><emphasis>Setter of member masterVolume.</emphasis></para>
                 <formalpara>
                     <title/>
                     <table frame="all">
-                        <title>Parameter                        </title>
+                        <title>Parameters                        </title>
                         <tgroup cols="2" align="left" colsep="1" rowsep="1">
                         <colspec colwidth="1*"/>
                         <colspec colwidth="4*"/>
@@ -174,7 +174,7 @@ float volume)<para><emphasis>Setter of member masterVolume.</emphasis></para>
                 <formalpara>
                     <title/>
                     <table frame="all">
-                        <title>Parameter                        </title>
+                        <title>Parameters                        </title>
                         <tgroup cols="2" align="left" colsep="1" rowsep="1">
                         <colspec colwidth="1*"/>
                         <colspec colwidth="4*"/>
@@ -203,7 +203,7 @@ float volume)<para><emphasis>Setter of member masterVolume.</emphasis></para>
                 <formalpara>
                     <title/>
                     <table frame="all">
-                        <title>Parameter                        </title>
+                        <title>Parameters                        </title>
                         <tgroup cols="2" align="left" colsep="1" rowsep="1">
                         <colspec colwidth="1*"/>
                         <colspec colwidth="4*"/>
@@ -228,7 +228,7 @@ float volume)<para><emphasis>Setter of member masterVolume.</emphasis></para>
                 <formalpara>
                     <title/>
                     <table frame="all">
-                        <title>Parameter                        </title>
+                        <title>Parameters                        </title>
                         <tgroup cols="2" align="left" colsep="1" rowsep="1">
                         <colspec colwidth="1*"/>
                         <colspec colwidth="4*"/>

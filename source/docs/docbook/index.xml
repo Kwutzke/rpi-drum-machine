@@ -14,7 +14,7 @@
         <xi:include href="namespacestd_1_1chrono.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     </chapter>
     <chapter>
-        <title>Klassen-Dokumentation</title>
+        <title>Class Documentation</title>
         <xi:include href="class_a_output_controller.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
         <xi:include href="class_display.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
         <xi:include href="class_drum_machine.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
@@ -26,7 +26,7 @@
         <xi:include href="class_timer.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     </chapter>
     <chapter>
-        <title>Datei-Dokumentation</title>
+        <title>File Documentation</title>
         <xi:include href="_a_output_controller_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
         <xi:include href="_display_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
         <xi:include href="_display_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>

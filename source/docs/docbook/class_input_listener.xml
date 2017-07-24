@@ -26,7 +26,7 @@ unsigned short input)</para>
                 <formalpara>
                     <title/>
                     <table frame="all">
-                        <title>Parameter                        </title>
+                        <title>Parameters                        </title>
                         <tgroup cols="2" align="left" colsep="1" rowsep="1">
                         <colspec colwidth="1*"/>
                         <colspec colwidth="4*"/>

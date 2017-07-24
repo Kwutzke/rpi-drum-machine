@@ -5,7 +5,7 @@
     <programlisting>#include <link linkend="_drum_machine_input_listener_8h">&lt;DrumMachineInputListener.h&gt;</link></programlisting>
 </para>
         <section>
-            <title>Private Attribute</title>
+            <title>Private Attributes</title>
             <para>
                 <itemizedlist>
                     <listitem>
@@ -52,7 +52,7 @@ unsigned short input)</para>
 <para><link linkend="class_input_listener">InputListener</link> implementation for the drum machine to handle input events. </para>
     </simplesect>
         <section>
-            <title>Dokumentation der Datenelemente</title>
+            <title>Member Data Documentation</title>
         </section>
             <section xml:id="class_drum_machine_input_listener_1a7552c36ebae9e6ae49f8929ae9853354">
                 <title>DrumMachineInputListener::DrumMachineInputListener (DrumMachine &amp;drumMachine)</title> <emphasis></emphasis>
@@ -61,7 +61,7 @@ unsigned short input)</para>
                 <formalpara>
                     <title/>
                     <table frame="all">
-                        <title>Parameter                        </title>
+                        <title>Parameters                        </title>
                         <tgroup cols="2" align="left" colsep="1" rowsep="1">
                         <colspec colwidth="1*"/>
                         <colspec colwidth="4*"/>
@@ -86,7 +86,7 @@ unsigned short input)</para>
                 <formalpara>
                     <title/>
                     <table frame="all">
-                        <title>Parameter                        </title>
+                        <title>Parameters                        </title>
                         <tgroup cols="2" align="left" colsep="1" rowsep="1">
                         <colspec colwidth="1*"/>
                         <colspec colwidth="4*"/>

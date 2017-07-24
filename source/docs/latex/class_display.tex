@@ -1,10 +1,10 @@
-\hypertarget{class_display}{}\section{Display Klassenreferenz}
+\hypertarget{class_display}{}\section{Display Class Reference}
 \label{class_display}\index{Display@{Display}}
 
 
 {\ttfamily \#include $<$Display.\+h$>$}
 
-\subsection*{Öffentliche Methoden}
+\subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_display_ae972fffea6f7ca1d627ef48c3d841bb3}{Display} ()
@@ -13,21 +13,21 @@ void \hyperlink{class_display_aae248dcbc4c44b911c35918feacaf31a}{show\+Main\+Scr
 \item 
 void \hyperlink{class_display_ae00838dd994556524fb8d86d7e855770}{show\+Sample\+Screen} (unsigned short bpm, float volume)
 \end{DoxyCompactItemize}
-\subsection*{Private Attribute}
+\subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 Adafruit\+\_\+\+S\+S\+D1306 \hyperlink{class_display_ad8b8ca65d118eb16461932c6630463a1}{display}
 \end{DoxyCompactItemize}
 
 
-\subsection{Ausführliche Beschreibung}
+\subsection{Detailed Description}
 A class that holds information an maintains the functionalaty of an Adafruit S\+S\+D1306 \hyperlink{class_display}{Display} 
 
-Definiert in Zeile 12 der Datei Display.\+h.
+Definition at line 12 of file Display.\+h.
 
 
 
-\subsection{Beschreibung der Konstruktoren und Destruktoren}
+\subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_display_ae972fffea6f7ca1d627ef48c3d841bb3}\label{class_display_ae972fffea6f7ca1d627ef48c3d841bb3}} 
 \index{Display@{Display}!Display@{Display}}
 \index{Display@{Display}!Display@{Display}}
@@ -36,15 +36,15 @@ Definiert in Zeile 12 der Datei Display.\+h.
 
 Constructor 
 
-Definiert in Zeile 3 der Datei Display.\+cpp.
+Definition at line 3 of file Display.\+cpp.
 
 
 
-Benutzt display.
+References display.
 
 
 
-\subsection{Dokumentation der Elementfunktionen}
+\subsection{Member Function Documentation}
 \mbox{\Hypertarget{class_display_aae248dcbc4c44b911c35918feacaf31a}\label{class_display_aae248dcbc4c44b911c35918feacaf31a}} 
 \index{Display@{Display}!show\+Main\+Screen@{show\+Main\+Screen}}
 \index{show\+Main\+Screen@{show\+Main\+Screen}!Display@{Display}}
@@ -52,21 +52,21 @@ Benutzt display.
 {\footnotesize\ttfamily void Display\+::show\+Main\+Screen (\begin{DoxyParamCaption}\item[{unsigned short}]{bpm }\end{DoxyParamCaption})}
 
 Activates the main screen 
-\begin{DoxyParams}{Parameter}
+\begin{DoxyParams}{Parameters}
 {\em bpm} & the speed of the loop, is shown in the display \\
 \hline
 \end{DoxyParams}
 
 
-Definiert in Zeile 8 der Datei Display.\+cpp.
+Definition at line 8 of file Display.\+cpp.
 
 
 
-Benutzt display.
+References display.
 
 
 
-Wird benutzt von Rasp\+Output\+Controller\+::show\+Main\+Screen().
+Referenced by Rasp\+Output\+Controller\+::show\+Main\+Screen().
 
 \mbox{\Hypertarget{class_display_ae00838dd994556524fb8d86d7e855770}\label{class_display_ae00838dd994556524fb8d86d7e855770}} 
 \index{Display@{Display}!show\+Sample\+Screen@{show\+Sample\+Screen}}
@@ -75,7 +75,7 @@ Wird benutzt von Rasp\+Output\+Controller\+::show\+Main\+Screen().
 {\footnotesize\ttfamily void Display\+::show\+Sample\+Screen (\begin{DoxyParamCaption}\item[{unsigned short}]{bpm,  }\item[{float}]{volume }\end{DoxyParamCaption})}
 
 Activates the sample screen 
-\begin{DoxyParams}{Parameter}
+\begin{DoxyParams}{Parameters}
 {\em bpm} & the speed of the loop, is shown in the display \\
 \hline
 {\em volume} & the volume of the active sample \\
@@ -83,19 +83,19 @@ Activates the sample screen
 \end{DoxyParams}
 
 
-Definiert in Zeile 18 der Datei Display.\+cpp.
+Definition at line 18 of file Display.\+cpp.
 
 
 
-Benutzt display.
+References display.
 
 
 
-Wird benutzt von Rasp\+Output\+Controller\+::show\+Sample\+Screen().
+Referenced by Rasp\+Output\+Controller\+::show\+Sample\+Screen().
 
 
 
-\subsection{Dokumentation der Datenelemente}
+\subsection{Member Data Documentation}
 \mbox{\Hypertarget{class_display_ad8b8ca65d118eb16461932c6630463a1}\label{class_display_ad8b8ca65d118eb16461932c6630463a1}} 
 \index{Display@{Display}!display@{display}}
 \index{display@{display}!Display@{Display}}
@@ -104,15 +104,15 @@ Wird benutzt von Rasp\+Output\+Controller\+::show\+Sample\+Screen().
 
 
 
-Definiert in Zeile 33 der Datei Display.\+h.
+Definition at line 33 of file Display.\+h.
 
 
 
-Wird benutzt von Display(), show\+Main\+Screen() und show\+Sample\+Screen().
+Referenced by Display(), show\+Main\+Screen(), and show\+Sample\+Screen().
 
 
 
-Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 \hyperlink{_display_8h}{Display.\+h}\item 
 \hyperlink{_display_8cpp}{Display.\+cpp}\end{DoxyCompactItemize}

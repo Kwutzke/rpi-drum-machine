@@ -5,7 +5,7 @@
     <programlisting>#include <link linkend="_display_8h">&lt;Display.h&gt;</link></programlisting>
 </para>
         <section>
-            <title>Private Attribute</title>
+            <title>Private Attributes</title>
             <para>
                 <itemizedlist>
                     <listitem>
@@ -42,7 +42,7 @@ unsigned short bpm, float volume)</para>
             </para>
         </section>
         <simplesect>
-            <title>Ausführliche Beschreibung</title>
+            <title>Detailed Description</title>
 
 <para>A class that holds information an maintains the functionalaty of an Adafruit SSD1306 <link linkend="class_display">Display</link> </para>
                 <para>Definition at line 12 of file Display.h</para>
@@ -50,7 +50,7 @@ unsigned short bpm, float volume)</para>
                 <para><itemizedlist><listitem><para>Display.h</para></listitem></itemizedlist></para>
         </simplesect>
         <section>
-            <title>Dokumentation der Datenelemente</title>
+            <title>Member Data Documentation</title>
         </section>
             <section xml:id="class_display_1ae972fffea6f7ca1d627ef48c3d841bb3">
                 <title>Display::Display ()</title> <emphasis></emphasis>
@@ -65,7 +65,7 @@ unsigned short bpm, float volume)</para>
                 <formalpara>
                     <title/>
                     <table frame="all">
-                        <title>Parameter                        </title>
+                        <title>Parameters                        </title>
                         <tgroup cols="2" align="left" colsep="1" rowsep="1">
                         <colspec colwidth="1*"/>
                         <colspec colwidth="4*"/>
@@ -90,7 +90,7 @@ unsigned short bpm, float volume)</para>
                 <formalpara>
                     <title/>
                     <table frame="all">
-                        <title>Parameter                        </title>
+                        <title>Parameters                        </title>
                         <tgroup cols="2" align="left" colsep="1" rowsep="1">
                         <colspec colwidth="1*"/>
                         <colspec colwidth="4*"/>

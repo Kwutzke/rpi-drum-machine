@@ -7,7 +7,7 @@
     <programlisting>#include &quot;Sample.h&quot;</programlisting>
     <programlisting>#include &quot;DrumMachine.h&quot;</programlisting>
     <simplesect>
-        <title>Ausführliche Beschreibung</title>
+        <title>Detailed Description</title>
     <para>Definition in file /Users/kilian/Development/EntwMM/Arduino Drum Machine/source/RaspOutputController.cpp</para>
     </simplesect>
 </section>

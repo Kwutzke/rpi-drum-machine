@@ -4,7 +4,7 @@
     <programlisting>#include &quot;DrumMachine.h&quot;</programlisting>
     <programlisting>#include &quot;InputListener.h&quot;</programlisting>
         <section>
-            <title> Klassen </title>
+            <title> Classes </title>
             <para>
                 <itemizedlist>
                     <listitem>
@@ -15,7 +15,7 @@
             </para>
         </section>
     <simplesect>
-        <title>Ausführliche Beschreibung</title>
+        <title>Detailed Description</title>
     <para>Definition in file /Users/kilian/Development/EntwMM/Arduino Drum Machine/source/DrumMachineInputListener.h</para>
     </simplesect>
 </section>

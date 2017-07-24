@@ -5,7 +5,7 @@
     <programlisting>#include <link linkend="_rasp_input_controller_8h">&lt;RaspInputController.h&gt;</link></programlisting>
 </para>
         <section>
-            <title>Private Attribute</title>
+            <title>Private Attributes</title>
             <para>
                 <itemizedlist>
                     <listitem>
@@ -112,7 +112,7 @@
 <para>Responsible for detecting any inputs and passing them to the registered listener to handle them. </para>
     </simplesect>
         <section>
-            <title>Dokumentation der Datenelemente</title>
+            <title>Member Data Documentation</title>
         </section>
             <section xml:id="class_rasp_input_controller_1a7e15590d321b382fcb5f4d70959a5cbe">
                 <title>void RaspInputController::startPolling ()</title> <emphasis>Start polling input events in a specific interval.</emphasis>
@@ -139,7 +139,7 @@
                 <formalpara>
                     <title/>
                     <table frame="all">
-                        <title>Parameter                        </title>
+                        <title>Parameters                        </title>
                         <tgroup cols="2" align="left" colsep="1" rowsep="1">
                         <colspec colwidth="1*"/>
                         <colspec colwidth="4*"/>

@@ -3,7 +3,7 @@
     <title>InputListener.h File Reference</title>
     <programlisting>#include &lt;vector&gt;</programlisting>
         <section>
-            <title> Klassen </title>
+            <title> Classes </title>
             <para>
                 <itemizedlist>
                     <listitem>
@@ -14,7 +14,7 @@
             </para>
         </section>
     <simplesect>
-        <title>Ausführliche Beschreibung</title>
+        <title>Detailed Description</title>
     <para>Definition in file /Users/kilian/Development/EntwMM/Arduino Drum Machine/source/InputListener.h</para>
     </simplesect>
 </section>

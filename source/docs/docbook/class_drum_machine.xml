@@ -5,7 +5,7 @@
     <programlisting>#include <link linkend="_drum_machine_8h">&lt;DrumMachine.h&gt;</link></programlisting>
 </para>
         <section>
-            <title>Private Attribute</title>
+            <title>Private Attributes</title>
             <para>
                 <itemizedlist>
                     <listitem>
@@ -261,7 +261,7 @@ unsigned short newActiveSample)</para>
 <para>Handles the beat loop and samples including correct timing for the give BPM, playing them at the correct beat steps and increasing and decreasing the volume. </para>
     </simplesect>
         <section>
-            <title>Dokumentation der Datenelemente</title>
+            <title>Member Data Documentation</title>
         </section>
             <section xml:id="class_drum_machine_1a5a42497c3a1f390537b6c12fddab1619">
                 <title>void DrumMachine::allocateChannels ()</title> <emphasis>Helper function which allocates the audio channels.</emphasis>
@@ -278,7 +278,7 @@ unsigned short newActiveSample)</para>
                 <formalpara>
                     <title/>
                     <table frame="all">
-                        <title>Parameter                        </title>
+                        <title>Parameters                        </title>
                         <tgroup cols="2" align="left" colsep="1" rowsep="1">
                         <colspec colwidth="1*"/>
                         <colspec colwidth="4*"/>
@@ -321,7 +321,7 @@ unsigned short newActiveSample)</para>
                 <formalpara>
                     <title/>
                     <table frame="all">
-                        <title>Parameter                        </title>
+                        <title>Parameters                        </title>
                         <tgroup cols="2" align="left" colsep="1" rowsep="1">
                         <colspec colwidth="1*"/>
                         <colspec colwidth="4*"/>
@@ -346,7 +346,7 @@ unsigned short newActiveSample)</para>
                 <formalpara>
                     <title/>
                     <table frame="all">
-                        <title>Parameter                        </title>
+                        <title>Parameters                        </title>
                         <tgroup cols="2" align="left" colsep="1" rowsep="1">
                         <colspec colwidth="1*"/>
                         <colspec colwidth="4*"/>
@@ -371,7 +371,7 @@ unsigned short newActiveSample)</para>
                 <formalpara>
                     <title/>
                     <table frame="all">
-                        <title>Parameter                        </title>
+                        <title>Parameters                        </title>
                         <tgroup cols="2" align="left" colsep="1" rowsep="1">
                         <colspec colwidth="1*"/>
                         <colspec colwidth="4*"/>
@@ -396,7 +396,7 @@ unsigned short newActiveSample)</para>
                 <formalpara>
                     <title/>
                     <table frame="all">
-                        <title>Parameter                        </title>
+                        <title>Parameters                        </title>
                         <tgroup cols="2" align="left" colsep="1" rowsep="1">
                         <colspec colwidth="1*"/>
                         <colspec colwidth="4*"/>
@@ -417,7 +417,7 @@ unsigned short newActiveSample)</para>
             <section xml:id="class_drum_machine_1aaa0c2e00a5009b239aac709c37602c7d">
                 <title>bool DrumMachine::isLoopRunning ()</title> <emphasis></emphasis>
                 
-<para><formalpara><title>Rückgabe: </title>
+<para><formalpara><title>Returns: </title>
 
 <para>whether the loop is currently running </para>
 </formalpara>
@@ -431,7 +431,7 @@ unsigned short newActiveSample)</para>
                 <formalpara>
                     <title/>
                     <table frame="all">
-                        <title>Parameter                        </title>
+                        <title>Parameters                        </title>
                         <tgroup cols="2" align="left" colsep="1" rowsep="1">
                         <colspec colwidth="1*"/>
                         <colspec colwidth="4*"/>
@@ -452,7 +452,7 @@ unsigned short newActiveSample)</para>
             <section xml:id="class_drum_machine_1a9a7a34dca1803071fec5b6687cb98343">
                 <title>unsigned short DrumMachine::getBPM ()</title> <emphasis></emphasis>
                 
-<para><formalpara><title>Rückgabe: </title>
+<para><formalpara><title>Returns: </title>
 
 <para>the current BPM </para>
 </formalpara>
@@ -466,7 +466,7 @@ unsigned short newActiveSample)</para>
                 <formalpara>
                     <title/>
                     <table frame="all">
-                        <title>Parameter                        </title>
+                        <title>Parameters                        </title>
                         <tgroup cols="2" align="left" colsep="1" rowsep="1">
                         <colspec colwidth="1*"/>
                         <colspec colwidth="4*"/>
@@ -487,7 +487,7 @@ unsigned short newActiveSample)</para>
             <section xml:id="class_drum_machine_1a3590f99d021aad35cca24fdcb0f8a246">
                 <title>float DrumMachine::getMasterVolume ()</title> <emphasis></emphasis>
                 
-<para><formalpara><title>Rückgabe: </title>
+<para><formalpara><title>Returns: </title>
 
 <para>the current master volume </para>
 </formalpara>
@@ -501,7 +501,7 @@ unsigned short newActiveSample)</para>
                 <formalpara>
                     <title/>
                     <table frame="all">
-                        <title>Parameter                        </title>
+                        <title>Parameters                        </title>
                         <tgroup cols="2" align="left" colsep="1" rowsep="1">
                         <colspec colwidth="1*"/>
                         <colspec colwidth="4*"/>
@@ -522,7 +522,7 @@ unsigned short newActiveSample)</para>
             <section xml:id="class_drum_machine_1ac8ef152a82bbce61bc1e2715c3e476b9">
                 <title>unsigned short DrumMachine::getActiveSample ()</title> <emphasis></emphasis>
                 
-<para><formalpara><title>Rückgabe: </title>
+<para><formalpara><title>Returns: </title>
 
 <para>The number of the currently active sample </para>
 </formalpara>

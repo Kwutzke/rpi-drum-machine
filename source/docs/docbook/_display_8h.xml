@@ -5,7 +5,7 @@
     <programlisting>#include &lt;Adafruit_GFX.h&gt;</programlisting>
     <programlisting>#include &lt;Adafruit_SSD1306.h&gt;</programlisting>
         <section>
-            <title> Klassen </title>
+            <title> Classes </title>
             <para>
                 <itemizedlist>
                     <listitem>
@@ -15,7 +15,7 @@
             </para>
         </section>
     <simplesect>
-        <title>Ausführliche Beschreibung</title>
+        <title>Detailed Description</title>
     <para>Definition in file /Users/kilian/Development/EntwMM/Arduino Drum Machine/source/Display.h</para>
     </simplesect>
 </section>

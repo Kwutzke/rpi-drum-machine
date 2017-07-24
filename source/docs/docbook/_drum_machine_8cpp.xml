@@ -6,7 +6,7 @@
     <programlisting>#include &lt;iostream&gt;</programlisting>
     <programlisting>#include &quot;DrumMachine.h&quot;</programlisting>
         <simplesect>
-            <title> Namensbereiche </title>
+            <title> Namespaces </title>
             <para>
                 <itemizedlist>
                     <listitem>
@@ -16,7 +16,7 @@
             </para>
         </simplesect>
     <simplesect>
-        <title>Ausführliche Beschreibung</title>
+        <title>Detailed Description</title>
     <para>Definition in file /Users/kilian/Development/EntwMM/Arduino Drum Machine/source/DrumMachine.cpp</para>
     </simplesect>
 </section>
