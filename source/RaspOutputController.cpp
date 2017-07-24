@@ -7,7 +7,7 @@
 using namespace state;
 using namespace sample;
 
-RaspOutputController::RaspOutputController() : beatBlinkDelay(0) {
+RaspOutputController::RaspOutputController() : beatDuration(0) {
     this->initializePins();
     this->switchOffAllLed();
     this->switchOnFirstBeatLed();
@@ -50,7 +50,7 @@ void RaspOutputController::switchOffAllLed() {
 
 void RaspOutputController::blink(int ledPin) {
     digitalWrite(ledPin, HIGH);
-    delay(this->beatBlinkDelay);
+    delay(this->beatDuration);
     digitalWrite(ledPin, LOW);
 }
 
@@ -86,7 +86,7 @@ void RaspOutputController::playPositionChange(unsigned short position, unsigned 
 }
 
 void RaspOutputController::setBeatDuration(unsigned int beatDuration) {
-    this->beatBlinkDelay = beatBlinkDelay;
+    this->beatDuration = beatDuration;
 }
 
 void RaspOutputController::showMainScreen(unsigned int bpm) {

@@ -16,7 +16,7 @@ using namespace std::chrono;
  */
 class Timer {
 private:
-    unsigned int precision; ///< The precision in nanoseconds
+    long precision; ///< The precision in nanoseconds
     unsigned int interval;  ///< The interval in milliseconds
     bool running;           ///< Is the timer currently running
 
