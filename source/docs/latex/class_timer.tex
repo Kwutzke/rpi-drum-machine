@@ -12,7 +12,7 @@ Call a callback function in a given interval, determining the time with a given 
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_timer_a5b659c4fb572c549dad183a7b32b08df}{Timer} (unsigned int \hyperlink{class_timer_aaf9bce1286b714658a0f4484d8fee960}{interval}, unsigned int \hyperlink{class_timer_a3d1026dd88596a97cb6b768f475ed57f}{precision})
+\hyperlink{class_timer_a5b659c4fb572c549dad183a7b32b08df}{Timer} (unsigned int \hyperlink{class_timer_aaf9bce1286b714658a0f4484d8fee960}{interval}, unsigned int \hyperlink{class_timer_a0eb4723e5856ae2180081af68980d1dc}{precision})
 \item 
 {\footnotesize template$<$typename Function , typename... Args$>$ }\\void \hyperlink{class_timer_adcf70b5065e31461e27309c96065437a}{start} (Function \&\&callback, Args \&\&... args)
 \item 
@@ -30,7 +30,7 @@ long long \hyperlink{class_timer_a39a332f8ce3a45ed8d78c772755342c8}{get\+Current
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-unsigned int \hyperlink{class_timer_a3d1026dd88596a97cb6b768f475ed57f}{precision}
+long \hyperlink{class_timer_a0eb4723e5856ae2180081af68980d1dc}{precision}
 \begin{DoxyCompactList}\small\item\em The precision in nanoseconds. \end{DoxyCompactList}\item 
 unsigned int \hyperlink{class_timer_aaf9bce1286b714658a0f4484d8fee960}{interval}
 \begin{DoxyCompactList}\small\item\em The interval in milliseconds. \end{DoxyCompactList}\item 
@@ -177,11 +177,11 @@ Definition at line 20 of file Timer.\+h.
 
 Referenced by get\+Interval(), and set\+Interval().
 
-\mbox{\Hypertarget{class_timer_a3d1026dd88596a97cb6b768f475ed57f}\label{class_timer_a3d1026dd88596a97cb6b768f475ed57f}} 
+\mbox{\Hypertarget{class_timer_a0eb4723e5856ae2180081af68980d1dc}\label{class_timer_a0eb4723e5856ae2180081af68980d1dc}} 
 \index{Timer@{Timer}!precision@{precision}}
 \index{precision@{precision}!Timer@{Timer}}
 \subsubsection{\texorpdfstring{precision}{precision}}
-{\footnotesize\ttfamily unsigned int Timer\+::precision\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily long Timer\+::precision\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

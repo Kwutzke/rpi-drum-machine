@@ -115,7 +115,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0778395ee8ec044d04fbfcb2f3b2eb04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23987d33142c3c09abf8126773f32d99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rasp_output_controller.html#a23987d33142c3c09abf8126773f32d99">blink</a> (int ledPin)</td></tr>
 <tr class="separator:a23987d33142c3c09abf8126773f32d99"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fd551f1aba056356befd71e5bff23f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rasp_output_controller.html#a5fd551f1aba056356befd71e5bff23f1">setBeatDuration</a> (unsigned int beatDuration) override</td></tr>
+<tr class="memitem:a5fd551f1aba056356befd71e5bff23f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rasp_output_controller.html#a5fd551f1aba056356befd71e5bff23f1">setBeatDuration</a> (unsigned int <a class="el" href="class_rasp_output_controller.html#a8c6d21d4749ca4e767dcff93f2c6d7ac">beatDuration</a>) override</td></tr>
 <tr class="memdesc:a5fd551f1aba056356befd71e5bff23f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter of beatDuration.  <a href="#a5fd551f1aba056356befd71e5bff23f1">More...</a><br /></td></tr>
 <tr class="separator:a5fd551f1aba056356befd71e5bff23f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad195a3d664b7c7e5680cd8949203c1fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rasp_output_controller.html#ad195a3d664b7c7e5680cd8949203c1fc">showMainScreen</a> (unsigned int bpm) override</td></tr>
@@ -148,8 +148,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:ad0ad19b081450eb1d9cd6548c14a23ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bb52cfee18c44cd2ed64dea27d5ccc4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_display.html">Display</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rasp_output_controller.html#a0bb52cfee18c44cd2ed64dea27d5ccc4">display</a></td></tr>
 <tr class="separator:a0bb52cfee18c44cd2ed64dea27d5ccc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4deb199f7d611c2be39dc2d59ea45bba"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rasp_output_controller.html#a4deb199f7d611c2be39dc2d59ea45bba">beatBlinkDelay</a></td></tr>
-<tr class="separator:a4deb199f7d611c2be39dc2d59ea45bba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c6d21d4749ca4e767dcff93f2c6d7ac"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rasp_output_controller.html#a8c6d21d4749ca4e767dcff93f2c6d7ac">beatDuration</a></td></tr>
+<tr class="separator:a8c6d21d4749ca4e767dcff93f2c6d7ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -251,7 +251,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_rasp_output_controller_8cpp_source.html#l00051">51</a> of file <a class="el" href="_rasp_output_controller_8cpp_source.html">RaspOutputController.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_rasp_output_controller_8h_source.html#l00180">beatBlinkDelay</a>.</p>
+<p class="reference">References <a class="el" href="_rasp_output_controller_8h_source.html#l00180">beatDuration</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_rasp_output_controller_8cpp_source.html#l00023">positionChange()</a>, and <a class="el" href="_rasp_output_controller_8cpp_source.html#l00043">switchOffAllLed()</a>.</p>
 
@@ -441,7 +441,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_rasp_output_controller_8cpp_source.html#l00088">88</a> of file <a class="el" href="_rasp_output_controller_8cpp_source.html">RaspOutputController.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_rasp_output_controller_8h_source.html#l00180">beatBlinkDelay</a>.</p>
+<p class="reference">References <a class="el" href="_rasp_output_controller_8h_source.html#l00180">beatDuration</a>.</p>
 
 </div>
 </div>
@@ -626,8 +626,8 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a4deb199f7d611c2be39dc2d59ea45bba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4deb199f7d611c2be39dc2d59ea45bba">&#9670;&nbsp;</a></span>beatBlinkDelay</h2>
+<a id="a8c6d21d4749ca4e767dcff93f2c6d7ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c6d21d4749ca4e767dcff93f2c6d7ac">&#9670;&nbsp;</a></span>beatDuration</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -636,7 +636,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int RaspOutputController::beatBlinkDelay</td>
+          <td class="memname">unsigned int RaspOutputController::beatDuration</td>
         </tr>
       </table>
   </td>

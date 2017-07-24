@@ -51,7 +51,7 @@
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>unsigned int beatBlinkDelay</para>
+                        <para>unsigned int beatDuration</para>
                     </listitem>
                 </itemizedlist>
             </para>

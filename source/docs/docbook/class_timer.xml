@@ -9,7 +9,7 @@
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>unsigned int precision<para><emphasis>The precision in nanoseconds.</emphasis></para></para>
+                        <para>long precision<para><emphasis>The precision in nanoseconds.</emphasis></para></para>
                     </listitem>
                 </itemizedlist>
             </para>

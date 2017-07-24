@@ -13,7 +13,7 @@ var class_rasp_output_controller =
     [ "switchOffAllLed", "class_rasp_output_controller.html#afdd3bcfa82341a9d2539233abe7cb617", null ],
     [ "switchOffAllRedBeatLeds", "class_rasp_output_controller.html#a9a5025e13e27544721a80e6725ed23e4", null ],
     [ "switchOnFirstBeatLed", "class_rasp_output_controller.html#a0cacbc3cbca8f1b78318234c6b74e576", null ],
-    [ "beatBlinkDelay", "class_rasp_output_controller.html#a4deb199f7d611c2be39dc2d59ea45bba", null ],
+    [ "beatDuration", "class_rasp_output_controller.html#a8c6d21d4749ca4e767dcff93f2c6d7ac", null ],
     [ "blueLedList", "class_rasp_output_controller.html#a9b5e5c4ee94d43d62e41961e6c8bea3b", null ],
     [ "display", "class_rasp_output_controller.html#a0bb52cfee18c44cd2ed64dea27d5ccc4", null ],
     [ "greenLedList", "class_rasp_output_controller.html#a8b888abfd8719eb95568abaf53d68d5c", null ],

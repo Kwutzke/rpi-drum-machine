@@ -7,6 +7,6 @@ var class_timer =
     [ "start", "class_timer.html#adcf70b5065e31461e27309c96065437a", null ],
     [ "stop", "class_timer.html#a63f0eb44b27402196590a03781515dba", null ],
     [ "interval", "class_timer.html#aaf9bce1286b714658a0f4484d8fee960", null ],
-    [ "precision", "class_timer.html#a3d1026dd88596a97cb6b768f475ed57f", null ],
+    [ "precision", "class_timer.html#a0eb4723e5856ae2180081af68980d1dc", null ],
     [ "running", "class_timer.html#a3b8bb57a0a252c88f85c0592715ea425", null ]
 ];

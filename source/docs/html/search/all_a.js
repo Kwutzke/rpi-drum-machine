@@ -7,5 +7,5 @@ var searchData=
   ['playsample',['playSample',['../class_sample.html#a720e0e4edc0eacfb6170951177eabc31',1,'Sample']]],
   ['pollingtimer',['pollingTimer',['../class_rasp_input_controller.html#a388779c1ddf9f5910a92cd350cc59e5c',1,'RaspInputController']]],
   ['positionchange',['positionChange',['../class_a_output_controller.html#a5a818a40e2911411d378032b8b2fb6c8',1,'AOutputController::positionChange()'],['../class_rasp_output_controller.html#afce87d510c0564567e4250b22639d5e0',1,'RaspOutputController::positionChange()']]],
-  ['precision',['precision',['../class_timer.html#a3d1026dd88596a97cb6b768f475ed57f',1,'Timer']]]
+  ['precision',['precision',['../class_timer.html#a0eb4723e5856ae2180081af68980d1dc',1,'Timer']]]
 ];
